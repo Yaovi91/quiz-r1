@@ -8,6 +8,8 @@ import { pickQuestion, pickDailyTen } from "./lib/picker.js";
 import { rollBonus } from "./lib/xp.js";
 import { todayKey } from "./lib/storage.js";
 import { popMicro } from "./lib/confetti.js";
+import { BADGES } from "./lib/badges.js";
+import { QUEST_POOL } from "./lib/quests.js";
 
 import HeaderBar from "./components/quiz/HeaderBar.jsx";
 import QuestionCard from "./components/quiz/QuestionCard.jsx";
@@ -29,10 +31,50 @@ const MODE_LABELS = {
   revision: "Révision ciblée",
 };
 
+// ============================================================
+// ErrorBoundary : capture les erreurs React au lieu d'écran noir
+// ============================================================
+import React from "react";
+class ErrorBoundary extends React.Component {
+  constructor(props) { super(props); this.state = { error: null }; }
+  static getDerivedStateFromError(error) { return { error }; }
+  componentDidCatch(error, info) {
+    console.error("App crashed:", error, info);
+  }
+  reset = () => {
+    this.setState({ error: null });
+    try { localStorage.removeItem("quizr1.v1.state"); } catch {}
+  };
+  render() {
+    if (this.state.error) {
+      return (
+        <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center" style={{ paddingTop: "env(safe-area-inset-top)" }}>
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-accent)] mb-2">Pépin</div>
+          <h1 className="font-display italic text-[26px] mb-3 text-[var(--color-fg-primary)]">
+            L'app a buggé
+          </h1>
+          <pre className="text-[11px] font-mono text-[var(--color-fg-tertiary)] mb-6 whitespace-pre-wrap break-words max-w-full">
+            {String(this.state.error?.message || this.state.error)}
+          </pre>
+          <button
+            onClick={this.reset}
+            className="px-4 py-3 rounded-[10px] bg-[var(--color-accent)] text-white font-mono text-[12px] uppercase tracking-wider"
+          >
+            Réinitialiser et redémarrer
+          </button>
+          <p className="text-[11px] text-[var(--color-fg-tertiary)] font-mono mt-4 max-w-[280px]">
+            Ta progression sera effacée mais l'app fonctionnera à nouveau.
+          </p>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 function listChapters(pool) {
   const set = new Set();
   for (const q of pool) {
-    // Premier segment numérique : "10.1.2" → "10"
     const first = q.chapitre.split(".")[0];
     set.add(first);
   }
@@ -46,40 +88,38 @@ function answerOk(question, selectedIdx) {
   return true;
 }
 
-export default function App() {
+function AppInner() {
   const { state, dispatch } = useStore();
   const { questions, loading, importQuestions, resetQuestions } = useQuestions();
 
-  // Mode et navigation
   const [mode, setMode] = useState("libre");
   const [modePickerOpen, setModePickerOpen] = useState(false);
   const [chapterPickerOpen, setChapterPickerOpen] = useState(false);
   const [activeChapter, setActiveChapter] = useState(null);
 
-  // Écrans secondaires
   const [statsOpen, setStatsOpen] = useState(false);
   const [libraryOpen, setLibraryOpen] = useState(false);
 
-  // Cycle question
   const [current, setCurrent] = useState(null);
-  const [phase, setPhase] = useState("asking"); // "asking" | "validated"
+  const [phase, setPhase] = useState("asking");
   const [result, setResult] = useState(null);
   const [xpMul, setXpMul] = useState(1);
 
-  // Daily challenge
-  const [dailyQueue, setDailyQueue] = useState([]); // ids restants
+  // Anti tap-through iPhone : bloque le tap immédiat sur "Question suivante"
+  // après validation. La transition Framer Motion dure ~280ms, on prend 400ms
+  // pour avoir une marge.
+  const [canAdvance, setCanAdvance] = useState(true);
+
+  const [dailyQueue, setDailyQueue] = useState([]);
   const [dailyScore, setDailyScore] = useState(0);
   const [dailyDone, setDailyDone] = useState(false);
 
-  // Survival
   const [survivalScore, setSurvivalScore] = useState(0);
   const [survivalOpen, setSurvivalOpen] = useState(false);
   const [survivalRecord, setSurvivalRecord] = useState(false);
 
-  // Cap journalier
   const [capReachedShown, setCapReachedShown] = useState(false);
 
-  // Visit notification (freeze used)
   const [visitNotice, setVisitNotice] = useState(null);
   useEffect(() => {
     if (state._visit?.freezeUsed) {
@@ -99,87 +139,71 @@ export default function App() {
     }
   }, [state._visit]);
 
-  // Cap journalier atteint ?
   const todayCount = useMemo(() => state.heatmap?.[todayKey()] || 0, [state.heatmap]);
   const capReached = state.settings?.dailyCap != null && todayCount >= state.settings.dailyCap;
 
-  /** Tire la prochaine question selon le mode actif. */
   function pickNext() {
-    if (!questions || questions.length === 0) return;
+    try {
+      if (!questions || questions.length === 0) return;
 
-    // Daily challenge : on consomme la queue prédéfinie
-    if (mode === "daily") {
-      if (dailyQueue.length === 0) {
-        const today = todayKey();
-        const alreadyPlayed = state.dailyChallenge?.date === today;
-        if (alreadyPlayed) {
-          // Déjà joué aujourd'hui
-          setDailyDone(true);
-          setCurrent(null);
+      if (mode === "daily") {
+        if (dailyQueue.length === 0) {
+          const today = todayKey();
+          const alreadyPlayed = state.dailyChallenge?.date === today;
+          if (alreadyPlayed) { setDailyDone(true); setCurrent(null); return; }
+          const list = pickDailyTen(questions, state, today);
+          if (list.length === 0) { setCurrent(null); return; }
+          setDailyQueue(list.slice(1).map(q => q.id));
+          setDailyScore(0); setDailyDone(false);
+          setCurrent(list[0]);
+          setXpMul(rollBonus()); setPhase("asking"); setResult(null);
           return;
         }
-        const list = pickDailyTen(questions, state, today);
-        if (list.length === 0) { setCurrent(null); return; }
-        setDailyQueue(list.slice(1).map(q => q.id));
-        setDailyScore(0);
-        setDailyDone(false);
-        setCurrent(list[0]);
-        setXpMul(rollBonus());
-        setPhase("asking");
-        setResult(null);
+        const nextId = dailyQueue[0];
+        const q = questions.find(x => x.id === nextId);
+        setDailyQueue(dailyQueue.slice(1));
+        setCurrent(q);
+        setXpMul(rollBonus()); setPhase("asking"); setResult(null);
         return;
       }
-      const nextId = dailyQueue[0];
-      const q = questions.find(x => x.id === nextId);
-      setDailyQueue(dailyQueue.slice(1));
-      setCurrent(q);
-      setXpMul(rollBonus());
-      setPhase("asking");
-      setResult(null);
-      return;
-    }
 
-    // Modes standards
-    const opts = {
-      mode: mode === "revision" ? "revision" : mode === "audit" ? "audit" : mode,
-      chapter: mode === "revision" ? activeChapter : null,
-      excludeIds: current ? [current.id] : [],
-    };
-    const q = pickQuestion(questions, state, opts);
-    setCurrent(q);
-    setXpMul(rollBonus());
-    setPhase("asking");
-    setResult(null);
+      const opts = {
+        mode: mode === "revision" ? "revision" : mode === "audit" ? "audit" : mode,
+        chapter: mode === "revision" ? activeChapter : null,
+        excludeIds: current ? [current.id] : [],
+      };
+      const q = pickQuestion(questions, state, opts);
+      setCurrent(q);
+      setXpMul(rollBonus()); setPhase("asking"); setResult(null);
+    } catch (e) {
+      console.error("pickNext crashed:", e);
+      setCurrent(null);
+    }
   }
 
-  // Premier pick une fois les questions chargées
   useEffect(() => {
-    if (!loading && !current && questions.length > 0) {
-      pickNext();
-    }
+    if (!loading && !current && questions.length > 0) pickNext();
   }, [loading, questions.length]);
 
-  // Re-pick à chaque changement de mode
   useEffect(() => {
     if (loading || questions.length === 0) return;
-    // Survival : reset score
-    if (mode === "survival") {
-      setSurvivalScore(0);
-      setSurvivalOpen(false);
-    }
-    // Daily : reset queue (sera reconstituée dans pickNext)
-    if (mode === "daily") {
-      setDailyQueue([]);
-      setDailyScore(0);
-      setDailyDone(false);
-    }
-    // Révision : si pas de chapitre, ouvre le picker
-    if (mode === "revision" && !activeChapter) {
-      setChapterPickerOpen(true);
-      return;
-    }
+    if (mode === "survival") { setSurvivalScore(0); setSurvivalOpen(false); }
+    if (mode === "daily") { setDailyQueue([]); setDailyScore(0); setDailyDone(false); }
+    if (mode === "revision" && !activeChapter) { setChapterPickerOpen(true); return; }
     pickNext();
   }, [mode, activeChapter]);
+
+  // Cooldown anti tap-through : à chaque passage en "validated", désactive
+  // le bouton "Question suivante" pendant 400ms.
+  useEffect(() => {
+    if (phase === "validated") {
+      setCanAdvance(false);
+      const t = setTimeout(() => setCanAdvance(true), 400);
+      return () => clearTimeout(t);
+    } else {
+      setCanAdvance(true);
+    }
+  }, [phase, current?.id]);
 
   function handleValidate(selected) {
     if (!current) return;
@@ -187,31 +211,18 @@ export default function App() {
 
     setResult({ ok, correctIndexes: current.bonnes_reponses });
     setPhase("validated");
-    if (ok) popMicro();
+    try { if (ok) popMicro(); } catch (e) { console.warn("confetti failed", e); }
 
-    // Mode révision : ne dispatche pas (pas d'XP, pas de SRS)
     if (mode === "revision") return;
 
-    dispatch({
-      type: "answer",
-      payload: { question: current, ok, xpMul },
-    });
+    dispatch({ type: "answer", payload: { question: current, ok, xpMul } });
 
-    // Mode survival : compte les bonnes, fin à la 1ère mauvaise
-    if (mode === "survival") {
-      if (ok) {
-        setSurvivalScore(s => s + 1);
-      }
-    }
-
-    // Mode daily : score
-    if (mode === "daily" && ok) {
-      setDailyScore(s => s + 1);
-    }
+    if (mode === "survival" && ok) setSurvivalScore(s => s + 1);
+    if (mode === "daily" && ok) setDailyScore(s => s + 1);
   }
 
   function handleNext() {
-    // Mode survival : si erreur précédente, fin de partie
+    if (!canAdvance) return; // protège du tap-through iPhone
     if (mode === "survival" && result && !result.ok) {
       const finalScore = survivalScore;
       const isRecord = finalScore > (state.survivalBest || 0);
@@ -220,20 +231,15 @@ export default function App() {
       dispatch({ type: "survival-end", payload: finalScore });
       return;
     }
-
-    // Mode daily : si queue vide, fin du challenge
     if (mode === "daily" && dailyQueue.length === 0) {
       setDailyDone(true);
       setCurrent(null);
       return;
     }
-
-    // Cap journalier atteint, message doux
     if (capReached && !capReachedShown && mode !== "revision") {
       setCapReachedShown(true);
       return;
     }
-
     pickNext();
   }
 
@@ -254,7 +260,6 @@ export default function App() {
     if (m === "revision") {
       setActiveChapter(null);
       setMode("revision");
-      // Le useEffect ci-dessus ouvrira le chapter picker
     } else {
       setMode(m);
     }
@@ -262,7 +267,6 @@ export default function App() {
 
   const chapters = useMemo(() => listChapters(questions), [questions]);
 
-  // Loading
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -271,7 +275,6 @@ export default function App() {
     );
   }
 
-  // Pas de questions
   if (!questions || questions.length === 0) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-8 text-center">
@@ -298,18 +301,27 @@ export default function App() {
     );
   }
 
-  // Évents post-réponse (level-up, badges)
   const evt = state._events;
   const levelUpLevel = evt?.levelUp || null;
-  const badgeItems = (evt?.badgesUnlocked || []).map(b => ({
-    id: b.id, title: b.name, subtitle: b.desc, icon: b.icon, kind: "Badge débloqué"
-  }));
-  const questItems = (evt?.questsCompleted || []).map(q => ({
-    id: "quest-" + q.id, title: q.label, subtitle: "+ XP bonus", icon: undefined, kind: "Quête réussie"
-  }));
+
+  // Résolution des IDs vers les objets complets (badges/quêtes).
+  // C'est UI-only : les composants Lucide ne sont jamais persistés.
+  const badgeItems = (evt?.badgesUnlocked || [])
+    .map(id => {
+      const b = BADGES.find(x => x.id === id);
+      return b ? { id, title: b.name, subtitle: b.desc, icon: b.icon, kind: "Badge débloqué" } : null;
+    })
+    .filter(Boolean);
+
+  const questItems = (evt?.questsCompleted || [])
+    .map(id => {
+      const q = QUEST_POOL.find(x => x.id === id);
+      return q ? { id: "quest-" + id, title: q.label, subtitle: "+50 XP bonus", icon: undefined, kind: "Quête réussie" } : null;
+    })
+    .filter(Boolean);
+
   const toastItems = [...questItems, ...badgeItems, ...(visitNotice ? [visitNotice] : [])];
 
-  // Cap journalier doux
   if (capReached && capReachedShown) {
     return (
       <CapScreen
@@ -329,7 +341,6 @@ export default function App() {
       />
 
       <div className="flex-1 flex flex-col pt-2">
-        {/* Daily challenge — terminé */}
         {mode === "daily" && dailyDone ? (
           <DailyDoneCard
             score={dailyScore}
@@ -337,7 +348,7 @@ export default function App() {
             state={state}
             onBackToLibre={() => setMode("libre")}
           />
-        ) : (
+        ) : current ? (
           <QuestionCard
             question={current}
             state={phase}
@@ -345,6 +356,20 @@ export default function App() {
             xpMul={xpMul}
             onValidate={handleValidate}
           />
+        ) : (
+          <div className="flex-1 flex items-center justify-center px-8 text-center">
+            <div>
+              <p className="text-[14px] text-[var(--color-fg-secondary)] mb-4">
+                Aucune question disponible pour ce mode.
+              </p>
+              <button
+                onClick={() => setMode("libre")}
+                className="px-4 py-2.5 rounded-[10px] bg-[var(--color-accent)] text-white font-mono text-[12px] uppercase tracking-wider"
+              >
+                Retour mode libre
+              </button>
+            </div>
+          </div>
         )}
       </div>
 
@@ -359,7 +384,6 @@ export default function App() {
         onOpenModes={() => setModePickerOpen(true)}
       />
 
-      {/* Explanation panel */}
       <ExplanationPanel
         open={phase === "validated" && !!current}
         question={current}
@@ -368,7 +392,6 @@ export default function App() {
         onNext={handleNext}
       />
 
-      {/* Mode picker */}
       <ModePicker
         open={modePickerOpen}
         current={mode}
@@ -377,7 +400,6 @@ export default function App() {
         chapters={chapters}
       />
 
-      {/* Chapter picker pour révision */}
       <ChapterPicker
         open={chapterPickerOpen}
         chapters={chapters}
@@ -386,7 +408,6 @@ export default function App() {
         onPick={(c) => { setActiveChapter(c); setChapterPickerOpen(false); }}
       />
 
-      {/* Overlays */}
       <StatsScreen
         open={statsOpen}
         state={state}
@@ -423,7 +444,14 @@ export default function App() {
   );
 }
 
-/** Petit écran "cap journalier atteint", non culpabilisant. */
+export default function App() {
+  return (
+    <ErrorBoundary>
+      <AppInner />
+    </ErrorBoundary>
+  );
+}
+
 function CapScreen({ cap, onContinue, onStats }) {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-8 text-center" style={{ paddingTop: "env(safe-area-inset-top)" }}>
@@ -461,7 +489,6 @@ function CapScreen({ cap, onContinue, onStats }) {
   );
 }
 
-/** Carte fin de Daily Challenge. */
 function DailyDoneCard({ score, total, state, onBackToLibre }) {
   const rate = score / total;
   const verdict = rate >= 0.9 ? "Sans faute ou presque" : rate >= 0.7 ? "Très solide" : rate >= 0.5 ? "À retravailler" : "Sois patient";
@@ -487,7 +514,6 @@ function DailyDoneCard({ score, total, state, onBackToLibre }) {
   );
 }
 
-/** Picker de chapitre pour le mode révision. */
 function ChapterPicker({ open, chapters, byChapter, onClose, onPick }) {
   return (
     <AnimatePresence>
@@ -514,7 +540,6 @@ function ChapterPicker({ open, chapters, byChapter, onClose, onPick }) {
 
               <div className="flex flex-col px-3 pb-3 gap-1.5">
                 {chapters.map(ch => {
-                  // Stats agrégées au chapitre racine
                   let seen = 0, correct = 0;
                   for (const [k, c] of Object.entries(byChapter || {})) {
                     if (k.startsWith(ch + ".") || k === ch) {
