@@ -18,7 +18,8 @@
       2
     ],
     "explication": "Selon §3.5 R1 2025 : le rapport Q1 (compte rendu de vérification semestrielle, formulaire en annexe 1) doit parvenir à CNPP dans un délai de 30 jours. Toute NC doit comporter sa date de première signalisation — son absence peut engager la responsabilité du vérificateur.",
-    "reference": "R1 §3.5 (édition 2025)"
+    "reference": "R1 §3.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-1-5-2-002",
@@ -39,7 +40,8 @@
       1
     ],
     "explication": "Toute NC doit comporter sa date de première signalisation. Son absence peut engager la responsabilité du vérificateur, notamment en cas de sinistre où l'assureur cherchera à reconstituer l'historique des observations.",
-    "reference": "R1 §1.5.2 (édition 2025)"
+    "reference": "R1 §1.5.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-1-5-3-001",
@@ -60,7 +62,8 @@
       1
     ],
     "explication": "Il existe deux versions du S1A : S1A POSTES et S1A SOURCES. Ce sont les formulaires de mémoire de l'entretien hebdomadaire, renseignés dès la réalisation de chaque opération.",
-    "reference": "R1 §1.5.3 (édition 2025)"
+    "reference": "R1 §1.5.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-1-5-3-002",
@@ -81,7 +84,8 @@
       2
     ],
     "explication": "Le S1A est la mémoire de l'entretien hebdomadaire. Sa lacune peut être invoquée par l'assureur en cas de sinistre comme preuve d'un défaut de maintenance.",
-    "reference": "R1 §1.5.3 (édition 2025)"
+    "reference": "R1 §1.5.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-1-5-4-001",
@@ -102,7 +106,8 @@
       2
     ],
     "explication": "Pour toute interruption programmée, le N100 doit être établi au moins 72 heures avant. Pour une interruption accidentelle, immédiatement.",
-    "reference": "R1 §1.5.4 / §18.2 (édition 2025)"
+    "reference": "R1 §1.5.4 / §18.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-1-5-4-002",
@@ -125,7 +130,8 @@
       2
     ],
     "explication": "Si la durée de mise hors service dépasse 12 heures, le N100 doit être diffusé à l'assureur, à CNPP et aux services de secours (pompiers).",
-    "reference": "R1 §1.5.4 / §18.2 (édition 2025)"
+    "reference": "R1 §1.5.4 / §18.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-1994-1-5-4-001",
@@ -146,7 +152,8 @@
       1
     ],
     "explication": "En 1994, le formulaire est intitulé « Avis de remise en service ». Il devient « Avis de mise hors service » à partir de 2002. Le fond des obligations est identique.",
-    "reference": "R1 §1.5.4 (édition 1994, note historique)"
+    "reference": "R1 §1.5.4 (édition 1994, note historique)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-1-5-5-001",
@@ -167,7 +174,8 @@
       2
     ],
     "explication": "Le dossier de suivi du système est conservé en permanence dans le local des sources, accessible en cas de visite ou d'intervention.",
-    "reference": "R1 §1.5.5 (édition 2025)"
+    "reference": "R1 §1.5.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-1-5-5-002",
@@ -190,7 +198,8 @@
       3
     ],
     "explication": "Le dossier de suivi contient notamment : PV de réception + rapport VdC CNPP, dernier N1 valide, les 2 derniers rapports Q1, les S1A en cours, fiches descriptives postes, plans 'tels que construits', tableau signalétique sources affiché, courbes essai sources, notices fabricants sprinkleurs spéciaux, N100 des 12 derniers mois.",
-    "reference": "R1 §1.5.5 (édition 2025)"
+    "reference": "R1 §1.5.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-1-5-5-003",
@@ -211,7 +220,8 @@
       1
     ],
     "explication": "Les courbes d'essai des sources doivent comporter les trois points caractéristiques : Q0% (débit nul), Q100% (débit nominal) et Q130%. Le point Q140% est spécifique à la NF EN 12845.",
-    "reference": "R1 §1.5.5 / §10.5 (édition 2025)"
+    "reference": "R1 §1.5.5 / §10.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-1-001",
@@ -232,7 +242,8 @@
       1
     ],
     "explication": "Le certificat N1 est délivré sous réserve du respect de la R1 en vigueur à la date de la première remise d'offre, et non à la date de la VdC. Cela protège l'installateur des évolutions du référentiel pendant la durée du chantier.",
-    "reference": "R1 §3.1 (édition 2025)"
+    "reference": "R1 §3.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-1-002",
@@ -253,7 +264,8 @@
       1
     ],
     "explication": "La déclaration de commande à CNPP doit être effectuée dans les 30 jours suivant la prise de commande par l'installateur certifié IF1.",
-    "reference": "R1 §3.1 (édition 2025)"
+    "reference": "R1 §3.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-2-001",
@@ -274,7 +286,8 @@
       2
     ],
     "explication": "Avant toute conception, l'installateur IF1 doit réaliser une analyse de risques contradictoire avec le donneur d'ordre. Elle détermine le classement de risque (Ch. 5) et conditionne le dimensionnement hydraulique (Ch. 6).",
-    "reference": "R1 §3.2 (édition 2025)"
+    "reference": "R1 §3.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-2-002",
@@ -295,7 +308,8 @@
       2
     ],
     "explication": "Toute modification d'activité doit conduire à une révision de l'analyse de risques. Le passage de bureaux (LH) à du stockage palettes change radicalement la classe (probablement HHS) et donc le dimensionnement requis.",
-    "reference": "R1 §3.2 / §5.1 (édition 2025)"
+    "reference": "R1 §3.2 / §5.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-1-001",
@@ -316,7 +330,8 @@
       2
     ],
     "explication": "La pression d'essai hydrostatique est la plus grande des deux valeurs : 15,5 bar OU 1,2 × Pmax. Pour une installation classique à 10 bar de service, on prend 15,5 bar. Pour une installation à 14 bar, on prend 1,2 × 14 = 16,8 bar.",
-    "reference": "R1 §3.3.1 (édition 2025)"
+    "reference": "R1 §3.3.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-1-002",
@@ -337,7 +352,8 @@
       2
     ],
     "explication": "L'essai hydrostatique doit durer au minimum 2 heures, avec mesure au point bas. Critères : aucune fuite, aucune rupture, aucune déformation permanente.",
-    "reference": "R1 §3.3.1 (édition 2025)"
+    "reference": "R1 §3.3.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-1-003",
@@ -358,7 +374,8 @@
       1
     ],
     "explication": "Les composants dont la Pmax est inférieure à la pression d'essai doivent être isolés ou protégés pendant l'essai (typiquement par by-pass ou retrait temporaire), pour éviter leur destruction.",
-    "reference": "R1 §3.3.1 (édition 2025)"
+    "reference": "R1 §3.3.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-2-001",
@@ -379,7 +396,8 @@
       1
     ],
     "explication": "Cas général : pression ≥ 2,5 bar, durée 24 h, perte admissible ≤ 0,30 bar. Cette règle s'applique aux réseaux sous air.",
-    "reference": "R1 §3.3.2 (édition 2025)"
+    "reference": "R1 §3.3.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-2-002",
@@ -400,7 +418,8 @@
       2
     ],
     "explication": "Pour les extensions de 31 à 200 têtes sous air, une variante avec durée réduite à 2 h est admise, avec la même pression ≥ 2,5 bar et le même critère de perte ≤ 0,30 bar. Mesure pragmatique introduite en 2008.",
-    "reference": "R1 §3.3.2 (édition 2025)"
+    "reference": "R1 §3.3.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-3-001",
@@ -421,7 +440,8 @@
       2
     ],
     "explication": "Le rinçage doit s'effectuer à une vitesse ≥ 3 m/s OU au débit Q130%, jusqu'à eau parfaitement claire et exempte de tout déchet en sortie. Un PV contradictoire est obligatoire.",
-    "reference": "R1 §3.3.3 (édition 2025)"
+    "reference": "R1 §3.3.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-3-002",
@@ -442,7 +462,8 @@
       2
     ],
     "explication": "Le rinçage élimine les impuretés de construction (sable, graviers, copeaux métalliques, joints abandonnés) qui risqueraient d'obstruer les orifices des sprinkleurs en cas de fonctionnement.",
-    "reference": "R1 §3.3.3 (édition 2025)"
+    "reference": "R1 §3.3.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-3-003",
@@ -463,7 +484,8 @@
       1
     ],
     "explication": "Un PV contradictoire de rinçage est obligatoire. 'Contradictoire' signifie signé par l'installateur ET un représentant du donneur d'ordre, attestant que l'eau en sortie était parfaitement claire.",
-    "reference": "R1 §3.3.3 (édition 2025)"
+    "reference": "R1 §3.3.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-4-8-001",
@@ -484,7 +506,8 @@
       2
     ],
     "explication": "Le délai d'asservissement (entre le déclenchement du premier sprinkleur et la coupure des équipements asservis) doit être de 30 s maximum.",
-    "reference": "R1 §4.8 (édition 2025)"
+    "reference": "R1 §4.8 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-4-8-002",
@@ -505,7 +528,8 @@
       1
     ],
     "explication": "Asservissement soufflage ou convoyeurs absent sur installation ESFR ou CMSA → NC majeure (rouge) au Q1 §4. Ces systèmes haute performance ne tolèrent pas la perturbation du panache thermique.",
-    "reference": "R1 §4.8 (édition 2025)"
+    "reference": "R1 §4.8 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-4-8-003",
@@ -526,7 +550,8 @@
       2
     ],
     "explication": "L'asservissement des transtockeurs (ASRS) sur installation ESFR est obligatoire suite à l'additif §6.13 intégré dans la R1 2025. Avant 2025, c'était une bonne pratique mais pas une obligation.",
-    "reference": "R1 §6.13 / §4.8.3 (édition 2025)"
+    "reference": "R1 §6.13 / §4.8.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-4-1-001",
@@ -547,7 +572,8 @@
       2
     ],
     "explication": "La distance minimale est 10 m OU 1,5 × hauteur du plus haut bâtiment protégé, la plus grande des deux valeurs. Pour un entrepôt de 12 m, la distance devient 18 m (1,5×12).",
-    "reference": "R1 §4.1 (édition 2025)"
+    "reference": "R1 §4.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-4-6-001",
@@ -568,7 +594,8 @@
       2
     ],
     "explication": "Les espaces cachés doivent être protégés si leur profondeur dépasse 0,8 m. En-dessous, le risque de propagation est jugé faible et la protection sous plafond suffit.",
-    "reference": "R1 §4.6 (édition 2025)"
+    "reference": "R1 §4.6 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-1-001",
@@ -589,7 +616,8 @@
       1
     ],
     "explication": "La règle fondamentale : la classe est déterminée par le risque le plus élevé présent dans la zone. Quand plusieurs classes coexistent, la protection doit être celle de la catégorie la plus dangereuse.",
-    "reference": "R1 §5.1.1 (édition 2025)"
+    "reference": "R1 §5.1.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-1-002",
@@ -612,7 +640,8 @@
       3
     ],
     "explication": "La classe LH (risque léger, faible charge calorifique) couvre les bureaux, hôtels, hôpitaux, écoles. Les entrepôts de plastiques relèvent au minimum de HHS#3 voire HHS#4 selon le type.",
-    "reference": "R1 §5.1.1 (édition 2025)"
+    "reference": "R1 §5.1.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-1-003",
@@ -633,7 +662,8 @@
       2
     ],
     "explication": "La classe OH se décompose en 4 sous-catégories : OH1 à OH4, avec des surfaces impliquées croissantes de 72 m² (OH1) à 360 m² (OH4). La densité est constante : 5,0 l/m²/min.",
-    "reference": "R1 §5.1 / T6.1 (édition 2025)"
+    "reference": "R1 §5.1 / T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-1-004",
@@ -654,7 +684,8 @@
       2
     ],
     "explication": "Le symbole # a été introduit en R1 2020 en même temps que la catégorie HHS#5. Avant 2020 : HHS1 à HHS4 sans symbole. Une fiche poste mentionnant 'HHS3' sans # = analyse antérieure à 2020.",
-    "reference": "R1 §5 (édition 2020/2025)"
+    "reference": "R1 §5 (édition 2020/2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2014-5-1-1-001",
@@ -675,7 +706,8 @@
       1
     ],
     "explication": "R1 2014 : HHS1 à HHS4 (4 catégories, sans #). R1 2020 a ajouté HHS#5 (mousses alvéolaires, aérosols, vrac) et introduit le symbole # sur l'ensemble. R1 2025 conserve HHS#1 à HHS#5.",
-    "reference": "R1 §5.1 (édition 2014, évolution)"
+    "reference": "R1 §5.1 (édition 2014, évolution)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-1-005",
@@ -696,7 +728,8 @@
       2
     ],
     "explication": "HHP4 (Higher Hazard Production niveau 4) = risque de feu à développement très rapide (solvants, certains plastiques en process). Le déluge avec têtes ouvertes et envahissement sur DAI est obligatoire.",
-    "reference": "R1 §5.1 / §7.4 (édition 2025)"
+    "reference": "R1 §5.1 / §7.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-1-006",
@@ -719,7 +752,8 @@
       3
     ],
     "explication": "La classe RS regroupe les risques nécessitant un accord CNPP spécifique : parkings, pneus, locaux haute tension, aérosols, certains liquides inflammables. Les bureaux relèvent de LH.",
-    "reference": "R1 §5.1.1 (édition 2025)"
+    "reference": "R1 §5.1.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-3-001",
@@ -740,7 +774,8 @@
       1
     ],
     "explication": "ST1 = empilage libre en masse ou en îlots, avec îlots ≤ 150 m² et allées ≥ 2,4 m. C'est le mode le plus basique : marchandises empilées au sol sans structure.",
-    "reference": "R1 §5.1.3 (édition 2025)"
+    "reference": "R1 §5.1.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-3-002",
@@ -761,7 +796,8 @@
       2
     ],
     "explication": "ST8 (racks à accumulation) est TOUJOURS classé HHS, quelle que soit la marchandise ou la hauteur. Le traitement en OH est une NC rouge au Q1 §9. La densité du flux d'air dans les accumulateurs aggrave systématiquement le risque.",
-    "reference": "R1 §5.1.3 / §5.4 (édition 2025)"
+    "reference": "R1 §5.1.3 / §5.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-3-003",
@@ -782,7 +818,8 @@
       1
     ],
     "explication": "ST9 désigne les racks cantilever (bras porte-à-faux), typiquement utilisés pour stocker des produits longs : tubes, profilés, planches. Mode introduit en R1 2020 pour combler une lacune.",
-    "reference": "R1 §5.1.3 (édition 2020/2025)"
+    "reference": "R1 §5.1.3 (édition 2020/2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-1984-5-1-3-001",
@@ -803,7 +840,8 @@
       1
     ],
     "explication": "R1 1984 : ST1 à ST5 (5 modes). R1 2014 : ST1 à ST6 + ST8. R1 2020 : ajout de ST9 cantilever. R1 2025 : ST1 à ST9 (ST7 désaffecté). Évolution majeure 2014→2020 avec ST9.",
-    "reference": "R1 §5.1.3 (édition 1984, évolution)"
+    "reference": "R1 §5.1.3 (édition 1984, évolution)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-3-004",
@@ -824,7 +862,8 @@
       2
     ],
     "explication": "ST4 (palettes sur racks à lisses) : allée minimale 1,2 m entre charges, pour permettre l'eau de pénétrer entre les niveaux et empêcher le développement vertical du feu.",
-    "reference": "R1 §5.1.3 (édition 2025)"
+    "reference": "R1 §5.1.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-3-001",
@@ -847,7 +886,8 @@
       2
     ],
     "explication": "Pour qu'un stockage reste classé OH (et non HHS), trois conditions cumulatives : protection ≥ OH3 + îlots ≤ 50 m² + allées ≥ 2,4 m. La hauteur n'est pas la condition unique mais dépend de la catégorie HHS visée (voir T5.3).",
-    "reference": "R1 §5.3 / T5.3 (édition 2025)"
+    "reference": "R1 §5.3 / T5.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-3-002",
@@ -868,7 +908,8 @@
       1
     ],
     "explication": "En OH4, toutes les zones de stockage présentes doivent être traitées HHS, quelle que soit leur configuration. La haute densité industrielle de OH4 cumulée à un stockage rend obligatoire la requalification en HHS.",
-    "reference": "R1 §5.3 (édition 2025)"
+    "reference": "R1 §5.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2020-5-3-001",
@@ -889,7 +930,8 @@
       1
     ],
     "explication": "En R1 2014, la limite HHS#4 ST1 était de 1,2 m. Une hauteur de 1,5 m dépassait cette limite → NC selon le référentiel applicable. La R1 2020 a porté cette limite à 1,7 m, mais c'est postérieur à l'édition de référence.",
-    "reference": "R1 §5.3 / T5.3 (édition 2014/2020)"
+    "reference": "R1 §5.3 / T5.3 (édition 2014/2020)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-4-2-001",
@@ -910,7 +952,8 @@
       2
     ],
     "explication": "Règle fondamentale §5.4.2 : la combustibilité du produit seul ne suffit pas. C'est la combinaison produit + emballage + conditionnement qui détermine la classe. Barres acier + cartons + palettes bois + film plastique → HHS#2 ou HHS#3 selon proportion plastique.",
-    "reference": "R1 §5.4.2 (édition 2025)"
+    "reference": "R1 §5.4.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-4-2-002",
@@ -933,7 +976,8 @@
       3
     ],
     "explication": "HHS#5 (créé en R1 2020) regroupe les marchandises à très forte combustibilité : mousses plastiques alvéolaires exposées, aérosols, cire, marchandises en vrac sans emballage. Les cartons sur palettes bois sont HHS#2.",
-    "reference": "R1 §5.4.2 (édition 2020/2025)"
+    "reference": "R1 §5.4.2 (édition 2020/2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-001",
@@ -954,7 +998,8 @@
       1
     ],
     "explication": "Q = K × √P = 80 × √0,5 = 80 × 0,707 ≈ 56,6 l/min. Formule fondamentale de l'hydraulique sprinkleur, généralisée depuis 2002 mais issue de l'Annexe VIII 1967.",
-    "reference": "R1 §6.1 (édition 2025)"
+    "reference": "R1 §6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-002",
@@ -975,7 +1020,8 @@
       2
     ],
     "explication": "P min LH = 0,7 bar. Pour OH, HHP et HHS : 0,5 bar. Pour ESFR : 3,4 à 5,2 bar (T17.2.3). Pression mesurée à la tête la plus défavorisée hydrauliquement.",
-    "reference": "R1 §6.1 / T6.1 (édition 2025)"
+    "reference": "R1 §6.1 / T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-003",
@@ -996,7 +1042,8 @@
       1
     ],
     "explication": "P min = 0,5 bar pour OH, HHP et HHS. P min = 0,7 bar pour LH. Pour ESFR : 3,4 à 5,2 bar.",
-    "reference": "R1 §6.1 / T6.1 (édition 2025)"
+    "reference": "R1 §6.1 / T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-004",
@@ -1017,7 +1064,8 @@
       0
     ],
     "explication": "Densité LH = 2,25 l/m²/min. Densité OH (OH1 à OH4 toutes égales) = 5,0 l/m²/min. HHP : 7,5 à 12,5 l/m²/min. HHS : 7,5 à >20 l/m²/min selon catégorie.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-005",
@@ -1038,7 +1086,8 @@
       1
     ],
     "explication": "Densité OH = 5,0 l/m²/min, identique pour OH1, OH2, OH3 et OH4. Ce qui change entre les sous-catégories OH, c'est la surface impliquée : 72 / 144 / 216 / 360 m².",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-006",
@@ -1059,7 +1108,8 @@
       1
     ],
     "explication": "Surface impliquée LH = 84 m². OH1 = 72 m². OH2 = 144 m². OH3 = 216 m². OH4 = 360 m². Surface utilisée pour le calcul hydraulique du débit total.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-007",
@@ -1080,7 +1130,8 @@
       0
     ],
     "explication": "Surface impliquée OH1 = 72 m². Progression : OH1=72, OH2=144, OH3=216, OH4=360 m². Plus le risque est élevé, plus la surface de calcul augmente.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-008",
@@ -1101,7 +1152,8 @@
       3
     ],
     "explication": "Surface impliquée OH4 = 360 m². C'est la plus grande des surfaces OH. Au-delà (HHP), les surfaces sont de 260 m² (HHP) et 260 à 300 m² (HHS).",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-009",
@@ -1122,7 +1174,8 @@
       2
     ],
     "explication": "S max spray LH = 16 m². OH : 12 m². HHP et HHS : 9 m² (sauf HHP1 : 12 m²). Au-delà de cette surface par tête, la couverture devient insuffisante.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-010",
@@ -1143,7 +1196,8 @@
       1
     ],
     "explication": "S max spray OH = 12 m². En LH : 16 m². En HHP/HHS : 9 m² (sauf HHP1 : 12 m²).",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-011",
@@ -1164,7 +1218,8 @@
       1
     ],
     "explication": "S max spray HHS = 9 m² (standard, distance libre ≥ 0,6 m). Si distance libre 0,6-1,0 m : 7,5 m². Si distance libre 0,3-0,6 m : 6 m².",
-    "reference": "R1 T6.1 / §6.3 (édition 2025)"
+    "reference": "R1 T6.1 / §6.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-012",
@@ -1185,7 +1240,8 @@
       2
     ],
     "explication": "K min = K115 pour densité ≥ 12,5 l/m²/min (évolution R1 2020). Calcul : K80 à 1,98 bar donne juste 112,5 l/min sur 9 m² à 12,5 l/m²/min — limite acceptable, mais on impose K115 pour la marge.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-013",
@@ -1206,7 +1262,8 @@
       1
     ],
     "explication": "Nouveauté R1 2025 : pour densité ≥ 20 l/m²/min, K min = K160 (nouvelle exigence). Sur installations antérieures, l'absence de K160 sur ces zones est un point AMP (à corriger au plus tard à la révision trentenaire).",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-014",
@@ -1227,7 +1284,8 @@
       2
     ],
     "explication": "Note (1) du T6.1 : K57 admis en OH uniquement si surface par sprinkleur < 9 m². Au-delà → K80 obligatoire même en OH. NC rouge si K57 utilisé en OH avec surface par tête ≥ 9 m².",
-    "reference": "R1 T6.1 note (1) (édition 2025)"
+    "reference": "R1 T6.1 note (1) (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-015",
@@ -1248,7 +1306,8 @@
       2
     ],
     "explication": "Espacement max LH = 4,6 m. OH : 4,0 m. HHP et HHS : 3,7 m. Espacement minimum (toutes classes) : 2,0 m.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-016",
@@ -1269,7 +1328,8 @@
       2
     ],
     "explication": "Espacement minimum 2,0 m, toutes classes. En-dessous, le risque de 'cold soldering' devient significatif : deux sprinkleurs trop proches se refroidissent mutuellement, retardant le déclenchement.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-017",
@@ -1290,7 +1350,8 @@
       2
     ],
     "explication": "Distance max mur parallèle LH = 2,3 m. OH = 2,0 m. HHP et HHS = 1,8 m. Au-delà, la couverture du mur est insuffisante.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-018",
@@ -1311,7 +1372,8 @@
       2
     ],
     "explication": "Portée max mural LH = 3,25 m. OH et HHP = 2,85 m. HHS = 2,6 m. La portée est la distance maximale projetée par le sprinkleur depuis le mur où il est fixé.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-019",
@@ -1332,7 +1394,8 @@
       1
     ],
     "explication": "S max sprinkleur mural OH = 9 m². LH = 12 m². Les sprinkleurs muraux ne sont pas admis en HHP ni HHS (zones de risque élevé).",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-2-001",
@@ -1353,7 +1416,8 @@
       1
     ],
     "explication": "Au-delà de 12 m de hauteur sous toiture, le dimensionnement doit être majoré par paliers de 1,5 m. Justification : volume d'air plus important + chaleur qui se dissipe → feu plus développé avant déclenchement.",
-    "reference": "R1 §6.2 (édition 2025)"
+    "reference": "R1 §6.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-2-002",
@@ -1374,7 +1438,8 @@
       2
     ],
     "explication": "Au-delà de 18 m, les majorations tabulées du §6.2 ne suffisent plus. Un accord CNPP préalable est obligatoire pour valider le dimensionnement, qui sortira souvent du cadre standard (ESFR, ASRS, etc.).",
-    "reference": "R1 §6.2 (édition 2025)"
+    "reference": "R1 §6.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-3-001",
@@ -1395,7 +1460,8 @@
       0
     ],
     "explication": "T6.3 : distance libre 0,3-0,6 m → S max = 6 m² et espacement max 2,5 m. Distance 0,6-1,0 m → 7,5 m² / 3,0 m. Distance ≥ 1,0 m (standard) → 9 m² / 3,7 m. Plus c'est proche du stockage, plus la couverture doit être resserrée.",
-    "reference": "R1 §6.3 / T6.3 (édition 2025)"
+    "reference": "R1 §6.3 / T6.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-3-1-1-001",
@@ -1416,7 +1482,8 @@
       1
     ],
     "explication": "§6.3.1.1 : surface au sol maxi 150 m² par îlot, allée de dégagement ≥ 2,4 m (réductible à 0,9 m le long des murs). Rappel ICPE 1510 : îlots possibles à 500 m² mais R1 plus strict pour la protection.",
-    "reference": "R1 §6.3.1.1 (édition 2025)"
+    "reference": "R1 §6.3.1.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-3-1-4-001",
@@ -1437,7 +1504,8 @@
       2
     ],
     "explication": "Les doubles racks doivent disposer d'un espace longitudinal (cheminée) de 15 cm en partie centrale, garanti par des moyens mécaniques permanents. Cette cheminée laisse passer la pulvérisation jusqu'aux niveaux inférieurs.",
-    "reference": "R1 §6.3.1.4 / F6.3.1.4b (édition 2025)"
+    "reference": "R1 §6.3.1.4 / F6.3.1.4b (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-3-1-4-002",
@@ -1458,7 +1526,8 @@
       2
     ],
     "explication": "Étagères admises : ligne pleine sur lisse basse à < 50 cm du sol ; ligne ajourée 50% sur 1ère lisse > 50 cm. Au-delà : caillebotis ajourés ≥ 70%. Les étagères pleines en haut sont une NC fréquente (bloquent la descente d'eau).",
-    "reference": "R1 §5.1.3 note 1 / §6.3.1.4 b (édition 2025)"
+    "reference": "R1 §5.1.3 note 1 / §6.3.1.4 b (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-12-001",
@@ -1479,7 +1548,8 @@
       1
     ],
     "explication": "§6.12 Centres de tri des déchets : classement HHS#2 à HHS#3 selon taux de plastique. Protection halls amont/aval et processus. Un des 5 additifs 2025 intégrés à l'édition de septembre 2025.",
-    "reference": "R1 §6.12 (édition 2025)"
+    "reference": "R1 §6.12 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-13-001",
@@ -1500,7 +1570,8 @@
       1
     ],
     "explication": "§6.13 ASRS : §6.13.1 stockages verticaux sur structure autoportante (Kardex, Hänel), §6.13.2 armoires fermées. Asservissement transtockeurs obligatoire (§4.8.3). Additif initialement de juin 2024, intégré à la R1 2025.",
-    "reference": "R1 §6.13 (édition 2025)"
+    "reference": "R1 §6.13 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-14-001",
@@ -1521,7 +1592,8 @@
       2
     ],
     "explication": "§6.14.1 : station de recharge VE non couverte = non soumise à la R1. §6.14.2 : station intérieure batteries lithium = soumise (risque de thermal runaway des batteries). Additif février 2025 intégré à la R1 2025.",
-    "reference": "R1 §6.14 (édition 2025)"
+    "reference": "R1 §6.14 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-1-001",
@@ -1542,7 +1614,8 @@
       2
     ],
     "explication": "Sous eau (canalisations en permanence sous pression d'eau) : surface max 10 000 m² par poste. Sous air : 4 000 m² (2 000 m² si enterré aval). Alternatif : 4 000 m².",
-    "reference": "R1 §7.1 (édition 2025)"
+    "reference": "R1 §7.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-2-001",
@@ -1563,7 +1636,8 @@
       1
     ],
     "explication": "Sous air : surface max 4 000 m² par poste, réduite à 2 000 m² si le poste est enterré aval. Justification : retard de mise en eau lié au temps d'évacuation de l'air.",
-    "reference": "R1 §7.2 (édition 2025)"
+    "reference": "R1 §7.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-4-001",
@@ -1584,7 +1658,8 @@
       1
     ],
     "explication": "Préaction C : double interverrouillage. L'eau n'est envoyée dans le réseau que si la DAI ET un sprinkleur sont ouverts simultanément. Protection ultime contre les dégâts des eaux par déclenchement intempestif. Évolution 2020.",
-    "reference": "R1 §7.4 (édition 2025)"
+    "reference": "R1 §7.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-5-001",
@@ -1605,7 +1680,8 @@
       2
     ],
     "explication": "pH antigel ≥ 7 (neutre à basique). Un pH inférieur indique une corrosion en cours qui s'attaque aux canalisations. Vérification annuelle. Renouvellement triennal si pH dégradé. NC rouge si pH < 7.",
-    "reference": "R1 §7.5 (édition 2025)"
+    "reference": "R1 §7.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-5-002",
@@ -1626,7 +1702,8 @@
       1
     ],
     "explication": "L'antigel doit protéger jusqu'à T° mini local + 5 °C. Cette marge de sécurité compense les variations ponctuelles. Si local descend à -10 °C, antigel testé jusqu'à -15 °C minimum.",
-    "reference": "R1 §7.5 (édition 2025)"
+    "reference": "R1 §7.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-6-001",
@@ -1647,7 +1724,8 @@
       1
     ],
     "explication": "Les émulseurs sont prévus pour les risques avec liquides inflammables (HHP3, HHP4). Ils forment un film moussant qui isole les vapeurs et étouffe le feu. Essai triennal de concentration obligatoire.",
-    "reference": "R1 §7.6 (édition 2025)"
+    "reference": "R1 §7.6 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-6-002",
@@ -1668,7 +1746,8 @@
       2
     ],
     "explication": "Règlement UE 2020/784 (interdiction étendue au 04/07/2025) → transition F3 obligatoire. Suite à 757/2010 (PFOS interdit) et 2017-1000 (PFOA). AMP — à anticiper. Demander devis fournisseur si émulseurs fluorés présents.",
-    "reference": "R1 §7.6 (édition 2025) / UE 2020/784"
+    "reference": "R1 §7.6 (édition 2025) / UE 2020/784",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-8-1-001",
@@ -1689,7 +1768,8 @@
       2
     ],
     "explication": "Majoration obligatoire de 12 m³ de réserve si RIA branchés en aval des pompes sprinkleurs. Compense la consommation des RIA lors d'une intervention, sans pénaliser l'autonomie sprinkleur.",
-    "reference": "R1 §7.8.1 (édition 2025)"
+    "reference": "R1 §7.8.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-001",
@@ -1710,7 +1790,8 @@
       0
     ],
     "explication": "Principe de deux sources indépendantes : ≥1898 (origine de la réglementation française des sprinkleurs). Les types B.1 à B.7 sont définis depuis ≥2002. La source B.8 a été créée en 2020 pour les ESFR.",
-    "reference": "R1 §8 (historique)"
+    "reference": "R1 §8 (historique)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-001-002",
@@ -1731,7 +1812,8 @@
       0
     ],
     "explication": "B.1 = réservoir gravitaire (admissible toutes classes). Hauteur ≥ 10 m au-dessus du sprinkleur le plus élevé pour assurer la pression statique.",
-    "reference": "R1 §8 (édition 2025)"
+    "reference": "R1 §8 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-001-003",
@@ -1752,7 +1834,8 @@
       2
     ],
     "explication": "Hauteur minimum d'un B.1 ≥ 10 m au-dessus du sprinkleur le plus élevé. Cette hauteur permet d'assurer la pression statique minimale même sans pompe (1 mCE ≈ 0,1 bar).",
-    "reference": "R1 §8 (édition 2025)"
+    "reference": "R1 §8 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-001-004",
@@ -1773,7 +1856,8 @@
       1
     ],
     "explication": "B.2 (1 château) : LH et OH petites surfaces uniquement. Interdit pour HHP/HHS > 45 000 m². Trop fragile pour les risques élevés (un seul point de pression).",
-    "reference": "R1 §8 (édition 2025)"
+    "reference": "R1 §8 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-001-005",
@@ -1794,7 +1878,8 @@
       2
     ],
     "explication": "B.7 = pompe automatique + réserve d'eau intégrale (en propre). Considérée comme la source la plus fiable, admissible toutes classes. Indépendance totale du réseau public.",
-    "reference": "R1 §8 (édition 2025)"
+    "reference": "R1 §8 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-001-006",
@@ -1815,7 +1900,8 @@
       2
     ],
     "explication": "B.8 (créée 2020) = 2 pompes indépendantes + aspirations dédiées. Obligatoire pour les installations ESFR. Redondance maximale : la défaillance d'une pompe ne compromet pas l'alimentation. Absence sur ESFR = NC rouge.",
-    "reference": "R1 §8 / §17 (édition 2020/2025)"
+    "reference": "R1 §8 / §17 (édition 2020/2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-001-007",
@@ -1836,7 +1922,8 @@
       2
     ],
     "explication": "HHP/HHS > 45 000 m² : combinaison B + B requise (deux sources B indépendantes). Entre 9 001 et 45 000 m² : A + B. ≤ 9 000 m² : B seule.",
-    "reference": "R1 §8 (édition 2025)"
+    "reference": "R1 §8 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-001-008",
@@ -1857,7 +1944,8 @@
       1
     ],
     "explication": "OH ≤ 9 000 m² : B seule suffit. OH > 9 000 m² : A + B requis. LH : A seule admise quelle que soit la surface.",
-    "reference": "R1 §8 (édition 2025)"
+    "reference": "R1 §8 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-001-009",
@@ -1878,7 +1966,8 @@
       0
     ],
     "explication": "LH : source A seule admise, quelle que soit la surface. Le risque léger ne nécessite pas la redondance d'une source B. Classes plus exigeantes : OH/HHP/HHS imposent au minimum une B.",
-    "reference": "R1 §8 (édition 2025)"
+    "reference": "R1 §8 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-2-001",
@@ -1899,7 +1988,8 @@
       2
     ],
     "explication": "Température ≥ +5 °C en permanence dans le local des sources. Sonde de T° avec report ECS. NC rouge si T° < 5°C (risque non-démarrage moteur diesel : huile trop visqueuse).",
-    "reference": "R1 §8.2 (édition 2025)"
+    "reference": "R1 §8.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-2-002",
@@ -1922,7 +2012,8 @@
       2
     ],
     "explication": "Alarmes obligatoires : intrusion (avec report ECS), T° basse (seuil +5°C, obligatoire si extension ≥ 31 têtes), niveau bas réserve (≥ 90% du volume). L'alarme incendie ambiance n'est pas spécifiquement imposée.",
-    "reference": "R1 §8.2 / §14 (édition 2025)"
+    "reference": "R1 §8.2 / §14 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-2-003",
@@ -1943,7 +2034,8 @@
       1
     ],
     "explication": "La sonde de T° basse devient obligatoire dès 31 têtes modifiées (§19.2.4). Cette obligation est liée à l'entrée dans la 'tranche moyenne' des extensions où des exigences renforcées s'appliquent.",
-    "reference": "R1 §8.2 / §19.2.4 (édition 2025)"
+    "reference": "R1 §8.2 / §19.2.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-2-004",
@@ -1964,7 +2056,8 @@
       1
     ],
     "explication": "Le tableau signalétique doit comporter les caractéristiques requises (issues du calcul hydraulique) ET les caractéristiques mesurées lors de la VdC CNPP. Référence pour les contrôles hebdomadaires.",
-    "reference": "R1 §8.4 (édition 2025)"
+    "reference": "R1 §8.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-2-005",
@@ -1985,7 +2078,8 @@
       1
     ],
     "explication": "Accès facilité pour les pompiers : mur extérieur avec accès direct depuis l'extérieur, OU cheminement coupe-feu protégé sans stockage. Permet l'intervention même bâtiment enfumé/sinistré.",
-    "reference": "R1 §8.2 a) (édition 2025)"
+    "reference": "R1 §8.2 a) (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-3-001",
@@ -2006,7 +2100,8 @@
       1
     ],
     "explication": "R1 2020+ : 130% pour source A, 150% pour source B explicites. R1 2025 ajoute : débitmètre fixe sur chaque source + piquage contre-mesure. Très souvent inadéquat sur installations anciennes → AMP.",
-    "reference": "R1 §8.3 (édition 2025)"
+    "reference": "R1 §8.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-3-002",
@@ -2027,7 +2122,8 @@
       1
     ],
     "explication": "Phrase Q1 type §8.3 : « Cette remise en état doit être faite avant la prochaine visite, faute de quoi ce point sera classé en non-conformité. » Donne un délai sans laisser passer un défaut majeur sans suite.",
-    "reference": "R1 §8.3 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §8.3 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-1-001",
@@ -2048,7 +2144,8 @@
       2
     ],
     "explication": "Depuis ≥2002 : réserves en géomembrane (PVC, butyl) interdites pour les nouvelles installations. Seules les réserves à parois rigides métalliques ou béton sont admises (durabilité, étanchéité long terme).",
-    "reference": "R1 §9 (édition 2002+)"
+    "reference": "R1 §9 (édition 2002+)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-1-002",
@@ -2069,7 +2166,8 @@
       1
     ],
     "explication": "Délai de remplissage maximum : 12 heures. Permet de garantir une remise en disponibilité rapide après un essai ou une intervention.",
-    "reference": "R1 §9 (édition 2025)"
+    "reference": "R1 §9 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-1-003",
@@ -2090,7 +2188,8 @@
       2
     ],
     "explication": "Volume insuffisant pour la durée requise = NC majeure. La source doit pouvoir fournir pression et débit pendant la durée prévue (chapitre 8). Sans volume requis, l'autonomie réglementaire n'est pas tenue.",
-    "reference": "R1 §9.1 / §8.5-8.7 (édition 2025)"
+    "reference": "R1 §9.1 / §8.5-8.7 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-2-001",
@@ -2111,7 +2210,8 @@
       1
     ],
     "explication": "Source A : 30 min en LH/OH, 60 min en HHP/HHS. Source B : 60 min en LH/OH, 90 min en HHP/HHS. La source B est toujours plus exigeante (plus fiable, autonomie plus longue).",
-    "reference": "R1 §9 (édition 2025)"
+    "reference": "R1 §9 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-2-002",
@@ -2132,7 +2232,8 @@
       1
     ],
     "explication": "Source A en HHP/HHS : 60 min. En LH/OH : 30 min. Le doublement s'explique par le risque accru de propagation et la nécessité de prolonger l'action sprinkleur en attendant les secours.",
-    "reference": "R1 §9 (édition 2025)"
+    "reference": "R1 §9 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-2-003",
@@ -2153,7 +2254,8 @@
       1
     ],
     "explication": "Source B en LH/OH : 60 min. En HHP/HHS : 90 min. La source B (auto avec réserve, ou maillée) doit tenir plus longtemps que la source A (réseau public ou châteaux).",
-    "reference": "R1 §9 (édition 2025)"
+    "reference": "R1 §9 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-2-004",
@@ -2174,7 +2276,8 @@
       2
     ],
     "explication": "Source B en HHP/HHS : 90 min. C'est l'autonomie maximale exigée par la R1. Cette durée permet de maîtriser le développement initial et d'attendre les secours sans interruption de protection.",
-    "reference": "R1 §9 (édition 2025)"
+    "reference": "R1 §9 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-1-004",
@@ -2195,7 +2298,8 @@
       1
     ],
     "explication": "Maintenir en permanence ≥ 90% du volume requis. L'alarme 'niveau bas source d'eau' se déclenche dès qu'il manque 10% du volume requis. Garantit une réaction avant que l'autonomie ne soit compromise.",
-    "reference": "R1 §9.1 / T14.2 (édition 2025)"
+    "reference": "R1 §9.1 / T14.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-4-3-001",
@@ -2216,7 +2320,8 @@
       1
     ],
     "explication": "§9.4.3 : pressostat obligatoire en amont du clapet anti-retour, muni d'une vanne d'essai, préréglé à la pression minimale requise à débit nul, et reporté en alarme. Surveille la disponibilité de l'eau de ville.",
-    "reference": "R1 §9.4.3 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §9.4.3 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-2-006",
@@ -2237,7 +2342,8 @@
       1
     ],
     "explication": "Le système d'essai de la protection sprinkleur du local pompes doit être raccordé à l'égout, afin de permettre le test de l'IPE sans inonder le local. Phrase Q1 type §8.2.",
-    "reference": "R1 §8.2 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §8.2 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-1-005",
@@ -2258,7 +2364,8 @@
       1
     ],
     "explication": "Triennal réserves : vidange complète, inspection interne, traitement anti-corrosion, remplacement joints de regard. Évite la dégradation à long terme (corrosion, dépôts, prolifération bactérienne).",
-    "reference": "R1 §18.7 (édition 2025)"
+    "reference": "R1 §18.7 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-1-004",
@@ -2279,7 +2386,8 @@
       1
     ],
     "explication": "Pression mesurée au point bas du réseau. C'est là que la pression statique est maximale (eau = colonne d'eau au-dessus). Garantit que la pression d'essai est bien atteinte partout dans le réseau.",
-    "reference": "R1 §3.3.1 (édition 2025)"
+    "reference": "R1 §3.3.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-1-005",
@@ -2302,7 +2410,8 @@
       2
     ],
     "explication": "Critères §3.3.1 : aucune fuite, aucune rupture, aucune déformation permanente. La stabilité de pression n'est pas exigée explicitement (la pression peut baisser légèrement par effet thermique sans qu'il y ait fuite).",
-    "reference": "R1 §3.3.1 (édition 2025)"
+    "reference": "R1 §3.3.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-1-1-001",
@@ -2323,7 +2432,8 @@
       1
     ],
     "explication": "Critère NF EN 12845 : h(Q140%) > 0,70 × h(Q100%). C'est une condition supplémentaire de la courbe pompe sur les installations alignées sur l'EN 12845 (différent du critère R1 sur Q130%).",
-    "reference": "R1 §1.1 / NF EN 12845 §10.7.2"
+    "reference": "R1 §1.1 / NF EN 12845 §10.7.2",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-8-4-001",
@@ -2344,7 +2454,8 @@
       2
     ],
     "explication": "Affichage obligatoire dans le local des sources. Permet aux équipes d'entretien et aux pompiers d'accéder immédiatement aux valeurs de référence (pressions, débits, autonomies attendues).",
-    "reference": "R1 §8.4 (édition 2025)"
+    "reference": "R1 §8.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-3-003",
@@ -2365,7 +2476,8 @@
       2
     ],
     "explication": "T5.3 : HHS#1 ST1 = 4,0 m. ST2-6 = 3,5 m. Plus la combustibilité du produit est faible (HHS#1 = très faible), plus la hauteur admise est élevée. Inversement HHS#5 limité à 1,2 m.",
-    "reference": "R1 T5.3 (édition 2025)"
+    "reference": "R1 T5.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-3-004",
@@ -2386,7 +2498,8 @@
       0
     ],
     "explication": "T5.3 : HHS#5 = 1,2 m maximum, identique pour ST1 et ST2-6. Catégorie créée en 2020 pour les marchandises à très forte combustibilité, avec la limite la plus basse de tout le tableau.",
-    "reference": "R1 T5.3 (édition 2020/2025)"
+    "reference": "R1 T5.3 (édition 2020/2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-001",
@@ -2407,7 +2520,8 @@
       1
     ],
     "explication": "Phrase Q1 type §5.1 : 'Modification de l'activité ou des marchandises stockées non déclarée. La protection sprinkleurs actuelle peut ne plus être adaptée au nouveau risque. Faire procéder à une nouvelle analyse de risques et à une visite de conformité du CNPP.'",
-    "reference": "R1 §5.1 + chapitre 6 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §5.1 + chapitre 6 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-3-1-1-002",
@@ -2428,7 +2542,8 @@
       2
     ],
     "explication": "L'allée 2,4 m est réductible à 0,9 m le long des murs uniquement. Cette réduction est admise car la propagation latérale est bloquée par le mur lui-même. Pas de réduction admise entre îlots.",
-    "reference": "R1 §6.3.1.1 (édition 2025)"
+    "reference": "R1 §6.3.1.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-020",
@@ -2449,7 +2564,8 @@
       3
     ],
     "explication": "Vitesse max réseau = 10 m/s. Vitesse max au passage d'une vanne ou d'un débitmètre = 6 m/s. Au-delà : coups de bélier, érosion, bruit, pertes de charge incontrôlées.",
-    "reference": "R1 §13.3 (édition 2025)"
+    "reference": "R1 §13.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-021",
@@ -2470,7 +2586,8 @@
       1
     ],
     "explication": "Vitesse max au passage d'une vanne ou d'un débitmètre = 6 m/s. Limite plus basse que la conduite générale (10 m/s) car les pertes de charge à travers les organes sont fortement non-linéaires.",
-    "reference": "R1 §13.3 (édition 2025)"
+    "reference": "R1 §13.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-3-005",
@@ -2491,7 +2608,8 @@
       1
     ],
     "explication": "ST5 = rayonnages étagères ≤ 1 m de large. ST6 = rayonnages étagères de 1 à 6 m de large. La largeur de l'étagère pleine perturbe la descente d'eau, d'où la distinction normative.",
-    "reference": "R1 §5.1.3 (édition 2025)"
+    "reference": "R1 §5.1.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-1-002",
@@ -2512,7 +2630,8 @@
       1
     ],
     "explication": "Sous eau : canalisations en permanence sous pression d'eau. C'est le type le plus courant, utilisé en locaux hors gel (T° ≥ 5°C). Réponse immédiate au déclenchement d'une tête.",
-    "reference": "R1 §7.1 (édition 2025)"
+    "reference": "R1 §7.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-2-002",
@@ -2533,7 +2652,8 @@
       1
     ],
     "explication": "Sous air : pour locaux à risque de gel (T° pouvant descendre < 5°C). Les canalisations sont sous pression d'air comprimé ; l'air est évacué quand une tête ouvre, puis l'eau arrive.",
-    "reference": "R1 §7.2 (édition 2025)"
+    "reference": "R1 §7.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-3-001",
@@ -2554,7 +2674,8 @@
       1
     ],
     "explication": "Alternatif : eau en été, air en hiver. Pour locaux à gel saisonnier. Compromis entre la rapidité du sous eau (saison chaude) et la sécurité du sous air (saison froide). Apparu en 1979.",
-    "reference": "R1 §7.3 (édition 2025)"
+    "reference": "R1 §7.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-4-002",
@@ -2575,7 +2696,8 @@
       1
     ],
     "explication": "Préaction : zones sensibles aux dégâts des eaux (datacenters, archives, musées). L'eau n'est envoyée que sur signal DAI (préaction A) ou ouverture de tête (B), voire les deux (C, double interverrouillage).",
-    "reference": "R1 §7.4 (édition 2025)"
+    "reference": "R1 §7.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-4-003",
@@ -2596,7 +2718,8 @@
       1
     ],
     "explication": "Déluge : têtes ouvertes en permanence, envahissement de toute la zone protégée dès activation par DAI. Obligatoire en HHP4 (liquides inflammables, propagation très rapide). Apparu en 1967.",
-    "reference": "R1 §7.4 (édition 2025)"
+    "reference": "R1 §7.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-5-1-1-007",
@@ -2617,7 +2740,8 @@
       1
     ],
     "explication": "NC rouge : un classement basé sur le produit seul, sans tenir compte de l'emballage, conduit à une sous-classification dangereuse. La combinaison produit + emballage est la règle fondamentale §5.4.2.",
-    "reference": "R1 §5.4.2 / §9 Q1 (édition 2025)"
+    "reference": "R1 §5.4.2 / §9 Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-1-006",
@@ -2638,7 +2762,8 @@
       2
     ],
     "explication": "§9.1 : réserves à ciel ouvert interdites en neuf. Risques : pollution, gel, contamination biologique, evaporation. Seules les réserves couvertes ou closes sont admises pour les nouvelles installations.",
-    "reference": "R1 §9.1 (édition 2025)"
+    "reference": "R1 §9.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-022",
@@ -2659,7 +2784,8 @@
       1
     ],
     "explication": "Sprinkleurs muraux admis en LH et OH uniquement. Non admis en HHP ni HHS : sur risques élevés, la couverture latérale d'un mural est insuffisante face à un panache thermique vertical important.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-4-8-004",
@@ -2680,7 +2806,8 @@
       1
     ],
     "explication": "NC orange au Q1 §4 : asservissement préconisé non réalisé sur installation traditionnelle. Sur ESFR/CMSA, ce même défaut serait rouge (asservissement obligatoire et non plus seulement préconisé).",
-    "reference": "R1 §4.8 / §4 Q1 (édition 2025)"
+    "reference": "R1 §4.8 / §4 Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-1-006",
@@ -2701,7 +2828,8 @@
       2
     ],
     "explication": "Pmax = 14 bar → 1,2 × 14 = 16,8 bar. Comparé à 15,5 bar : on prend la plus grande = 16,8 bar. La règle 'la plus grande des deux' évite que des installations haute pression soient sous-testées.",
-    "reference": "R1 §3.3.1 (édition 2025)"
+    "reference": "R1 §3.3.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-3-3-2-003",
@@ -2722,7 +2850,8 @@
       1
     ],
     "explication": "Perte admissible ≤ 0,30 bar sur 24 h. Critère identique pour les variantes 2 h des extensions 31-200 têtes. Au-delà, fuite d'air significative non admissible.",
-    "reference": "R1 §3.3.2 (édition 2025)"
+    "reference": "R1 §3.3.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-9-2-005",
@@ -2743,7 +2872,8 @@
       3
     ],
     "explication": "L'autonomie B est systématiquement supérieure à l'autonomie A : 60 vs 30 min en LH/OH, 90 vs 60 min en HHP/HHS. Pas un 'doublement' arithmétique mais une exigence renforcée car B est la source de fiabilité.",
-    "reference": "R1 §9 (édition 2025)"
+    "reference": "R1 §9 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-1-023",
@@ -2764,7 +2894,8 @@
       1
     ],
     "explication": "Espacement max HHP/HHS = 3,7 m (identique). LH : 4,6 m. OH : 4,0 m. La réduction progressive de l'espacement avec la sévérité du risque garantit une couverture plus dense.",
-    "reference": "R1 T6.1 (édition 2025)"
+    "reference": "R1 T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-6-3-002",
@@ -2785,7 +2916,8 @@
       2
     ],
     "explication": "R1 2014/2020 : règles HHS en §6.4. R1 2025 : renuméroté en §6.3. Pas d'AMP technique sur ce point (cosmétique). Les références §6.4.x dans rapports anciens = §6.3.x aujourd'hui.",
-    "reference": "R1 §6.3 (édition 2025, renumérotation)"
+    "reference": "R1 §6.3 (édition 2025, renumérotation)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-001",
@@ -2806,7 +2938,8 @@
       1
     ],
     "explication": "Chaque pompe doit démarrer automatiquement et immédiatement à la chute de pression. Position AUTO permanente obligatoire.",
-    "reference": "R1 §10.1 (édition 2025)"
+    "reference": "R1 §10.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-002",
@@ -2827,7 +2960,8 @@
       3
     ],
     "explication": "NC rouge §3 Q1 (rubriques 3.3/3.4). Une pompe en position MANUEL ne démarrera pas automatiquement lors d'un sinistre. Risque de mise en échec total.",
-    "reference": "R1 §10.1 (édition 2025)"
+    "reference": "R1 §10.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-003",
@@ -2848,7 +2982,8 @@
       2
     ],
     "explication": "Les pompes principales ne s'arrêtent JAMAIS automatiquement. Arrêt manuel uniquement, après vérification que le sinistre est maîtrisé. Évite l'arrêt prématuré pendant le sinistre.",
-    "reference": "R1 §10.1 (édition 2025)"
+    "reference": "R1 §10.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-004",
@@ -2870,7 +3005,8 @@
       1
     ],
     "explication": "Pressostat non isolable (pas de vanne intercalée) et listé CNPP. Garantit qu'il ne peut être désactivé par erreur et que ses caractéristiques sont certifiées.",
-    "reference": "R1 §10.1 (édition 2025)"
+    "reference": "R1 §10.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-005",
@@ -2891,7 +3027,8 @@
       1
     ],
     "explication": "Source B : 2 pressostats indépendants obligatoires. Redondance pour le démarrage automatique. Pressostat unique sur ancienne installation = AMP à corriger trentenaire.",
-    "reference": "R1 §10.1 (édition 2025)"
+    "reference": "R1 §10.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-1984-10-1-001",
@@ -2912,7 +3049,8 @@
       1
     ],
     "explication": "R1 1984 : 1 pressostat. 2 pressostats obligatoires depuis 2014. Sur système R1 1984 : AMP (la règle a évolué après l'édition d'origine).",
-    "reference": "R1 §10.1 (édition 1984 / évolution)"
+    "reference": "R1 §10.1 (édition 1984 / évolution)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-006",
@@ -2933,7 +3071,8 @@
       2
     ],
     "explication": "Vanne d'isolement de bouteille pressostatique interdite. La régulation des débits doit être réalisée par diaphragme (restricteur). Phrase Q1 type §10.1.",
-    "reference": "R1 §10.1 / §13.3.4 (édition 2025)"
+    "reference": "R1 §10.1 / §13.3.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-1984-10-1-002",
@@ -2954,7 +3093,8 @@
       1
     ],
     "explication": "R1 1984 : vanne autorisée. Interdite depuis 2014. AMP sur référentiel 1984 — passage à diaphragme à anticiper trentenaire.",
-    "reference": "R1 §10.1 (évolution 1984→2014)"
+    "reference": "R1 §10.1 (évolution 1984→2014)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-007",
@@ -2975,7 +3115,8 @@
       1
     ],
     "explication": "La pompe jockey (petite, basse puissance) maintient la pression statique du réseau et compense les micro-fuites normales. Elle évite les démarrages intempestifs des pompes principales.",
-    "reference": "R1 §10.1 (édition 2025)"
+    "reference": "R1 §10.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-008",
@@ -2996,7 +3137,8 @@
       1
     ],
     "explication": "Hiérarchie type : Arrêt jockey = pression B à Q0% ; Démarrage jockey = Arrêt jockey −1 bar ; Démarrage A = Démarrage jockey −1 bar ; Démarrage B = Démarrage A −1 bar. La jockey compense d'abord, les pompes principales démarrent si la baisse persiste.",
-    "reference": "R1 §10.1 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §10.1 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-009",
@@ -3017,7 +3159,8 @@
       1
     ],
     "explication": "Vanne d'essai dédiée pour le démarrage de la pompe jockey. Permet de tester périodiquement son démarrage sans purger artificiellement le réseau. Phrase Q1 type §10.1.",
-    "reference": "R1 §10.1 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §10.1 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-010",
@@ -3038,7 +3181,8 @@
       1
     ],
     "explication": "3 démarrages consécutifs en charge réussis (rubrique Q1 2.63). Démontre la fiabilité du démarrage et la capacité de la pompe à reprendre service immédiatement.",
-    "reference": "R1 §10.1 (édition 2025)"
+    "reference": "R1 §10.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-011",
@@ -3059,7 +3203,8 @@
       1
     ],
     "explication": "Essai hebdomadaire électropompe : 10 min à Q100%. Règle inchangée depuis 1936 (89 ans). Relevé : pressions Q0% et Q100%, intensité moteur.",
-    "reference": "R1 §18.4 (édition 2025)"
+    "reference": "R1 §18.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-012",
@@ -3080,7 +3225,8 @@
       2
     ],
     "explication": "Essai hebdomadaire pompe diesel : 20 min à Q100% (vs 10 min pour électropompe — diesel a besoin de monter en T° pour évaluation complète). Relevé : P, régime, T° eau, T° huile.",
-    "reference": "R1 §18.4 (édition 2025)"
+    "reference": "R1 §18.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-2-001",
@@ -3101,7 +3247,8 @@
       1
     ],
     "explication": "Pression à débit nul ≤ 12 bar ET ≤ 120 % de la pression à Q100% (pompes à axe horizontal). Double condition R1 2025. Au-delà : risque de surpression, fatigue accélérée du réseau.",
-    "reference": "R1 §10.2 / §10.5 (édition 2025)"
+    "reference": "R1 §10.2 / §10.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-2-002",
@@ -3122,7 +3269,8 @@
       1
     ],
     "explication": "Tresse fuyarde : réfection (resserrage ou remplacement). Phrase Q1 type §10.2. Une fuite excessive indique une usure du presse-étoupe.",
-    "reference": "R1 §10.2 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §10.2 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-2-003",
@@ -3143,7 +3291,8 @@
       2
     ],
     "explication": "Si1 ou Si2 hors courbe mesurée = NC rouge §2 Q1 (rubriques 2.53-2.58). Ces points conditionnent l'adéquation hydraulique. S'ils sortent : la pompe ne couvre plus le besoin calculé.",
-    "reference": "R1 §10.2 (édition 2025)"
+    "reference": "R1 §10.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-2-004",
@@ -3164,7 +3313,8 @@
       1
     ],
     "explication": "Pression à Q130% ≥ 75 % de la pression à Q100%. Critère stable depuis 2008. Garantit que la pompe garde de la marge en sur-débit. Sinon : pompe en limite ou aspiration dégradée.",
-    "reference": "R1 §10.5 (édition 2025)"
+    "reference": "R1 §10.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-2-005",
@@ -3185,7 +3335,8 @@
       1
     ],
     "explication": "Écart ≤ 0,5 bar à Q100% vs courbe de référence CNPP. Au-delà : observation §11 (NC orange §2.55). Indique une dégradation pompe ou un changement réseau.",
-    "reference": "R1 §10.2 (édition 2025)"
+    "reference": "R1 §10.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-3-2-001",
@@ -3206,7 +3357,8 @@
       2
     ],
     "explication": "Distance maximale d'aspiration : 40 m. Au-delà, pertes de charge en aspiration et risques de désamorçage. Règle stable depuis 2014.",
-    "reference": "R1 §10.3.2 (édition 2025)"
+    "reference": "R1 §10.3.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-4-001",
@@ -3227,7 +3379,8 @@
       1
     ],
     "explication": "Phrase Q1 §10.4 : diagnostic + maintenance corrective. Causes : clapet de pied défaillant, désamorçage, usure corps/turbine. Sans remise en service correcte → NC.",
-    "reference": "R1 §10.4 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §10.4 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-5-001",
@@ -3248,7 +3401,8 @@
       1
     ],
     "explication": "Marge obligatoire de 0,5 bar, lame d'eau utile déduite. Au-delà : augmenter régime moteur si nécessaire. R1 2025 §18.5 : marge < 0,5 bar n'est pas une NC formelle mais à signaler pour suivi.",
-    "reference": "R1 §10.5 / §18.5 (édition 2025)"
+    "reference": "R1 §10.5 / §18.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-5-001",
@@ -3271,7 +3425,8 @@
       2
     ],
     "explication": "R1 2025 §18.5 : glissement > 5 %, marge puissance < 20 %, marge pression < 0,5 bar ne sont PAS des NC pour vérification semestrielle. À signaler pour suivi. En revanche pompe MANUEL = NC rouge.",
-    "reference": "R1 §18.5 (édition 2025, nouveauté)"
+    "reference": "R1 §18.5 (édition 2025, nouveauté)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-5-002",
@@ -3292,7 +3447,8 @@
       1
     ],
     "explication": "R1 2025 §18.5 : une variation importante (ex. 5 % → 9 %) doit être signalée — peut indiquer la nécessité d'une maintenance corrective. La valeur seule > 5 % n'est plus une NC formelle, mais la tendance compte.",
-    "reference": "R1 §18.5 (édition 2025)"
+    "reference": "R1 §18.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-2-001",
@@ -3313,7 +3469,8 @@
       1
     ],
     "explication": "Clés sous verre dormant à côté de l'armoire. Clés non retirables sauf en position AUTO. Obligatoire depuis R1 2014. Évite les modifications laissées en MANUEL/ARRÊT par erreur.",
-    "reference": "R1 §12.2 (édition 2025)"
+    "reference": "R1 §12.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-1984-12-2-001",
@@ -3334,7 +3491,8 @@
       1
     ],
     "explication": "R1 1984 : pas obligatoire. Obligatoire depuis 2014. AMP sur référentiel 1984 — à corriger trentenaire.",
-    "reference": "R1 §12.2 (évolution 1984→2014)"
+    "reference": "R1 §12.2 (évolution 1984→2014)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-2-002",
@@ -3355,7 +3513,8 @@
       1
     ],
     "explication": "Phrase Q1 §12.2 : remplacement du voyant 'tension secteur'. Sans voyant fonctionnel, l'exploitant ne peut pas vérifier visuellement la disponibilité de l'alimentation au quotidien.",
-    "reference": "R1 §12.2 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12.2 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-3-001",
@@ -3376,7 +3535,8 @@
       1
     ],
     "explication": "§12.3 : 6 séquences de démarrage (5 à 10 s chacune), séparées de 10 s maximum. Si échec final → alarme de non-démarrage reportée au tableau de signalisation.",
-    "reference": "R1 §12.3 (édition 2025)"
+    "reference": "R1 §12.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-3-002",
@@ -3397,7 +3557,8 @@
       2
     ],
     "explication": "Tension de démarrage < 80 % de la tension nominale → batterie défaillante. Autres signaux : électrolyte épais ou niveau insuffisant. Action : remplacement du jeu complet de batteries (jamais une seule).",
-    "reference": "R1 §12.3 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12.3 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-3-003",
@@ -3418,7 +3579,8 @@
       1
     ],
     "explication": "Remplacer l'ENSEMBLE du jeu de batteries (jamais une seule). Une batterie neuve avec d'anciennes : déséquilibre, charge inégale, usure accélérée des neuves. Si seul le niveau est faible : appoint en eau déminéralisée.",
-    "reference": "R1 §12.3 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12.3 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-3-004",
@@ -3439,7 +3601,8 @@
       1
     ],
     "explication": "Non-fonctionnement klaxon : le remettre en état. C'est l'alerte sonore locale en cas de non-démarrage du moteur — essentielle pour alerter immédiatement les opérateurs présents.",
-    "reference": "R1 §12.3 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12.3 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-5-001",
@@ -3460,7 +3623,8 @@
       1
     ],
     "explication": "Évolution R1 2025 : signalement du glissement moteur dès 5 % (anciennement 10 %). Pas une NC formelle pour Q1, mais à signaler pour suivi et corriger trentenaire.",
-    "reference": "R1 §12.5 / §18.5 (édition 2025)"
+    "reference": "R1 §12.5 / §18.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-5-002",
@@ -3481,7 +3645,8 @@
       1
     ],
     "explication": "Glissement = (régime à vide − régime en charge Q130%) / régime à vide × 100. Mesure la capacité du moteur à 'tenir' son régime sous charge. Au-delà de 5 % : tendance à essouffler.",
-    "reference": "R1 §12.5 (édition 2025)"
+    "reference": "R1 §12.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-7-001",
@@ -3502,7 +3667,8 @@
       2
     ],
     "explication": "Tuyauterie d'échappement calorifugée jusqu'à 1,6 m (hauteur de risque de brûlure). Une grille de protection doit empêcher tout contact accidentel.",
-    "reference": "R1 §12.7 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12.7 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-7-002",
@@ -3523,7 +3689,8 @@
       1
     ],
     "explication": "Grille ou clapet pare-oiseaux à l'extrémité de l'échappement moteur. Évite l'obstruction par des nids ou des oiseaux qui pourraient empêcher le démarrage.",
-    "reference": "R1 §12.7 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12.7 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-8-001",
@@ -3544,7 +3711,8 @@
       3
     ],
     "explication": "Maintenir en permanence le réservoir principal au plein (4/4). + Réserve équivalente sur rétention incombustible, indicateur visuel, autonomie min 3 h. Système de remplissage fixe pour l'appoint.",
-    "reference": "R1 §12.8 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12.8 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-8-002",
@@ -3568,7 +3736,8 @@
       3
     ],
     "explication": "Réserve de gazole : volume équivalent au réservoir principal, sur rétention incombustible, indicateur visuel, autonomie min 3 h. + Système de remplissage fixe pour l'appoint.",
-    "reference": "R1 §12.8 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12.8 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-8-003",
@@ -3589,7 +3758,8 @@
       1
     ],
     "explication": "GNR à proscrire sauf approbation du dieseliste. Composition différente (additifs, viscosité) qui peut nuire au démarrage à froid et endommager certains moteurs. Affichage sur le réservoir fortement conseillé.",
-    "reference": "R1 §12.8 / CR GIS-Technique 09/06/11"
+    "reference": "R1 §12.8 / CR GIS-Technique 09/06/11",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-9-001",
@@ -3613,7 +3783,8 @@
       3
     ],
     "explication": "Additif CNPP 25/05/13 intégré R1 2025 : 2 filtres huile + 2 filtres gazole (avec joints) + 2 jeux courroies + 1 jeu complet joints/durites. À mettre en conformité au plus tard trentenaire.",
-    "reference": "R1 §12.9 / additif CNPP 25/05/13"
+    "reference": "R1 §12.9 / additif CNPP 25/05/13",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-10-001",
@@ -3634,7 +3805,8 @@
       1
     ],
     "explication": "Parties tournantes non protégées = NC §12.10 (risque d'accidents corporels). Carters obligatoires sur poulies, courroies, arbres en rotation.",
-    "reference": "R1 §12.10 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12.10 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-6-001",
@@ -3655,7 +3827,8 @@
       1
     ],
     "explication": "Réserve d'huile moteur à prévoir dans le local pour les appoints. Permet l'intervention immédiate en cas de niveau bas constaté lors d'un essai hebdomadaire.",
-    "reference": "R1 §12.6 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12.6 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-2-003",
@@ -3676,7 +3849,8 @@
       1
     ],
     "explication": "Casquette de protection / cache anti-aspersion au-dessus du filtre à air OU filtre à air étanche. Évite que l'eau d'extinction ennoie le filtre, ce qui couperait le moteur en plein incendie.",
-    "reference": "R1 §12 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §12 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-12-3-005",
@@ -3700,7 +3874,8 @@
       3
     ],
     "explication": "§18.4.2 avant essai diesel : préchauffage, huile, eau refroidissement (embouage), électrolyte batteries. Pendant essai : tension batteries au démarrage, refroidissement (stabilisation T°), pression d'huile.",
-    "reference": "R1 §18.4.2 (édition 2025)"
+    "reference": "R1 §18.4.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-11-001",
@@ -3721,7 +3896,8 @@
       1
     ],
     "explication": "Câbles CR1 (résistants au feu) dans les zones non protégées par sprinkleurs. Logique : si la zone est protégée par sprinkleurs, l'incendie y sera maîtrisé ; si non protégée, le câble doit tenir seul.",
-    "reference": "R1 §11 (édition 2025)"
+    "reference": "R1 §11 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-11-002",
@@ -3742,7 +3918,8 @@
       1
     ],
     "explication": "Câbles sous fourreaux métalliques, enterrés ≥ 0,60 m en extérieur. Protège contre les agressions mécaniques (engins, travaux) et le feu de surface.",
-    "reference": "R1 §11 (édition 2025)"
+    "reference": "R1 §11 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-11-003",
@@ -3763,7 +3940,8 @@
       1
     ],
     "explication": "Étiquetage formalisé R1 1994 : « DÉPART ÉQUIPEMENT SPRINKLEURS — NE PAS COUPER MÊME EN CAS D'INCENDIE ». Empêche les pompiers ou intervenants de couper par réflexe l'alimentation pendant un sinistre.",
-    "reference": "R1 §11 (édition 1994/2025)"
+    "reference": "R1 §11 (édition 1994/2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-11-004",
@@ -3784,7 +3962,8 @@
       1
     ],
     "explication": "Armoire de commande : AUTO / MANUEL / ARRÊT distinctement étiquetées + ampèremètre par groupe pour contrôle de l'intensité. Formalisé R1 1994.",
-    "reference": "R1 §11 (édition 2025)"
+    "reference": "R1 §11 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-11-005",
@@ -3805,7 +3984,8 @@
       1
     ],
     "explication": "NC rouge §3 Q1 (rubrique 3.16). Sans ampèremètre fonctionnel, impossible de détecter un déséquilibre, une surcharge ou une perte de phase pendant le fonctionnement.",
-    "reference": "R1 §11 (édition 2025)"
+    "reference": "R1 §11 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2014-11-001",
@@ -3826,7 +4006,8 @@
       1
     ],
     "explication": "R1 2014 : passage de 15 s à 30 s. Évolution majeure assouplissant la conformité sur groupes modernes. Sur ancien système : si délai à 20 s, c'est conforme R1 2025 (l'exigence s'est assouplie).",
-    "reference": "R1 §11 (évolution 1994→2014)"
+    "reference": "R1 §11 (évolution 1994→2014)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-11-006",
@@ -3847,7 +4028,8 @@
       2
     ],
     "explication": "Essai groupe électrogène : triennal, sous charge QS2 depuis le groupe seul. PV à conserver. Rubrique Q1 2.64-2.65 : date essai (≤ 3 ans), délai reprise 30 s.",
-    "reference": "R1 §11 / §18.7 (édition 2025)"
+    "reference": "R1 §11 / §18.7 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2020-11-001",
@@ -3868,7 +4050,8 @@
       2
     ],
     "explication": "R1 2020 : câbles démarreurs indébrochables pour extensions > 200 têtes + report alarme coupure élec source B. Évite la déconnexion accidentelle ou malveillante.",
-    "reference": "R1 §11 (édition 2020/2025)"
+    "reference": "R1 §11 (édition 2020/2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-1-4-001",
@@ -3889,7 +4072,8 @@
       1
     ],
     "explication": "Point F : sprinkleur le plus défavorisé hydrauliquement. Équipé d'un sprinkleur tronqué K-factor adapté + vanne + manomètre, à < 1,5 m du sol. Permet le test triennal d'arrivée d'eau.",
-    "reference": "R1 §13.1.4 (édition 2025)"
+    "reference": "R1 §13.1.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-1-4-002",
@@ -3910,7 +4094,8 @@
       1
     ],
     "explication": "Manomètre du Point F à moins de 1,5 m du sol — pour lecture aisée lors des essais triennaux sans nacelle ou échelle. Hauteur ergonomique de référence.",
-    "reference": "R1 §13.1.4 (édition 2025)"
+    "reference": "R1 §13.1.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-1-4-003",
@@ -3931,7 +4116,8 @@
       2
     ],
     "explication": "Délai limité à 60 s pour installations sous air. Au-delà : risque que le feu se développe avant action sprinkleur. Mesure à l'essai triennal Point F.",
-    "reference": "R1 §7.2.1 / §13.1.4 (édition 2025)"
+    "reference": "R1 §7.2.1 / §13.1.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-1-4-004",
@@ -3952,7 +4138,8 @@
       1
     ],
     "explication": "Réseaux antigel : Point F équipé d'un sprinkleur tronqué K-factor identique au plus défavorisé. Alternative : dispositif bouchonné avec matériel d'essai (flexible, raccord symétrique, sprinkleur tronqué) disponible au local source.",
-    "reference": "R1 §13.1.4 (édition 2025)"
+    "reference": "R1 §13.1.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-1-4-005",
@@ -3973,7 +4160,8 @@
       3
     ],
     "explication": "NC rouge §7 Q1 : essai triennal Point F non réalisé sur postes à air, alternatifs, antigel ou préaction B/C. Sans cet essai, impossible de vérifier le délai d'arrivée d'eau réel et le bon fonctionnement complet.",
-    "reference": "R1 §13.1.4 / §18.7 (édition 2025)"
+    "reference": "R1 §13.1.4 / §18.7 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-1-6-001",
@@ -3994,7 +4182,8 @@
       1
     ],
     "explication": "Rinçage périodique pour éviter l'embouage des canalisations. Particulièrement important si eau corrosive ou riche en matières en suspension. Évite l'obstruction des sprinkleurs.",
-    "reference": "R1 §13.1.6 (édition 2025)"
+    "reference": "R1 §13.1.6 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-1-001",
@@ -4015,7 +4204,8 @@
       2
     ],
     "explication": "Supprimer impérativement. Capuchon ou adhésif = la tête ne peut pas se déclencher en cas de feu. NC rouge §9 Q1. Souvent oublié après travaux de peinture ou nouvelle construction.",
-    "reference": "R1 §13.2.1 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §13.2.1 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-1-002",
@@ -4036,7 +4226,8 @@
       1
     ],
     "explication": "Espacement minimum 2 m partout. À 1,5 m : risque d'arrosage mutuel (refroidissement de l'élément thermosensible). Action : revoir l'implantation ou installer des déflecteurs entre sprinkleurs adjacents.",
-    "reference": "R1 §13.2.1 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §13.2.1 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-2-001",
@@ -4057,7 +4248,8 @@
       2
     ],
     "explication": "Distance libre min 0,6 m sous sprinkleur HHS (T13.2.2.1). Demi-sphère de distribution : si < 0,6 m, le cône d'arrosage est obstrué. NC rouge §9 Q1.",
-    "reference": "R1 §13.2.2 / T13.2.2.1 (édition 2025)"
+    "reference": "R1 §13.2.2 / T13.2.2.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-2-002",
@@ -4078,7 +4270,8 @@
       1
     ],
     "explication": "Sprinkleurs partiellement blindés par obstacles à < 50 cm : action requise. Vérifier l'absence d'obstacle significatif. Repositionner les sprinkleurs ou en ajouter pour combler les zones d'ombre.",
-    "reference": "R1 §13.2.2.2 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §13.2.2.2 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-3-001",
@@ -4099,7 +4292,8 @@
       1
     ],
     "explication": "Distance déflecteur/plafond : 7,5 cm minimum (éviter écran thermique isolant la tête), 15 cm maximum (au-delà, chaleur se dissipe, déclenchement retardé). Dérog 0,45 m si construction combustible + accord CNPP.",
-    "reference": "R1 §13.2.3 (édition 2025)"
+    "reference": "R1 §13.2.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-3-002",
@@ -4120,7 +4314,8 @@
       1
     ],
     "explication": "Phrase Q1 §13.2.3 : régler les sprinkleurs en hauteur et refixer les rosaces. Rosace bien positionnée = couverture thermique correcte. Mal positionnée = retard de déclenchement.",
-    "reference": "R1 §13.2.3 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §13.2.3 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-4-001",
@@ -4141,7 +4336,8 @@
       2
     ],
     "explication": "Distance minimum 15 cm entre sprinkleur et cloison/mur. Évite le barrage perturbant la distribution thermique du panache et de l'arrosage.",
-    "reference": "R1 §13.2.4 (édition 2025)"
+    "reference": "R1 §13.2.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-4-002",
@@ -4162,7 +4358,8 @@
       1
     ],
     "explication": "Distance max sprinkleur/mur parallèle : 2,3 m LH, 2,0 m OH, 1,8 m HHP/HHS. À plus de 2 m en OH : recentrer ou ajouter un sprinkleur près du mur pour couvrir la zone.",
-    "reference": "R1 §13.2.4 / T6.1 (édition 2025)"
+    "reference": "R1 §13.2.4 / T6.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-7-1-001",
@@ -4183,7 +4380,8 @@
       1
     ],
     "explication": "Au-delà de 1 m², toute toile tendue ou film plastique sous le niveau des sprinkleurs doit être supprimé OU des sprinkleurs ajoutés en-dessous. Sinon l'eau ne descend pas sur le feu.",
-    "reference": "R1 §13.2.7.1 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §13.2.7.1 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-7-2-001",
@@ -4204,7 +4402,8 @@
       2
     ],
     "explication": "Plafond résille : 70 % d'ouverture minimum + largeurs d'ouverture ≥ 2,5 cm. Permet le passage suffisant de chaleur et d'eau. Sinon : remplacer les zones non conformes.",
-    "reference": "R1 §13.2.7.2 (édition 2025)"
+    "reference": "R1 §13.2.7.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-7-2-002",
@@ -4225,7 +4424,8 @@
       1
     ],
     "explication": "Si sprinkleurs à moins de 80 cm au-dessus du plafond résille : descendre les sprinkleurs sous la face inférieure OU installer des plaques 0,3×0,3 m de retenue de chaleur au-dessus.",
-    "reference": "R1 §13.2.7.2 / F13.2.7.2 (édition 2025)"
+    "reference": "R1 §13.2.7.2 / F13.2.7.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-7-2-003",
@@ -4246,7 +4446,8 @@
       1
     ],
     "explication": "Remettre les plaques en place. Faux-plafond incomplet = circulation d'air anormale, fuite de chaleur, retard de détection des sprinkleurs sous plafond.",
-    "reference": "R1 §13.2.7.2 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §13.2.7.2 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-7-3-001",
@@ -4267,7 +4468,8 @@
       1
     ],
     "explication": "Sprinkleurs sous poutres > 1,5 m d'espacement sans répartition adaptée : revoir la disposition. Les poutres font écran thermique et perturbent la distribution. Calepinage à reprendre.",
-    "reference": "R1 §13.2.7.3 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §13.2.7.3 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-10-001",
@@ -4288,7 +4490,8 @@
       1
     ],
     "explication": "Sprinkleur mural : 1 m latéral (de part et d'autre) + 1,7 m perpendiculaire au mur, sans obstacle. Sinon blindage de l'arrosage.",
-    "reference": "R1 §13.2.10 (édition 2025)"
+    "reference": "R1 §13.2.10 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-11-001",
@@ -4309,7 +4512,8 @@
       1
     ],
     "explication": "Stock LH = 6 têtes minimum (tous types K, températures, orientations du site). OH = 24. HHP/HHS = 36. Permet de remplacer rapidement les têtes déclenchées sans rupture de protection.",
-    "reference": "R1 §13.2.11 (édition 2025)"
+    "reference": "R1 §13.2.11 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-11-002",
@@ -4330,7 +4534,8 @@
       2
     ],
     "explication": "Stock OH = 24 têtes minimum. LH = 6. HHP/HHS = 36. Tous types installés + clés. Stocké dans armoire visible et accessible, T° ≤ 27 °C.",
-    "reference": "R1 §13.2.11 (édition 2025)"
+    "reference": "R1 §13.2.11 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-11-003",
@@ -4351,7 +4556,8 @@
       2
     ],
     "explication": "Stock HHP/HHS = 36 têtes minimum (R1 2025). Inclure ESFR/CMSA si applicable. + Clés appropriées. Évolution : 12 ou 24 (1984), 24 (2008), 24 ou 36 (2014), 36 (2020/2025).",
-    "reference": "R1 §13.2.11 (édition 2025)"
+    "reference": "R1 §13.2.11 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-11-004",
@@ -4374,7 +4580,8 @@
       2
     ],
     "explication": "R1 2025 §13.2.11 : tous types installés + clés, armoire visible et accessible, T° ≤ 27 °C. Pas 'sous clé chez le responsable' : doit être accessible au local source pour intervention immédiate.",
-    "reference": "R1 §13.2.11 (édition 2025)"
+    "reference": "R1 §13.2.11 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-4-001",
@@ -4395,7 +4602,8 @@
       2
     ],
     "explication": "Mise hors gel ≥ 0,80 m de profondeur. Correspond à la profondeur de gel en France métropolitaine (variable selon altitude/région). En-dessous : risque de gel des canalisations.",
-    "reference": "R1 §13.4 (édition 2025)"
+    "reference": "R1 §13.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-2-003",
@@ -4416,7 +4624,8 @@
       1
     ],
     "explication": "Les allées entre racks doivent rester libres de tout stockage. Stockage temporaire interdit. NC §13.2.2.1 — perturbe la distribution d'eau et l'accès des pompiers.",
-    "reference": "R1 §13.2.2.1 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §13.2.2.1 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-15-6-2-001",
@@ -4437,7 +4646,8 @@
       1
     ],
     "explication": "§15.6.2 : interdit d'utiliser les tuyauteries/supports sprinkleurs comme points d'accrochage pour d'autres équipements. Risque : déformation, fuite, sollicitation hors dimensionnement.",
-    "reference": "R1 §15.6.2 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §15.6.2 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-1-003",
@@ -4458,7 +4668,8 @@
       1
     ],
     "explication": "Modification de cloisons sans reprise du calepinage = NC majeure. Action : revoir l'ensemble du calepinage. Souvent rencontré lors de réagencements de bureaux ou de cellules de stockage.",
-    "reference": "R1 §13.2 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §13.2 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-3-001",
@@ -4479,7 +4690,8 @@
       3
     ],
     "explication": "Vitesse max réseau = 10 m/s. Au passage d'une vanne ou d'un débitmètre = 6 m/s. Au-delà : coups de bélier, érosion, bruit, pertes de charge incontrôlées.",
-    "reference": "R1 §13.3 (édition 2025)"
+    "reference": "R1 §13.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-3-002",
@@ -4500,7 +4712,8 @@
       1
     ],
     "explication": "Vitesse max au passage vanne/débitmètre = 6 m/s. Limite plus basse que la conduite générale (10 m/s) — pertes de charge à travers les organes fortement non-linéaires.",
-    "reference": "R1 §13.3 (édition 2025)"
+    "reference": "R1 §13.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-4-002",
@@ -4521,7 +4734,8 @@
       2
     ],
     "explication": "Panneaux PIC introduits en 2008 suite à des sinistres graves. Âme combustible (PU ou PS) entre parements métalliques : peut brûler par combustion interne non détectable. Sprinkleurs implantés en regard des joints longitudinaux et transversaux.",
-    "reference": "R1 §13.4 (édition 2008/2025)"
+    "reference": "R1 §13.4 (édition 2008/2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-7-5-cad-001",
@@ -4542,7 +4756,8 @@
       1
     ],
     "explication": "Vannes d'isolement antigel exemptées de report d'alarme : cadenasser. Évite les fermetures accidentelles non détectées. Le cadenas est la barrière physique de substitution au report électrique.",
-    "reference": "R1 §7.5.1 / §15.3 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §7.5.1 / §15.3 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-10-1-013",
@@ -4563,7 +4778,8 @@
       1
     ],
     "explication": "Démarrage manuel obligatoire en complément. Permet le déclenchement par opérateur en cas de besoin. Toujours retour en position AUTO obligatoire après l'essai/intervention.",
-    "reference": "R1 §10.1 / §18.4.1 (édition 2025)"
+    "reference": "R1 §10.1 / §18.4.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-4-001",
@@ -4584,7 +4800,8 @@
       2
     ],
     "explication": "Essai gong hydraulique : ≥ 10 s via vanne d'essai de 12 mm. Vérifie le bon fonctionnement de l'alarme acoustique mécanique des postes de contrôle. NC orange §4 Q1 si < 10 s ou gong non fonctionnel.",
-    "reference": "R1 §18.4.3 (édition 2025)"
+    "reference": "R1 §18.4.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-4-002",
@@ -4605,7 +4822,8 @@
       2
     ],
     "explication": "Archivage manomètre enregistreur : 1 an minimum. Permet de retracer historiquement les variations de pression, détecter les anomalies récurrentes, et fournir des éléments à l'assureur en cas de sinistre.",
-    "reference": "R1 §15.2 / §18.4.3 (édition 2025)"
+    "reference": "R1 §15.2 / §18.4.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-5-002",
@@ -4626,7 +4844,8 @@
       1
     ],
     "explication": "Vérification semestrielle = 2 fois par an, par vérificateur certifié E1. Règle inchangée depuis 1936 (89 ans). Le rapport Q1 est transmis à CNPP dans les 30 jours (R1 2025 §3.5).",
-    "reference": "R1 §18.5 (édition 2025)"
+    "reference": "R1 §18.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-5-003",
@@ -4647,7 +4866,8 @@
       1
     ],
     "explication": "3 niveaux : NC avec risque de mise en échec (action urgente, date 1ère signalisation obligatoire), NC sans risque (à lever avant prochain Q1, date 1ère signalisation), observations §11 (améliorations, pas de délai).",
-    "reference": "R1 §18.5 (édition 2025)"
+    "reference": "R1 §18.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-5-004",
@@ -4668,7 +4888,8 @@
       1
     ],
     "explication": "Les observations sont limitées aux réseaux situés dans le champ visuel normal. Les réseaux inaccessibles ou à l'intérieur de faux-plafonds ne peuvent donner lieu à des observations. Important pour la rédaction des Q1.",
-    "reference": "R1 §18.5 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §18.5 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-7-001",
@@ -4689,7 +4910,8 @@
       1
     ],
     "explication": "Triennal : remplacement intégral obligatoire des manomètres et vacuomètres sources (pas seulement vérification). NC orange §2 Q1 si non remplacés depuis > 3 ans.",
-    "reference": "R1 §18.7 (édition 2025)"
+    "reference": "R1 §18.7 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-7-002",
@@ -4710,7 +4932,8 @@
       1
     ],
     "explication": "Triennal : nettoyage + vérification des manomètres et débitmètres à l'aide d'un appareil étalonné. Garantit la précision des mesures lors des essais. PV à conserver.",
-    "reference": "R1 §18.7.4 (édition 2025)"
+    "reference": "R1 §18.7.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-7-003",
@@ -4731,7 +4954,8 @@
       1
     ],
     "explication": "NC orange §5 Q1. Vanne d'alarme non démontée/révisée depuis > 3 ans = entretien triennal en retard. Démontage + détartrage + remplacement joints obligatoires tous les 3 ans.",
-    "reference": "R1 §18.7 (édition 2025)"
+    "reference": "R1 §18.7 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-2-001",
@@ -4752,7 +4976,8 @@
       2
     ],
     "explication": "Interruption programmée : N100 ≥ 72 h avant. Interruption accidentelle : immédiatement. Diffusion : assureur + CNPP + services de secours. Inchangé depuis 1898.",
-    "reference": "R1 §18.2 (édition 2025)"
+    "reference": "R1 §18.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-2-002",
@@ -4775,7 +5000,8 @@
       2
     ],
     "explication": "§18.2.2 : rondes renforcées + interdiction des travaux par points chauds + information des services de secours pendant toute la MHS. L'arrêt total de l'activité n'est pas requis (mais l'activité doit être adaptée).",
-    "reference": "R1 §18.2.2 (édition 2025)"
+    "reference": "R1 §18.2.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-9-001",
@@ -4796,7 +5022,8 @@
       2
     ],
     "explication": "Révision trentenaire : tous les 30 ans, depuis 1984. Avant : 1957 = 20 ans (eau) / 15 ans (air) ; 1974 = 25 ans / 20 ans. Inchangé depuis 41 ans.",
-    "reference": "R1 §18.9 (édition 1984/2025)"
+    "reference": "R1 §18.9 (édition 1984/2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-9-002",
@@ -4817,7 +5044,8 @@
       2
     ],
     "explication": "Trentenaire : remise en conformité avec la R1 en vigueur à la date de la révision. Remplacement des têtes > 30 ans. Nouvelle VdC CNPP → nouveau N1. Toutes les AMP doivent être levées à cette occasion.",
-    "reference": "R1 §18.9 / Annexe 3 (édition 2025)"
+    "reference": "R1 §18.9 / Annexe 3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-18-7-004",
@@ -4840,7 +5068,8 @@
       2
     ],
     "explication": "Triennal réserves : vidange + inspection interne + traitement anti-corrosion + remplacement joints de regard. Pas de remplacement intégral.",
-    "reference": "R1 §18.7 (édition 2025)"
+    "reference": "R1 §18.7 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-15-3-001",
@@ -4861,7 +5090,8 @@
       1
     ],
     "explication": "NC rouge §15.3 Q1 : vanne d'arrêt fermée sans report d'alarme = installation neutralisée sans que personne ne le sache. Aucune protection sprinkleur en cas de feu sur la zone.",
-    "reference": "R1 §15.3 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §15.3 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-15-3-002",
@@ -4882,7 +5112,8 @@
       1
     ],
     "explication": "Vanne passante = défaut d'étanchéité du siège. Action : entretien ou remplacement. Une vanne qui fuit en position fermée n'isole plus correctement le réseau pour les essais et maintenances.",
-    "reference": "R1 §15.2 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §15.2 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-15-3-003",
@@ -4903,7 +5134,8 @@
       0
     ],
     "explication": "Robinet 1/4 de tour autorisé pour DN 15 à DN 50 (axe de manœuvre monté par l'intérieur du corps). Manœuvre rapide pour les vannes d'essai. Au-delà : vannes à opercule ou papillon.",
-    "reference": "R1 §15.3 (édition 2025)"
+    "reference": "R1 §15.3 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-15-3-004",
@@ -4924,7 +5156,8 @@
       1
     ],
     "explication": "CR GIS-Technique 08/11/07 : cadenas spécifiques identifiables aux vannes sprinkleur. Permet de distinguer immédiatement les vannes sprinkleurs des autres équipements lors des interventions.",
-    "reference": "CR GIS-Technique 08/11/07"
+    "reference": "CR GIS-Technique 08/11/07",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-15-3-005",
@@ -4945,7 +5178,8 @@
       1
     ],
     "explication": "Remplacer les volants creux (ouverts à l'arrière) par des volants pleins. Évite les accidents corporels (pincements) lors de manipulations rapides. Phrase Q1 type §15.3.",
-    "reference": "R1 §15.3 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §15.3 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-15-3-006",
@@ -4966,7 +5200,8 @@
       2
     ],
     "explication": "CR GIS-Technique 02/02/12 : l'alarme « défaut vanne by-pass » doit être délivrée DÈS une position incomplète de fermeture, pas seulement à l'ouverture complète. Détection plus précoce d'une mauvaise manœuvre.",
-    "reference": "R1 §15.3 / CR GIS-Technique 02/02/12"
+    "reference": "R1 §15.3 / CR GIS-Technique 02/02/12",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-14-1-001",
@@ -4987,7 +5222,8 @@
       1
     ],
     "explication": "NC §14.1 : sans report fonctionnel, en cas de fonctionnement ou d'anomalie, personne n'est informé → l'ampleur des dégâts s'accroît. Action : rétablir au plus vite la surveillance des alarmes 24h/24.",
-    "reference": "R1 §14.1 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §14.1 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-14-1-002",
@@ -5008,7 +5244,8 @@
       1
     ],
     "explication": "Double report d'alarme : en complément de la télésurveillance, un autre report de synthèse vers un local du site occupé pendant les heures ouvrées. Réaction plus rapide quand le site est occupé.",
-    "reference": "R1 §14.1 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §14.1 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-14-1-003",
@@ -5029,7 +5266,8 @@
       2
     ],
     "explication": "Source secondaire ECS : 24 h minimum d'autonomie. Garantit la signalisation pendant une coupure secteur prolongée. Sans cela, plus aucune alarme en cas d'incident électrique majeur.",
-    "reference": "R1 §14.1 (édition 2025)"
+    "reference": "R1 §14.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-14-2-001",
@@ -5050,7 +5288,8 @@
       1
     ],
     "explication": "Local sources en sous-sol : équiper de flotteurs (type Jola) délivrant une alarme « risque d'inondation » reportée à l'armoire de report centralisée. Détection rapide d'une fuite avant noyage des équipements.",
-    "reference": "R1 §14.2 / T14.2 / catalogue Q1 (édition 2025)"
+    "reference": "R1 §14.2 / T14.2 / catalogue Q1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-13-2-2-004",
@@ -5071,7 +5310,8 @@
       0
     ],
     "explication": "T13.2.2.1 R1 2025 : LH/OH/HHP1 = 0,3 m + 0,9 m sphère. HHP2-3 = 0,6 m. HHS = 1 m mini (4-6 m maxi). Évolution majeure 2025 — valeurs revues vs anciennes éditions.",
-    "reference": "R1 §13.2.2.1 / T13.2.2.1 (édition 2025)"
+    "reference": "R1 §13.2.2.1 / T13.2.2.1 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-19-2-2-001",
@@ -5092,7 +5332,8 @@
       0
     ],
     "explication": "§19.2.2 : ≤ 5 sprinkleurs maximum par an et par poste de contrôle peuvent être exécutées par l'utilisateur, en avisant l'assureur et le vérificateur certifié. Hors ESFR/CMSA. Inchangé depuis 1898.",
-    "reference": "R1 §19.2.2 (édition 2025)"
+    "reference": "R1 §19.2.2 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-19-2-4-001",
@@ -5113,7 +5354,8 @@
       1
     ],
     "explication": "§19.2.4 : extension > 30 sprinkleurs → sonde de T° dans le local des sources d'eau obligatoire (reliée en alarme). Surveillance renforcée du local pompes sur les installations significativement modifiées.",
-    "reference": "R1 §19.2.4 (édition 2025)"
+    "reference": "R1 §19.2.4 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-19-2-5-001",
@@ -5135,7 +5377,8 @@
       1
     ],
     "explication": "§19.2.5 : extension > 200 sprinkleurs → ajouter alarme coupure alimentation électrique électropompe B + adresser dossier complet à CNPP en vue d'une visite de conformité (N1 réactualisé). Seuil VdC = 200 têtes depuis 2002.",
-    "reference": "R1 §19.2.5 (édition 2025)"
+    "reference": "R1 §19.2.5 (édition 2025)",
+    "referentiel": "R1"
   },
   {
     "id": "r1-2025-19-2-1-001",
@@ -5156,6 +5399,1563 @@
       1
     ],
     "explication": "§19.2.1 : équiper toutes les sources d'eau d'un dispositif d'essai. + Fournir au vérificateur le nouveau dossier technique (nombre de sprinkleurs, nouveaux calculs, plans, courbe d'essai des sources, sonde T° en alarme).",
-    "reference": "R1 §19.2.1 / §3.8 (édition 2025)"
+    "reference": "R1 §19.2.1 / §3.8 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "en12845-5-1-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "5.1.2",
+    "theme": "Étendue protection — Exceptions autorisées",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Selon NF EN 12845 §5.1.2, dans lesquels de ces locaux la protection sprinkleur peut-elle être omise après prise en compte de la charge calorifique ?",
+    "propositions": [
+      "Toilettes en matériaux non combustibles sans stockage de matières combustibles",
+      "Cages d'escaliers fermées sans matières combustibles, construites à l'épreuve du feu",
+      "Pièces protégées par un autre système d'extinction automatique (gaz, poudre, pulvérisation d'eau)",
+      "Bureaux ouverts"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§5.1.2 autorise l'omission après analyse de la charge calorifique pour : toilettes non combustibles sans stockage, cages d'escaliers et puits fermés non combustibles à l'épreuve du feu, pièces protégées par un autre système automatique (gaz, poudre, pulvérisation), et ateliers de traitement par voie humide. Les bureaux restent protégés.",
+    "reference": "NF EN 12845+A2 §5.1.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-5-3-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "5.3",
+    "theme": "Séparation à l'épreuve du feu",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle résistance au feu minimale doit présenter la séparation entre une zone protégée et une zone non protégée ?",
+    "propositions": [
+      "15 min",
+      "30 min",
+      "60 min",
+      "120 min"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Minimum 60 min (l'autorité compétente peut imposer plus). Les portes doivent être à fermeture automatique ou se fermer automatiquement en cas d'incendie.",
+    "reference": "NF EN 12845+A2 §5.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-5-4-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "5.4",
+    "theme": "Espaces cachés — Seuil de protection",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "À partir de quelle hauteur un espace caché (faux-plafond, faux-plancher) doit-il être systématiquement protégé par sprinkleurs ?",
+    "propositions": [
+      "0,3 m",
+      "0,5 m",
+      "0,8 m",
+      "1,2 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Au-dessus de 0,8 m de hauteur, protection obligatoire. En-dessous, protection requise uniquement si l'espace contient ou est construit avec des matières combustibles. Valeur identique à la R1.",
+    "reference": "NF EN 12845+A2 §5.4 (avril 2026)"
+  },
+  {
+    "id": "en12845-5-4-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "5.4",
+    "theme": "Espace caché — Classe de protection",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle classe de protection doit être appliquée dans un espace caché situé dans un local classé OH3 ?",
+    "propositions": [
+      "LH",
+      "OH1",
+      "OH3 (même classe que le local)",
+      "HH"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§5.4 : la protection dans l'espace caché est LH si la classe principale est LH, et OH1 dans tous les autres cas. Donc OH1 pour un local OH3.",
+    "reference": "NF EN 12845+A2 §5.4 (avril 2026)"
+  },
+  {
+    "id": "en12845-5-5-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "5.5",
+    "theme": "Différence sprinkleur le plus haut/bas",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle différence de hauteur maximale est admise entre le sprinkleur le plus haut et le plus bas d'une installation reliée à un même poste de contrôle ?",
+    "propositions": [
+      "15 m",
+      "30 m",
+      "45 m",
+      "60 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Différence maximale 45 m entre sprinkleur le plus haut et le plus bas. Au-delà, les exigences de l'Annexe E (installations de grande hauteur) s'appliquent.",
+    "reference": "NF EN 12845+A2 §5.5 (avril 2026)"
+  },
+  {
+    "id": "en12845-5-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "5.2",
+    "theme": "Stockage en plein air — Distance minimale",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En l'absence de réglementation spécifique, quelle distance minimale doit séparer des matières combustibles stockées en plein air du bâtiment protégé ?",
+    "propositions": [
+      "5 m fixe",
+      "10 m ou 1,5 × hauteur du matériau stocké, la plus grande des deux",
+      "10 m fixe",
+      "20 m fixe"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§5.2 : la distance ne doit pas être inférieure à 10 m OU 1,5 × hauteur du matériau stocké. C'est cohérent avec la R1 §4.1 (qui fait référence à la hauteur du bâtiment plutôt que du stockage).",
+    "reference": "NF EN 12845+A2 §5.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-6-2-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "6.2.2",
+    "theme": "Classe LH — Définition",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon NF EN 12845, quelle surface maximale d'un local unique à tenue au feu < 30 min est admise en classe LH ?",
+    "propositions": [
+      "84 m²",
+      "126 m²",
+      "216 m²",
+      "Aucune limite"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.2.2 : la classe LH ne comprend aucun local unique de plus de 126 m² dont la tenue au feu est inférieure à 30 min. Cette limite est spécifique à l'EN 12845 (la R1 n'a pas cette formulation explicite).",
+    "reference": "NF EN 12845+A2 §6.2.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-6-1-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "6.1",
+    "theme": "Classes coexistantes — Extension critère",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Dans le cas de zones en communication ouverte appartenant à des classes différentes, sur combien de rangées de sprinkleurs au minimum la classe supérieure doit-elle être étendue dans la classe inférieure ?",
+    "propositions": [
+      "1 rangée",
+      "2 rangées au moins",
+      "3 rangées au moins",
+      "Toute la zone"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.1 : les critères de conception de la classe la plus élevée doivent être étendus à au moins 2 rangées de sprinkleurs dans la zone de classe inférieure. Précision propre à l'EN 12845.",
+    "reference": "NF EN 12845+A2 §6.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-6-2-3-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "6.2.3",
+    "theme": "Stockage en zone OH — Conditions",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Selon NF EN 12845, quelles conditions cumulatives permettent de traiter un stockage en zone OH (et non HHS) ?",
+    "propositions": [
+      "Protection conçue au minimum selon OH3",
+      "Îlot de stockage maximum 50 m²",
+      "Espace libre minimum 2,4 m autour de chaque îlot",
+      "Hauteur < 1 m"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§6.2.3 : protection OH3 minimum + îlots ≤ 50 m² + espace libre ≥ 2,4 m autour. La hauteur dépend du Tableau 1 (catégorie I-IV, mode ST). Conditions très proches de la R1 §5.3.",
+    "reference": "NF EN 12845+A2 §6.2.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-6-2-3-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "6.2.3",
+    "theme": "OH4 + stockage",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Que faut-il faire d'une zone de stockage située dans un local classé OH4 ?",
+    "propositions": [
+      "Maintenir en OH4 si hauteur ≤ 2 m",
+      "La traiter comme HHS",
+      "La requalifier en OH3 avec îlots réduits",
+      "Aucune action si les marchandises sont peu combustibles"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.2.3 : lorsque la zone est classée OH4 (ou que les conditions de stockage en OH ne peuvent être satisfaites), la zone de stockage doit être traitée comme HHS. Règle identique à la R1.",
+    "reference": "NF EN 12845+A2 §6.2.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-6-2-4-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "6.2.4.2",
+    "theme": "HHS — Subdivisions",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Combien de catégories existent dans la classe HHS selon la NF EN 12845 ?",
+    "propositions": [
+      "3 (HHS1 à HHS3)",
+      "4 (HHS1 à HHS4)",
+      "5 (HHS1 à HHS5)",
+      "6 (HHS1 à HHS6)"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.2.4.2 : HHS est subdivisé en 4 catégories (HHS1 à HHS4). À noter : la R1 (édition 2020/2025) a introduit HHS#5 avec le symbole #, qui ne figure pas dans l'EN 12845.",
+    "reference": "NF EN 12845+A2 §6.2.4.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-6-2-4-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "6.2.4.1",
+    "theme": "HHP4 — Type d'installation",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Comment la protection contre les risques HHP4 est-elle généralement assurée selon NF EN 12845 ?",
+    "propositions": [
+      "Système sous eau classique",
+      "Système sous air à débit majoré",
+      "Système de type déluge (hors domaine d'application de la norme)",
+      "Pulvérisation d'eau"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§6.2.4.1 NOTE : la protection HHP4 est généralement assurée par systèmes déluge qui n'entrent pas dans le domaine d'application de la NF EN 12845. Cohérent avec la R1 (HHP4 → déluge obligatoire).",
+    "reference": "NF EN 12845+A2 §6.2.4.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-6-3-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "6.3.2",
+    "theme": "Modes de stockage — ST5",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode de stockage ST5 selon NF EN 12845 correspond à :",
+    "propositions": [
+      "Palettes sur racks (gerbage sur rayonnage)",
+      "Étagères pleines ou ajourées de largeur ≤ 1 m",
+      "Empilage libre en îlots",
+      "Étagères de largeur > 1 m et ≤ 6 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.3.2 : ST5 = étagères pleines ou ajourées de largeur ≤ 1 m. ST6 = idem mais largeur 1 à 6 m. ST4 = palettes sur racks. À noter : l'EN 12845 ne définit pas ST7, ST8, ST9 contrairement à la R1.",
+    "reference": "NF EN 12845+A2 §6.3.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-6-3-2-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "6.3.2",
+    "theme": "Modes de stockage — Différence avec R1",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle différence majeure existe entre les modes de stockage de la NF EN 12845 et ceux de la R1 ?",
+    "propositions": [
+      "Aucune différence",
+      "L'EN 12845 définit ST1-ST6 ; la R1 ajoute ST8 (racks accumulation) et ST9 (cantilever)",
+      "L'EN 12845 a 9 modes, la R1 seulement 6",
+      "L'EN 12845 utilise des lettres au lieu de chiffres"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "L'EN 12845 définit ST1 à ST6 uniquement. La R1 ajoute ST8 (racks à accumulation, toujours HHS) et ST9 (racks cantilever, introduit en 2020). Point important pour l'audit cross-référentiel.",
+    "reference": "NF EN 12845+A2 §6.3.2 vs R1 §5.1.3 (2025)"
+  },
+  {
+    "id": "en12845-7-1-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.1",
+    "theme": "Densité de calcul LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la densité minimale de calcul en classe LH selon la NF EN 12845 ?",
+    "propositions": [
+      "2,25 mm/min",
+      "5,0 mm/min",
+      "7,5 mm/min",
+      "10,0 mm/min"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Tableau 3 §7.1 : densité LH = 2,25 mm/min, surface impliquée 84 m². Valeurs identiques à la R1 §T6.1. À noter que les systèmes sous air ne sont pas autorisés en LH (passer en OH1).",
+    "reference": "NF EN 12845+A2 §7.1 / Tableau 3 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-1-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.1",
+    "theme": "Surface impliquée OH1 — Air vs eau",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En classe OH1, la surface impliquée pour un système sous eau est de 72 m². Quelle valeur s'applique pour un système sous air ou alternatif ?",
+    "propositions": [
+      "72 m² (identique)",
+      "84 m²",
+      "90 m²",
+      "108 m²"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Tableau 3 §7.1 : OH1 = 72 m² sous eau / 90 m² sous air ou alternatif. Majoration de +25 % pour compenser le retard d'arrivée de l'eau. Spécificité importante de l'EN 12845.",
+    "reference": "NF EN 12845+A2 §7.1 / Tableau 3 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-1-003",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.1",
+    "theme": "Surface impliquée OH3 — Air vs eau",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "OH3 sous eau = 216 m² de surface impliquée. Quelle valeur sous air ?",
+    "propositions": [
+      "216 m²",
+      "260 m²",
+      "270 m²",
+      "324 m²"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Tableau 3 §7.1 : OH3 = 216 m² sous eau / 270 m² sous air ou alternatif. Majoration +25 % systématique sous air. OH1: 72→90, OH2: 144→180, OH3: 216→270.",
+    "reference": "NF EN 12845+A2 §7.1 / Tableau 3 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-1-004",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.1",
+    "theme": "OH4 — Restriction sous air",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Un système OH4 peut-il être conçu en sous air selon NF EN 12845 ?",
+    "propositions": [
+      "Oui avec majoration +25 %",
+      "Oui sans modification",
+      "Non — utiliser HHP1 à la place",
+      "Oui uniquement en zone hors gel"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Tableau 3 §7.1 : OH4 sous air n'est PAS autorisé — il faut basculer en HHP1. Comme LH où le sous air force le passage à OH1.",
+    "reference": "NF EN 12845+A2 §7.1 / Tableau 3 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-1-005",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.1",
+    "theme": "Densité HHP1",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Densité de calcul minimale en classe HHP1 selon NF EN 12845 ?",
+    "propositions": [
+      "5,0 mm/min",
+      "7,5 mm/min",
+      "10,0 mm/min",
+      "12,5 mm/min"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Tableau 3 §7.1 : HHP1 = 7,5 mm/min, surface 260 m². HHP2 = 10,0 / HHP3 = 12,5. Valeurs identiques à la R1 §T6.1.",
+    "reference": "NF EN 12845+A2 §7.1 / Tableau 3 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-1-006",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.1",
+    "theme": "Surface impliquée HHP",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Surface impliquée commune à HHP1, HHP2 et HHP3 sous eau ?",
+    "propositions": [
+      "216 m²",
+      "260 m²",
+      "300 m²",
+      "360 m²"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Tableau 3 §7.1 : HHP1-2-3 = 260 m² sous eau, 325 m² sous air (+25 %). La densité augmente avec le groupe (7,5/10,0/12,5) mais la surface impliquée reste constante.",
+    "reference": "NF EN 12845+A2 §7.1 / Tableau 3 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-2-3-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.2.3.4",
+    "theme": "Sprinkleurs racks — Pression minimale",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pression minimale au niveau de tout sprinkleur en service quand il y a des sprinkleurs installés dans les racks ?",
+    "propositions": [
+      "0,5 bar",
+      "1,0 bar",
+      "2,0 bar",
+      "3,4 bar"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§7.2.3.4 NOTE / §13.4.4 : pression minimale 2,0 bar à tout sprinkleur en service dans une installation avec sprinkleurs intermédiaires dans racks. Bien supérieur aux 0,5 bar standards OH/HHP/HHS.",
+    "reference": "NF EN 12845+A2 §7.2.3.4 / §13.4.4 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-2-3-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.2.3.3",
+    "theme": "Sprinkleurs racks — Hypothèse de calcul",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour le calcul hydraulique, combien de sprinkleurs sont supposés fonctionner par niveau de racks ?",
+    "propositions": [
+      "1 sprinkleur sur 3 niveaux",
+      "3 sprinkleurs sur chaque niveau, max 3 niveaux, position la plus éloignée",
+      "Tous les sprinkleurs du rack",
+      "6 sprinkleurs sur 2 niveaux"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§7.2.3.3 : 3 sprinkleurs fonctionnent simultanément sur chaque niveau, maximum 3 niveaux, dans la position hydrauliquement la plus éloignée. Aucun fonctionnement simultané supposé pour plus de 3 rangées (vertical ou horizontal).",
+    "reference": "NF EN 12845+A2 §7.2.3.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-2-3-003",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.2.3.3",
+    "theme": "Calcul HHS — Racks impliqués selon allées",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Combien de racks sont supposés impliqués lorsque la largeur des allées entre racks est < 1,2 m ?",
+    "propositions": [
+      "1 rack",
+      "2 racks",
+      "3 racks",
+      "Tous les racks adjacents"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§7.2.3.3 : allées ≥ 2,4 m → 1 rack impliqué ; allées entre 1,2 m et 2,4 m → 2 racks ; allées < 1,2 m → 3 racks. Plus les allées sont étroites, plus le calcul prévoit de racks simultanés.",
+    "reference": "NF EN 12845+A2 §7.2.3.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-2-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.2.2.1",
+    "theme": "Bâtiments > 12 m",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour un bâtiment de hauteur > 12 m en HHS sous toiture uniquement, quelle démarche est requise ?",
+    "propositions": [
+      "Aucune démarche particulière",
+      "Consultation obligatoire des autorités",
+      "Passage automatique en ESFR",
+      "Doubler la densité"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§7.2.2.1 : pour hauteur > 12 m en HHS, consultation obligatoire des autorités. Cohérent avec la R1 qui impose accord CNPP préalable pour hauteurs > 18 m.",
+    "reference": "NF EN 12845+A2 §7.2.2.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-2-2-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.2.2.3",
+    "theme": "Espace libre excessif (> 4 m)",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Si l'espace libre entre la hauteur de stockage et les déflecteurs dépasse 4 m, l'option 1 prévoit d'augmenter la densité. De combien sur le premier mètre en excès ?",
+    "propositions": [
+      "+1 mm/min",
+      "+2,5 mm/min",
+      "+5 mm/min",
+      "+10 mm/min"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§7.2.2.3 option 1 : +2,5 mm/min sur le premier mètre en excès, puis +1 mm/min par mètre supplémentaire. K115 minimum imposé. Option 2 : passer à des sprinkleurs intermédiaires dans racks.",
+    "reference": "NF EN 12845+A2 §7.2.2.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-2-3-004",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.2.3.1",
+    "theme": "Limite poste de contrôle sprinkleurs racks",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Au-delà de combien de sprinkleurs intermédiaires dans les racks, ils doivent être alimentés par un poste de contrôle distinct des sprinkleurs sous toiture ?",
+    "propositions": [
+      "20",
+      "30",
+      "50",
+      "100"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§7.2.3.1 : lorsque plus de 50 sprinkleurs intermédiaires dans les racks sont installés, ils ne doivent pas être alimentés par le même poste de contrôle que les sprinkleurs sous toiture.",
+    "reference": "NF EN 12845+A2 §7.2.3.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-8-1-1-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "8.1.1",
+    "theme": "Autonomie source — LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Durée minimale d'autonomie d'une source d'eau en classe LH selon NF EN 12845 ?",
+    "propositions": [
+      "15 min",
+      "30 min",
+      "60 min",
+      "90 min"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§8.1.1 : LH = 30 min, OH = 60 min, HHP et HHS = 90 min. L'EN 12845 ne distingue pas source A et B comme la R1 ; ce sont les durées minimales par classe.",
+    "reference": "NF EN 12845+A2 §8.1.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-8-1-1-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "8.1.1",
+    "theme": "Autonomie source — HHS",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Durée minimale d'une source d'eau en HHS selon NF EN 12845 ?",
+    "propositions": [
+      "30 min",
+      "60 min",
+      "90 min",
+      "120 min"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§8.1.1 : HHP et HHS = 90 min. Cohérent avec la R1 sur source B (90 min en HHP/HHS) mais l'EN 12845 ne distingue pas A et B.",
+    "reference": "NF EN 12845+A2 §8.1.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-8-1-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "8.1.2",
+    "theme": "Continuité — Conditions inopérantes",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Selon §8.1.2 NF EN 12845, contre quelles conditions une source d'eau doit-elle être protégée ?",
+    "propositions": [
+      "Gel",
+      "Sécheresse",
+      "Inondation",
+      "Coupure d'électricité du réseau public"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§8.1.2 : la source d'eau ne doit pas être affectée par gel, sécheresse, inondation ou toute autre condition qui réduirait le débit ou la rendrait inopérante. Les coupures électriques relèvent du chap. 10 (pompes).",
+    "reference": "NF EN 12845+A2 §8.1.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-8-1-3-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "8.1.3",
+    "theme": "Température minimum local",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Température minimale à maintenir au poste de contrôle et à la canalisation d'alimentation selon NF EN 12845 ?",
+    "propositions": [
+      "0 °C",
+      "+2 °C",
+      "+4 °C",
+      "+5 °C"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§8.1.3 : ≥ +4 °C. À noter : la R1 §8.2 exige +5 °C dans le local des sources. Différence subtile mais réelle entre les deux référentiels.",
+    "reference": "NF EN 12845+A2 §8.1.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-8-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "8.2.1",
+    "theme": "Pression maximale de l'eau",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pression maximale d'eau admissible au niveau du raccordement des équipements selon NF EN 12845 ?",
+    "propositions": [
+      "8 bar",
+      "10 bar",
+      "12 bar",
+      "16 bar"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§8.2.1 : pression maximale 12 bar (sauf cas spécifiques §8.2.2 grande hauteur > 45 m où certains points peuvent dépasser sous condition d'adéquation matériel). Valeur identique à la R1 §10.2.",
+    "reference": "NF EN 12845+A2 §8.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-8-2-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "8.2.2",
+    "theme": "Grande hauteur > 45 m — Pression > 12 bar admise",
+    "difficulte": 5,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Dans un système de grande hauteur (différence haut/bas > 45 m), où une pression > 12 bar peut-elle être admise ?",
+    "propositions": [
+      "Au refoulement des pompes",
+      "Dans les colonnes montantes et canalisations de distribution",
+      "Au niveau des sprinkleurs",
+      "Sur les gongs hydrauliques"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
+    "explication": "§8.2.2 : pression > 12 bar admise (a) au refoulement des pompes et (b) dans colonnes montantes et canalisations de distribution, sous réserve que tous les équipements soient adaptés. Pas admise sur sprinkleurs, gongs, clapets d'alarme, etc.",
+    "reference": "NF EN 12845+A2 §8.2.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-3-1-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.3.1",
+    "theme": "Systèmes précalculés LH — Débit/pression",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour un système LH précalculé (sous eau ou préaction), quel débit minimum est requis au poste de contrôle ?",
+    "propositions": [
+      "100 l/min",
+      "225 l/min",
+      "375 l/min",
+      "540 l/min"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Tableau 6 §7.3.1 : LH précalculé sous eau et à préaction = 225 l/min à 2,2 + ps bar au poste de contrôle. Pas de système sous air en LH.",
+    "reference": "NF EN 12845+A2 §7.3.1 / Tableau 6 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-3-1-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.3.1",
+    "theme": "Symbole ps — Définition",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans les exigences de pression au poste de contrôle (ex : 2,2 + ps bar), que représente 'ps' ?",
+    "propositions": [
+      "Pression statique au refoulement de la pompe",
+      "Perte de pression statique due à la hauteur du sprinkleur le plus haut par rapport au manomètre 'C' du poste de contrôle",
+      "Pression de service",
+      "Perte de charge par frottement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Tableau 6 §7.3.1 NOTE : ps = perte de pression statique due à la hauteur du sprinkleur le plus haut du réseau par rapport au manomètre 'C' du poste de contrôle, exprimée en bars.",
+    "reference": "NF EN 12845+A2 §7.3.1 / Tableau 6 (avril 2026)"
+  },
+  {
+    "id": "en12845-10-7-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "10.7.2",
+    "theme": "Source B — Critère 140 % débit",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon NF EN 12845 §10.7.2, la pompe doit fournir 140 % du débit nominal à quelle pression minimum ?",
+    "propositions": [
+      "50 % de la pression nominale",
+      "60 % de la pression nominale",
+      "70 % de la pression nominale",
+      "90 % de la pression nominale"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§10.7.2 EN 12845 : pompe doit fournir 140 % du débit nominal à ≥ 70 % de la pression nominale. C'est le critère Q140% évoqué dans la R1 (h(Q140%) > 0,70 × h(Q100%)) applicable uniquement si la fiche technique référence EN 12845.",
+    "reference": "NF EN 12845+A2 §10.7.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-10-7-5-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "10.7.5",
+    "theme": "Pressostats — Nombre",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon NF EN 12845 §10.7.5.1, combien de pressostats doivent être installés pour démarrer chaque station de pompage ?",
+    "propositions": [
+      "1",
+      "2",
+      "3",
+      "Variable selon la classe"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§10.7.5.1 EN 12845 : deux pressostats indépendants pour démarrer chaque station de pompage. Identique à la R1 §10.1 (2 pressostats obligatoires depuis 2014).",
+    "reference": "NF EN 12845+A2 §10.7.5.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-12-3-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "12.3",
+    "theme": "Distance minimale entre sprinkleurs",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Distance minimale entre deux sprinkleurs selon NF EN 12845 ?",
+    "propositions": [
+      "1,5 m",
+      "2,0 m",
+      "2,5 m",
+      "3,0 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§12.3 EN 12845 : minimum 2,0 m entre deux sprinkleurs. Identique à la R1 §T6.1. Évite le 'cold soldering' (refroidissement mutuel retardant le déclenchement).",
+    "reference": "NF EN 12845+A2 §12.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-14-4-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "14.4",
+    "theme": "Température nominale sprinkleurs",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel type de sprinkleur est recommandé par NF EN 12845 dans un local où la température ambiante n'est pas connue ?",
+    "propositions": [
+      "À ampoule rouge (68 °C)",
+      "À ampoule bleue (141 °C)",
+      "À ampoule verte (93 °C)",
+      "Le plus bas seuil disponible"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "§14.4 : la température nominale doit être choisie en fonction de la température ambiante maximale prévisible. En usage standard, 68 °C (ampoule rouge) couvre les ambiances normales jusqu'à ~38 °C.",
+    "reference": "NF EN 12845+A2 §14.4 (avril 2026)"
+  },
+  {
+    "id": "en12845-17-2-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "17.2.2",
+    "theme": "Espacement supports — Acier vs cuivre",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Espacement maximum entre deux supports successifs pour une canalisation en acier selon NF EN 12845 ?",
+    "propositions": [
+      "2 m",
+      "3 m",
+      "4 m",
+      "5 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§17.2.2 : 4 m max pour acier, 2 m pour cuivre. Possibilité d'augmenter de 50 % pour canalisations > 50 mm sous conditions (double support indépendant ou support charge +50 %).",
+    "reference": "NF EN 12845+A2 §17.2.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-17-2-2-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "17.2.2",
+    "theme": "Distance sprinkleur terminal-support",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Distance maximale entre un sprinkleur terminal et le support le plus proche pour une canalisation DN 25 ?",
+    "propositions": [
+      "0,5 m",
+      "0,9 m",
+      "1,2 m",
+      "1,5 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§17.2.2 : 0,9 m max pour canalisations DN 25 ; 1,2 m max pour canalisations > DN 25. Distance minimale entre un sprinkleur debout et son support : 0,15 m.",
+    "reference": "NF EN 12845+A2 §17.2.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-17-1-9-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "17.1.9",
+    "theme": "Tuyaux en cuivre — Restrictions",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Dans quelles classes de risque les tuyaux de cuivre sont-ils admis par NF EN 12845 ?",
+    "propositions": [
+      "LH",
+      "OH1, OH2, OH3",
+      "OH4",
+      "HHP et HHS"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
+    "explication": "§17.1.9 : tuyaux de cuivre admis uniquement en systèmes sous eau classés LH, OH1, OH2 et OH3 — pas en OH4, HHP ou HHS. Toujours en aval de toute canalisation acier.",
+    "reference": "NF EN 12845+A2 §17.1.9 (avril 2026)"
+  },
+  {
+    "id": "en12845-17-1-8-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "17.1.8",
+    "theme": "Pente — Installations sous air",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pente minimale des antennes dans une installation sous air selon NF EN 12845 ?",
+    "propositions": [
+      "0,1 %",
+      "0,2 %",
+      "0,4 %",
+      "1,0 %"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§17.1.8 : installations sous air / alternatives / préaction : pente ≥ 0,4 % pour les antennes vers la canalisation de distribution, ≥ 0,2 % pour les canalisations de distribution vers la vanne de vidange. Permet l'évacuation de l'eau résiduelle.",
+    "reference": "NF EN 12845+A2 §17.1.8 (avril 2026)"
+  },
+  {
+    "id": "en12845-18-1-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "18.1",
+    "theme": "Plan de masse — Contenu",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Quels éléments doivent obligatoirement figurer sur le plan de masse selon NF EN 12845 §18.1 ?",
+    "propositions": [
+      "Numéro de l'installation et emplacement du poste de contrôle + gong",
+      "Classe de risque de chaque zone et hauteur max de stockage",
+      "Emplacement des vannes d'arrêt secondaires",
+      "Coordonnées du fournisseur d'eau"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§18.1 : plan de masse à proximité de l'entrée, visible par les pompiers. Doit indiquer : (a) n° installation + poste contrôle + gong, (b) zones de classes de risque et hauteur max stockage, (c) surface couverte par chaque installation, (d) emplacement vannes d'arrêt secondaires.",
+    "reference": "NF EN 12845+A2 §18.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-18-2-1-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "18.2.1",
+    "theme": "Plaque de localisation — Lettrage",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Hauteur minimum des lettres « VANNE D'ARRÊT DES SPRINKLEURS » sur la plaque extérieure ?",
+    "propositions": [
+      "20 mm",
+      "25 mm",
+      "35 mm",
+      "50 mm"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§18.2.1 : lettres ≥ 35 mm pour « VANNE D'ARRÊT DES SPRINKLEURS » et ≥ 25 mm pour « À L'INTÉRIEUR ». Lettres blanches sur fond rouge. Plaque résistante aux intempéries, fixée sur mur extérieur près de l'entrée la plus proche du poste de contrôle.",
+    "reference": "NF EN 12845+A2 §18.2.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-18-2-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "18.2.2",
+    "theme": "Avis vannes d'arrêt — Couleurs",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelles couleurs imposées pour l'avis « VANNE DE RÉGULATION DES SPRINKLEURS » à proximité des vannes d'arrêt ?",
+    "propositions": [
+      "Lettres noires sur fond jaune",
+      "Lettres blanches sur fond rouge",
+      "Lettres rouges sur fond blanc",
+      "Lettres blanches sur fond bleu"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§18.2.2 : avis rectangulaire avec lettres blanches d'au moins 20 mm de haut sur fond rouge. Pour une vanne enfermée dans une salle, un second avis « Maintenir la porte fermée » (lettres blanches ≥ 5 mm sur fond bleu) doit être apposé sur la face intérieure de la porte.",
+    "reference": "NF EN 12845+A2 §18.2.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-18-2-6-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "18.2.6.3",
+    "theme": "Étiquetage alim moteur pompe électrique",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle étiquette doit porter chaque interrupteur sur l'alimentation électrique d'une pompe sprinkleur électrique ?",
+    "propositions": [
+      "« ALIMENTATION POMPE — IMPORTANT »",
+      "« HAUTE TENSION — DANGER »",
+      "« ALIMENTATION MOTEUR DE POMPE SPRINKLEURS — NE PAS COUPER EN CAS D'INCENDIE »",
+      "Aucun étiquetage spécifique imposé"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§18.2.6.3 : étiquetage obligatoire « ALIMENTATION MOTEUR DE POMPE SPRINKLEURS — NE PAS COUPER EN CAS D'INCENDIE ». Formulation très proche de la R1 mais légèrement différente.",
+    "reference": "NF EN 12845+A2 §18.2.6.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-19-1-1-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "19.1.1.1",
+    "theme": "Essai pneumatique — Critère perte",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Perte de pression maximale admise lors d'un essai pneumatique de 24 h selon NF EN 12845 ?",
+    "propositions": [
+      "0,15 bar",
+      "0,30 bar",
+      "0,50 bar",
+      "1,00 bar"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "§19.1.1.1 : essai pneumatique à ≥ 2,5 bar pendant ≥ 24 h. Perte admissible ≤ 0,15 bar en 24 h. À noter : la R1 §3.3.2 admet une perte ≤ 0,30 bar — l'EN 12845 est plus stricte.",
+    "reference": "NF EN 12845+A2 §19.1.1.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-19-1-1-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "19.1.1.2",
+    "theme": "Essai hydraulique — Pression",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pression d'essai hydraulique selon NF EN 12845 ?",
+    "propositions": [
+      "15,5 bar ou 1,2 × Pmax",
+      "15 bar ou 1,5 × Pmax",
+      "10 bar pendant 4 h",
+      "20 bar pendant 1 h"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§19.1.1.2 : essai hydraulique ≥ 2 h, pression ≥ 15 bar ou 1,5 × Pmax, la plus grande des deux. À noter : la R1 §3.3.1 retient 15,5 bar ou 1,2 × Pmax — différence significative à connaître.",
+    "reference": "NF EN 12845+A2 §19.1.1.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-1-4-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.1.4",
+    "theme": "Stock sprinkleurs rechange — Conditions",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Conditions de stockage des sprinkleurs de rechange selon NF EN 12845 §20.1.4 ?",
+    "propositions": [
+      "Avec les clés fournies par le fournisseur",
+      "Dans des armoires bien visibles et facilement accessibles",
+      "Température ambiante ≤ 27 °C",
+      "Avec un registre de mouvement signé"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§20.1.4 : sprinkleurs + clés dans une ou plusieurs armoires visibles et accessibles, T° ambiante ≤ 27 °C. Stock à reconstituer rapidement après utilisation. Aucun registre de mouvement obligatoire dans cette norme.",
+    "reference": "NF EN 12845+A2 §20.1.4 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-1-4-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.1.4",
+    "theme": "Stock rechange — LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Stock minimum de sprinkleurs de rechange en LH selon NF EN 12845 ?",
+    "propositions": [
+      "6",
+      "12",
+      "24",
+      "36"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "§20.1.4 : 6 en LH, 24 en OH, 36 en HHP et HHS. Valeurs strictement identiques à la R1 §13.2.11.",
+    "reference": "NF EN 12845+A2 §20.1.4 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-2-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.2.2.1",
+    "theme": "Programme hebdomadaire — Intervalle",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Intervalle maximal entre deux contrôles du programme hebdomadaire selon NF EN 12845 ?",
+    "propositions": [
+      "5 jours",
+      "7 jours",
+      "10 jours",
+      "14 jours"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§20.2.2.1 : intervalles de 7 jours au maximum. Hebdomadaire strict.",
+    "reference": "NF EN 12845+A2 §20.2.2.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-2-2-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.2.2.2",
+    "theme": "Surveillance pression — Air",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon §20.2.2.2 NF EN 12845, la pression dans les canalisations sous air ne doit pas chuter de plus de combien par semaine ?",
+    "propositions": [
+      "0,1 bar",
+      "0,5 bar",
+      "1,0 bar",
+      "2,0 bar"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§20.2.2.2 : il convient que la pression dans les canalisations sous air, alternatives et à préaction ne chute pas de plus de 1,0 bar par semaine. Au-delà : fuite à investiguer.",
+    "reference": "NF EN 12845+A2 §20.2.2.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-2-2-003",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.2.2.3",
+    "theme": "Essai gong hydraulique hebdo — Durée",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Durée minimale de la sonnerie du gong hydraulique lors du contrôle hebdomadaire selon NF EN 12845 ?",
+    "propositions": [
+      "10 s",
+      "15 s",
+      "30 s",
+      "60 s"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§20.2.2.3 : chaque gong hydraulique doit sonner au moins 30 s. À noter : la R1 §18.4.3 retient 10 s minimum — l'EN 12845 est trois fois plus exigeante sur ce point.",
+    "reference": "NF EN 12845+A2 §20.2.2.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-2-2-004",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.2.2.5",
+    "theme": "Essai diesel hebdo — Durée",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Durée minimale de fonctionnement d'un moteur diesel lors de l'essai hebdomadaire selon NF EN 12845 ?",
+    "propositions": [
+      "10 min",
+      "20 min",
+      "30 min",
+      "1 h"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§20.2.2.5 : moteur diesel doit tourner pendant 20 min ou la durée recommandée par le fournisseur. Identique à la R1. Puis arrêt et redémarrage immédiat par essai manuel.",
+    "reference": "NF EN 12845+A2 §20.2.2.5 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-3-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.3.2.1",
+    "theme": "Programme trimestriel",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Intervalle maximal entre deux contrôles du programme trimestriel selon NF EN 12845 ?",
+    "propositions": [
+      "12 semaines",
+      "13 semaines",
+      "16 semaines",
+      "3 mois calendaires"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§20.3.2.1 : contrôles à des intervalles de 13 semaines au maximum (~ 3 mois). À noter : la R1 utilise un cycle semestriel (§18.5) et non trimestriel — différence structurelle.",
+    "reference": "NF EN 12845+A2 §20.3.2.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-3-3-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.3.3.1",
+    "theme": "Programme semestriel",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Intervalle maximal entre deux contrôles du programme semestriel selon NF EN 12845 ?",
+    "propositions": [
+      "3 mois",
+      "6 mois",
+      "9 mois",
+      "12 mois"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§20.3.3.1 : 6 mois maximum. Concerne notamment les clapets d'alarme sous air, les alarmes raccordées au service d'incendie. Cohérent avec le rythme semestriel R1.",
+    "reference": "NF EN 12845+A2 §20.3.3.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-2-3-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.2.3",
+    "theme": "Programme mensuel — Batteries",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Que vérifie-t-on mensuellement sur les batteries au plomb selon NF EN 12845 ?",
+    "propositions": [
+      "Tension uniquement",
+      "Densité et niveau de l'électrolyte",
+      "Capacité résiduelle",
+      "État des bornes"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§20.2.3 : niveau et densité de l'électrolyte de toutes les batteries au plomb (démarreurs diesel + tableaux de commande). Si densité faible : vérifier chargeur ; remplacer batteries si chargeur OK.",
+    "reference": "NF EN 12845+A2 §20.2.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-1-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.1.1",
+    "theme": "Responsable du système",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Selon §20.1.1 NF EN 12845, quelles informations doivent être affichées dans le local des vannes de sprinkleurs ?",
+    "propositions": [
+      "Nom du responsable et de son remplaçant",
+      "Adresse du responsable et du remplaçant",
+      "Numéros de téléphone",
+      "Photographie du responsable"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§20.1.1 : nom, adresse et numéro de téléphone du responsable et du remplaçant, affichés de manière bien visible dans le local des vannes. Pas de photographie requise.",
+    "reference": "NF EN 12845+A2 §20.1.1 (avril 2026)"
+  },
+  {
+    "id": "en12845-20-3-2-7-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "20.3.2.7",
+    "theme": "Vannes d'arrêt — Manœuvre trimestrielle",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon §20.3.2.7 NF EN 12845, que faire trimestriellement des vannes d'arrêt contrôlant l'écoulement d'eau vers les sprinkleurs ?",
+    "propositions": [
+      "Aucune action",
+      "Les manœuvrer pour s'assurer du bon fonctionnement puis les verrouiller en position",
+      "Les démonter et nettoyer",
+      "Les remplacer si > 5 ans"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§20.3.2.7 : manœuvrer toutes les vannes d'arrêt (postes de contrôle, vannes de zone, vannes secondaires), s'assurer de leur bon fonctionnement, les verrouiller à nouveau solidement en position.",
+    "reference": "NF EN 12845+A2 §20.3.2.7 (avril 2026)"
+  },
+  {
+    "id": "en12845-vs-r1-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "comparaison",
+    "theme": "EN 12845 vs R1 — Essai pneumatique",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle différence existe entre R1 2025 et NF EN 12845 sur le critère de perte de pression à l'essai pneumatique 24 h ?",
+    "propositions": [
+      "Aucune différence (les deux à 0,30 bar)",
+      "R1 plus stricte : 0,15 bar vs 0,30 bar EN 12845",
+      "EN 12845 plus stricte : 0,15 bar vs 0,30 bar R1",
+      "EN 12845 ne fixe pas de critère"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "L'EN 12845 §19.1.1.1 admet une perte ≤ 0,15 bar en 24 h. La R1 §3.3.2 admet ≤ 0,30 bar. L'EN 12845 est deux fois plus stricte sur ce point. Important à connaître pour les essais selon le référentiel applicable.",
+    "reference": "NF EN 12845+A2 §19.1.1.1 vs R1 §3.3.2"
+  },
+  {
+    "id": "en12845-vs-r1-002",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "comparaison",
+    "theme": "EN 12845 vs R1 — Gong hebdo",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Différence entre R1 2025 et NF EN 12845 sur la durée minimale de l'essai hebdomadaire du gong hydraulique ?",
+    "propositions": [
+      "Identiques (10 s)",
+      "R1 : 10 s / EN 12845 : 30 s",
+      "R1 : 30 s / EN 12845 : 10 s",
+      "R1 : 30 s / EN 12845 : 60 s"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 §18.4.3 : ≥ 10 s. EN 12845 §20.2.2.3 : ≥ 30 s. L'EN 12845 est trois fois plus exigeante. Différence à connaître lors d'audits sur installations alignées EN 12845.",
+    "reference": "NF EN 12845+A2 §20.2.2.3 vs R1 §18.4.3"
+  },
+  {
+    "id": "en12845-vs-r1-003",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "comparaison",
+    "theme": "EN 12845 vs R1 — Modes ST",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle est la différence des modes de stockage entre R1 2025 et NF EN 12845 ?",
+    "propositions": [
+      "Identiques",
+      "R1 : ST1-ST6 / EN 12845 : ST1-ST9",
+      "R1 : ST1-ST9 (avec ST7 désaffecté) / EN 12845 : ST1-ST6 uniquement",
+      "Les lettres sont inversées (R1=A à F, EN=ST1 à ST6)"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "EN 12845 §6.3.2 définit ST1 à ST6. R1 §5.1.3 ajoute ST8 (racks accumulation, toujours HHS) et ST9 (racks cantilever, depuis 2020), ST7 étant désaffecté. À connaître pour cross-référentiel.",
+    "reference": "NF EN 12845+A2 §6.3.2 vs R1 §5.1.3"
+  },
+  {
+    "id": "en12845-vs-r1-004",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "comparaison",
+    "theme": "EN 12845 vs R1 — Hydrostatique",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Différence entre R1 2025 et NF EN 12845 sur la pression d'essai hydrostatique ?",
+    "propositions": [
+      "Identiques",
+      "R1 : 15,5 bar ou 1,2×Pmax / EN 12845 : 15 bar ou 1,5×Pmax",
+      "R1 : 15 bar ou 1,5×Pmax / EN 12845 : 15,5 bar ou 1,2×Pmax",
+      "EN 12845 ne fixe pas de pression"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 §3.3.1 : ≥ 15,5 bar ou 1,2 × Pmax. EN 12845 §19.1.1.2 : ≥ 15 bar ou 1,5 × Pmax. Pour Pmax = 10 bar : R1=15,5 bar, EN=15 bar. Pour Pmax = 14 bar : R1=16,8 bar, EN=21 bar.",
+    "reference": "NF EN 12845+A2 §19.1.1.2 vs R1 §3.3.1"
+  },
+  {
+    "id": "en12845-vs-r1-005",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "comparaison",
+    "theme": "EN 12845 vs R1 — T° local",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Différence entre R1 2025 et NF EN 12845 sur la température minimale du local des sources / poste de contrôle ?",
+    "propositions": [
+      "Identiques (+5 °C)",
+      "R1 : +5 °C / EN 12845 : +4 °C",
+      "R1 : +4 °C / EN 12845 : +5 °C",
+      "R1 : +5 °C / EN 12845 : 0 °C"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 §8.2 : ≥ +5 °C dans le local des sources. EN 12845 §8.1.3 : ≥ +4 °C au poste de contrôle et canalisation d'alimentation. Différence subtile mais réelle.",
+    "reference": "NF EN 12845+A2 §8.1.3 vs R1 §8.2"
+  },
+  {
+    "id": "en12845-vs-r1-006",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "comparaison",
+    "theme": "EN 12845 vs R1 — Catégories HHS",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Différence du nombre de catégories HHS entre R1 2025 et NF EN 12845 ?",
+    "propositions": [
+      "Identiques (4 catégories)",
+      "R1 : 5 catégories HHS#1-5 / EN 12845 : 4 catégories HHS1-4",
+      "R1 : 4 catégories / EN 12845 : 5 catégories",
+      "EN 12845 ne traite pas le HHS"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 2020/2025 §5.4.2 : HHS#1 à HHS#5 (5 catégories, ajout du # et de HHS#5 mousses/aérosols en 2020). EN 12845 §6.2.4.2 : HHS1 à HHS4 (4 catégories sans #).",
+    "reference": "NF EN 12845+A2 §6.2.4.2 vs R1 §5.4.2"
+  },
+  {
+    "id": "en12845-9-3-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "9.3",
+    "theme": "Réservoirs de stockage",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est le rôle du niveau d'eau bas 'X' d'un réservoir de stockage selon NF EN 12845 ?",
+    "propositions": [
+      "Niveau d'alarme intrusion",
+      "Niveau d'alarme niveau bas pour information",
+      "Niveau de référence pour calculer la hauteur géodésique entre la pompe et l'eau",
+      "Niveau de purge annuelle"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§4.4.4.5 / §9.3 : niveau d'eau bas 'X' = référence géodésique entre l'axe de la pompe et le niveau d'eau bas du réservoir. Sert au calcul de la hauteur d'aspiration et à la garantie de fonctionnement même réserve presque vide.",
+    "reference": "NF EN 12845+A2 §9.3 / Figure 4 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-2-2-003",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.2.2.3",
+    "theme": "Espace libre >4m — K-factor minimum",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon NF EN 12845 §7.2.2.3 option 1, quel K-factor minimum est imposé lorsqu'on augmente la densité pour compenser un espace libre > 4 m ?",
+    "propositions": [
+      "K80",
+      "K115",
+      "K160",
+      "K200"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§7.2.2.3 option 1 : K115 minimum imposé quand on choisit d'augmenter la densité plutôt que d'installer des sprinkleurs intermédiaires dans les racks.",
+    "reference": "NF EN 12845+A2 §7.2.2.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-3-2-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.3.2.3",
+    "theme": "HHP/HHS — Seuil 48 sprinkleurs",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon §7.3.2.3 NF EN 12845, lorsqu'une partie HHP ou HHS d'un local implique moins de combien de sprinkleurs, le débit/pression doit être disponible aux sprinkleurs les plus hauts au point d'entrée dans la zone HH ?",
+    "propositions": [
+      "12",
+      "24",
+      "48",
+      "100"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§7.3.2.3 : seuil 48 sprinkleurs. En-dessous, le débit et la pression du Tableau 7 doivent être disponibles au point d'entrée des sprinkleurs les plus hauts dans la zone HHP/HHS.",
+    "reference": "NF EN 12845+A2 §7.3.2.3 (avril 2026)"
+  },
+  {
+    "id": "en12845-18-2-3-001",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "18.2.3.2",
+    "theme": "Notice poste de contrôle — Contenu",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Quelles informations doit comporter la notice indélébile fixée à chaque poste de contrôle selon NF EN 12845 §18.2.3.2 ?",
+    "propositions": [
+      "Numéro de l'installation",
+      "Classes de risque des zones protégées",
+      "Exigences de calcul (surface impliquée, densité)",
+      "Date de la dernière vérification"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§18.2.3.2 : numéro installation, classes de risque, exigences de calcul (surface impliquée + densité), exigences pression/débit. La date de vérification n'est pas dans la notice mais dans les enregistrements §20.3.1.2.",
+    "reference": "NF EN 12845+A2 §18.2.3.2 (avril 2026)"
+  },
+  {
+    "id": "en12845-7-2-2-004",
+    "referentiel": "EN12845",
+    "edition": "2026",
+    "chapitre": "7.2.3.2",
+    "theme": "Toiture avec sprinkleurs racks — Densité",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Densité minimale de calcul pour les sprinkleurs sous toiture lorsque des sprinkleurs intermédiaires sont installés dans les racks ?",
+    "propositions": [
+      "5,0 mm/min sur 144 m²",
+      "7,5 mm/min sur 260 m²",
+      "10,0 mm/min sur 260 m²",
+      "12,5 mm/min sur 300 m²"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§7.2.3.2 : densité minimale 7,5 mm/min sur une surface impliquée de 260 m² pour les sprinkleurs sous toiture lorsque des sprinkleurs intermédiaires sont prévus dans les racks. Si stockage au-dessus du niveau le plus haut de protection intermédiaire : critères du Tableau 5.",
+    "reference": "NF EN 12845+A2 §7.2.3.2 (avril 2026)"
   }
 ]
