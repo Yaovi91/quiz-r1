@@ -1,262 +1,5161 @@
 [
   {
-    "id": "r1-2025-10-1-001",
+    "id": "r1-2025-1-5-2-001",
     "edition": "2025",
-    "chapitre": "10.1",
-    "theme": "Pompes",
+    "chapitre": "3.5",
+    "theme": "Documents — Rapport Q1",
     "difficulte": 2,
     "multi": false,
     "mode_audit": false,
-    "enonce": "Combien de pressostats indépendants doivent être installés pour commander le démarrage automatique de chaque source de type B ?",
-    "propositions": ["Un seul, listé CNPP", "Deux, indépendants", "Trois, redondants", "Aucun, démarrage manuel uniquement"],
-    "bonnes_reponses": [1],
-    "explication": "Chaque source de type B doit comporter deux pressostats indépendants pour le démarrage automatique. Pressostat unique = NC avec risque de mise en échec.",
-    "reference": "R1 §10.1 (édition 2025) — NF EN 12845 §10.7.5.1"
+    "enonce": "Dans quel délai le rapport de vérification semestrielle Q1 doit-il parvenir à CNPP ?",
+    "propositions": [
+      "7 jours",
+      "15 jours",
+      "30 jours",
+      "60 jours"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Selon §3.5 R1 2025 : le rapport Q1 (compte rendu de vérification semestrielle, formulaire en annexe 1) doit parvenir à CNPP dans un délai de 30 jours. Toute NC doit comporter sa date de première signalisation — son absence peut engager la responsabilité du vérificateur.",
+    "reference": "R1 §3.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-1-5-2-002",
+    "edition": "2025",
+    "chapitre": "1.5.2",
+    "theme": "NC — Première signalisation",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur un rapport Q1, une NC ne comporte pas sa date de première signalisation. Quelle est la conséquence ?",
+    "propositions": [
+      "Aucune, la NC reste valable",
+      "La responsabilité du vérificateur peut être engagée",
+      "La NC est requalifiée en AMP automatiquement",
+      "Le N1 est retiré immédiatement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Toute NC doit comporter sa date de première signalisation. Son absence peut engager la responsabilité du vérificateur, notamment en cas de sinistre où l'assureur cherchera à reconstituer l'historique des observations.",
+    "reference": "R1 §1.5.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-1-5-3-001",
+    "edition": "2025",
+    "chapitre": "1.5.3",
+    "theme": "S1A — Entretien hebdomadaire",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Combien de versions distinctes du formulaire S1A existe-t-il ?",
+    "propositions": [
+      "Une seule version",
+      "Deux : S1A POSTES et S1A SOURCES",
+      "Trois : Postes, Sources et Réseau",
+      "Quatre : une par type d'installation"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Il existe deux versions du S1A : S1A POSTES et S1A SOURCES. Ce sont les formulaires de mémoire de l'entretien hebdomadaire, renseignés dès la réalisation de chaque opération.",
+    "reference": "R1 §1.5.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-1-5-3-002",
+    "edition": "2025",
+    "chapitre": "1.5.3",
+    "theme": "S1A — Valeur juridique",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'exploitant n'a pas renseigné les S1A depuis plusieurs mois. Quel risque encourt-il ?",
+    "propositions": [
+      "Aucun, ces formulaires sont indicatifs",
+      "Une amende administrative",
+      "Lacune invoquable par l'assureur en cas de sinistre",
+      "Retrait immédiat du N1"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le S1A est la mémoire de l'entretien hebdomadaire. Sa lacune peut être invoquée par l'assureur en cas de sinistre comme preuve d'un défaut de maintenance.",
+    "reference": "R1 §1.5.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-1-5-4-001",
+    "edition": "2025",
+    "chapitre": "1.5.4",
+    "theme": "N100 — Mise hors service",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une interruption programmée du système doit être notifiée combien de temps à l'avance ?",
+    "propositions": [
+      "24 heures",
+      "48 heures",
+      "72 heures",
+      "7 jours"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Pour toute interruption programmée, le N100 doit être établi au moins 72 heures avant. Pour une interruption accidentelle, immédiatement.",
+    "reference": "R1 §1.5.4 / §18.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-1-5-4-002",
+    "edition": "2025",
+    "chapitre": "1.5.4",
+    "theme": "N100 — Diffusion",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Pour une mise hors service supérieure à 12 heures, à qui le N100 doit-il être diffusé ?",
+    "propositions": [
+      "À l'assureur",
+      "À CNPP",
+      "Aux services de secours (pompiers)",
+      "Uniquement à l'exploitant"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Si la durée de mise hors service dépasse 12 heures, le N100 doit être diffusé à l'assureur, à CNPP et aux services de secours (pompiers).",
+    "reference": "R1 §1.5.4 / §18.2 (édition 2025)"
+  },
+  {
+    "id": "r1-1994-1-5-4-001",
+    "edition": "1994",
+    "chapitre": "1.5.4",
+    "theme": "N100 — Évolution historique",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "En 1994, le formulaire aujourd'hui appelé N100 était intitulé différemment. Quel était son nom ?",
+    "propositions": [
+      "Avis d'arrêt système",
+      "Avis de remise en service",
+      "Notification d'incident",
+      "Déclaration de maintenance"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "En 1994, le formulaire est intitulé « Avis de remise en service ». Il devient « Avis de mise hors service » à partir de 2002. Le fond des obligations est identique.",
+    "reference": "R1 §1.5.4 (édition 1994, note historique)"
+  },
+  {
+    "id": "r1-2025-1-5-5-001",
+    "edition": "2025",
+    "chapitre": "1.5.5",
+    "theme": "Dossier de suivi",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Où le dossier de suivi du système doit-il être conservé ?",
+    "propositions": [
+      "Au siège social de l'entreprise",
+      "Chez l'installateur certifié IF1",
+      "En permanence dans le local des sources",
+      "Au bureau du responsable sécurité"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le dossier de suivi du système est conservé en permanence dans le local des sources, accessible en cas de visite ou d'intervention.",
+    "reference": "R1 §1.5.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-1-5-5-002",
+    "edition": "2025",
+    "chapitre": "1.5.5",
+    "theme": "Dossier de suivi — Contenu",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Parmi ces documents, lesquels DOIVENT figurer dans le dossier de suivi conservé au local des sources ?",
+    "propositions": [
+      "Le PV de réception initial et le rapport de VdC CNPP",
+      "Les 2 derniers rapports Q1",
+      "Les contrats commerciaux avec les fournisseurs",
+      "Les N100 des 12 derniers mois"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      3
+    ],
+    "explication": "Le dossier de suivi contient notamment : PV de réception + rapport VdC CNPP, dernier N1 valide, les 2 derniers rapports Q1, les S1A en cours, fiches descriptives postes, plans 'tels que construits', tableau signalétique sources affiché, courbes essai sources, notices fabricants sprinkleurs spéciaux, N100 des 12 derniers mois.",
+    "reference": "R1 §1.5.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-1-5-5-003",
+    "edition": "2025",
+    "chapitre": "1.5.5",
+    "theme": "Courbes d'essai sources",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quels points caractéristiques doivent figurer sur les courbes d'essai des sources conservées au dossier de suivi ?",
+    "propositions": [
+      "Q0%, Q50%, Q100%",
+      "Q0%, Q100%, Q130%",
+      "Q100%, Q140%, Q200%",
+      "Uniquement Q100%"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Les courbes d'essai des sources doivent comporter les trois points caractéristiques : Q0% (débit nul), Q100% (débit nominal) et Q130%. Le point Q140% est spécifique à la NF EN 12845.",
+    "reference": "R1 §1.5.5 / §10.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-1-001",
+    "edition": "2025",
+    "chapitre": "3.1",
+    "theme": "Référentiel applicable",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un système livré en 2024 avec VdC en 2026, quelle édition R1 sert de référentiel pour le certificat N1 ?",
+    "propositions": [
+      "La R1 en vigueur à la date de la VdC (2026)",
+      "La R1 en vigueur à la date de la première remise d'offre",
+      "La R1 en vigueur à la date de mise en service",
+      "Au choix entre l'édition de la commande et la VdC"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le certificat N1 est délivré sous réserve du respect de la R1 en vigueur à la date de la première remise d'offre, et non à la date de la VdC. Cela protège l'installateur des évolutions du référentiel pendant la durée du chantier.",
+    "reference": "R1 §3.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-1-002",
+    "edition": "2025",
+    "chapitre": "3.1",
+    "theme": "Déclaration de commande CNPP",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans quel délai l'installateur IF1 doit-il déclarer la commande à CNPP ?",
+    "propositions": [
+      "15 jours après la prise de commande",
+      "30 jours après la prise de commande",
+      "60 jours après la prise de commande",
+      "Avant le début des travaux"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "La déclaration de commande à CNPP doit être effectuée dans les 30 jours suivant la prise de commande par l'installateur certifié IF1.",
+    "reference": "R1 §3.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-2-001",
+    "edition": "2025",
+    "chapitre": "3.2",
+    "theme": "Analyse de risques",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Qui doit réaliser l'analyse de risques préalable à la conception ?",
+    "propositions": [
+      "L'exploitant seul",
+      "Le bureau de contrôle indépendant",
+      "L'installateur IF1, de manière contradictoire avec le donneur d'ordre",
+      "L'assureur"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Avant toute conception, l'installateur IF1 doit réaliser une analyse de risques contradictoire avec le donneur d'ordre. Elle détermine le classement de risque (Ch. 5) et conditionne le dimensionnement hydraulique (Ch. 6).",
+    "reference": "R1 §3.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-2-002",
+    "edition": "2025",
+    "chapitre": "3.2",
+    "theme": "Modification d'activité",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'exploitant transforme une partie de son bâtiment de bureaux en zone de stockage palettes. Quelle action est obligatoire ?",
+    "propositions": [
+      "Aucune si la surface est inférieure à 100 m²",
+      "Une simple information à l'assureur suffit",
+      "Réviser l'analyse de risques et adapter la protection",
+      "Attendre la prochaine VdC pour signaler"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Toute modification d'activité doit conduire à une révision de l'analyse de risques. Le passage de bureaux (LH) à du stockage palettes change radicalement la classe (probablement HHS) et donc le dimensionnement requis.",
+    "reference": "R1 §3.2 / §5.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-1-001",
+    "edition": "2025",
+    "chapitre": "3.3.1",
+    "theme": "Essai hydrostatique — Pression",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la pression d'essai hydrostatique d'une installation sprinkleur ?",
+    "propositions": [
+      "10 bar fixe",
+      "15,5 bar fixe",
+      "La plus grande des deux valeurs : 15,5 bar ou 1,2 × Pmax",
+      "1,5 × pression de service"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "La pression d'essai hydrostatique est la plus grande des deux valeurs : 15,5 bar OU 1,2 × Pmax. Pour une installation classique à 10 bar de service, on prend 15,5 bar. Pour une installation à 14 bar, on prend 1,2 × 14 = 16,8 bar.",
+    "reference": "R1 §3.3.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-1-002",
+    "edition": "2025",
+    "chapitre": "3.3.1",
+    "theme": "Essai hydrostatique — Durée",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la durée minimale de l'essai hydrostatique ?",
+    "propositions": [
+      "30 min",
+      "1 h",
+      "2 h",
+      "24 h"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "L'essai hydrostatique doit durer au minimum 2 heures, avec mesure au point bas. Critères : aucune fuite, aucune rupture, aucune déformation permanente.",
+    "reference": "R1 §3.3.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-1-003",
+    "edition": "2025",
+    "chapitre": "3.3.1",
+    "theme": "Essai hydrostatique — Composants",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors de l'essai hydrostatique, comment traiter les composants dont la Pmax tolérée est inférieure à la pression d'essai ?",
+    "propositions": [
+      "Augmenter leur pression progressivement",
+      "Les isoler ou les protéger pendant l'essai",
+      "Réduire la pression d'essai globale",
+      "Les remplacer avant l'essai"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Les composants dont la Pmax est inférieure à la pression d'essai doivent être isolés ou protégés pendant l'essai (typiquement par by-pass ou retrait temporaire), pour éviter leur destruction.",
+    "reference": "R1 §3.3.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-2-001",
+    "edition": "2025",
+    "chapitre": "3.3.2",
+    "theme": "Essai pneumatique — Pression et durée",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelles sont les valeurs réglementaires de l'essai pneumatique en cas général ?",
+    "propositions": [
+      "≥ 1 bar pendant 12 h",
+      "≥ 2,5 bar pendant 24 h, perte ≤ 0,30 bar",
+      "≥ 5 bar pendant 2 h, perte ≤ 0,50 bar",
+      "≥ 10 bar pendant 48 h"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Cas général : pression ≥ 2,5 bar, durée 24 h, perte admissible ≤ 0,30 bar. Cette règle s'applique aux réseaux sous air.",
+    "reference": "R1 §3.3.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-2-002",
+    "edition": "2025",
+    "chapitre": "3.3.2",
+    "theme": "Essai pneumatique — Variante extensions",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour une extension de 31 à 200 têtes sous air, quelle est la variante admise pour l'essai pneumatique ?",
+    "propositions": [
+      "Pas d'essai requis pour ces extensions",
+      "≥ 2,5 bar, 24 h (cas général sans changement)",
+      "≥ 2,5 bar, durée réduite à 2 h admise",
+      "≥ 1 bar, 24 h"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Pour les extensions de 31 à 200 têtes sous air, une variante avec durée réduite à 2 h est admise, avec la même pression ≥ 2,5 bar et le même critère de perte ≤ 0,30 bar. Mesure pragmatique introduite en 2008.",
+    "reference": "R1 §3.3.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-3-001",
+    "edition": "2025",
+    "chapitre": "3.3.3",
+    "theme": "Rinçage canalisations enterrées",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle vitesse minimale d'eau est requise lors du rinçage des canalisations enterrées ?",
+    "propositions": [
+      "1 m/s",
+      "2 m/s",
+      "3 m/s",
+      "5 m/s"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le rinçage doit s'effectuer à une vitesse ≥ 3 m/s OU au débit Q130%, jusqu'à eau parfaitement claire et exempte de tout déchet en sortie. Un PV contradictoire est obligatoire.",
+    "reference": "R1 §3.3.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-3-002",
+    "edition": "2025",
+    "chapitre": "3.3.3",
+    "theme": "Rinçage — Objectif",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est l'objectif principal du rinçage des canalisations enterrées ?",
+    "propositions": [
+      "Tester la pression d'éclatement",
+      "Désinfecter le réseau d'eau",
+      "Éliminer les impuretés de construction risquant d'obstruer les orifices sprinkleurs",
+      "Vérifier l'étanchéité des joints"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le rinçage élimine les impuretés de construction (sable, graviers, copeaux métalliques, joints abandonnés) qui risqueraient d'obstruer les orifices des sprinkleurs en cas de fonctionnement.",
+    "reference": "R1 §3.3.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-3-003",
+    "edition": "2025",
+    "chapitre": "3.3.3",
+    "theme": "Rinçage — Document",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quel document est obligatoirement établi à l'issue du rinçage ?",
+    "propositions": [
+      "Une déclaration sur l'honneur de l'installateur",
+      "Un PV contradictoire",
+      "Une attestation du fournisseur d'eau",
+      "Une simple note dans le journal de chantier"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Un PV contradictoire de rinçage est obligatoire. 'Contradictoire' signifie signé par l'installateur ET un représentant du donneur d'ordre, attestant que l'eau en sortie était parfaitement claire.",
+    "reference": "R1 §3.3.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-4-8-001",
+    "edition": "2025",
+    "chapitre": "4.8",
+    "theme": "Asservissements — Délai",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est le délai maximal d'asservissement (1er sprinkleur → coupure) ?",
+    "propositions": [
+      "10 s",
+      "20 s",
+      "30 s",
+      "60 s"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le délai d'asservissement (entre le déclenchement du premier sprinkleur et la coupure des équipements asservis) doit être de 30 s maximum.",
+    "reference": "R1 §4.8 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-4-8-002",
+    "edition": "2025",
+    "chapitre": "4.8",
+    "theme": "Asservissements — ESFR/CMSA",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur une installation ESFR ou CMSA protégeant un convoyeur ou avec soufflage, l'asservissement est :",
+    "propositions": [
+      "Recommandé mais facultatif",
+      "Obligatoire — son absence est une NC majeure",
+      "Obligatoire uniquement si la surface dépasse 5000 m²",
+      "À l'appréciation de l'exploitant"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Asservissement soufflage ou convoyeurs absent sur installation ESFR ou CMSA → NC majeure (rouge) au Q1 §4. Ces systèmes haute performance ne tolèrent pas la perturbation du panache thermique.",
+    "reference": "R1 §4.8 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-4-8-003",
+    "edition": "2025",
+    "chapitre": "4.8",
+    "theme": "Asservissement ASRS",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur une installation ESFR, l'asservissement des transtockeurs ASRS est-il obligatoire ?",
+    "propositions": [
+      "Non, ce n'est qu'une recommandation",
+      "Oui depuis 2014",
+      "Oui depuis 2025 (additif §6.13)",
+      "Uniquement en HHS#5"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "L'asservissement des transtockeurs (ASRS) sur installation ESFR est obligatoire suite à l'additif §6.13 intégré dans la R1 2025. Avant 2025, c'était une bonne pratique mais pas une obligation.",
+    "reference": "R1 §6.13 / §4.8.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-4-1-001",
+    "edition": "2025",
+    "chapitre": "4.1",
+    "theme": "Distance bâtiment combustible",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle distance minimale doit-on respecter entre un bâtiment protégé et un stockage extérieur de matières combustibles ?",
+    "propositions": [
+      "5 m fixe",
+      "10 m fixe",
+      "10 m OU 1,5 × hauteur du plus haut bâtiment, la plus grande des deux",
+      "20 m fixe"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "La distance minimale est 10 m OU 1,5 × hauteur du plus haut bâtiment protégé, la plus grande des deux valeurs. Pour un entrepôt de 12 m, la distance devient 18 m (1,5×12).",
+    "reference": "R1 §4.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-4-6-001",
+    "edition": "2025",
+    "chapitre": "4.6",
+    "theme": "Espaces cachés",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "À partir de quelle profondeur un espace caché (faux-plafond, comble) doit-il être protégé par sprinkleurs ?",
+    "propositions": [
+      "0,3 m",
+      "0,5 m",
+      "0,8 m",
+      "1,2 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Les espaces cachés doivent être protégés si leur profondeur dépasse 0,8 m. En-dessous, le risque de propagation est jugé faible et la protection sous plafond suffit.",
+    "reference": "R1 §4.6 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-1-1-001",
+    "edition": "2025",
+    "chapitre": "5.1.1",
+    "theme": "Règle de classification",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quand des marchandises de classes différentes coexistent dans une même zone, quelle protection s'applique ?",
+    "propositions": [
+      "La protection moyenne pondérée",
+      "La protection de la catégorie la plus dangereuse",
+      "La protection de la marchandise majoritaire",
+      "Un compromis défini avec l'assureur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "La règle fondamentale : la classe est déterminée par le risque le plus élevé présent dans la zone. Quand plusieurs classes coexistent, la protection doit être celle de la catégorie la plus dangereuse.",
+    "reference": "R1 §5.1.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-1-1-002",
+    "edition": "2025",
+    "chapitre": "5.1.1",
+    "theme": "Classe LH — Exemples",
+    "difficulte": 1,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Lesquels de ces établissements relèvent typiquement de la classe LH ?",
+    "propositions": [
+      "Bureaux",
+      "Hôtel",
+      "Entrepôt de plastiques",
+      "École"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      3
+    ],
+    "explication": "La classe LH (risque léger, faible charge calorifique) couvre les bureaux, hôtels, hôpitaux, écoles. Les entrepôts de plastiques relèvent au minimum de HHS#3 voire HHS#4 selon le type.",
+    "reference": "R1 §5.1.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-1-1-003",
+    "edition": "2025",
+    "chapitre": "5.1.1",
+    "theme": "Classes OH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Combien de sous-catégories existent dans la classe OH (Ordinary Hazard) ?",
+    "propositions": [
+      "2 (OH1, OH2)",
+      "3 (OH1 à OH3)",
+      "4 (OH1 à OH4)",
+      "5 (OH1 à OH5)"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "La classe OH se décompose en 4 sous-catégories : OH1 à OH4, avec des surfaces impliquées croissantes de 72 m² (OH1) à 360 m² (OH4). La densité est constante : 5,0 l/m²/min.",
+    "reference": "R1 §5.1 / T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-1-1-004",
+    "edition": "2025",
+    "chapitre": "5.1.1",
+    "theme": "Classes HHS — Symbole",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le symbole # accolé à HHS (HHS#1 à HHS#5) est apparu en quelle édition ?",
+    "propositions": [
+      "2008",
+      "2014",
+      "2020",
+      "2025"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le symbole # a été introduit en R1 2020 en même temps que la catégorie HHS#5. Avant 2020 : HHS1 à HHS4 sans symbole. Une fiche poste mentionnant 'HHS3' sans # = analyse antérieure à 2020.",
+    "reference": "R1 §5 (édition 2020/2025)"
+  },
+  {
+    "id": "r1-2014-5-1-1-001",
+    "edition": "2014",
+    "chapitre": "5.1.1",
+    "theme": "Classes HHS — Historique",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "En R1 2014, combien de catégories HHS existait-il ?",
+    "propositions": [
+      "3 : HHS1 à HHS3",
+      "4 : HHS1 à HHS4",
+      "5 : HHS#1 à HHS#5",
+      "6 : HHS1 à HHS6"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 2014 : HHS1 à HHS4 (4 catégories, sans #). R1 2020 a ajouté HHS#5 (mousses alvéolaires, aérosols, vrac) et introduit le symbole # sur l'ensemble. R1 2025 conserve HHS#1 à HHS#5.",
+    "reference": "R1 §5.1 (édition 2014, évolution)"
+  },
+  {
+    "id": "r1-2025-5-1-1-005",
+    "edition": "2025",
+    "chapitre": "5.1.1",
+    "theme": "HHP4 — Protection",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel type d'installation est obligatoire en classe HHP4 ?",
+    "propositions": [
+      "Sous eau uniquement",
+      "Sous air",
+      "Déluge obligatoire",
+      "Préaction C"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "HHP4 (Higher Hazard Production niveau 4) = risque de feu à développement très rapide (solvants, certains plastiques en process). Le déluge avec têtes ouvertes et envahissement sur DAI est obligatoire.",
+    "reference": "R1 §5.1 / §7.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-1-1-006",
+    "edition": "2025",
+    "chapitre": "5.1.1",
+    "theme": "Classe RS",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Parmi ces risques, lesquels relèvent typiquement de la classe RS (Risques Spéciaux) ?",
+    "propositions": [
+      "Parkings couverts",
+      "Stockage de pneus",
+      "Bureaux open-space",
+      "Locaux haute tension"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      3
+    ],
+    "explication": "La classe RS regroupe les risques nécessitant un accord CNPP spécifique : parkings, pneus, locaux haute tension, aérosols, certains liquides inflammables. Les bureaux relèvent de LH.",
+    "reference": "R1 §5.1.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-1-3-001",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST1",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode de stockage ST1 correspond à :",
+    "propositions": [
+      "Stockage sur racks à lisses",
+      "Empilage libre en masse ou en îlots",
+      "Rayonnages étagères ≤ 1 m large",
+      "Racks à accumulation"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ST1 = empilage libre en masse ou en îlots, avec îlots ≤ 150 m² et allées ≥ 2,4 m. C'est le mode le plus basique : marchandises empilées au sol sans structure.",
+    "reference": "R1 §5.1.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-1-3-002",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST8",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Un mode de stockage ST8 (racks à accumulation) est traité dans une fiche poste comme OH. Quel est votre diagnostic ?",
+    "propositions": [
+      "Conforme si la surface est < 1000 m²",
+      "Conforme si la hauteur est < 4 m",
+      "NC rouge — ST8 est toujours HHS obligatoirement",
+      "AMP — nouvelle règle de 2020"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "ST8 (racks à accumulation) est TOUJOURS classé HHS, quelle que soit la marchandise ou la hauteur. Le traitement en OH est une NC rouge au Q1 §9. La densité du flux d'air dans les accumulateurs aggrave systématiquement le risque.",
+    "reference": "R1 §5.1.3 / §5.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-1-3-003",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST9",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode ST9 a été introduit en R1 2020. À quoi correspond-il ?",
+    "propositions": [
+      "Stockage automatisé sur transtockeurs",
+      "Racks cantilever (bras porte-à-faux)",
+      "Stockage à ciel ouvert",
+      "Stockage en hauteur > 12 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ST9 désigne les racks cantilever (bras porte-à-faux), typiquement utilisés pour stocker des produits longs : tubes, profilés, planches. Mode introduit en R1 2020 pour combler une lacune.",
+    "reference": "R1 §5.1.3 (édition 2020/2025)"
+  },
+  {
+    "id": "r1-1984-5-1-3-001",
+    "edition": "1984",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — Histoire",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Combien de modes de stockage étaient définis en R1 1984 ?",
+    "propositions": [
+      "3 (ST1 à ST3)",
+      "5 (ST1 à ST5)",
+      "6 (ST1 à ST6)",
+      "9 (ST1 à ST9)"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 1984 : ST1 à ST5 (5 modes). R1 2014 : ST1 à ST6 + ST8. R1 2020 : ajout de ST9 cantilever. R1 2025 : ST1 à ST9 (ST7 désaffecté). Évolution majeure 2014→2020 avec ST9.",
+    "reference": "R1 §5.1.3 (édition 1984, évolution)"
+  },
+  {
+    "id": "r1-2025-5-1-3-004",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "ST4 — Racks à lisses",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un mode ST4 (palettes sur racks à lisses), quelle est l'allée minimale entre charges ?",
+    "propositions": [
+      "0,8 m",
+      "1,0 m",
+      "1,2 m",
+      "2,4 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "ST4 (palettes sur racks à lisses) : allée minimale 1,2 m entre charges, pour permettre l'eau de pénétrer entre les niveaux et empêcher le développement vertical du feu.",
+    "reference": "R1 §5.1.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-3-001",
+    "edition": "2025",
+    "chapitre": "5.3",
+    "theme": "Stockage en zone OH — Conditions",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Quelles conditions doivent être réunies pour traiter un stockage en zone OH3 (et non HHS) ?",
+    "propositions": [
+      "Protection ≥ OH3",
+      "Îlots ≤ 50 m²",
+      "Allées ≥ 2,4 m",
+      "Hauteur ≤ 1 m"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Pour qu'un stockage reste classé OH (et non HHS), trois conditions cumulatives : protection ≥ OH3 + îlots ≤ 50 m² + allées ≥ 2,4 m. La hauteur n'est pas la condition unique mais dépend de la catégorie HHS visée (voir T5.3).",
+    "reference": "R1 §5.3 / T5.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-3-002",
+    "edition": "2025",
+    "chapitre": "5.3",
+    "theme": "OH4 + stockage",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Dans une zone classée OH4, comment doit être traité un stockage présent ?",
+    "propositions": [
+      "En OH4 si l'îlot ≤ 50 m²",
+      "Toutes zones de stockage doivent être traitées HHS",
+      "En OH3 si hauteur ≤ 2 m",
+      "Selon la marchandise"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "En OH4, toutes les zones de stockage présentes doivent être traitées HHS, quelle que soit leur configuration. La haute densité industrielle de OH4 cumulée à un stockage rend obligatoire la requalification en HHS.",
+    "reference": "R1 §5.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2020-5-3-001",
+    "edition": "2020",
+    "chapitre": "5.3",
+    "theme": "HHS#4 — Évolution hauteur",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Un stockage de plastiques en HHS#4 sur mode ST1 (empilage libre) a une hauteur de 1,5 m. L'édition R1 applicable est la 2014. Quel est votre diagnostic ?",
+    "propositions": [
+      "Conforme",
+      "NC — la limite était de 1,2 m en R1 2014",
+      "AMP — la règle de 1,7 m est postérieure",
+      "Conforme si la marchandise est emballée"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "En R1 2014, la limite HHS#4 ST1 était de 1,2 m. Une hauteur de 1,5 m dépassait cette limite → NC selon le référentiel applicable. La R1 2020 a porté cette limite à 1,7 m, mais c'est postérieur à l'édition de référence.",
+    "reference": "R1 §5.3 / T5.3 (édition 2014/2020)"
+  },
+  {
+    "id": "r1-2025-5-4-2-001",
+    "edition": "2025",
+    "chapitre": "5.4.2",
+    "theme": "HHS — Règle de combinaison",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur un site, vous trouvez des barres d'acier (produit incombustible) stockées en cartons sur palettes bois filmées plastique. Comment classer ?",
+    "propositions": [
+      "LH car le produit est incombustible",
+      "OH car ce sont des cartons",
+      "HHS#2 voire HHS#3 selon analyse combinaison produit + emballage",
+      "RS — accord CNPP nécessaire"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Règle fondamentale §5.4.2 : la combustibilité du produit seul ne suffit pas. C'est la combinaison produit + emballage + conditionnement qui détermine la classe. Barres acier + cartons + palettes bois + film plastique → HHS#2 ou HHS#3 selon proportion plastique.",
+    "reference": "R1 §5.4.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-4-2-002",
+    "edition": "2025",
+    "chapitre": "5.4.2",
+    "theme": "HHS#5 — Caractéristiques",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Quelles marchandises relèvent typiquement de la catégorie HHS#5 (très forte combustibilité) ?",
+    "propositions": [
+      "Mousses plastiques alvéolaires exposées",
+      "Cartons sur palettes bois",
+      "Aérosols",
+      "Cire en vrac sans emballage"
+    ],
+    "bonnes_reponses": [
+      0,
+      2,
+      3
+    ],
+    "explication": "HHS#5 (créé en R1 2020) regroupe les marchandises à très forte combustibilité : mousses plastiques alvéolaires exposées, aérosols, cire, marchandises en vrac sans emballage. Les cartons sur palettes bois sont HHS#2.",
+    "reference": "R1 §5.4.2 (édition 2020/2025)"
+  },
+  {
+    "id": "r1-2025-6-1-001",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Formule Q = K × √P",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel débit délivre un sprinkleur K80 sous une pression de 0,5 bar ?",
+    "propositions": [
+      "40 l/min",
+      "56,6 l/min",
+      "80 l/min",
+      "113 l/min"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Q = K × √P = 80 × √0,5 = 80 × 0,707 ≈ 56,6 l/min. Formule fondamentale de l'hydraulique sprinkleur, généralisée depuis 2002 mais issue de l'Annexe VIII 1967.",
+    "reference": "R1 §6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-002",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "P min — LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la pression minimale au sprinkleur en classe LH ?",
+    "propositions": [
+      "0,3 bar",
+      "0,5 bar",
+      "0,7 bar",
+      "1,0 bar"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "P min LH = 0,7 bar. Pour OH, HHP et HHS : 0,5 bar. Pour ESFR : 3,4 à 5,2 bar (T17.2.3). Pression mesurée à la tête la plus défavorisée hydrauliquement.",
+    "reference": "R1 §6.1 / T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-003",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "P min — OH/HHP/HHS",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la pression minimale au sprinkleur en classe OH, HHP ou HHS ?",
+    "propositions": [
+      "0,3 bar",
+      "0,5 bar",
+      "0,7 bar",
+      "1,0 bar"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "P min = 0,5 bar pour OH, HHP et HHS. P min = 0,7 bar pour LH. Pour ESFR : 3,4 à 5,2 bar.",
+    "reference": "R1 §6.1 / T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-004",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Densité LH",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la densité de calcul en classe LH ?",
+    "propositions": [
+      "2,25 l/m²/min",
+      "5,0 l/m²/min",
+      "7,5 l/m²/min",
+      "10 l/m²/min"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Densité LH = 2,25 l/m²/min. Densité OH (OH1 à OH4 toutes égales) = 5,0 l/m²/min. HHP : 7,5 à 12,5 l/m²/min. HHS : 7,5 à >20 l/m²/min selon catégorie.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-005",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Densité OH",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la densité de calcul en classe OH (toutes sous-catégories) ?",
+    "propositions": [
+      "2,25 l/m²/min",
+      "5,0 l/m²/min",
+      "7,5 l/m²/min",
+      "10 l/m²/min"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Densité OH = 5,0 l/m²/min, identique pour OH1, OH2, OH3 et OH4. Ce qui change entre les sous-catégories OH, c'est la surface impliquée : 72 / 144 / 216 / 360 m².",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-006",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Surface impliquée LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la surface impliquée en classe LH ?",
+    "propositions": [
+      "72 m²",
+      "84 m²",
+      "144 m²",
+      "216 m²"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Surface impliquée LH = 84 m². OH1 = 72 m². OH2 = 144 m². OH3 = 216 m². OH4 = 360 m². Surface utilisée pour le calcul hydraulique du débit total.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-007",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Surface impliquée OH1",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la surface impliquée en OH1 ?",
+    "propositions": [
+      "72 m²",
+      "84 m²",
+      "144 m²",
+      "216 m²"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Surface impliquée OH1 = 72 m². Progression : OH1=72, OH2=144, OH3=216, OH4=360 m². Plus le risque est élevé, plus la surface de calcul augmente.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-008",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Surface impliquée OH4",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la surface impliquée en OH4 ?",
+    "propositions": [
+      "216 m²",
+      "260 m²",
+      "300 m²",
+      "360 m²"
+    ],
+    "bonnes_reponses": [
+      3
+    ],
+    "explication": "Surface impliquée OH4 = 360 m². C'est la plus grande des surfaces OH. Au-delà (HHP), les surfaces sont de 260 m² (HHP) et 260 à 300 m² (HHS).",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-009",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Surface max spray LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la surface maximale par tête spray en LH ?",
+    "propositions": [
+      "9 m²",
+      "12 m²",
+      "16 m²",
+      "20 m²"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "S max spray LH = 16 m². OH : 12 m². HHP et HHS : 9 m² (sauf HHP1 : 12 m²). Au-delà de cette surface par tête, la couverture devient insuffisante.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-010",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Surface max — OH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la surface maximale par tête spray en OH ?",
+    "propositions": [
+      "9 m²",
+      "12 m²",
+      "16 m²",
+      "20 m²"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "S max spray OH = 12 m². En LH : 16 m². En HHP/HHS : 9 m² (sauf HHP1 : 12 m²).",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-011",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Surface max — HHS",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la surface maximale par tête spray en HHS ?",
+    "propositions": [
+      "6 m²",
+      "9 m²",
+      "12 m²",
+      "16 m²"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "S max spray HHS = 9 m² (standard, distance libre ≥ 0,6 m). Si distance libre 0,6-1,0 m : 7,5 m². Si distance libre 0,3-0,6 m : 6 m².",
+    "reference": "R1 T6.1 / §6.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-012",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "K min — densité ≥ 12,5",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est le K-factor minimum pour une densité ≥ 12,5 l/m²/min ?",
+    "propositions": [
+      "K57",
+      "K80",
+      "K115",
+      "K160"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "K min = K115 pour densité ≥ 12,5 l/m²/min (évolution R1 2020). Calcul : K80 à 1,98 bar donne juste 112,5 l/min sur 9 m² à 12,5 l/m²/min — limite acceptable, mais on impose K115 pour la marge.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-013",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "K min — densité ≥ 20 (nouveauté 2025)",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Nouveauté R1 2025 : quel K-factor minimum est désormais imposé pour une densité ≥ 20 l/m²/min ?",
+    "propositions": [
+      "K115",
+      "K160",
+      "K200",
+      "K240"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Nouveauté R1 2025 : pour densité ≥ 20 l/m²/min, K min = K160 (nouvelle exigence). Sur installations antérieures, l'absence de K160 sur ces zones est un point AMP (à corriger au plus tard à la révision trentenaire).",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-014",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "K57 en OH",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sous quelle condition un K57 peut-il être admis en classe OH ?",
+    "propositions": [
+      "Jamais — K80 minimum en OH",
+      "Toujours en OH1 et OH2",
+      "Si la surface par sprinkleur est < 9 m²",
+      "Si la pression est ≥ 1 bar"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Note (1) du T6.1 : K57 admis en OH uniquement si surface par sprinkleur < 9 m². Au-delà → K80 obligatoire même en OH. NC rouge si K57 utilisé en OH avec surface par tête ≥ 9 m².",
+    "reference": "R1 T6.1 note (1) (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-015",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Espacement max — LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est l'espacement maximal entre sprinkleurs en LH ?",
+    "propositions": [
+      "3,7 m",
+      "4,0 m",
+      "4,6 m",
+      "5,0 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Espacement max LH = 4,6 m. OH : 4,0 m. HHP et HHS : 3,7 m. Espacement minimum (toutes classes) : 2,0 m.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-016",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Espacement min",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est l'espacement minimal entre deux sprinkleurs spray (toutes classes) ?",
+    "propositions": [
+      "1,0 m",
+      "1,5 m",
+      "2,0 m",
+      "2,5 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Espacement minimum 2,0 m, toutes classes. En-dessous, le risque de 'cold soldering' devient significatif : deux sprinkleurs trop proches se refroidissent mutuellement, retardant le déclenchement.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-017",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Distance max mur — LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la distance maximale d'un sprinkleur spray par rapport à un mur parallèle en LH ?",
+    "propositions": [
+      "1,8 m",
+      "2,0 m",
+      "2,3 m",
+      "2,5 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Distance max mur parallèle LH = 2,3 m. OH = 2,0 m. HHP et HHS = 1,8 m. Au-delà, la couverture du mur est insuffisante.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-018",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Portée mural — LH",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la portée maximale d'un sprinkleur mural en LH ?",
+    "propositions": [
+      "2,6 m",
+      "2,85 m",
+      "3,25 m",
+      "3,7 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Portée max mural LH = 3,25 m. OH et HHP = 2,85 m. HHS = 2,6 m. La portée est la distance maximale projetée par le sprinkleur depuis le mur où il est fixé.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-019",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Surface max mural — OH",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la surface maximale par sprinkleur mural en OH ?",
+    "propositions": [
+      "6 m²",
+      "9 m²",
+      "12 m²",
+      "16 m²"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "S max sprinkleur mural OH = 9 m². LH = 12 m². Les sprinkleurs muraux ne sont pas admis en HHP ni HHS (zones de risque élevé).",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-2-001",
+    "edition": "2025",
+    "chapitre": "6.2",
+    "theme": "Majorations grande hauteur",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "À partir de quelle hauteur sous toiture les majorations de densité commencent-elles à s'appliquer (§6.2) ?",
+    "propositions": [
+      "10 m",
+      "12 m",
+      "15 m",
+      "18 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Au-delà de 12 m de hauteur sous toiture, le dimensionnement doit être majoré par paliers de 1,5 m. Justification : volume d'air plus important + chaleur qui se dissipe → feu plus développé avant déclenchement.",
+    "reference": "R1 §6.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-2-002",
+    "edition": "2025",
+    "chapitre": "6.2",
+    "theme": "Hauteur > 18 m",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour une protection HHP à une hauteur sous toiture > 18 m, que faut-il ?",
+    "propositions": [
+      "Appliquer la majoration standard",
+      "Doubler la densité",
+      "Accord CNPP préalable obligatoire",
+      "Passer en ESFR systématiquement"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Au-delà de 18 m, les majorations tabulées du §6.2 ne suffisent plus. Un accord CNPP préalable est obligatoire pour valider le dimensionnement, qui sortira souvent du cadre standard (ESFR, ASRS, etc.).",
+    "reference": "R1 §6.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-3-001",
+    "edition": "2025",
+    "chapitre": "6.3",
+    "theme": "HHS — Distance libre sous sprinkleur",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En HHS, pour une distance libre de 0,5 m sous sprinkleur, quelle est la surface maximale par tête ?",
+    "propositions": [
+      "6 m²",
+      "7,5 m²",
+      "9 m²",
+      "12 m²"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "T6.3 : distance libre 0,3-0,6 m → S max = 6 m² et espacement max 2,5 m. Distance 0,6-1,0 m → 7,5 m² / 3,0 m. Distance ≥ 1,0 m (standard) → 9 m² / 3,7 m. Plus c'est proche du stockage, plus la couverture doit être resserrée.",
+    "reference": "R1 §6.3 / T6.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-3-1-1-001",
+    "edition": "2025",
+    "chapitre": "6.3.1.1",
+    "theme": "HHS — Îlots 150 m²",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur un stockage HHS#3 à K80 et hauteur > 1,80 m, quelles sont les limites d'îlot et d'allée ?",
+    "propositions": [
+      "100 m² par îlot, allées 2,0 m",
+      "150 m² par îlot, allées 2,4 m (réductibles à 0,9 m le long des murs)",
+      "200 m² par îlot, allées 1,2 m",
+      "Aucune limite imposée"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.3.1.1 : surface au sol maxi 150 m² par îlot, allée de dégagement ≥ 2,4 m (réductible à 0,9 m le long des murs). Rappel ICPE 1510 : îlots possibles à 500 m² mais R1 plus strict pour la protection.",
+    "reference": "R1 §6.3.1.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-3-1-4-001",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Doubles racks — Cheminée centrale",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle largeur de cheminée centrale doit être maintenue dans un double rack ?",
+    "propositions": [
+      "5 cm",
+      "10 cm",
+      "15 cm",
+      "20 cm"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Les doubles racks doivent disposer d'un espace longitudinal (cheminée) de 15 cm en partie centrale, garanti par des moyens mécaniques permanents. Cette cheminée laisse passer la pulvérisation jusqu'aux niveaux inférieurs.",
+    "reference": "R1 §6.3.1.4 / F6.3.1.4b (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-3-1-4-002",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Étagères pleines sur racks",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Concernant les étagères pleines en partie haute des racks (note 1 §5.1.3) :",
+    "propositions": [
+      "Toujours interdites",
+      "Toujours admises sans restriction",
+      "Admises uniquement en lisse basse à < 50 cm du sol, ou ajourées 50% sur 1ère lisse > 50 cm",
+      "Admises si certifiées CE"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Étagères admises : ligne pleine sur lisse basse à < 50 cm du sol ; ligne ajourée 50% sur 1ère lisse > 50 cm. Au-delà : caillebotis ajourés ≥ 70%. Les étagères pleines en haut sont une NC fréquente (bloquent la descente d'eau).",
+    "reference": "R1 §5.1.3 note 1 / §6.3.1.4 b (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-12-001",
+    "edition": "2025",
+    "chapitre": "6.12",
+    "theme": "Additif 2025 — Centres de tri",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "L'additif §6.12 de la R1 2025 concerne :",
+    "propositions": [
+      "Les stations de recharge VE",
+      "Les centres de tri des déchets",
+      "Les parcs de stationnement",
+      "Les transtockeurs ASRS"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.12 Centres de tri des déchets : classement HHS#2 à HHS#3 selon taux de plastique. Protection halls amont/aval et processus. Un des 5 additifs 2025 intégrés à l'édition de septembre 2025.",
+    "reference": "R1 §6.12 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-13-001",
+    "edition": "2025",
+    "chapitre": "6.13",
+    "theme": "ASRS — Transtockeurs",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel additif R1 2025 traite des stockages automatisés (ASRS) ?",
+    "propositions": [
+      "§6.12",
+      "§6.13",
+      "§6.14",
+      "§6.15"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.13 ASRS : §6.13.1 stockages verticaux sur structure autoportante (Kardex, Hänel), §6.13.2 armoires fermées. Asservissement transtockeurs obligatoire (§4.8.3). Additif initialement de juin 2024, intégré à la R1 2025.",
+    "reference": "R1 §6.13 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-14-001",
+    "edition": "2025",
+    "chapitre": "6.14",
+    "theme": "Bornes recharge — Soumis ou non",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une station de recharge VE en extérieur non couverte est-elle soumise à la R1 ?",
+    "propositions": [
+      "Oui dans tous les cas",
+      "Oui si > 5 bornes",
+      "Non — §6.14.1 non couverte = non soumise",
+      "Au cas par cas"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§6.14.1 : station de recharge VE non couverte = non soumise à la R1. §6.14.2 : station intérieure batteries lithium = soumise (risque de thermal runaway des batteries). Additif février 2025 intégré à la R1 2025.",
+    "reference": "R1 §6.14 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-1-001",
+    "edition": "2025",
+    "chapitre": "7.1",
+    "theme": "Installations sous eau — Surface max",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la surface maximale d'une installation sous eau (par poste) ?",
+    "propositions": [
+      "4 000 m²",
+      "5 000 m²",
+      "10 000 m²",
+      "20 000 m²"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Sous eau (canalisations en permanence sous pression d'eau) : surface max 10 000 m² par poste. Sous air : 4 000 m² (2 000 m² si enterré aval). Alternatif : 4 000 m².",
+    "reference": "R1 §7.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-2-001",
+    "edition": "2025",
+    "chapitre": "7.2",
+    "theme": "Sous air — Surface max",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la surface maximale d'une installation sous air par poste ?",
+    "propositions": [
+      "2 000 m²",
+      "4 000 m²",
+      "10 000 m²",
+      "20 000 m²"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Sous air : surface max 4 000 m² par poste, réduite à 2 000 m² si le poste est enterré aval. Justification : retard de mise en eau lié au temps d'évacuation de l'air.",
+    "reference": "R1 §7.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-4-001",
+    "edition": "2025",
+    "chapitre": "7.4",
+    "theme": "Préaction C — Caractéristique",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Qu'est-ce qui caractérise une installation préaction de type C ?",
+    "propositions": [
+      "Une seule détection",
+      "Double interverrouillage : DAI + ouverture sprinkleur",
+      "Têtes ouvertes envahies sur DAI",
+      "Réseau permanent sous antigel"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Préaction C : double interverrouillage. L'eau n'est envoyée dans le réseau que si la DAI ET un sprinkleur sont ouverts simultanément. Protection ultime contre les dégâts des eaux par déclenchement intempestif. Évolution 2020.",
+    "reference": "R1 §7.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-5-001",
+    "edition": "2025",
+    "chapitre": "7.5",
+    "theme": "Antigel — pH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quel est le pH minimum admissible pour le liquide antigel ?",
+    "propositions": [
+      "pH ≥ 5",
+      "pH ≥ 6",
+      "pH ≥ 7",
+      "pH ≥ 8"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "pH antigel ≥ 7 (neutre à basique). Un pH inférieur indique une corrosion en cours qui s'attaque aux canalisations. Vérification annuelle. Renouvellement triennal si pH dégradé. NC rouge si pH < 7.",
+    "reference": "R1 §7.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-5-002",
+    "edition": "2025",
+    "chapitre": "7.5",
+    "theme": "Antigel — Marge thermique",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'antigel doit assurer une protection à quelle température ?",
+    "propositions": [
+      "T° minimum du local",
+      "T° minimum du local + 5 °C",
+      "T° minimum du local - 5 °C",
+      "0 °C minimum"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "L'antigel doit protéger jusqu'à T° mini local + 5 °C. Cette marge de sécurité compense les variations ponctuelles. Si local descend à -10 °C, antigel testé jusqu'à -15 °C minimum.",
+    "reference": "R1 §7.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-6-001",
+    "edition": "2025",
+    "chapitre": "7.6",
+    "theme": "Émulseurs — Risques",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour quels risques sont prévus les émulseurs ?",
+    "propositions": [
+      "Tous risques en classes OH",
+      "Risques avec liquides inflammables (HHP3/4)",
+      "Stockages plastiques HHS#5",
+      "Parkings RS"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Les émulseurs sont prévus pour les risques avec liquides inflammables (HHP3, HHP4). Ils forment un film moussant qui isole les vapeurs et étouffe le feu. Essai triennal de concentration obligatoire.",
+    "reference": "R1 §7.6 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-6-002",
+    "edition": "2025",
+    "chapitre": "7.6",
+    "theme": "Émulseurs — PFOS/PFOA/F3",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quel règlement européen impose la transition vers émulseurs F3 sans fluor à partir du 04/07/2025 ?",
+    "propositions": [
+      "Règlement 757/2010 (PFOS)",
+      "Règlement 2017-1000 (PFOA)",
+      "Règlement 2020/784",
+      "Aucun — transition volontaire"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Règlement UE 2020/784 (interdiction étendue au 04/07/2025) → transition F3 obligatoire. Suite à 757/2010 (PFOS interdit) et 2017-1000 (PFOA). AMP — à anticiper. Demander devis fournisseur si émulseurs fluorés présents.",
+    "reference": "R1 §7.6 (édition 2025) / UE 2020/784"
+  },
+  {
+    "id": "r1-2025-7-8-1-001",
+    "edition": "2025",
+    "chapitre": "7.8.1",
+    "theme": "RIA — Majoration réserve",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Si des RIA sont branchés en aval des pompes sprinkleurs, quelle majoration de réserve est obligatoire ?",
+    "propositions": [
+      "+ 5 m³",
+      "+ 8 m³",
+      "+ 12 m³",
+      "+ 20 m³"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Majoration obligatoire de 12 m³ de réserve si RIA branchés en aval des pompes sprinkleurs. Compense la consommation des RIA lors d'une intervention, sans pénaliser l'autonomie sprinkleur.",
+    "reference": "R1 §7.8.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-001",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "Sources — Principe historique",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Depuis quelle date approximative le principe de deux sources d'eau indépendantes est-il imposé ?",
+    "propositions": [
+      "≥1898",
+      "≥1936",
+      "≥1967",
+      "≥1984"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Principe de deux sources indépendantes : ≥1898 (origine de la réglementation française des sprinkleurs). Les types B.1 à B.7 sont définis depuis ≥2002. La source B.8 a été créée en 2020 pour les ESFR.",
+    "reference": "R1 §8 (historique)"
+  },
+  {
+    "id": "r1-2025-8-001-002",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "Source B.1",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "À quelle source correspond un réservoir gravitaire ?",
+    "propositions": [
+      "B.1",
+      "B.2",
+      "B.7",
+      "B.8"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "B.1 = réservoir gravitaire (admissible toutes classes). Hauteur ≥ 10 m au-dessus du sprinkleur le plus élevé pour assurer la pression statique.",
+    "reference": "R1 §8 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-001-003",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "B.1 — Hauteur",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour un réservoir gravitaire B.1, quelle hauteur minimum doit-il avoir au-dessus du sprinkleur le plus élevé ?",
+    "propositions": [
+      "5 m",
+      "8 m",
+      "10 m",
+      "15 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Hauteur minimum d'un B.1 ≥ 10 m au-dessus du sprinkleur le plus élevé. Cette hauteur permet d'assurer la pression statique minimale même sans pompe (1 mCE ≈ 0,1 bar).",
+    "reference": "R1 §8 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-001-004",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "B.2 — Réseau public 1 château",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle est l'admissibilité de la source B.2 (réseau public alimenté par 1 château) ?",
+    "propositions": [
+      "Toutes classes",
+      "LH et OH petites surfaces uniquement",
+      "HHP/HHS jusqu'à 45 000 m²",
+      "Réservée aux RS"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "B.2 (1 château) : LH et OH petites surfaces uniquement. Interdit pour HHP/HHS > 45 000 m². Trop fragile pour les risques élevés (un seul point de pression).",
+    "reference": "R1 §8 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-001-005",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "B.7",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "À quoi correspond la source B.7 ?",
+    "propositions": [
+      "Réservoir gravitaire",
+      "Réseau public maillé",
+      "Pompe automatique + réserve d'eau intégrale",
+      "Deux pompes indépendantes (ESFR)"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "B.7 = pompe automatique + réserve d'eau intégrale (en propre). Considérée comme la source la plus fiable, admissible toutes classes. Indépendance totale du réseau public.",
+    "reference": "R1 §8 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-001-006",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "B.8 — Nouveauté 2020",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "La source B.8 a été créée en 2020 pour quel usage ?",
+    "propositions": [
+      "Les installations sous antigel",
+      "Les RS parkings",
+      "Les ESFR — obligation de redondance maximale",
+      "Les transtockeurs"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "B.8 (créée 2020) = 2 pompes indépendantes + aspirations dédiées. Obligatoire pour les installations ESFR. Redondance maximale : la défaillance d'une pompe ne compromet pas l'alimentation. Absence sur ESFR = NC rouge.",
+    "reference": "R1 §8 / §17 (édition 2020/2025)"
+  },
+  {
+    "id": "r1-2025-8-001-007",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "HHP/HHS > 45 000 m²",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour un risque HHP ou HHS de surface > 45 000 m², quelle combinaison de sources est requise ?",
+    "propositions": [
+      "B seule",
+      "A + B",
+      "B + B",
+      "A + A"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "HHP/HHS > 45 000 m² : combinaison B + B requise (deux sources B indépendantes). Entre 9 001 et 45 000 m² : A + B. ≤ 9 000 m² : B seule.",
+    "reference": "R1 §8 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-001-008",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "OH ≤ 9 000 m²",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un risque OH de surface ≤ 9 000 m², quelle source est requise ?",
+    "propositions": [
+      "A seule",
+      "B seule",
+      "A + B",
+      "B + B"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "OH ≤ 9 000 m² : B seule suffit. OH > 9 000 m² : A + B requis. LH : A seule admise quelle que soit la surface.",
+    "reference": "R1 §8 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-001-009",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour une installation en classe LH (toute surface), quelle source est admise au minimum ?",
+    "propositions": [
+      "A seule admise",
+      "B seule",
+      "A + B obligatoire",
+      "B + B"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "LH : source A seule admise, quelle que soit la surface. Le risque léger ne nécessite pas la redondance d'une source B. Classes plus exigeantes : OH/HHP/HHS imposent au minimum une B.",
+    "reference": "R1 §8 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-2-001",
+    "edition": "2025",
+    "chapitre": "8.2",
+    "theme": "Local sources — Température",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle température minimale doit être maintenue en permanence dans le local des sources ?",
+    "propositions": [
+      "0 °C",
+      "+2 °C",
+      "+5 °C",
+      "+10 °C"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Température ≥ +5 °C en permanence dans le local des sources. Sonde de T° avec report ECS. NC rouge si T° < 5°C (risque non-démarrage moteur diesel : huile trop visqueuse).",
+    "reference": "R1 §8.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-2-002",
+    "edition": "2025",
+    "chapitre": "8.2",
+    "theme": "Local sources — Alarmes obligatoires",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Quelles alarmes doivent être présentes dans le local des sources ?",
+    "propositions": [
+      "Alarme intrusion (avec report ECS)",
+      "Alarme température basse",
+      "Alarme niveau bas réserve",
+      "Alarme incendie ambiance"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Alarmes obligatoires : intrusion (avec report ECS), T° basse (seuil +5°C, obligatoire si extension ≥ 31 têtes), niveau bas réserve (≥ 90% du volume). L'alarme incendie ambiance n'est pas spécifiquement imposée.",
+    "reference": "R1 §8.2 / §14 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-2-003",
+    "edition": "2025",
+    "chapitre": "8.2",
+    "theme": "Sonde T° basse — Seuil obligation",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "À partir de quelle taille d'extension la sonde de T° basse devient-elle obligatoire ?",
+    "propositions": [
+      "Dès 5 têtes ajoutées",
+      "Dès 31 têtes ajoutées",
+      "Dès 100 têtes ajoutées",
+      "Dès 200 têtes ajoutées"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "La sonde de T° basse devient obligatoire dès 31 têtes modifiées (§19.2.4). Cette obligation est liée à l'entrée dans la 'tranche moyenne' des extensions où des exigences renforcées s'appliquent.",
+    "reference": "R1 §8.2 / §19.2.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-2-004",
+    "edition": "2025",
+    "chapitre": "8.2",
+    "theme": "Tableau signalétique",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Que doit contenir le tableau signalétique des sources affiché dans le local ?",
+    "propositions": [
+      "Uniquement le nom de l'installateur",
+      "Les caractéristiques requises ET les caractéristiques mesurées par CNPP",
+      "Le PV de la dernière VdC",
+      "Le numéro de téléphone du service de maintenance"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le tableau signalétique doit comporter les caractéristiques requises (issues du calcul hydraulique) ET les caractéristiques mesurées lors de la VdC CNPP. Référence pour les contrôles hebdomadaires.",
+    "reference": "R1 §8.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-2-005",
+    "edition": "2025",
+    "chapitre": "8.2",
+    "theme": "Local pompes — Accès",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Comment doit être conçu l'accès au local des sources ?",
+    "propositions": [
+      "Par l'intérieur du bâtiment, pour faciliter les contrôles",
+      "Par un mur extérieur, accès direct depuis l'extérieur ou cheminement coupe-feu sans stockage",
+      "Au sous-sol pour limiter le bruit",
+      "À l'étage pour limiter l'inondation"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Accès facilité pour les pompiers : mur extérieur avec accès direct depuis l'extérieur, OU cheminement coupe-feu protégé sans stockage. Permet l'intervention même bâtiment enfumé/sinistré.",
+    "reference": "R1 §8.2 a) (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-3-001",
+    "edition": "2025",
+    "chapitre": "8.3",
+    "theme": "Dispositif d'essai — Capacité",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelles sont les capacités requises du dispositif d'essai par type de source en R1 2025 ?",
+    "propositions": [
+      "100% pour A et B",
+      "130% source A / 150% source B",
+      "150% pour A et B",
+      "120% A / 130% B"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 2020+ : 130% pour source A, 150% pour source B explicites. R1 2025 ajoute : débitmètre fixe sur chaque source + piquage contre-mesure. Très souvent inadéquat sur installations anciennes → AMP.",
+    "reference": "R1 §8.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-3-002",
+    "edition": "2025",
+    "chapitre": "8.3",
+    "theme": "Dispositif d'essai — Conséquence non-réalisation",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors d'une visite Q1, le débitmètre fixe est hors service, l'essai de débit n'est pas réalisable. Quelle phrase utilisez-vous ?",
+    "propositions": [
+      "Aucune mention, l'essai sera reporté à la prochaine visite",
+      "Cette remise en état doit être faite avant la prochaine visite, faute de quoi ce point sera classé en NC",
+      "NC immédiate sans préavis",
+      "Information à l'assureur uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Phrase Q1 type §8.3 : « Cette remise en état doit être faite avant la prochaine visite, faute de quoi ce point sera classé en non-conformité. » Donne un délai sans laisser passer un défaut majeur sans suite.",
+    "reference": "R1 §8.3 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-1-001",
+    "edition": "2025",
+    "chapitre": "9.1",
+    "theme": "Réserves — Géomembrane interdite",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Depuis quelle édition les réserves en géomembrane (PVC, butyl) sont-elles interdites pour les nouvelles installations ?",
+    "propositions": [
+      "1984",
+      "1994",
+      "2002",
+      "2014"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Depuis ≥2002 : réserves en géomembrane (PVC, butyl) interdites pour les nouvelles installations. Seules les réserves à parois rigides métalliques ou béton sont admises (durabilité, étanchéité long terme).",
+    "reference": "R1 §9 (édition 2002+)"
+  },
+  {
+    "id": "r1-2025-9-1-002",
+    "edition": "2025",
+    "chapitre": "9.1",
+    "theme": "Délai remplissage réserve",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est le délai maximum de remplissage d'une réserve d'eau ?",
+    "propositions": [
+      "6 h",
+      "12 h",
+      "24 h",
+      "48 h"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Délai de remplissage maximum : 12 heures. Permet de garantir une remise en disponibilité rapide après un essai ou une intervention.",
+    "reference": "R1 §9 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-1-003",
+    "edition": "2025",
+    "chapitre": "9.1",
+    "theme": "Volume insuffisant — Phrase NC",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur un site, vous constatez que le volume utile de la réserve (lame d'eau utile déduite) ne couvre pas l'autonomie requise. Quelle est la qualification ?",
+    "propositions": [
+      "Remarque mineure",
+      "AMP si la R1 a évolué",
+      "NC majeure — la source ne peut fournir l'autonomie chapitre 8",
+      "Sans suite si l'exploitant assure le rappoint"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Volume insuffisant pour la durée requise = NC majeure. La source doit pouvoir fournir pression et débit pendant la durée prévue (chapitre 8). Sans volume requis, l'autonomie réglementaire n'est pas tenue.",
+    "reference": "R1 §9.1 / §8.5-8.7 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-2-001",
+    "edition": "2025",
+    "chapitre": "9.2",
+    "theme": "Autonomie source A — LH/OH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est l'autonomie minimale d'une source A en classe LH ou OH ?",
+    "propositions": [
+      "15 min",
+      "30 min",
+      "60 min",
+      "90 min"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Source A : 30 min en LH/OH, 60 min en HHP/HHS. Source B : 60 min en LH/OH, 90 min en HHP/HHS. La source B est toujours plus exigeante (plus fiable, autonomie plus longue).",
+    "reference": "R1 §9 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-2-002",
+    "edition": "2025",
+    "chapitre": "9.2",
+    "theme": "Autonomie source A — HHP/HHS",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est l'autonomie minimale d'une source A en classe HHP ou HHS ?",
+    "propositions": [
+      "30 min",
+      "60 min",
+      "90 min",
+      "120 min"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Source A en HHP/HHS : 60 min. En LH/OH : 30 min. Le doublement s'explique par le risque accru de propagation et la nécessité de prolonger l'action sprinkleur en attendant les secours.",
+    "reference": "R1 §9 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-2-003",
+    "edition": "2025",
+    "chapitre": "9.2",
+    "theme": "Autonomie source B — LH/OH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est l'autonomie minimale d'une source B en classe LH ou OH ?",
+    "propositions": [
+      "30 min",
+      "60 min",
+      "90 min",
+      "120 min"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Source B en LH/OH : 60 min. En HHP/HHS : 90 min. La source B (auto avec réserve, ou maillée) doit tenir plus longtemps que la source A (réseau public ou châteaux).",
+    "reference": "R1 §9 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-2-004",
+    "edition": "2025",
+    "chapitre": "9.2",
+    "theme": "Autonomie source B — HHP/HHS",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est l'autonomie minimale d'une source B en classe HHP ou HHS ?",
+    "propositions": [
+      "60 min",
+      "75 min",
+      "90 min",
+      "120 min"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Source B en HHP/HHS : 90 min. C'est l'autonomie maximale exigée par la R1. Cette durée permet de maîtriser le développement initial et d'attendre les secours sans interruption de protection.",
+    "reference": "R1 §9 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-1-004",
+    "edition": "2025",
+    "chapitre": "9.1",
+    "theme": "Alarme niveau bas",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quand l'alarme « niveau bas réserve » doit-elle se déclencher ?",
+    "propositions": [
+      "Dès qu'il manque 5% du volume requis",
+      "Dès qu'il manque 10% du volume requis",
+      "Dès qu'il manque 20% du volume requis",
+      "Quand la réserve est totalement vide"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Maintenir en permanence ≥ 90% du volume requis. L'alarme 'niveau bas source d'eau' se déclenche dès qu'il manque 10% du volume requis. Garantit une réaction avant que l'autonomie ne soit compromise.",
+    "reference": "R1 §9.1 / T14.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-4-3-001",
+    "edition": "2025",
+    "chapitre": "9.4.3",
+    "theme": "Eau de ville — Pressostat amont",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur une source eau de ville, un pressostat manque en amont du clapet anti-retour. Que prévoir ?",
+    "propositions": [
+      "Aucune action — non requis",
+      "Installer un pressostat en amont du clapet, avec vanne d'essai, préréglé à la pression min Q0%, reporté en alarme",
+      "Remplacer le clapet anti-retour",
+      "Installer une pompe surpresseur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§9.4.3 : pressostat obligatoire en amont du clapet anti-retour, muni d'une vanne d'essai, préréglé à la pression minimale requise à débit nul, et reporté en alarme. Surveille la disponibilité de l'eau de ville.",
+    "reference": "R1 §9.4.3 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-8-2-006",
+    "edition": "2025",
+    "chapitre": "8.2",
+    "theme": "Local pompes — IPE essai",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour tester l'IPE (Indicateur de Passage d'Eau) du local pompes, quelle disposition est requise ?",
+    "propositions": [
+      "Démontage de l'IPE",
+      "Raccordement à l'égout du système d'essai de la protection sprinkleur du local",
+      "Vidange complète du réseau",
+      "Coupure de l'alimentation"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le système d'essai de la protection sprinkleur du local pompes doit être raccordé à l'égout, afin de permettre le test de l'IPE sans inonder le local. Phrase Q1 type §8.2.",
+    "reference": "R1 §8.2 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-1-005",
+    "edition": "2025",
+    "chapitre": "9.1",
+    "theme": "Réserves — Vidange triennale",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle opération de maintenance triennale concerne les réserves d'eau ?",
+    "propositions": [
+      "Remplacement intégral",
+      "Vidange complète + inspection interne + traitement anti-corrosion + remplacement joints de regard",
+      "Désinfection au chlore",
+      "Test d'étanchéité sous pression"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Triennal réserves : vidange complète, inspection interne, traitement anti-corrosion, remplacement joints de regard. Évite la dégradation à long terme (corrosion, dépôts, prolifération bactérienne).",
+    "reference": "R1 §18.7 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-1-004",
+    "edition": "2025",
+    "chapitre": "3.3.1",
+    "theme": "Hydrostatique — Point de mesure",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Où est mesurée la pression d'essai hydrostatique ?",
+    "propositions": [
+      "Au point le plus haut",
+      "Au point bas",
+      "Au refoulement de la pompe",
+      "À mi-hauteur du réseau"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Pression mesurée au point bas du réseau. C'est là que la pression statique est maximale (eau = colonne d'eau au-dessus). Garantit que la pression d'essai est bien atteinte partout dans le réseau.",
+    "reference": "R1 §3.3.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-1-005",
+    "edition": "2025",
+    "chapitre": "3.3.1",
+    "theme": "Hydrostatique — Critères acceptation",
+    "difficulte": 2,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Quels critères doivent être satisfaits pour valider l'essai hydrostatique ?",
+    "propositions": [
+      "Aucune fuite",
+      "Aucune rupture",
+      "Aucune déformation permanente",
+      "Pression stable à ± 0,5 bar"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Critères §3.3.1 : aucune fuite, aucune rupture, aucune déformation permanente. La stabilité de pression n'est pas exigée explicitement (la pression peut baisser légèrement par effet thermique sans qu'il y ait fuite).",
+    "reference": "R1 §3.3.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-1-1-001",
+    "edition": "2025",
+    "chapitre": "1",
+    "theme": "Q140% (référence EN 12845)",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour une installation prise en référence sur la NF EN 12845, quel critère supplémentaire s'applique à Q140% ?",
+    "propositions": [
+      "h(Q140%) ≥ 0,50 × h(Q100%)",
+      "h(Q140%) ≥ 0,70 × h(Q100%)",
+      "h(Q140%) ≥ 0,90 × h(Q100%)",
+      "Aucun critère"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Critère NF EN 12845 : h(Q140%) > 0,70 × h(Q100%). C'est une condition supplémentaire de la courbe pompe sur les installations alignées sur l'EN 12845 (différent du critère R1 sur Q130%).",
+    "reference": "R1 §1.1 / NF EN 12845 §10.7.2"
+  },
+  {
+    "id": "r1-2025-8-4-001",
+    "edition": "2025",
+    "chapitre": "8.4",
+    "theme": "Tableau signalétique — Affichage",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Le tableau signalétique des sources doit-il être affiché ?",
+    "propositions": [
+      "Non, conservé dans le dossier de suivi",
+      "Oui, à l'entrée du site",
+      "Oui, dans le local des sources",
+      "Affichage facultatif"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Affichage obligatoire dans le local des sources. Permet aux équipes d'entretien et aux pompiers d'accéder immédiatement aux valeurs de référence (pressions, débits, autonomies attendues).",
+    "reference": "R1 §8.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-3-003",
+    "edition": "2025",
+    "chapitre": "5.3",
+    "theme": "T5.3 — HHS#1 ST1",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Hauteur max admissible pour un stockage HHS#1 en mode ST1 (empilage libre) ?",
+    "propositions": [
+      "1,5 m",
+      "3,0 m",
+      "4,0 m",
+      "6,0 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "T5.3 : HHS#1 ST1 = 4,0 m. ST2-6 = 3,5 m. Plus la combustibilité du produit est faible (HHS#1 = très faible), plus la hauteur admise est élevée. Inversement HHS#5 limité à 1,2 m.",
+    "reference": "R1 T5.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-3-004",
+    "edition": "2025",
+    "chapitre": "5.3",
+    "theme": "T5.3 — HHS#5",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Hauteur max admissible pour un stockage HHS#5 (mousses, aérosols, cire) ?",
+    "propositions": [
+      "1,2 m",
+      "1,7 m",
+      "2,1 m",
+      "3,0 m"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "T5.3 : HHS#5 = 1,2 m maximum, identique pour ST1 et ST2-6. Catégorie créée en 2020 pour les marchandises à très forte combustibilité, avec la limite la plus basse de tout le tableau.",
+    "reference": "R1 T5.3 (édition 2020/2025)"
+  },
+  {
+    "id": "r1-2025-5-1-001",
+    "edition": "2025",
+    "chapitre": "5.1",
+    "theme": "Changement activité",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous constatez en visite qu'un changement de marchandises stockées n'a pas été déclaré. Quel point de NC formuler ?",
+    "propositions": [
+      "Remarque sans gravité",
+      "Modification non déclarée — la protection peut ne plus être adaptée. Nouvelle analyse de risques et VdC CNPP requises",
+      "NC mineure avec délai 6 mois",
+      "Sanction directe : retrait du N1"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Phrase Q1 type §5.1 : 'Modification de l'activité ou des marchandises stockées non déclarée. La protection sprinkleurs actuelle peut ne plus être adaptée au nouveau risque. Faire procéder à une nouvelle analyse de risques et à une visite de conformité du CNPP.'",
+    "reference": "R1 §5.1 + chapitre 6 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-3-1-1-002",
+    "edition": "2025",
+    "chapitre": "6.3.1.1",
+    "theme": "Allée réduite contre mur",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'allée d'îlot HHS de 2,4 m peut être réduite. Dans quelle situation et à quelle valeur ?",
+    "propositions": [
+      "1,2 m partout",
+      "1,5 m partout",
+      "0,9 m le long des murs uniquement",
+      "Aucune réduction admise"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "L'allée 2,4 m est réductible à 0,9 m le long des murs uniquement. Cette réduction est admise car la propagation latérale est bloquée par le mur lui-même. Pas de réduction admise entre îlots.",
+    "reference": "R1 §6.3.1.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-020",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Vitesse max réseau",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la vitesse maximale d'eau admissible dans le réseau de distribution ?",
+    "propositions": [
+      "5 m/s",
+      "6 m/s",
+      "8 m/s",
+      "10 m/s"
+    ],
+    "bonnes_reponses": [
+      3
+    ],
+    "explication": "Vitesse max réseau = 10 m/s. Vitesse max au passage d'une vanne ou d'un débitmètre = 6 m/s. Au-delà : coups de bélier, érosion, bruit, pertes de charge incontrôlées.",
+    "reference": "R1 §13.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-021",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Vitesse max vanne/débitmètre",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle vitesse maximale d'eau est admissible au passage d'une vanne ou d'un débitmètre ?",
+    "propositions": [
+      "4 m/s",
+      "6 m/s",
+      "8 m/s",
+      "10 m/s"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Vitesse max au passage d'une vanne ou d'un débitmètre = 6 m/s. Limite plus basse que la conduite générale (10 m/s) car les pertes de charge à travers les organes sont fortement non-linéaires.",
+    "reference": "R1 §13.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-1-3-005",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "ST5/ST6 — Rayonnages",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la différence principale entre les modes ST5 et ST6 ?",
+    "propositions": [
+      "ST5 = rayonnages métalliques, ST6 = rayonnages bois",
+      "ST5 = étagères ≤ 1 m, ST6 = étagères 1 à 6 m de large",
+      "ST5 = stockage fixe, ST6 = stockage mobile",
+      "Aucune différence, terminologie historique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ST5 = rayonnages étagères ≤ 1 m de large. ST6 = rayonnages étagères de 1 à 6 m de large. La largeur de l'étagère pleine perturbe la descente d'eau, d'où la distinction normative.",
+    "reference": "R1 §5.1.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-1-002",
+    "edition": "2025",
+    "chapitre": "7.1",
+    "theme": "Type installation — Sous eau",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la caractéristique principale d'une installation 'sous eau' ?",
+    "propositions": [
+      "Eau libre dans le réseau, à pression atmosphérique",
+      "Canalisations en permanence sous pression d'eau",
+      "Réseau rempli d'antigel",
+      "Têtes ouvertes en permanence"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Sous eau : canalisations en permanence sous pression d'eau. C'est le type le plus courant, utilisé en locaux hors gel (T° ≥ 5°C). Réponse immédiate au déclenchement d'une tête.",
+    "reference": "R1 §7.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-2-002",
+    "edition": "2025",
+    "chapitre": "7.2",
+    "theme": "Type installation — Sous air",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est l'usage typique d'une installation 'sous air' ?",
+    "propositions": [
+      "Locaux frigorifiques uniquement",
+      "Locaux à risque de gel",
+      "Bâtiments tertiaires standards",
+      "Salles informatiques (anti dégât des eaux)"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Sous air : pour locaux à risque de gel (T° pouvant descendre < 5°C). Les canalisations sont sous pression d'air comprimé ; l'air est évacué quand une tête ouvre, puis l'eau arrive.",
+    "reference": "R1 §7.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-3-001",
+    "edition": "2025",
+    "chapitre": "7.3",
+    "theme": "Type installation — Alternatif",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est le principe d'une installation alternative ?",
+    "propositions": [
+      "Deux alimentations qui s'alternent",
+      "Eau en été, air en hiver",
+      "Eau et air simultanés",
+      "Maintenance par roulement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Alternatif : eau en été, air en hiver. Pour locaux à gel saisonnier. Compromis entre la rapidité du sous eau (saison chaude) et la sécurité du sous air (saison froide). Apparu en 1979.",
+    "reference": "R1 §7.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-4-002",
+    "edition": "2025",
+    "chapitre": "7.4",
+    "theme": "Type installation — Préaction",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Sur quelle zone une installation préaction est-elle typiquement déployée ?",
+    "propositions": [
+      "Toutes zones classiques",
+      "Zones sensibles aux dégâts des eaux",
+      "Zones extérieures",
+      "Locaux haute température"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Préaction : zones sensibles aux dégâts des eaux (datacenters, archives, musées). L'eau n'est envoyée que sur signal DAI (préaction A) ou ouverture de tête (B), voire les deux (C, double interverrouillage).",
+    "reference": "R1 §7.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-7-4-003",
+    "edition": "2025",
+    "chapitre": "7.4",
+    "theme": "Type installation — Déluge",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la caractéristique d'une installation déluge ?",
+    "propositions": [
+      "Pression renforcée à 16 bar",
+      "Têtes ouvertes, envahissement sur DAI",
+      "Densité doublée",
+      "Réserve d'eau supplémentaire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Déluge : têtes ouvertes en permanence, envahissement de toute la zone protégée dès activation par DAI. Obligatoire en HHP4 (liquides inflammables, propagation très rapide). Apparu en 1967.",
+    "reference": "R1 §7.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-5-1-1-007",
+    "edition": "2025",
+    "chapitre": "5.1.1",
+    "theme": "Classement basé sur produit seul",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Un classement de risques basé uniquement sur le produit (sans tenir compte de l'emballage) constitue :",
+    "propositions": [
+      "Une démarche normale",
+      "Une NC rouge (sous-classification dangereuse)",
+      "Une AMP si la R1 a évolué",
+      "Une remarque mineure"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC rouge : un classement basé sur le produit seul, sans tenir compte de l'emballage, conduit à une sous-classification dangereuse. La combinaison produit + emballage est la règle fondamentale §5.4.2.",
+    "reference": "R1 §5.4.2 / §9 Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-1-006",
+    "edition": "2025",
+    "chapitre": "9.1",
+    "theme": "Réserve à ciel ouvert",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une réserve d'eau à ciel ouvert (bassin extérieur non couvert) est-elle admise en R1 2025 pour une nouvelle installation ?",
+    "propositions": [
+      "Oui, sans restriction",
+      "Oui, si volume > 1000 m³",
+      "Interdite pour les nouvelles installations",
+      "Admise uniquement en LH"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§9.1 : réserves à ciel ouvert interdites en neuf. Risques : pollution, gel, contamination biologique, evaporation. Seules les réserves couvertes ou closes sont admises pour les nouvelles installations.",
+    "reference": "R1 §9.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-022",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Sprinkleur mural — Classe limite",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans quelles classes les sprinkleurs muraux sont-ils admis ?",
+    "propositions": [
+      "Toutes classes",
+      "LH et OH uniquement",
+      "HHP et HHS uniquement",
+      "LH uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Sprinkleurs muraux admis en LH et OH uniquement. Non admis en HHP ni HHS : sur risques élevés, la couverture latérale d'un mural est insuffisante face à un panache thermique vertical important.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-4-8-004",
+    "edition": "2025",
+    "chapitre": "4.8",
+    "theme": "Asservissement préconisé non réalisé",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur une installation traditionnelle (non ESFR/CMSA), un asservissement préconisé n'a pas été réalisé. Quel niveau de NC ?",
+    "propositions": [
+      "Rouge — comme sur ESFR",
+      "Orange — NC à corriger",
+      "Jaune — remarque mineure",
+      "Aucune NC"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC orange au Q1 §4 : asservissement préconisé non réalisé sur installation traditionnelle. Sur ESFR/CMSA, ce même défaut serait rouge (asservissement obligatoire et non plus seulement préconisé).",
+    "reference": "R1 §4.8 / §4 Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-1-006",
+    "edition": "2025",
+    "chapitre": "3.3.1",
+    "theme": "Calcul Pmax exemple",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une installation a une pression de service maximale de 14 bar. Quelle est la pression d'essai hydrostatique ?",
+    "propositions": [
+      "14 bar",
+      "15,5 bar",
+      "16,8 bar (1,2 × 14)",
+      "21 bar (1,5 × 14)"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Pmax = 14 bar → 1,2 × 14 = 16,8 bar. Comparé à 15,5 bar : on prend la plus grande = 16,8 bar. La règle 'la plus grande des deux' évite que des installations haute pression soient sous-testées.",
+    "reference": "R1 §3.3.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-2-003",
+    "edition": "2025",
+    "chapitre": "3.3.2",
+    "theme": "Perte admissible pneumatique",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle perte de pression est admissible sur un essai pneumatique 24 h ?",
+    "propositions": [
+      "≤ 0,10 bar",
+      "≤ 0,30 bar",
+      "≤ 0,50 bar",
+      "≤ 1,00 bar"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Perte admissible ≤ 0,30 bar sur 24 h. Critère identique pour les variantes 2 h des extensions 31-200 têtes. Au-delà, fuite d'air significative non admissible.",
+    "reference": "R1 §3.3.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-9-2-005",
+    "edition": "2025",
+    "chapitre": "9.2",
+    "theme": "Comparaison sources A et B",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un risque donné, l'autonomie source B est-elle toujours :",
+    "propositions": [
+      "Égale à l'autonomie source A",
+      "Inférieure à l'autonomie source A",
+      "Le double de la source A",
+      "Supérieure à l'autonomie source A (60 vs 30 min en LH/OH, 90 vs 60 en HHP/HHS)"
+    ],
+    "bonnes_reponses": [
+      3
+    ],
+    "explication": "L'autonomie B est systématiquement supérieure à l'autonomie A : 60 vs 30 min en LH/OH, 90 vs 60 min en HHP/HHS. Pas un 'doublement' arithmétique mais une exigence renforcée car B est la source de fiabilité.",
+    "reference": "R1 §9 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-1-023",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Espacement HHP/HHS",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est l'espacement maximal entre sprinkleurs en HHP ou HHS ?",
+    "propositions": [
+      "3,0 m",
+      "3,7 m",
+      "4,0 m",
+      "4,6 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Espacement max HHP/HHS = 3,7 m (identique). LH : 4,6 m. OH : 4,0 m. La réduction progressive de l'espacement avec la sévérité du risque garantit une couverture plus dense.",
+    "reference": "R1 T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-6-3-002",
+    "edition": "2025",
+    "chapitre": "6.3",
+    "theme": "Numérotation HHS — Renumérotation",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En R1 2025, les règles HHS se trouvent en §6.3. Où étaient-elles en R1 2014/2020 ?",
+    "propositions": [
+      "§6.1",
+      "§6.2",
+      "§6.4",
+      "§7.3"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "R1 2014/2020 : règles HHS en §6.4. R1 2025 : renuméroté en §6.3. Pas d'AMP technique sur ce point (cosmétique). Les références §6.4.x dans rapports anciens = §6.3.x aujourd'hui.",
+    "reference": "R1 §6.3 (édition 2025, renumérotation)"
+  },
+  {
+    "id": "r1-2025-10-1-001",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Pompes — Démarrage automatique",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Comment doit démarrer une pompe principale sprinkleur lors d'une chute de pression du réseau ?",
+    "propositions": [
+      "Manuellement par un opérateur",
+      "Automatiquement et immédiatement",
+      "Après confirmation de l'ECS",
+      "Après vérification visuelle"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Chaque pompe doit démarrer automatiquement et immédiatement à la chute de pression. Position AUTO permanente obligatoire.",
+    "reference": "R1 §10.1 (édition 2025)"
   },
   {
     "id": "r1-2025-10-1-002",
     "edition": "2025",
     "chapitre": "10.1",
-    "theme": "Pompes",
+    "theme": "Pompes — Position AUTO",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En visite Q1, une pompe est en position MANUEL. Quel niveau de NC ?",
+    "propositions": [
+      "Remarque mineure",
+      "NC jaune",
+      "NC orange",
+      "NC rouge — ne démarrera pas automatiquement en cas de sinistre"
+    ],
+    "bonnes_reponses": [
+      3
+    ],
+    "explication": "NC rouge §3 Q1 (rubriques 3.3/3.4). Une pompe en position MANUEL ne démarrera pas automatiquement lors d'un sinistre. Risque de mise en échec total.",
+    "reference": "R1 §10.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-1-003",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Pompes — Arrêt",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Comment doivent s'arrêter les pompes principales sprinkleur ?",
+    "propositions": [
+      "Automatiquement après stabilisation de pression",
+      "Au bout de 10 minutes",
+      "Manuellement uniquement — jamais d'arrêt automatique",
+      "À la commande de l'ECS"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Les pompes principales ne s'arrêtent JAMAIS automatiquement. Arrêt manuel uniquement, après vérification que le sinistre est maîtrisé. Évite l'arrêt prématuré pendant le sinistre.",
+    "reference": "R1 §10.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-1-004",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Pressostat — Caractéristiques",
+    "difficulte": 2,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Quelles caractéristiques sont obligatoires pour le pressostat de démarrage ?",
+    "propositions": [
+      "Non isolable",
+      "Listé CNPP",
+      "Étanche IP68",
+      "Manuel"
+    ],
+    "bonnes_reponses": [
+      0,
+      1
+    ],
+    "explication": "Pressostat non isolable (pas de vanne intercalée) et listé CNPP. Garantit qu'il ne peut être désactivé par erreur et que ses caractéristiques sont certifiées.",
+    "reference": "R1 §10.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-1-005",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Pressostat — Doublement source B",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Combien de pressostats indépendants pour démarrer une source de type B en R1 2025 ?",
+    "propositions": [
+      "1",
+      "2",
+      "3",
+      "Variable"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Source B : 2 pressostats indépendants obligatoires. Redondance pour le démarrage automatique. Pressostat unique sur ancienne installation = AMP à corriger trentenaire.",
+    "reference": "R1 §10.1 (édition 2025)"
+  },
+  {
+    "id": "r1-1984-10-1-001",
+    "edition": "1984",
+    "chapitre": "10.1",
+    "theme": "Pressostats — Évolution",
     "difficulte": 3,
     "multi": false,
     "mode_audit": true,
-    "enonce": "En vérification semestrielle, vous trouvez une vanne d'isolement sur la bouteille pressostatique d'une pompe. Quelle est la conclusion conforme ?",
+    "enonce": "Sur un système R1 1984 d'origine avec 1 seul pressostat de démarrage source B, votre constat est :",
     "propositions": [
-      "Conforme : la vanne facilite la maintenance",
-      "NC : la vanne d'isolement de la bouteille pressostatique est interdite",
-      "Observation §11 : à signaler sans urgence",
-      "Conforme uniquement si la vanne est cadenassée en position ouverte"
+      "NC — 2 pressostats toujours obligatoires",
+      "AMP — exigence renforcée après 1984, à corriger au plus tard trentenaire",
+      "Sans suite",
+      "Recommandation à l'exploitant"
     ],
-    "bonnes_reponses": [1],
-    "explication": "Cette vanne est strictement interdite (R1 §10.1 et §13.3.4). La régulation des débits doit être assurée par diaphragme (restricteur). C'est une NC qui peut mettre en échec la régulation pressostatique.",
-    "reference": "R1 §10.1 et §13.3.4 (édition 2025)"
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 1984 : 1 pressostat. 2 pressostats obligatoires depuis 2014. Sur système R1 1984 : AMP (la règle a évolué après l'édition d'origine).",
+    "reference": "R1 §10.1 (édition 1984 / évolution)"
+  },
+  {
+    "id": "r1-2025-10-1-006",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Bouteille pressostatique — Vanne d'isolement",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Une vanne d'isolement sur la bouteille pressostatique est :",
+    "propositions": [
+      "Recommandée pour la maintenance",
+      "Autorisée si cadenassée ouverte",
+      "Interdite — régulation par diaphragme requise",
+      "Tolérée sur les anciennes installations"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Vanne d'isolement de bouteille pressostatique interdite. La régulation des débits doit être réalisée par diaphragme (restricteur). Phrase Q1 type §10.1.",
+    "reference": "R1 §10.1 / §13.3.4 (édition 2025)"
+  },
+  {
+    "id": "r1-1984-10-1-002",
+    "edition": "1984",
+    "chapitre": "10.1",
+    "theme": "Bouteille pressostatique — Histoire",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vanne d'isolement de bouteille pressostatique sur installation R1 1984 d'origine. Qualification ?",
+    "propositions": [
+      "NC — toujours interdite",
+      "AMP — vanne autorisée en 1984, interdite depuis 2014",
+      "Recommandation",
+      "Sans suite"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 1984 : vanne autorisée. Interdite depuis 2014. AMP sur référentiel 1984 — passage à diaphragme à anticiper trentenaire.",
+    "reference": "R1 §10.1 (évolution 1984→2014)"
+  },
+  {
+    "id": "r1-2025-10-1-007",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Pompe jockey",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "À quoi sert la pompe jockey dans une installation sprinkleur ?",
+    "propositions": [
+      "Démarrer en cas de panne des pompes principales",
+      "Maintenir la pression statique et compenser les micro-fuites",
+      "Servir d'alimentation des RIA",
+      "Tester les pompes principales"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "La pompe jockey (petite, basse puissance) maintient la pression statique du réseau et compense les micro-fuites normales. Elle évite les démarrages intempestifs des pompes principales.",
+    "reference": "R1 §10.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-1-008",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Réglages pressostats — Hiérarchie",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Hiérarchie type des seuils pressostats (du plus haut au plus bas) ?",
+    "propositions": [
+      "Démarrage B > Démarrage A > Démarrage jockey > Arrêt jockey",
+      "Arrêt jockey > Démarrage jockey > Démarrage A > Démarrage B (chaque −1 bar)",
+      "Démarrage A > Arrêt jockey > Démarrage B > Démarrage jockey",
+      "Tous au même seuil"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Hiérarchie type : Arrêt jockey = pression B à Q0% ; Démarrage jockey = Arrêt jockey −1 bar ; Démarrage A = Démarrage jockey −1 bar ; Démarrage B = Démarrage A −1 bar. La jockey compense d'abord, les pompes principales démarrent si la baisse persiste.",
+    "reference": "R1 §10.1 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-1-009",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Pompe jockey — Vanne d'essai",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour tester le démarrage de la pompe jockey, quelle disposition est recommandée ?",
+    "propositions": [
+      "Aucune disposition spécifique",
+      "Une vanne d'essai dédiée",
+      "Un asservissement à l'ECS",
+      "Démarrage par minuterie cyclique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Vanne d'essai dédiée pour le démarrage de la pompe jockey. Permet de tester périodiquement son démarrage sans purger artificiellement le réseau. Phrase Q1 type §10.1.",
+    "reference": "R1 §10.1 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-1-010",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Électropompe — Test Q1",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quel test spécifique d'électropompe réalise-t-on lors d'une visite Q1 ?",
+    "propositions": [
+      "1 démarrage à Q100% suffisant",
+      "3 démarrages consécutifs en charge réussis",
+      "Test en continu pendant 1 h",
+      "Simulation panne secteur uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "3 démarrages consécutifs en charge réussis (rubrique Q1 2.63). Démontre la fiabilité du démarrage et la capacité de la pompe à reprendre service immédiatement.",
+    "reference": "R1 §10.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-1-011",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Essai hebdo électropompe",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la durée minimale de l'essai hebdomadaire d'une électropompe ?",
+    "propositions": [
+      "5 min à Q100%",
+      "10 min à Q100%",
+      "20 min à Q100%",
+      "30 min à Q100%"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Essai hebdomadaire électropompe : 10 min à Q100%. Règle inchangée depuis 1936 (89 ans). Relevé : pressions Q0% et Q100%, intensité moteur.",
+    "reference": "R1 §18.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-1-012",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Essai hebdo diesel",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la durée minimale de l'essai hebdomadaire d'une pompe diesel ?",
+    "propositions": [
+      "10 min à Q100%",
+      "15 min à Q100%",
+      "20 min à Q100%",
+      "30 min à Q100%"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Essai hebdomadaire pompe diesel : 20 min à Q100% (vs 10 min pour électropompe — diesel a besoin de monter en T° pour évaluation complète). Relevé : P, régime, T° eau, T° huile.",
+    "reference": "R1 §18.4 (édition 2025)"
   },
   {
     "id": "r1-2025-10-2-001",
     "edition": "2025",
     "chapitre": "10.2",
-    "theme": "Pompes",
+    "theme": "Pression à débit nul",
     "difficulte": 3,
-    "multi": true,
-    "mode_audit": false,
-    "enonce": "En R1 2025, la pression de refoulement à débit nul d'une pompe doit respecter quelles conditions ? (plusieurs bonnes réponses)",
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle est la pression maximale au refoulement à débit nul pour une pompe à axe horizontal ?",
     "propositions": [
-      "Être inférieure ou égale à 12 bar",
-      "Être supérieure à 15 bar pour garantir la marge",
-      "Être inférieure ou égale à 120 % de la pression au point S1",
-      "Aucune limite réglementaire spécifique"
+      "10 bar absolu",
+      "12 bar (et ≤ 120 % de la pression à Q100%)",
+      "16 bar",
+      "1,5 × pression nominale"
     ],
-    "bonnes_reponses": [0, 2],
-    "explication": "R1 2025 §10.2 : la pression à débit nul ne doit pas excéder 12 bar ET ne doit pas dépasser 120 % de la pression au point S1 (débit nominal). Évolution 2025 : la double condition est désormais explicite.",
-    "reference": "R1 §10.2 et §10.5 (édition 2025)"
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Pression à débit nul ≤ 12 bar ET ≤ 120 % de la pression à Q100% (pompes à axe horizontal). Double condition R1 2025. Au-delà : risque de surpression, fatigue accélérée du réseau.",
+    "reference": "R1 §10.2 / §10.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-2-002",
+    "edition": "2025",
+    "chapitre": "10.2",
+    "theme": "Tresse fuyarde",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Une tresse de pompe (presse-étoupe) présente une fuite anormale. Action ?",
+    "propositions": [
+      "Sans action — fuites mineures admises",
+      "Réfection : resserrage ou remplacement",
+      "Remplacement complet de la pompe",
+      "Mise hors service immédiate"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Tresse fuyarde : réfection (resserrage ou remplacement). Phrase Q1 type §10.2. Une fuite excessive indique une usure du presse-étoupe.",
+    "reference": "R1 §10.2 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-2-003",
+    "edition": "2025",
+    "chapitre": "10.2",
+    "theme": "Courbe pompe — Si hors courbe",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors d'un essai semestriel, un point Si1 ou Si2 sort de la courbe pompe mesurée. Diagnostic ?",
+    "propositions": [
+      "Remarque mineure",
+      "Tolérance ± 10 % admise",
+      "NC rouge — risque de mise en échec du système",
+      "AMP — à corriger sur 3 ans"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Si1 ou Si2 hors courbe mesurée = NC rouge §2 Q1 (rubriques 2.53-2.58). Ces points conditionnent l'adéquation hydraulique. S'ils sortent : la pompe ne couvre plus le besoin calculé.",
+    "reference": "R1 §10.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-2-004",
+    "edition": "2025",
+    "chapitre": "10.2",
+    "theme": "Critère Q130%",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "À l'essai de la pompe, la pression à Q130% doit être au moins :",
+    "propositions": [
+      "50 % de la pression à Q100%",
+      "75 % de la pression à Q100%",
+      "100 % de la pression à Q100%",
+      "Égale à la pression nominale"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Pression à Q130% ≥ 75 % de la pression à Q100%. Critère stable depuis 2008. Garantit que la pompe garde de la marge en sur-débit. Sinon : pompe en limite ou aspiration dégradée.",
+    "reference": "R1 §10.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-2-005",
+    "edition": "2025",
+    "chapitre": "10.2",
+    "theme": "Écart Q100% vs référence",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "À Q100%, l'écart maximum admis vs courbe de référence CNPP est :",
+    "propositions": [
+      "0,2 bar",
+      "0,5 bar",
+      "1,0 bar",
+      "5 %"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Écart ≤ 0,5 bar à Q100% vs courbe de référence CNPP. Au-delà : observation §11 (NC orange §2.55). Indique une dégradation pompe ou un changement réseau.",
+    "reference": "R1 §10.2 (édition 2025)"
   },
   {
     "id": "r1-2025-10-3-2-001",
     "edition": "2025",
     "chapitre": "10.3.2",
-    "theme": "Réserves d'eau",
+    "theme": "Distance d'aspiration",
     "difficulte": 2,
     "multi": false,
-    "mode_audit": false,
-    "enonce": "Quelle est la distance maximale autorisée entre le mur extérieur du local sources et le bord de la réserve ?",
-    "propositions": ["20 m", "30 m", "40 m", "50 m"],
-    "bonnes_reponses": [2],
-    "explication": "R1 §10.3.2 : la distance d'aspiration entre le mur extérieur du local des sources d'eau et le bord de la réserve ne doit pas excéder 40 m. Au-delà, NC.",
+    "mode_audit": true,
+    "enonce": "Quelle distance maximale entre le mur extérieur du local sources et le bord de la réserve d'eau ?",
+    "propositions": [
+      "20 m",
+      "30 m",
+      "40 m",
+      "50 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Distance maximale d'aspiration : 40 m. Au-delà, pertes de charge en aspiration et risques de désamorçage. Règle stable depuis 2014.",
     "reference": "R1 §10.3.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-4-001",
+    "edition": "2025",
+    "chapitre": "10.4",
+    "theme": "Source A — Performances dégradées",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Baisse sensible des performances de la pompe Source A : le débit nominal n'est plus atteint. Action ?",
+    "propositions": [
+      "Sans suite — tolérance d'usure",
+      "Diagnostic + maintenance corrective : clapet de pied, désamorçage, usure",
+      "Remplacement immédiat",
+      "Information à l'assureur uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Phrase Q1 §10.4 : diagnostic + maintenance corrective. Causes : clapet de pied défaillant, désamorçage, usure corps/turbine. Sans remise en service correcte → NC.",
+    "reference": "R1 §10.4 / catalogue Q1 (édition 2025)"
   },
   {
     "id": "r1-2025-10-5-001",
     "edition": "2025",
     "chapitre": "10.5",
-    "theme": "Courbe pompe",
+    "theme": "Marge de pression 0,5 bar",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon §10.5, tous les besoins hydrauliques doivent être couverts avec quelle marge minimum ?",
+    "propositions": [
+      "0,2 bar",
+      "0,5 bar",
+      "1,0 bar",
+      "2,0 bar"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Marge obligatoire de 0,5 bar, lame d'eau utile déduite. Au-delà : augmenter régime moteur si nécessaire. R1 2025 §18.5 : marge < 0,5 bar n'est pas une NC formelle mais à signaler pour suivi.",
+    "reference": "R1 §10.5 / §18.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-5-001",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Q1 — Pas une NC (R1 2025)",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Nouveauté R1 2025 §18.5 : lesquels de ces points ne sont PAS des NC pour les vérifications semestrielles ?",
+    "propositions": [
+      "Glissement moteur > 5 %",
+      "Marge de puissance moteur < 20 %",
+      "Marge de pression source < 0,5 bar",
+      "Pompe en position MANUEL"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "R1 2025 §18.5 : glissement > 5 %, marge puissance < 20 %, marge pression < 0,5 bar ne sont PAS des NC pour vérification semestrielle. À signaler pour suivi. En revanche pompe MANUEL = NC rouge.",
+    "reference": "R1 §18.5 (édition 2025, nouveauté)"
+  },
+  {
+    "id": "r1-2025-10-5-002",
+    "edition": "2025",
+    "chapitre": "10.5",
+    "theme": "Variation glissement entre 2 visites",
     "difficulte": 4,
     "multi": false,
     "mode_audit": true,
-    "enonce": "Lors de l'essai semestriel d'une pompe diesel, vous mesurez à Q130% une pression égale à 70 % de la pression à Q100%. Le résultat est-il acceptable selon R1 2025 ?",
+    "enonce": "Sur deux vérifications semestrielles successives, le glissement passe de 5 % à 9 %. Quelle interprétation ?",
     "propositions": [
-      "Oui, le seuil R1 est de 65 %",
-      "Non, la pression à S3 doit être au moins égale à 75 % de la pression à S1",
-      "Oui, à condition que Q140% > 70 % de Q100% (référence EN 12845)",
-      "Non, le seuil R1 est de 80 %"
+      "Variation normale, sans action",
+      "À signaler — peut indiquer la nécessité d'une maintenance corrective",
+      "NC rouge immédiate",
+      "Remplacer la pompe"
     ],
-    "bonnes_reponses": [1],
-    "explication": "R1 §10.5 : à Q130% (point S3), la pression doit être ≥ 75 % de la pression à Q100% (point S1). 70 % = NC avec risque de mise en échec — pompe en limite de capacité.",
-    "reference": "R1 §10.5 (édition 2025)"
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 2025 §18.5 : une variation importante (ex. 5 % → 9 %) doit être signalée — peut indiquer la nécessité d'une maintenance corrective. La valeur seule > 5 % n'est plus une NC formelle, mais la tendance compte.",
+    "reference": "R1 §18.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-2-001",
+    "edition": "2025",
+    "chapitre": "12.2",
+    "theme": "Sélecteur clés — Verre dormant",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Où doivent être placées les clés du sélecteur de position (AUTO/ARRÊT/MANUEL) de l'armoire diesel ?",
+    "propositions": [
+      "Au bureau de la maintenance",
+      "Sous verre dormant à côté de l'armoire",
+      "Dans le coffre fort du site",
+      "Sur le contrôleur de service"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Clés sous verre dormant à côté de l'armoire. Clés non retirables sauf en position AUTO. Obligatoire depuis R1 2014. Évite les modifications laissées en MANUEL/ARRÊT par erreur.",
+    "reference": "R1 §12.2 (édition 2025)"
+  },
+  {
+    "id": "r1-1984-12-2-001",
+    "edition": "1984",
+    "chapitre": "12.2",
+    "theme": "Sélecteur — Évolution",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur installation R1 1984 d'origine, absence de verre dormant pour les clés du sélecteur :",
+    "propositions": [
+      "NC — règle absolue",
+      "AMP — non obligatoire en 1984, obligatoire depuis 2014",
+      "Sans suite",
+      "Recommandation"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 1984 : pas obligatoire. Obligatoire depuis 2014. AMP sur référentiel 1984 — à corriger trentenaire.",
+    "reference": "R1 §12.2 (évolution 1984→2014)"
+  },
+  {
+    "id": "r1-2025-12-2-002",
+    "edition": "2025",
+    "chapitre": "12.2",
+    "theme": "Voyant tension secteur HS",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Le voyant « tension secteur » de l'armoire GMPD est hors-service. Action ?",
+    "propositions": [
+      "Sans action si la pompe fonctionne",
+      "Le remplacer",
+      "Remplacer toute l'armoire",
+      "Information à CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Phrase Q1 §12.2 : remplacement du voyant 'tension secteur'. Sans voyant fonctionnel, l'exploitant ne peut pas vérifier visuellement la disponibilité de l'alimentation au quotidien.",
+    "reference": "R1 §12.2 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-3-001",
+    "edition": "2025",
+    "chapitre": "12.3",
+    "theme": "Séquence démarrage diesel",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon §12.3, combien de séquences de démarrage doit permettre l'armoire diesel ?",
+    "propositions": [
+      "3 séquences",
+      "6 séquences de 5 à 10 s, séparées de 10 s max",
+      "10 séquences",
+      "Illimitées jusqu'au démarrage"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§12.3 : 6 séquences de démarrage (5 à 10 s chacune), séparées de 10 s maximum. Si échec final → alarme de non-démarrage reportée au tableau de signalisation.",
+    "reference": "R1 §12.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-3-002",
+    "edition": "2025",
+    "chapitre": "12.3",
+    "theme": "Batteries — Tension démarrage",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Le seuil de tension de démarrage des batteries en-dessous duquel elles sont considérées défaillantes :",
+    "propositions": [
+      "60 % de la tension nominale",
+      "70 % de la tension nominale",
+      "80 % de la tension nominale",
+      "90 % de la tension nominale"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Tension de démarrage < 80 % de la tension nominale → batterie défaillante. Autres signaux : électrolyte épais ou niveau insuffisant. Action : remplacement du jeu complet de batteries (jamais une seule).",
+    "reference": "R1 §12.3 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-3-003",
+    "edition": "2025",
+    "chapitre": "12.3",
+    "theme": "Batteries — Remplacement",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Une seule batterie du jeu présente une défaillance. Que remplacer ?",
+    "propositions": [
+      "Uniquement la batterie défaillante",
+      "L'ensemble du jeu de batteries",
+      "Rien — attendre la défaillance complète",
+      "La moitié du jeu"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Remplacer l'ENSEMBLE du jeu de batteries (jamais une seule). Une batterie neuve avec d'anciennes : déséquilibre, charge inégale, usure accélérée des neuves. Si seul le niveau est faible : appoint en eau déminéralisée.",
+    "reference": "R1 §12.3 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-3-004",
+    "edition": "2025",
+    "chapitre": "12.3",
+    "theme": "Klaxon non-démarrage",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Le klaxon d'alarme issu de la séquence de démarrage ne fonctionne pas. Action ?",
+    "propositions": [
+      "Sans action — fonction redondante",
+      "Le remettre en état",
+      "Remplacer l'armoire",
+      "Information assureur seulement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Non-fonctionnement klaxon : le remettre en état. C'est l'alerte sonore locale en cas de non-démarrage du moteur — essentielle pour alerter immédiatement les opérateurs présents.",
+    "reference": "R1 §12.3 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-5-001",
+    "edition": "2025",
+    "chapitre": "12.5",
+    "theme": "Glissement moteur — Seuil R1 2025",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Évolution R1 2025 §12.5 : à partir de quelle valeur le glissement moteur doit-il être signalé ?",
+    "propositions": [
+      "Dès 2 %",
+      "Dès 5 % (anciennement 10 %)",
+      "Dès 10 % (inchangé)",
+      "Aucun seuil défini"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Évolution R1 2025 : signalement du glissement moteur dès 5 % (anciennement 10 %). Pas une NC formelle pour Q1, mais à signaler pour suivi et corriger trentenaire.",
+    "reference": "R1 §12.5 / §18.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-5-002",
+    "edition": "2025",
+    "chapitre": "12.5",
+    "theme": "Glissement — Définition",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le glissement moteur diesel correspond à :",
+    "propositions": [
+      "Le glissement de la courroie alternateur",
+      "(N vide − N charge Q130%) / N vide × 100",
+      "L'écart de régime entre 2 essais",
+      "Le ratio entre puissance fournie et nominale"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Glissement = (régime à vide − régime en charge Q130%) / régime à vide × 100. Mesure la capacité du moteur à 'tenir' son régime sous charge. Au-delà de 5 % : tendance à essouffler.",
+    "reference": "R1 §12.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-7-001",
+    "edition": "2025",
+    "chapitre": "12.7",
+    "theme": "Échappement — Calorifugeage",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Jusqu'à quelle hauteur la tuyauterie d'échappement doit-elle être calorifugée ?",
+    "propositions": [
+      "1,0 m",
+      "1,5 m",
+      "1,6 m",
+      "2,0 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Tuyauterie d'échappement calorifugée jusqu'à 1,6 m (hauteur de risque de brûlure). Une grille de protection doit empêcher tout contact accidentel.",
+    "reference": "R1 §12.7 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-7-002",
+    "edition": "2025",
+    "chapitre": "12.7",
+    "theme": "Échappement — Clapet pare-oiseaux",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "À l'extrémité extérieure de l'échappement moteur, quel dispositif est obligatoire ?",
+    "propositions": [
+      "Un silencieux supplémentaire",
+      "Une grille ou un clapet pare-oiseaux",
+      "Un coude inversé",
+      "Aucun dispositif particulier"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Grille ou clapet pare-oiseaux à l'extrémité de l'échappement moteur. Évite l'obstruction par des nids ou des oiseaux qui pourraient empêcher le démarrage.",
+    "reference": "R1 §12.7 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-8-001",
+    "edition": "2025",
+    "chapitre": "12.8",
+    "theme": "Réservoir gazole — Niveau",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Le réservoir principal de gazole du diesel doit être maintenu :",
+    "propositions": [
+      "Au minimum à 1/4",
+      "Au minimum à 1/2",
+      "Au minimum à 3/4",
+      "En permanence au plein (4/4)"
+    ],
+    "bonnes_reponses": [
+      3
+    ],
+    "explication": "Maintenir en permanence le réservoir principal au plein (4/4). + Réserve équivalente sur rétention incombustible, indicateur visuel, autonomie min 3 h. Système de remplissage fixe pour l'appoint.",
+    "reference": "R1 §12.8 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-8-002",
+    "edition": "2025",
+    "chapitre": "12.8",
+    "theme": "Réservoir gazole — Réserve",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Quelles caractéristiques sont requises pour la réserve de gazole complémentaire ?",
+    "propositions": [
+      "Sur rétention incombustible",
+      "Volume équivalent au volume complet du réservoir principal",
+      "Indicateur visuel de niveau",
+      "Autonomie minimum 3 h"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Réserve de gazole : volume équivalent au réservoir principal, sur rétention incombustible, indicateur visuel, autonomie min 3 h. + Système de remplissage fixe pour l'appoint.",
+    "reference": "R1 §12.8 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-8-003",
+    "edition": "2025",
+    "chapitre": "12.8",
+    "theme": "GNR — Gazole non routier",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'utilisation de GNR (gazole non routier) pour alimenter le moteur diesel sprinkleur est :",
+    "propositions": [
+      "Recommandée (moins cher)",
+      "À proscrire sauf approbation du dieseliste",
+      "Imposée par la réglementation",
+      "Au choix de l'exploitant"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "GNR à proscrire sauf approbation du dieseliste. Composition différente (additifs, viscosité) qui peut nuire au démarrage à froid et endommager certains moteurs. Affichage sur le réservoir fortement conseillé.",
+    "reference": "R1 §12.8 / CR GIS-Technique 09/06/11"
+  },
+  {
+    "id": "r1-2025-12-9-001",
+    "edition": "2025",
+    "chapitre": "12.9",
+    "theme": "Pièces de rechange diesel",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Évolution R1 2025 (additif CNPP 25/05/13 intégré) : quelles pièces doivent être stockées dans le local ?",
+    "propositions": [
+      "2 éléments de filtre à huile complets avec joints",
+      "2 éléments de filtre à gazole complets avec joints",
+      "2 jeux de courroies",
+      "1 jeu complet de joints et durites"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Additif CNPP 25/05/13 intégré R1 2025 : 2 filtres huile + 2 filtres gazole (avec joints) + 2 jeux courroies + 1 jeu complet joints/durites. À mettre en conformité au plus tard trentenaire.",
+    "reference": "R1 §12.9 / additif CNPP 25/05/13"
+  },
+  {
+    "id": "r1-2025-12-10-001",
+    "edition": "2025",
+    "chapitre": "12.10",
+    "theme": "Parties tournantes",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous constatez en visite des parties tournantes du diesel non protégées. Qualification ?",
+    "propositions": [
+      "Sans suite — risque interne maintenance",
+      "NC — risque d'accidents corporels",
+      "Information CHSCT seulement",
+      "Recommandation"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Parties tournantes non protégées = NC §12.10 (risque d'accidents corporels). Carters obligatoires sur poulies, courroies, arbres en rotation.",
+    "reference": "R1 §12.10 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-6-001",
+    "edition": "2025",
+    "chapitre": "12.6",
+    "theme": "Réserve huile moteur",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Une réserve d'huile moteur doit-elle être prévue dans le local diesel ?",
+    "propositions": [
+      "Non — appoint sur demande",
+      "Oui — pour les appoints éventuels",
+      "Seulement en climat froid",
+      "Au choix de l'exploitant"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Réserve d'huile moteur à prévoir dans le local pour les appoints. Permet l'intervention immédiate en cas de niveau bas constaté lors d'un essai hebdomadaire.",
+    "reference": "R1 §12.6 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-2-003",
+    "edition": "2025",
+    "chapitre": "12",
+    "theme": "Filtre à air — Cache anti-aspersion",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Si des sprinkleurs sont situés au-dessus du moteur diesel, quelle protection installer ?",
+    "propositions": [
+      "Rien — pas d'interaction prévue",
+      "Casquette de protection ou cache anti-aspersion au-dessus du filtre à air, ou filtre à air étanche",
+      "Désactiver les sprinkleurs locaux",
+      "Mettre les sprinkleurs en préaction"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Casquette de protection / cache anti-aspersion au-dessus du filtre à air OU filtre à air étanche. Évite que l'eau d'extinction ennoie le filtre, ce qui couperait le moteur en plein incendie.",
+    "reference": "R1 §12 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-12-3-005",
+    "edition": "2025",
+    "chapitre": "12.3",
+    "theme": "Niveaux pré-essai diesel",
+    "difficulte": 2,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Avant un essai hebdomadaire diesel, quels contrôles obligatoires ?",
+    "propositions": [
+      "Préchauffage",
+      "Niveau d'huile",
+      "Niveau eau de refroidissement (embouage)",
+      "Niveau électrolyte batteries"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "§18.4.2 avant essai diesel : préchauffage, huile, eau refroidissement (embouage), électrolyte batteries. Pendant essai : tension batteries au démarrage, refroidissement (stabilisation T°), pression d'huile.",
+    "reference": "R1 §18.4.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-11-001",
+    "edition": "2025",
+    "chapitre": "11",
+    "theme": "Câbles CR1",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Dans quelles zones les câbles d'alimentation pompes doivent-ils être CR1 ?",
+    "propositions": [
+      "Partout systématiquement",
+      "Dans les zones NON protégées par sprinkleurs",
+      "Uniquement en extérieur",
+      "Dans les zones HHS uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Câbles CR1 (résistants au feu) dans les zones non protégées par sprinkleurs. Logique : si la zone est protégée par sprinkleurs, l'incendie y sera maîtrisé ; si non protégée, le câble doit tenir seul.",
+    "reference": "R1 §11 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-11-002",
+    "edition": "2025",
+    "chapitre": "11",
+    "theme": "Câbles enterrés",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Profondeur minimale d'enfouissement des câbles d'alimentation en extérieur ?",
+    "propositions": [
+      "0,30 m",
+      "0,60 m",
+      "0,80 m",
+      "1,00 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Câbles sous fourreaux métalliques, enterrés ≥ 0,60 m en extérieur. Protège contre les agressions mécaniques (engins, travaux) et le feu de surface.",
+    "reference": "R1 §11 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-11-003",
+    "edition": "2025",
+    "chapitre": "11",
+    "theme": "Étiquetage coffrets",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle mention obligatoire sur les coffrets d'alimentation sprinkleur ?",
+    "propositions": [
+      "« HAUTE TENSION — DANGER »",
+      "« DÉPART ÉQUIPEMENT SPRINKLEURS — NE PAS COUPER MÊME EN CAS D'INCENDIE »",
+      "« RÉSERVÉ AU SERVICE DE MAINTENANCE »",
+      "Aucune obligation"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Étiquetage formalisé R1 1994 : « DÉPART ÉQUIPEMENT SPRINKLEURS — NE PAS COUPER MÊME EN CAS D'INCENDIE ». Empêche les pompiers ou intervenants de couper par réflexe l'alimentation pendant un sinistre.",
+    "reference": "R1 §11 (édition 1994/2025)"
+  },
+  {
+    "id": "r1-2025-11-004",
+    "edition": "2025",
+    "chapitre": "11",
+    "theme": "Armoire AUTO/MANUEL/ARRÊT",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelles positions doit comporter l'armoire de commande (formalisé R1 1994) ?",
+    "propositions": [
+      "MARCHE / ARRÊT",
+      "AUTO / MANUEL / ARRÊT, distinctement étiquetées",
+      "ON / OFF",
+      "AUTOMATIQUE / SECOURS"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Armoire de commande : AUTO / MANUEL / ARRÊT distinctement étiquetées + ampèremètre par groupe pour contrôle de l'intensité. Formalisé R1 1994.",
+    "reference": "R1 §11 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-11-005",
+    "edition": "2025",
+    "chapitre": "11",
+    "theme": "Ampèremètre à 0 A",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors d'une visite Q1, l'ampèremètre indique 0 A alors que la pompe est en marche. Diagnostic ?",
+    "propositions": [
+      "Conforme — ampèremètre désactivé en marche",
+      "NC rouge — surveillance moteur aveugle",
+      "Tolérance jusqu'à 5 %",
+      "Information assureur seulement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC rouge §3 Q1 (rubrique 3.16). Sans ampèremètre fonctionnel, impossible de détecter un déséquilibre, une surcharge ou une perte de phase pendant le fonctionnement.",
+    "reference": "R1 §11 (édition 2025)"
+  },
+  {
+    "id": "r1-2014-11-001",
+    "edition": "2014",
+    "chapitre": "11",
+    "theme": "Groupe électrogène — Délai 30 s",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Avant R1 2014, quel était le délai max de reprise du groupe électrogène (aujourd'hui 30 s) ?",
+    "propositions": [
+      "10 s",
+      "15 s",
+      "20 s",
+      "60 s"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "R1 2014 : passage de 15 s à 30 s. Évolution majeure assouplissant la conformité sur groupes modernes. Sur ancien système : si délai à 20 s, c'est conforme R1 2025 (l'exigence s'est assouplie).",
+    "reference": "R1 §11 (évolution 1994→2014)"
+  },
+  {
+    "id": "r1-2025-11-006",
+    "edition": "2025",
+    "chapitre": "11",
+    "theme": "Groupe électrogène — Essai",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "À quelle fréquence l'essai sous charge du groupe électrogène de secours ?",
+    "propositions": [
+      "Mensuel",
+      "Annuel",
+      "Triennal",
+      "Décennal"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Essai groupe électrogène : triennal, sous charge QS2 depuis le groupe seul. PV à conserver. Rubrique Q1 2.64-2.65 : date essai (≤ 3 ans), délai reprise 30 s.",
+    "reference": "R1 §11 / §18.7 (édition 2025)"
+  },
+  {
+    "id": "r1-2020-11-001",
+    "edition": "2020",
+    "chapitre": "11",
+    "theme": "Câbles indébrochables — Seuil",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Depuis R1 2020, à partir de quelle taille d'extension les câbles démarreurs doivent être indébrochables ?",
+    "propositions": [
+      "Toutes installations",
+      "Extensions > 100 têtes",
+      "Extensions > 200 têtes",
+      "Uniquement ESFR"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "R1 2020 : câbles démarreurs indébrochables pour extensions > 200 têtes + report alarme coupure élec source B. Évite la déconnexion accidentelle ou malveillante.",
+    "reference": "R1 §11 (édition 2020/2025)"
   },
   {
     "id": "r1-2025-13-1-4-001",
     "edition": "2025",
     "chapitre": "13.1.4",
-    "theme": "Essai Point F",
+    "theme": "Point F — Définition",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le Point F correspond à :",
+    "propositions": [
+      "Le poste de contrôle principal",
+      "Le sprinkleur le plus défavorisé hydrauliquement, équipé pour essai",
+      "Le clapet anti-retour de la source",
+      "Le pressostat de démarrage"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Point F : sprinkleur le plus défavorisé hydrauliquement. Équipé d'un sprinkleur tronqué K-factor adapté + vanne + manomètre, à < 1,5 m du sol. Permet le test triennal d'arrivée d'eau.",
+    "reference": "R1 §13.1.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-1-4-002",
+    "edition": "2025",
+    "chapitre": "13.1.4",
+    "theme": "Point F — Hauteur manomètre",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Le manomètre du Point F doit être positionné à quelle hauteur maximale du sol ?",
+    "propositions": [
+      "1,0 m",
+      "1,5 m",
+      "1,8 m",
+      "2,0 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Manomètre du Point F à moins de 1,5 m du sol — pour lecture aisée lors des essais triennaux sans nacelle ou échelle. Hauteur ergonomique de référence.",
+    "reference": "R1 §13.1.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-1-4-003",
+    "edition": "2025",
+    "chapitre": "13.1.4",
+    "theme": "Point F — Délai arrivée eau (sous air)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Délai maximal d'arrivée d'eau au Point F pour une installation sous air ?",
+    "propositions": [
+      "30 s",
+      "45 s",
+      "60 s",
+      "90 s"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Délai limité à 60 s pour installations sous air. Au-delà : risque que le feu se développe avant action sprinkleur. Mesure à l'essai triennal Point F.",
+    "reference": "R1 §7.2.1 / §13.1.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-1-4-004",
+    "edition": "2025",
+    "chapitre": "13.1.4",
+    "theme": "Point F antigel",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour un réseau antigel, comment équiper le Point F ?",
+    "propositions": [
+      "Avec un sprinkleur standard K57",
+      "Avec un sprinkleur tronqué K-factor identique au sprinkleur le plus défavorisé",
+      "Avec un robinet d'essai sans sprinkleur",
+      "Aucun équipement spécifique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Réseaux antigel : Point F équipé d'un sprinkleur tronqué K-factor identique au plus défavorisé. Alternative : dispositif bouchonné avec matériel d'essai (flexible, raccord symétrique, sprinkleur tronqué) disponible au local source.",
+    "reference": "R1 §13.1.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-1-4-005",
+    "edition": "2025",
+    "chapitre": "13.1.4",
+    "theme": "Essai triennal Point F — Non réalisé",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur postes à air, alternatifs, antigel ou préaction B/C : essai triennal Point F non réalisé. Niveau de NC ?",
+    "propositions": [
+      "Sans suite",
+      "NC jaune",
+      "NC orange",
+      "NC rouge §7 Q1"
+    ],
+    "bonnes_reponses": [
+      3
+    ],
+    "explication": "NC rouge §7 Q1 : essai triennal Point F non réalisé sur postes à air, alternatifs, antigel ou préaction B/C. Sans cet essai, impossible de vérifier le délai d'arrivée d'eau réel et le bon fonctionnement complet.",
+    "reference": "R1 §13.1.4 / §18.7 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-1-6-001",
+    "edition": "2025",
+    "chapitre": "13.1.6",
+    "theme": "Rinçage périodique",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quel est l'intérêt d'un rinçage périodique des canalisations ?",
+    "propositions": [
+      "Tester l'étanchéité",
+      "Éviter l'embouage, particulièrement en présence d'eau corrosive",
+      "Vérifier la pression résiduelle",
+      "Désinfecter le réseau"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Rinçage périodique pour éviter l'embouage des canalisations. Particulièrement important si eau corrosive ou riche en matières en suspension. Évite l'obstruction des sprinkleurs.",
+    "reference": "R1 §13.1.6 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-1-001",
+    "edition": "2025",
+    "chapitre": "13.2.1",
+    "theme": "Capuchon de protection",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous trouvez en visite des sprinkleurs encore équipés du capuchon de protection (ou enrubannés d'adhésif). Action ?",
+    "propositions": [
+      "Conforme — protection contre la poussière",
+      "Sans suite si peinture",
+      "Supprimer la protection — tête bloquée ne peut pas se déclencher",
+      "Information à l'installateur"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Supprimer impérativement. Capuchon ou adhésif = la tête ne peut pas se déclencher en cas de feu. NC rouge §9 Q1. Souvent oublié après travaux de peinture ou nouvelle construction.",
+    "reference": "R1 §13.2.1 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-1-002",
+    "edition": "2025",
+    "chapitre": "13.2.1",
+    "theme": "Arrosage mutuel — Espacement",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Deux sprinkleurs sont placés à 1,5 m l'un de l'autre (risque d'arrosage mutuel). Action ?",
+    "propositions": [
+      "Conforme — pas de minimum",
+      "Revoir l'implantation ou installer des déflecteurs (≈ 20 × 15 cm)",
+      "Désactiver l'un des deux",
+      "Sans suite si OH ou HHP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Espacement minimum 2 m partout. À 1,5 m : risque d'arrosage mutuel (refroidissement de l'élément thermosensible). Action : revoir l'implantation ou installer des déflecteurs entre sprinkleurs adjacents.",
+    "reference": "R1 §13.2.1 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-2-001",
+    "edition": "2025",
+    "chapitre": "13.2.2",
+    "theme": "Distance libre sous sprinkleur HHS",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Distance libre minimale sous sprinkleur en HHS ?",
+    "propositions": [
+      "0,3 m",
+      "0,5 m",
+      "0,6 m",
+      "1,0 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Distance libre min 0,6 m sous sprinkleur HHS (T13.2.2.1). Demi-sphère de distribution : si < 0,6 m, le cône d'arrosage est obstrué. NC rouge §9 Q1.",
+    "reference": "R1 §13.2.2 / T13.2.2.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-2-002",
+    "edition": "2025",
+    "chapitre": "13.2.2.2",
+    "theme": "Obstacles à 50 cm sous sprinkleur",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous trouvez des luminaires, gaines ou canalisations à moins de 50 cm sous des sprinkleurs. Action ?",
+    "propositions": [
+      "Conforme — pas d'impact",
+      "Vérifier l'absence d'obstacle significatif. Repositionner ou ajouter des sprinkleurs",
+      "Désactiver les sprinkleurs concernés",
+      "Information sans suite"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Sprinkleurs partiellement blindés par obstacles à < 50 cm : action requise. Vérifier l'absence d'obstacle significatif. Repositionner les sprinkleurs ou en ajouter pour combler les zones d'ombre.",
+    "reference": "R1 §13.2.2.2 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-3-001",
+    "edition": "2025",
+    "chapitre": "13.2.3",
+    "theme": "Distance déflecteur — Toiture plate",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Distance verticale réglementaire entre déflecteur du sprinkleur et sous-face du plafond ?",
+    "propositions": [
+      "Entre 5 et 10 cm",
+      "Entre 7,5 et 15 cm",
+      "Entre 10 et 20 cm",
+      "Maximum 30 cm"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Distance déflecteur/plafond : 7,5 cm minimum (éviter écran thermique isolant la tête), 15 cm maximum (au-delà, chaleur se dissipe, déclenchement retardé). Dérog 0,45 m si construction combustible + accord CNPP.",
+    "reference": "R1 §13.2.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-3-002",
+    "edition": "2025",
+    "chapitre": "13.2.3",
+    "theme": "Sprinkleurs affleurants",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur des sprinkleurs affleurants (sans rosace) : les rosaces sont tombées devant l'élément thermosensible. Action ?",
+    "propositions": [
+      "Sans suite — protection acceptable",
+      "Régler les sprinkleurs en hauteur et refixer les rosaces",
+      "Remplacer les sprinkleurs",
+      "Désactiver les sprinkleurs concernés"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Phrase Q1 §13.2.3 : régler les sprinkleurs en hauteur et refixer les rosaces. Rosace bien positionnée = couverture thermique correcte. Mal positionnée = retard de déclenchement.",
+    "reference": "R1 §13.2.3 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-4-001",
+    "edition": "2025",
+    "chapitre": "13.2.4",
+    "theme": "Distance min cloison",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Distance horizontale minimale entre un sprinkleur et une cloison ou un mur ?",
+    "propositions": [
+      "5 cm",
+      "10 cm",
+      "15 cm",
+      "30 cm"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Distance minimum 15 cm entre sprinkleur et cloison/mur. Évite le barrage perturbant la distribution thermique du panache et de l'arrosage.",
+    "reference": "R1 §13.2.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-4-002",
+    "edition": "2025",
+    "chapitre": "13.2.4",
+    "theme": "Sprinkleur trop éloigné mur",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous trouvez un sprinkleur à plus de 2 m d'une cloison parallèle (zone OH). Action ?",
+    "propositions": [
+      "Conforme",
+      "Le recentrer ou ajouter un sprinkleur",
+      "Information sans suite",
+      "Mettre une cloison déflectrice"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Distance max sprinkleur/mur parallèle : 2,3 m LH, 2,0 m OH, 1,8 m HHP/HHS. À plus de 2 m en OH : recentrer ou ajouter un sprinkleur près du mur pour couvrir la zone.",
+    "reference": "R1 §13.2.4 / T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-7-1-001",
+    "edition": "2025",
+    "chapitre": "13.2.7.1",
+    "theme": "Toile tendue / film plastique",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Une toile tendue / film plastique thermorétractable de 3 m² est suspendue sous le niveau des sprinkleurs. Action ?",
+    "propositions": [
+      "Conforme si surface < 10 m²",
+      "La supprimer ou installer des sprinkleurs en-dessous",
+      "Mettre un poste sous air dédié",
+      "Sans suite"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Au-delà de 1 m², toute toile tendue ou film plastique sous le niveau des sprinkleurs doit être supprimé OU des sprinkleurs ajoutés en-dessous. Sinon l'eau ne descend pas sur le feu.",
+    "reference": "R1 §13.2.7.1 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-7-2-001",
+    "edition": "2025",
+    "chapitre": "13.2.7.2",
+    "theme": "Plafond résille — Taux ajouré",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour qu'un plafond résille soit conforme, quel taux d'ouverture minimum ?",
+    "propositions": [
+      "50 %",
+      "60 %",
+      "70 %",
+      "80 %"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Plafond résille : 70 % d'ouverture minimum + largeurs d'ouverture ≥ 2,5 cm. Permet le passage suffisant de chaleur et d'eau. Sinon : remplacer les zones non conformes.",
+    "reference": "R1 §13.2.7.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-7-2-002",
+    "edition": "2025",
+    "chapitre": "13.2.7.2",
+    "theme": "Plafond résille — Hauteur sprinkleur",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Si les sprinkleurs sont à moins de 80 cm au-dessus du plafond résille, que faut-il prévoir ?",
+    "propositions": [
+      "Aucune disposition particulière",
+      "Soit descendre les sprinkleurs sous la face inférieure, soit installer des plaques de retenue de chaleur 0,3×0,3 m",
+      "Augmenter la pression de service",
+      "Doubler les sprinkleurs"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Si sprinkleurs à moins de 80 cm au-dessus du plafond résille : descendre les sprinkleurs sous la face inférieure OU installer des plaques 0,3×0,3 m de retenue de chaleur au-dessus.",
+    "reference": "R1 §13.2.7.2 / F13.2.7.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-7-2-003",
+    "edition": "2025",
+    "chapitre": "13.2.7.2",
+    "theme": "Plaques de faux-plafond manquantes",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Plusieurs plaques de faux-plafond manquantes ou mal positionnées. Action ?",
+    "propositions": [
+      "Sans suite — le réseau sprinkleur est en dessous",
+      "Les remettre en place pour assurer une détection optimale",
+      "Remplacer le faux-plafond",
+      "Information à l'exploitant uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Remettre les plaques en place. Faux-plafond incomplet = circulation d'air anormale, fuite de chaleur, retard de détection des sprinkleurs sous plafond.",
+    "reference": "R1 §13.2.7.2 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-7-3-001",
+    "edition": "2025",
+    "chapitre": "13.2.7.3",
+    "theme": "Plafond avec poutres",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sprinkleurs disposés sous des poutres distantes de plus de 1,5 m entre elles, sans répartition adaptée. Action ?",
+    "propositions": [
+      "Conforme — pas de règle particulière",
+      "Revoir la disposition",
+      "Ajouter un poste sous air",
+      "Augmenter le débit pompe"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Sprinkleurs sous poutres > 1,5 m d'espacement sans répartition adaptée : revoir la disposition. Les poutres font écran thermique et perturbent la distribution. Calepinage à reprendre.",
+    "reference": "R1 §13.2.7.3 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-10-001",
+    "edition": "2025",
+    "chapitre": "13.2.10",
+    "theme": "Sprinkleur mural — Espaces libres",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour un sprinkleur mural, quels sont les espaces libres requis (latéral / perpendiculaire) ?",
+    "propositions": [
+      "0,5 m / 1,0 m",
+      "1,0 m / 1,7 m",
+      "1,5 m / 2,0 m",
+      "2,0 m / 2,5 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Sprinkleur mural : 1 m latéral (de part et d'autre) + 1,7 m perpendiculaire au mur, sans obstacle. Sinon blindage de l'arrosage.",
+    "reference": "R1 §13.2.10 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-11-001",
+    "edition": "2025",
+    "chapitre": "13.2.11",
+    "theme": "Stock rechange — LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Stock minimum de sprinkleurs de rechange en classe LH ?",
+    "propositions": [
+      "3 têtes",
+      "6 têtes",
+      "12 têtes",
+      "24 têtes"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Stock LH = 6 têtes minimum (tous types K, températures, orientations du site). OH = 24. HHP/HHS = 36. Permet de remplacer rapidement les têtes déclenchées sans rupture de protection.",
+    "reference": "R1 §13.2.11 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-11-002",
+    "edition": "2025",
+    "chapitre": "13.2.11",
+    "theme": "Stock rechange — OH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Stock minimum de sprinkleurs de rechange en classe OH ?",
+    "propositions": [
+      "6 têtes",
+      "12 têtes",
+      "24 têtes",
+      "36 têtes"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Stock OH = 24 têtes minimum. LH = 6. HHP/HHS = 36. Tous types installés + clés. Stocké dans armoire visible et accessible, T° ≤ 27 °C.",
+    "reference": "R1 §13.2.11 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-11-003",
+    "edition": "2025",
+    "chapitre": "13.2.11",
+    "theme": "Stock rechange — HHP/HHS",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Stock minimum de sprinkleurs de rechange en classe HHP ou HHS ?",
+    "propositions": [
+      "12 têtes",
+      "24 têtes",
+      "36 têtes",
+      "48 têtes"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Stock HHP/HHS = 36 têtes minimum (R1 2025). Inclure ESFR/CMSA si applicable. + Clés appropriées. Évolution : 12 ou 24 (1984), 24 (2008), 24 ou 36 (2014), 36 (2020/2025).",
+    "reference": "R1 §13.2.11 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-11-004",
+    "edition": "2025",
+    "chapitre": "13.2.11",
+    "theme": "Stock rechange — Stockage",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Quelles conditions de stockage pour les sprinkleurs de rechange en R1 2025 ?",
+    "propositions": [
+      "Tous types installés + clés",
+      "Armoire visible et accessible",
+      "Température n'excédant pas 27 °C",
+      "Sous clé chez le responsable maintenance"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "R1 2025 §13.2.11 : tous types installés + clés, armoire visible et accessible, T° ≤ 27 °C. Pas 'sous clé chez le responsable' : doit être accessible au local source pour intervention immédiate.",
+    "reference": "R1 §13.2.11 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-4-001",
+    "edition": "2025",
+    "chapitre": "13.4",
+    "theme": "Mise hors gel — Profondeur",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Profondeur minimale d'enfouissement d'une conduite extérieure pour mise hors gel ?",
+    "propositions": [
+      "0,40 m",
+      "0,60 m",
+      "0,80 m",
+      "1,20 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Mise hors gel ≥ 0,80 m de profondeur. Correspond à la profondeur de gel en France métropolitaine (variable selon altitude/région). En-dessous : risque de gel des canalisations.",
+    "reference": "R1 §13.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-2-003",
+    "edition": "2025",
+    "chapitre": "13.2.2.1",
+    "theme": "Stockage en allées",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous trouvez des allées entre racks utilisées pour stockage temporaire. Action ?",
+    "propositions": [
+      "Tolérance jusqu'à 30 jours",
+      "Les allées doivent rester libres de tout stockage",
+      "Conforme si < 50 % de l'allée occupée",
+      "Sans suite si stockage léger"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Les allées entre racks doivent rester libres de tout stockage. Stockage temporaire interdit. NC §13.2.2.1 — perturbe la distribution d'eau et l'accès des pompiers.",
+    "reference": "R1 §13.2.2.1 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-15-6-2-001",
+    "edition": "2025",
+    "chapitre": "15.6.2",
+    "theme": "Réseau — Détournement",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous trouvez d'autres équipements accrochés aux tuyauteries et supports sprinkleurs. Action ?",
+    "propositions": [
+      "Conforme — réseau solide",
+      "Détournement interdit — à supprimer",
+      "Vérifier la charge admissible",
+      "Information à l'exploitant"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§15.6.2 : interdit d'utiliser les tuyauteries/supports sprinkleurs comme points d'accrochage pour d'autres équipements. Risque : déformation, fuite, sollicitation hors dimensionnement.",
+    "reference": "R1 §15.6.2 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-1-003",
+    "edition": "2025",
+    "chapitre": "13.2",
+    "theme": "Réseau après modification cloisons",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Après modification des cloisons : il manque des sprinkleurs, d'autres sont mal centrés ou blindés. Action ?",
+    "propositions": [
+      "Information à l'exploitant",
+      "Revoir l'ensemble du calepinage",
+      "Conforme si proche du conforme",
+      "Désactiver les sprinkleurs blindés"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Modification de cloisons sans reprise du calepinage = NC majeure. Action : revoir l'ensemble du calepinage. Souvent rencontré lors de réagencements de bureaux ou de cellules de stockage.",
+    "reference": "R1 §13.2 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-3-001",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Vitesse max réseau",
     "difficulte": 3,
     "multi": false,
     "mode_audit": false,
-    "enonce": "Lors de l'essai triennal du point F (sprinkleur le plus défavorisé), à quel délai maximal d'arrivée d'eau l'installation sous air doit-elle satisfaire ?",
-    "propositions": ["30 s", "45 s", "60 s", "120 s"],
-    "bonnes_reponses": [2],
-    "explication": "Le délai d'arrivée d'eau au point F doit être limité à 60 s pour les installations sous air. À confirmer selon type d'installation (R1 §7.2.1 et §13.1.4).",
-    "reference": "R1 §7.2.1 et §13.1.4 (édition 2025)"
+    "enonce": "Vitesse maximale d'eau admissible dans le réseau de distribution sprinkleur ?",
+    "propositions": [
+      "5 m/s",
+      "6 m/s",
+      "8 m/s",
+      "10 m/s"
+    ],
+    "bonnes_reponses": [
+      3
+    ],
+    "explication": "Vitesse max réseau = 10 m/s. Au passage d'une vanne ou d'un débitmètre = 6 m/s. Au-delà : coups de bélier, érosion, bruit, pertes de charge incontrôlées.",
+    "reference": "R1 §13.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-3-002",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Vitesse max vanne",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Vitesse maximale d'eau admissible au passage d'une vanne ou d'un débitmètre ?",
+    "propositions": [
+      "4 m/s",
+      "6 m/s",
+      "8 m/s",
+      "10 m/s"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Vitesse max au passage vanne/débitmètre = 6 m/s. Limite plus basse que la conduite générale (10 m/s) — pertes de charge à travers les organes fortement non-linéaires.",
+    "reference": "R1 §13.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-4-002",
+    "edition": "2025",
+    "chapitre": "13.4",
+    "theme": "Panneaux PIC — Origine 2008",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les prescriptions sur les panneaux sandwichs PIC ont été introduites en :",
+    "propositions": [
+      "1994",
+      "2002",
+      "2008",
+      "2014"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Panneaux PIC introduits en 2008 suite à des sinistres graves. Âme combustible (PU ou PS) entre parements métalliques : peut brûler par combustion interne non détectable. Sprinkleurs implantés en regard des joints longitudinaux et transversaux.",
+    "reference": "R1 §13.4 (édition 2008/2025)"
+  },
+  {
+    "id": "r1-2025-7-5-cad-001",
+    "edition": "2025",
+    "chapitre": "7.5",
+    "theme": "Antigel — Cadenas vannes",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Les vannes d'isolement des systèmes antigel exemptées de report d'alarme doivent être :",
+    "propositions": [
+      "Sans dispositif particulier",
+      "Cadenassées",
+      "Sous clé chez le responsable",
+      "Munies d'un coffret cassable"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Vannes d'isolement antigel exemptées de report d'alarme : cadenasser. Évite les fermetures accidentelles non détectées. Le cadenas est la barrière physique de substitution au report électrique.",
+    "reference": "R1 §7.5.1 / §15.3 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-1-013",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Source B — Démarrage manuel",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En complément du démarrage automatique, quelle commande doit être disponible sur l'armoire pompes ?",
+    "propositions": [
+      "Aucune commande supplémentaire",
+      "Démarrage manuel + retour en position AUTO obligatoire",
+      "Démarrage à distance par téléphone",
+      "Commande par DAI uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Démarrage manuel obligatoire en complément. Permet le déclenchement par opérateur en cas de besoin. Toujours retour en position AUTO obligatoire après l'essai/intervention.",
+    "reference": "R1 §10.1 / §18.4.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-4-001",
+    "edition": "2025",
+    "chapitre": "18.4.3",
+    "theme": "Essai gong hydraulique",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quelle est la durée minimale de l'essai hebdomadaire du gong hydraulique ?",
+    "propositions": [
+      "3 s",
+      "5 s",
+      "10 s",
+      "30 s"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Essai gong hydraulique : ≥ 10 s via vanne d'essai de 12 mm. Vérifie le bon fonctionnement de l'alarme acoustique mécanique des postes de contrôle. NC orange §4 Q1 si < 10 s ou gong non fonctionnel.",
+    "reference": "R1 §18.4.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-4-002",
+    "edition": "2025",
+    "chapitre": "18.4.3",
+    "theme": "Manomètre enregistreur — Archivage",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Durée minimum d'archivage des graphiques de manomètre enregistreur ?",
+    "propositions": [
+      "1 mois",
+      "6 mois",
+      "1 an",
+      "3 ans"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Archivage manomètre enregistreur : 1 an minimum. Permet de retracer historiquement les variations de pression, détecter les anomalies récurrentes, et fournir des éléments à l'assureur en cas de sinistre.",
+    "reference": "R1 §15.2 / §18.4.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-5-002",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Vérification semestrielle — Périodicité",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Combien de vérifications semestrielles par an ?",
+    "propositions": [
+      "1 par an",
+      "2 par an",
+      "4 par an",
+      "À la demande"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Vérification semestrielle = 2 fois par an, par vérificateur certifié E1. Règle inchangée depuis 1936 (89 ans). Le rapport Q1 est transmis à CNPP dans les 30 jours (R1 2025 §3.5).",
+    "reference": "R1 §18.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-5-003",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Niveaux de constatations",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Combien de niveaux de constatations distingue le §18.5 R1 2025 ?",
+    "propositions": [
+      "2 : NC et observations",
+      "3 : NC avec risque, NC sans risque, observations §11",
+      "4 : critique, majeur, mineur, observation",
+      "Un seul niveau"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "3 niveaux : NC avec risque de mise en échec (action urgente, date 1ère signalisation obligatoire), NC sans risque (à lever avant prochain Q1, date 1ère signalisation), observations §11 (améliorations, pas de délai).",
+    "reference": "R1 §18.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-5-004",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Champ de vérification — Limite",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Les observations Q1 sont limitées à :",
+    "propositions": [
+      "L'ensemble du bâtiment, peu importe l'accès",
+      "Les réseaux dans le champ visuel normal — pas les réseaux inaccessibles ou en faux-plafond",
+      "Les zones < 5 m de hauteur uniquement",
+      "Les zones spécifiées par l'assureur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Les observations sont limitées aux réseaux situés dans le champ visuel normal. Les réseaux inaccessibles ou à l'intérieur de faux-plafonds ne peuvent donner lieu à des observations. Important pour la rédaction des Q1.",
+    "reference": "R1 §18.5 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-7-001",
+    "edition": "2025",
+    "chapitre": "18.7",
+    "theme": "Manomètres sources — Triennal",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "À quelle fréquence les manomètres et vacuomètres des sources doivent-ils être remplacés (pas seulement vérifiés) ?",
+    "propositions": [
+      "Annuel",
+      "Triennal",
+      "Décennal",
+      "Trentenaire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Triennal : remplacement intégral obligatoire des manomètres et vacuomètres sources (pas seulement vérification). NC orange §2 Q1 si non remplacés depuis > 3 ans.",
+    "reference": "R1 §18.7 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-7-002",
+    "edition": "2025",
+    "chapitre": "18.7.4",
+    "theme": "Manomètres et débitmètres",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Tous les 3 ans, les manomètres et débitmètres doivent être :",
+    "propositions": [
+      "Remplacés systématiquement",
+      "Nettoyés et vérifiés à l'aide d'un appareil étalonné",
+      "Démontés pour vérification interne",
+      "Aucune action particulière"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Triennal : nettoyage + vérification des manomètres et débitmètres à l'aide d'un appareil étalonné. Garantit la précision des mesures lors des essais. PV à conserver.",
+    "reference": "R1 §18.7.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-7-003",
+    "edition": "2025",
+    "chapitre": "18.7",
+    "theme": "Vanne d'alarme — Triennal",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Une vanne d'alarme n'a pas été démontée/révisée depuis 4 ans. Diagnostic ?",
+    "propositions": [
+      "Sans suite — pas d'usure visible",
+      "NC orange — entretien triennal non réalisé",
+      "AMP",
+      "Recommandation"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC orange §5 Q1. Vanne d'alarme non démontée/révisée depuis > 3 ans = entretien triennal en retard. Démontage + détartrage + remplacement joints obligatoires tous les 3 ans.",
+    "reference": "R1 §18.7 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-2-001",
+    "edition": "2025",
+    "chapitre": "18.2",
+    "theme": "N100 programmée — Délai",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour une interruption programmée, le N100 doit être transmis au moins :",
+    "propositions": [
+      "24 h avant",
+      "48 h avant",
+      "72 h avant",
+      "1 semaine avant"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Interruption programmée : N100 ≥ 72 h avant. Interruption accidentelle : immédiatement. Diffusion : assureur + CNPP + services de secours. Inchangé depuis 1898.",
+    "reference": "R1 §18.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-2-002",
+    "edition": "2025",
+    "chapitre": "18.2.2",
+    "theme": "MHS — Mesures compensatoires",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Pendant une mise hors service, quelles mesures préventives compensatoires sont obligatoires ?",
+    "propositions": [
+      "Rondes renforcées",
+      "Interdiction des travaux par points chauds",
+      "Information des services de secours",
+      "Arrêt total de l'activité"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§18.2.2 : rondes renforcées + interdiction des travaux par points chauds + information des services de secours pendant toute la MHS. L'arrêt total de l'activité n'est pas requis (mais l'activité doit être adaptée).",
+    "reference": "R1 §18.2.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-9-001",
+    "edition": "2025",
+    "chapitre": "18.9",
+    "theme": "Révision trentenaire — Périodicité",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Périodicité de la révision trentenaire ?",
+    "propositions": [
+      "Tous les 20 ans",
+      "Tous les 25 ans",
+      "Tous les 30 ans",
+      "Tous les 50 ans"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Révision trentenaire : tous les 30 ans, depuis 1984. Avant : 1957 = 20 ans (eau) / 15 ans (air) ; 1974 = 25 ans / 20 ans. Inchangé depuis 41 ans.",
+    "reference": "R1 §18.9 (édition 1984/2025)"
+  },
+  {
+    "id": "r1-2025-18-9-002",
+    "edition": "2025",
+    "chapitre": "18.9",
+    "theme": "Trentenaire — Référentiel",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors de la révision trentenaire, quel référentiel R1 s'applique pour la remise en conformité ?",
+    "propositions": [
+      "Le référentiel d'origine du système",
+      "Le référentiel intermédiaire (15 ans plus tard)",
+      "La R1 en vigueur à la date de la révision",
+      "Au choix de l'exploitant"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Trentenaire : remise en conformité avec la R1 en vigueur à la date de la révision. Remplacement des têtes > 30 ans. Nouvelle VdC CNPP → nouveau N1. Toutes les AMP doivent être levées à cette occasion.",
+    "reference": "R1 §18.9 / Annexe 3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-7-004",
+    "edition": "2025",
+    "chapitre": "18.7",
+    "theme": "Réserves — Triennal",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Quelles opérations triennales obligatoires sur les réserves d'eau ?",
+    "propositions": [
+      "Vidange complète",
+      "Inspection interne",
+      "Traitement anti-corrosion",
+      "Remplacement intégral"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Triennal réserves : vidange + inspection interne + traitement anti-corrosion + remplacement joints de regard. Pas de remplacement intégral.",
+    "reference": "R1 §18.7 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-15-3-001",
+    "edition": "2025",
+    "chapitre": "15.3",
+    "theme": "Vanne d'arrêt fermée",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous trouvez en visite une vanne d'arrêt en position fermée, sans report d'alarme. Diagnostic ?",
+    "propositions": [
+      "Conforme si cadenassée",
+      "NC rouge — installation neutralisée sans signalisation",
+      "Information à l'exploitant uniquement",
+      "Recommandation"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC rouge §15.3 Q1 : vanne d'arrêt fermée sans report d'alarme = installation neutralisée sans que personne ne le sache. Aucune protection sprinkleur en cas de feu sur la zone.",
+    "reference": "R1 §15.3 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-15-3-002",
+    "edition": "2025",
+    "chapitre": "15.3",
+    "theme": "Vanne passante",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Une vanne d'arrêt poste de contrôle est passante (fuite à travers le siège). Action ?",
+    "propositions": [
+      "Sans suite — fuite mineure",
+      "Entretien, voir remplacement",
+      "Mise hors service immédiate",
+      "Information assureur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Vanne passante = défaut d'étanchéité du siège. Action : entretien ou remplacement. Une vanne qui fuit en position fermée n'isole plus correctement le réseau pour les essais et maintenances.",
+    "reference": "R1 §15.2 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-15-3-003",
+    "edition": "2025",
+    "chapitre": "15.3",
+    "theme": "Vannes 1/4 tour — DN",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour quel diamètre les robinets à boisseau sphérique 1/4 de tour sont-ils autorisés ?",
+    "propositions": [
+      "DN 15 à DN 50",
+      "DN 50 à DN 100",
+      "DN 100 à DN 200",
+      "Tous DN"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Robinet 1/4 de tour autorisé pour DN 15 à DN 50 (axe de manœuvre monté par l'intérieur du corps). Manœuvre rapide pour les vannes d'essai. Au-delà : vannes à opercule ou papillon.",
+    "reference": "R1 §15.3 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-15-3-004",
+    "edition": "2025",
+    "chapitre": "15.3",
+    "theme": "Cadenas vannes",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon CR GIS-Technique 08/11/07, quels cadenas pour les vannes du système sprinkleur ?",
+    "propositions": [
+      "Cadenas universels",
+      "Cadenas spécifiques identifiables aux vannes sprinkleur",
+      "Aucune obligation",
+      "Cadenas codés à 4 chiffres"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "CR GIS-Technique 08/11/07 : cadenas spécifiques identifiables aux vannes sprinkleur. Permet de distinguer immédiatement les vannes sprinkleurs des autres équipements lors des interventions.",
+    "reference": "CR GIS-Technique 08/11/07"
+  },
+  {
+    "id": "r1-2025-15-3-005",
+    "edition": "2025",
+    "chapitre": "15.3",
+    "theme": "Vannes papillon — Volants",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur les vannes papillon, quel type de volants faut-il privilégier ?",
+    "propositions": [
+      "Volants creux (légers)",
+      "Volants pleins (pour éviter les pincements)",
+      "Pas de volant — uniquement levier",
+      "Volants escamotables"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Remplacer les volants creux (ouverts à l'arrière) par des volants pleins. Évite les accidents corporels (pincements) lors de manipulations rapides. Phrase Q1 type §15.3.",
+    "reference": "R1 §15.3 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-15-3-006",
+    "edition": "2025",
+    "chapitre": "15.3",
+    "theme": "CR GIS-Technique 02/02/12 — Défaut vanne by-pass",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon CR GIS-Technique 02/02/12, l'alarme « défaut vanne by-pass » doit être délivrée :",
+    "propositions": [
+      "À l'ouverture complète de la vanne",
+      "À la fermeture complète",
+      "Dès une position incomplète de fermeture",
+      "À mi-course uniquement"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "CR GIS-Technique 02/02/12 : l'alarme « défaut vanne by-pass » doit être délivrée DÈS une position incomplète de fermeture, pas seulement à l'ouverture complète. Détection plus précoce d'une mauvaise manœuvre.",
+    "reference": "R1 §15.3 / CR GIS-Technique 02/02/12"
+  },
+  {
+    "id": "r1-2025-14-1-001",
+    "edition": "2025",
+    "chapitre": "14.1",
+    "theme": "Surveillance alarmes — Télésurveillance",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Le report d'alarme vers la télésurveillance n'a pas fonctionné le jour de la visite. Diagnostic ?",
+    "propositions": [
+      "Sans suite — équipement annexe",
+      "NC — rétablir au plus vite la surveillance 24h/24",
+      "Information CNPP uniquement",
+      "Recommandation"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC §14.1 : sans report fonctionnel, en cas de fonctionnement ou d'anomalie, personne n'est informé → l'ampleur des dégâts s'accroît. Action : rétablir au plus vite la surveillance des alarmes 24h/24.",
+    "reference": "R1 §14.1 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-14-1-002",
+    "edition": "2025",
+    "chapitre": "14.1",
+    "theme": "Double report alarme",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En complément du report en télésurveillance 24/24, quelle disposition recommander ?",
+    "propositions": [
+      "Aucune disposition supplémentaire",
+      "Un autre report de synthèse vers un local du site occupé en heures ouvrées",
+      "Un troisième report vers les pompiers",
+      "Information à l'assureur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Double report d'alarme : en complément de la télésurveillance, un autre report de synthèse vers un local du site occupé pendant les heures ouvrées. Réaction plus rapide quand le site est occupé.",
+    "reference": "R1 §14.1 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-14-1-003",
+    "edition": "2025",
+    "chapitre": "14.1",
+    "theme": "ECS — Autonomie source secondaire",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Durée minimale d'autonomie de la source secondaire de l'ECS (Équipement de Contrôle et Signalisation) ?",
+    "propositions": [
+      "1 h",
+      "12 h",
+      "24 h",
+      "72 h"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Source secondaire ECS : 24 h minimum d'autonomie. Garantit la signalisation pendant une coupure secteur prolongée. Sans cela, plus aucune alarme en cas d'incident électrique majeur.",
+    "reference": "R1 §14.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-14-2-001",
+    "edition": "2025",
+    "chapitre": "14.2 / T14.2",
+    "theme": "Flotteurs risque inondation",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Pour un local sources en sous-sol, quelle disposition recommander ?",
+    "propositions": [
+      "Aucune disposition spécifique",
+      "Flotteurs (type Jola) délivrant une alarme « risque inondation » reportée",
+      "Pompe de relevage automatique",
+      "Étanchéité spéciale"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Local sources en sous-sol : équiper de flotteurs (type Jola) délivrant une alarme « risque d'inondation » reportée à l'armoire de report centralisée. Détection rapide d'une fuite avant noyage des équipements.",
+    "reference": "R1 §14.2 / T14.2 / catalogue Q1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-2-2-004",
+    "edition": "2025",
+    "chapitre": "13.2.2.1",
+    "theme": "T13.2.2.1 — Valeurs HHP1",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon T13.2.2.1 R1 2025, la distance libre sous sprinkleur en HHP1 est de :",
+    "propositions": [
+      "0,3 m + 0,9 m de sphère",
+      "0,6 m fixe",
+      "1 m minimum",
+      "Identique au HHS"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "T13.2.2.1 R1 2025 : LH/OH/HHP1 = 0,3 m + 0,9 m sphère. HHP2-3 = 0,6 m. HHS = 1 m mini (4-6 m maxi). Évolution majeure 2025 — valeurs revues vs anciennes éditions.",
+    "reference": "R1 §13.2.2.1 / T13.2.2.1 (édition 2025)"
   },
   {
     "id": "r1-2025-19-2-2-001",
     "edition": "2025",
     "chapitre": "19.2.2",
-    "theme": "Extensions",
-    "difficulte": 2,
+    "theme": "Extension ≤ 5 têtes",
+    "difficulte": 3,
     "multi": false,
-    "mode_audit": false,
-    "enonce": "Combien de sprinkleurs maximum par an et par poste de contrôle l'utilisateur peut-il faire installer en extension/modification sans recourir à une entreprise certifiée, en avisant assureur et vérificateur ?",
-    "propositions": ["2", "5", "10", "30"],
-    "bonnes_reponses": [1],
-    "explication": "R1 §19.2.2 : seules les extensions/modifications de 5 sprinkleurs maximum par an et par poste de contrôle peuvent être exécutées par l'utilisateur lui-même. Au-delà (6e et plus), entreprise certifiée obligatoire.",
+    "mode_audit": true,
+    "enonce": "Quelles extensions peuvent être exécutées par l'utilisateur (sans installateur certifié) ?",
+    "propositions": [
+      "≤ 5 sprinkleurs par an par poste, en avisant l'assureur et le vérificateur certifié",
+      "≤ 10 sprinkleurs par an",
+      "≤ 20 sprinkleurs par an",
+      "Aucune, toujours installateur certifié"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "§19.2.2 : ≤ 5 sprinkleurs maximum par an et par poste de contrôle peuvent être exécutées par l'utilisateur, en avisant l'assureur et le vérificateur certifié. Hors ESFR/CMSA. Inchangé depuis 1898.",
     "reference": "R1 §19.2.2 (édition 2025)"
   },
   {
     "id": "r1-2025-19-2-4-001",
     "edition": "2025",
     "chapitre": "19.2.4",
-    "theme": "Extensions",
+    "theme": "Extension 31-200 — Sonde T°",
     "difficulte": 3,
     "multi": false,
     "mode_audit": true,
-    "enonce": "Lors d'une extension de 45 sprinkleurs sur un poste de contrôle, quel équipement supplémentaire devient obligatoire dans le local des sources d'eau ?",
+    "enonce": "Pour une extension de plus de 30 sprinkleurs, quelle obligation supplémentaire ?",
     "propositions": [
-      "Une seconde pompe jockey",
-      "Une sonde de température dans le local des sources d'eau",
-      "Un second pressostat",
-      "Une alarme sur la coupure d'alimentation électrique de l'électropompe B"
+      "Aucune obligation supplémentaire",
+      "Sonde de température dans le local des sources d'eau, reliée en alarme",
+      "Doubler les pompes",
+      "Refaire la VdC CNPP"
     ],
-    "bonnes_reponses": [1],
-    "explication": "R1 §19.2.4 : dès 31 sprinkleurs modifiés, la mise en place d'une sonde de température dans le local des sources d'eau devient obligatoire. L'alarme coupure alim B ne devient obligatoire qu'au-delà de 200 sprinkleurs (§19.2.5).",
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§19.2.4 : extension > 30 sprinkleurs → sonde de T° dans le local des sources d'eau obligatoire (reliée en alarme). Surveillance renforcée du local pompes sur les installations significativement modifiées.",
     "reference": "R1 §19.2.4 (édition 2025)"
   },
   {
-    "id": "r1-2025-3-3-1-001",
+    "id": "r1-2025-19-2-5-001",
     "edition": "2025",
-    "chapitre": "3.3.1",
-    "theme": "Essais réglementaires",
+    "chapitre": "19.2.5",
+    "theme": "Extension > 200 têtes",
     "difficulte": 3,
-    "multi": false,
-    "mode_audit": false,
-    "enonce": "Quelle est la pression minimale de l'essai hydrostatique à la mise en service d'une installation sprinkler R1 ?",
-    "propositions": [
-      "10 bar pendant 2 heures",
-      "12 bar ou Pmax pendant 2 heures",
-      "La plus grande des deux : 15,5 bar ou 1,2 × Pmax, pendant 2 heures minimum",
-      "20 bar pendant 24 heures"
-    ],
-    "bonnes_reponses": [2],
-    "explication": "R1 §3.3.1 : pression d'essai = la plus grande de 15,5 bar et 1,2 × Pmax, durée minimale 2 h mesurée au point bas. Critère : aucune fuite, rupture ou déformation permanente.",
-    "reference": "R1 §3.3.1 (édition 2025)"
-  },
-  {
-    "id": "r1-2025-T6-1-001",
-    "edition": "2025",
-    "chapitre": "6.1",
-    "theme": "Densités de calcul",
-    "difficulte": 2,
-    "multi": false,
-    "mode_audit": false,
-    "enonce": "Quelle est la densité de calcul réglementaire pour une classe de risque OH (Ordinary Hazard) ?",
-    "propositions": ["2,25 l/m²/min", "5,0 l/m²/min", "7,5 l/m²/min", "12,5 l/m²/min"],
-    "bonnes_reponses": [1],
-    "explication": "Tableau T6.1 R1 2025 : densité LH = 2,25 l/m²/min, OH (OH1 à OH4) = 5,0 l/m²/min. La densité s'applique sur la surface impliquée correspondante.",
-    "reference": "R1 Tableau T6.1 (édition 2025)"
-  },
-  {
-    "id": "r1-2025-T6-1-002",
-    "edition": "2025",
-    "chapitre": "6.1",
-    "theme": "K-factors",
-    "difficulte": 4,
-    "multi": false,
-    "mode_audit": false,
-    "enonce": "Quelle nouveauté R1 2025 concerne le K-factor minimal en fonction de la densité requise ?",
-    "propositions": [
-      "K57 admis pour toutes densités ≥ 12,5",
-      "K min K160 introduit pour densités ≥ 20 l/m²/min",
-      "K min K80 désormais requis dès LH",
-      "Suppression du K115 minimum"
-    ],
-    "bonnes_reponses": [1],
-    "explication": "Évolution R1 2025 : K min K160 pour densités ≥ 20 l/m²/min (nouveau). K min K115 pour densités ≥ 12,5 l/m²/min existe depuis 2020.",
-    "reference": "R1 Tableau T6.1 (édition 2025) — évolution"
-  },
-  {
-    "id": "r1-2025-13-2-001",
-    "edition": "2025",
-    "chapitre": "13.2",
-    "theme": "Implantation sprinkleurs",
-    "difficulte": 2,
     "multi": true,
-    "mode_audit": false,
-    "enonce": "Pour une toiture en construction non combustible (cas général), quelle est la distance déflecteur/toiture autorisée selon R1 2025 ? (plusieurs bonnes réponses)",
+    "mode_audit": true,
+    "enonce": "Pour une extension de plus de 200 sprinkleurs, quelles obligations ?",
     "propositions": [
-      "Minimum 0,07 m",
-      "Maximum 0,15 m",
-      "Maximum 0,45 m sauf dérogation",
-      "Aucune limite haute"
+      "Ajouter alarme coupure alimentation électrique électropompe B",
+      "Adresser dossier complet à CNPP pour VdC (N1 réactualisé)",
+      "Installer un second poste de contrôle",
+      "Doubler la réserve d'eau"
     ],
-    "bonnes_reponses": [0, 1],
-    "explication": "R1 §13.2 (cas général) : minimum 0,07 m (éviter écran thermique de la toiture), maximum 0,15 m. La valeur 0,45 m est une dérogation pour construction combustible avec accord CNPP.",
-    "reference": "R1 §13.2 (édition 2025)"
+    "bonnes_reponses": [
+      0,
+      1
+    ],
+    "explication": "§19.2.5 : extension > 200 sprinkleurs → ajouter alarme coupure alimentation électrique électropompe B + adresser dossier complet à CNPP en vue d'une visite de conformité (N1 réactualisé). Seuil VdC = 200 têtes depuis 2002.",
+    "reference": "R1 §19.2.5 (édition 2025)"
   },
   {
-    "id": "r1-2025-18-4-001",
+    "id": "r1-2025-19-2-1-001",
     "edition": "2025",
-    "chapitre": "18.4",
-    "theme": "Essais hebdomadaires",
-    "difficulte": 2,
+    "chapitre": "19.2.1",
+    "theme": "Extension — Dispositif d'essai",
+    "difficulte": 3,
     "multi": false,
     "mode_audit": true,
-    "enonce": "Lors de la lecture du registre S1A, vous constatez que les essais hebdomadaires de la pompe diesel durent 10 minutes au lieu des durées attendues. Quelle est l'anomalie ?",
+    "enonce": "Lors de toute extension, quelle obligation sur les sources d'eau ?",
     "propositions": [
-      "Aucune : 10 min est la durée pour diesel comme pour électrique",
-      "Durée trop courte : l'essai pompe diesel doit durer 20 min à Q100%",
-      "Durée trop longue : 5 min suffisent pour diesel",
-      "Durée correcte si la pompe a démarré au premier essai automatique"
+      "Aucune action sur les sources",
+      "Équiper toutes les sources d'eau d'un dispositif d'essai",
+      "Remplacer toutes les pompes",
+      "Refaire l'analyse de risques uniquement"
     ],
-    "bonnes_reponses": [1],
-    "explication": "R1 §18.4 : essai pompe électrique = 10 min à Q100% / essai pompe diesel = 20 min à Q100%, mesures de P à Q0%, Q100%, Q130%, régime tachymètre, T° eau et huile. NC §12.1 Q1.",
-    "reference": "R1 §18.4 (édition 2025)"
-  },
-  {
-    "id": "r1-2020-12-9-001",
-    "edition": "2020",
-    "chapitre": "12.9",
-    "theme": "Pièces de rechange diesel",
-    "difficulte": 3,
-    "multi": false,
-    "mode_audit": false,
-    "enonce": "Selon R1 (additif 2013, repris en 2020 et 2025), quelle est la liste minimale des pièces de rechange à conserver pour le moteur diesel d'une pompe ?",
-    "propositions": [
-      "1 filtre huile + 1 filtre gazole + 1 jeu de courroies",
-      "2 filtres huile + 2 filtres gazole + 2 jeux courroies + 1 jeu joints/durites",
-      "3 filtres huile + 3 filtres gazole + 3 jeux courroies",
-      "Pas de liste obligatoire, à l'appréciation de l'installateur"
+    "bonnes_reponses": [
+      1
     ],
-    "bonnes_reponses": [1],
-    "explication": "R1 §12.9 (additif CNPP 25/05/13, repris depuis) : 2 filtres huile + 2 filtres gazole + 2 jeux courroies + 1 jeu joints/durites. AMP si système antérieur à 2013.",
-    "reference": "R1 §12.9 (édition 2020/2025)"
-  },
-  {
-    "id": "r1-2014-5-1-3-001",
-    "edition": "2014",
-    "chapitre": "5.1.3",
-    "theme": "Modes de stockage",
-    "difficulte": 4,
-    "multi": false,
-    "mode_audit": false,
-    "enonce": "Quelle évolution importante a marqué le passage R1 2014 → R1 2020 sur la définition des modes de stockage ?",
-    "propositions": [
-      "Suppression du mode ST6",
-      "Ajout du mode ST9 (stockage en cantilever)",
-      "Renumérotation totale ST1→SA1",
-      "Fusion des modes ST3 et ST4"
-    ],
-    "bonnes_reponses": [1],
-    "explication": "R1 2014 définissait ST1 à ST6 + ST8. R1 2020 a ajouté le mode ST9 pour le stockage cantilever. R1 2025 va de ST1 à ST9 (ST7 désaffecté).",
-    "reference": "R1 §5.1.3 — évolution 2014→2020→2025"
+    "explication": "§19.2.1 : équiper toutes les sources d'eau d'un dispositif d'essai. + Fournir au vérificateur le nouveau dossier technique (nombre de sprinkleurs, nouveaux calculs, plans, courbe d'essai des sources, sonde T° en alarme).",
+    "reference": "R1 §19.2.1 / §3.8 (édition 2025)"
   }
 ]
