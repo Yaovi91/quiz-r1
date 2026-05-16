@@ -1,0 +1,262 @@
+[
+  {
+    "id": "r1-2025-10-1-001",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Pompes",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Combien de pressostats indépendants doivent être installés pour commander le démarrage automatique de chaque source de type B ?",
+    "propositions": ["Un seul, listé CNPP", "Deux, indépendants", "Trois, redondants", "Aucun, démarrage manuel uniquement"],
+    "bonnes_reponses": [1],
+    "explication": "Chaque source de type B doit comporter deux pressostats indépendants pour le démarrage automatique. Pressostat unique = NC avec risque de mise en échec.",
+    "reference": "R1 §10.1 (édition 2025) — NF EN 12845 §10.7.5.1"
+  },
+  {
+    "id": "r1-2025-10-1-002",
+    "edition": "2025",
+    "chapitre": "10.1",
+    "theme": "Pompes",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En vérification semestrielle, vous trouvez une vanne d'isolement sur la bouteille pressostatique d'une pompe. Quelle est la conclusion conforme ?",
+    "propositions": [
+      "Conforme : la vanne facilite la maintenance",
+      "NC : la vanne d'isolement de la bouteille pressostatique est interdite",
+      "Observation §11 : à signaler sans urgence",
+      "Conforme uniquement si la vanne est cadenassée en position ouverte"
+    ],
+    "bonnes_reponses": [1],
+    "explication": "Cette vanne est strictement interdite (R1 §10.1 et §13.3.4). La régulation des débits doit être assurée par diaphragme (restricteur). C'est une NC qui peut mettre en échec la régulation pressostatique.",
+    "reference": "R1 §10.1 et §13.3.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-2-001",
+    "edition": "2025",
+    "chapitre": "10.2",
+    "theme": "Pompes",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "En R1 2025, la pression de refoulement à débit nul d'une pompe doit respecter quelles conditions ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Être inférieure ou égale à 12 bar",
+      "Être supérieure à 15 bar pour garantir la marge",
+      "Être inférieure ou égale à 120 % de la pression au point S1",
+      "Aucune limite réglementaire spécifique"
+    ],
+    "bonnes_reponses": [0, 2],
+    "explication": "R1 2025 §10.2 : la pression à débit nul ne doit pas excéder 12 bar ET ne doit pas dépasser 120 % de la pression au point S1 (débit nominal). Évolution 2025 : la double condition est désormais explicite.",
+    "reference": "R1 §10.2 et §10.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-3-2-001",
+    "edition": "2025",
+    "chapitre": "10.3.2",
+    "theme": "Réserves d'eau",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la distance maximale autorisée entre le mur extérieur du local sources et le bord de la réserve ?",
+    "propositions": ["20 m", "30 m", "40 m", "50 m"],
+    "bonnes_reponses": [2],
+    "explication": "R1 §10.3.2 : la distance d'aspiration entre le mur extérieur du local des sources d'eau et le bord de la réserve ne doit pas excéder 40 m. Au-delà, NC.",
+    "reference": "R1 §10.3.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-10-5-001",
+    "edition": "2025",
+    "chapitre": "10.5",
+    "theme": "Courbe pompe",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors de l'essai semestriel d'une pompe diesel, vous mesurez à Q130% une pression égale à 70 % de la pression à Q100%. Le résultat est-il acceptable selon R1 2025 ?",
+    "propositions": [
+      "Oui, le seuil R1 est de 65 %",
+      "Non, la pression à S3 doit être au moins égale à 75 % de la pression à S1",
+      "Oui, à condition que Q140% > 70 % de Q100% (référence EN 12845)",
+      "Non, le seuil R1 est de 80 %"
+    ],
+    "bonnes_reponses": [1],
+    "explication": "R1 §10.5 : à Q130% (point S3), la pression doit être ≥ 75 % de la pression à Q100% (point S1). 70 % = NC avec risque de mise en échec — pompe en limite de capacité.",
+    "reference": "R1 §10.5 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-13-1-4-001",
+    "edition": "2025",
+    "chapitre": "13.1.4",
+    "theme": "Essai Point F",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Lors de l'essai triennal du point F (sprinkleur le plus défavorisé), à quel délai maximal d'arrivée d'eau l'installation sous air doit-elle satisfaire ?",
+    "propositions": ["30 s", "45 s", "60 s", "120 s"],
+    "bonnes_reponses": [2],
+    "explication": "Le délai d'arrivée d'eau au point F doit être limité à 60 s pour les installations sous air. À confirmer selon type d'installation (R1 §7.2.1 et §13.1.4).",
+    "reference": "R1 §7.2.1 et §13.1.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-19-2-2-001",
+    "edition": "2025",
+    "chapitre": "19.2.2",
+    "theme": "Extensions",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Combien de sprinkleurs maximum par an et par poste de contrôle l'utilisateur peut-il faire installer en extension/modification sans recourir à une entreprise certifiée, en avisant assureur et vérificateur ?",
+    "propositions": ["2", "5", "10", "30"],
+    "bonnes_reponses": [1],
+    "explication": "R1 §19.2.2 : seules les extensions/modifications de 5 sprinkleurs maximum par an et par poste de contrôle peuvent être exécutées par l'utilisateur lui-même. Au-delà (6e et plus), entreprise certifiée obligatoire.",
+    "reference": "R1 §19.2.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-19-2-4-001",
+    "edition": "2025",
+    "chapitre": "19.2.4",
+    "theme": "Extensions",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors d'une extension de 45 sprinkleurs sur un poste de contrôle, quel équipement supplémentaire devient obligatoire dans le local des sources d'eau ?",
+    "propositions": [
+      "Une seconde pompe jockey",
+      "Une sonde de température dans le local des sources d'eau",
+      "Un second pressostat",
+      "Une alarme sur la coupure d'alimentation électrique de l'électropompe B"
+    ],
+    "bonnes_reponses": [1],
+    "explication": "R1 §19.2.4 : dès 31 sprinkleurs modifiés, la mise en place d'une sonde de température dans le local des sources d'eau devient obligatoire. L'alarme coupure alim B ne devient obligatoire qu'au-delà de 200 sprinkleurs (§19.2.5).",
+    "reference": "R1 §19.2.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-3-3-1-001",
+    "edition": "2025",
+    "chapitre": "3.3.1",
+    "theme": "Essais réglementaires",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la pression minimale de l'essai hydrostatique à la mise en service d'une installation sprinkler R1 ?",
+    "propositions": [
+      "10 bar pendant 2 heures",
+      "12 bar ou Pmax pendant 2 heures",
+      "La plus grande des deux : 15,5 bar ou 1,2 × Pmax, pendant 2 heures minimum",
+      "20 bar pendant 24 heures"
+    ],
+    "bonnes_reponses": [2],
+    "explication": "R1 §3.3.1 : pression d'essai = la plus grande de 15,5 bar et 1,2 × Pmax, durée minimale 2 h mesurée au point bas. Critère : aucune fuite, rupture ou déformation permanente.",
+    "reference": "R1 §3.3.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-T6-1-001",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Densités de calcul",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la densité de calcul réglementaire pour une classe de risque OH (Ordinary Hazard) ?",
+    "propositions": ["2,25 l/m²/min", "5,0 l/m²/min", "7,5 l/m²/min", "12,5 l/m²/min"],
+    "bonnes_reponses": [1],
+    "explication": "Tableau T6.1 R1 2025 : densité LH = 2,25 l/m²/min, OH (OH1 à OH4) = 5,0 l/m²/min. La densité s'applique sur la surface impliquée correspondante.",
+    "reference": "R1 Tableau T6.1 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-T6-1-002",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "K-factors",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle nouveauté R1 2025 concerne le K-factor minimal en fonction de la densité requise ?",
+    "propositions": [
+      "K57 admis pour toutes densités ≥ 12,5",
+      "K min K160 introduit pour densités ≥ 20 l/m²/min",
+      "K min K80 désormais requis dès LH",
+      "Suppression du K115 minimum"
+    ],
+    "bonnes_reponses": [1],
+    "explication": "Évolution R1 2025 : K min K160 pour densités ≥ 20 l/m²/min (nouveau). K min K115 pour densités ≥ 12,5 l/m²/min existe depuis 2020.",
+    "reference": "R1 Tableau T6.1 (édition 2025) — évolution"
+  },
+  {
+    "id": "r1-2025-13-2-001",
+    "edition": "2025",
+    "chapitre": "13.2",
+    "theme": "Implantation sprinkleurs",
+    "difficulte": 2,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Pour une toiture en construction non combustible (cas général), quelle est la distance déflecteur/toiture autorisée selon R1 2025 ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Minimum 0,07 m",
+      "Maximum 0,15 m",
+      "Maximum 0,45 m sauf dérogation",
+      "Aucune limite haute"
+    ],
+    "bonnes_reponses": [0, 1],
+    "explication": "R1 §13.2 (cas général) : minimum 0,07 m (éviter écran thermique de la toiture), maximum 0,15 m. La valeur 0,45 m est une dérogation pour construction combustible avec accord CNPP.",
+    "reference": "R1 §13.2 (édition 2025)"
+  },
+  {
+    "id": "r1-2025-18-4-001",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Essais hebdomadaires",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors de la lecture du registre S1A, vous constatez que les essais hebdomadaires de la pompe diesel durent 10 minutes au lieu des durées attendues. Quelle est l'anomalie ?",
+    "propositions": [
+      "Aucune : 10 min est la durée pour diesel comme pour électrique",
+      "Durée trop courte : l'essai pompe diesel doit durer 20 min à Q100%",
+      "Durée trop longue : 5 min suffisent pour diesel",
+      "Durée correcte si la pompe a démarré au premier essai automatique"
+    ],
+    "bonnes_reponses": [1],
+    "explication": "R1 §18.4 : essai pompe électrique = 10 min à Q100% / essai pompe diesel = 20 min à Q100%, mesures de P à Q0%, Q100%, Q130%, régime tachymètre, T° eau et huile. NC §12.1 Q1.",
+    "reference": "R1 §18.4 (édition 2025)"
+  },
+  {
+    "id": "r1-2020-12-9-001",
+    "edition": "2020",
+    "chapitre": "12.9",
+    "theme": "Pièces de rechange diesel",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon R1 (additif 2013, repris en 2020 et 2025), quelle est la liste minimale des pièces de rechange à conserver pour le moteur diesel d'une pompe ?",
+    "propositions": [
+      "1 filtre huile + 1 filtre gazole + 1 jeu de courroies",
+      "2 filtres huile + 2 filtres gazole + 2 jeux courroies + 1 jeu joints/durites",
+      "3 filtres huile + 3 filtres gazole + 3 jeux courroies",
+      "Pas de liste obligatoire, à l'appréciation de l'installateur"
+    ],
+    "bonnes_reponses": [1],
+    "explication": "R1 §12.9 (additif CNPP 25/05/13, repris depuis) : 2 filtres huile + 2 filtres gazole + 2 jeux courroies + 1 jeu joints/durites. AMP si système antérieur à 2013.",
+    "reference": "R1 §12.9 (édition 2020/2025)"
+  },
+  {
+    "id": "r1-2014-5-1-3-001",
+    "edition": "2014",
+    "chapitre": "5.1.3",
+    "theme": "Modes de stockage",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle évolution importante a marqué le passage R1 2014 → R1 2020 sur la définition des modes de stockage ?",
+    "propositions": [
+      "Suppression du mode ST6",
+      "Ajout du mode ST9 (stockage en cantilever)",
+      "Renumérotation totale ST1→SA1",
+      "Fusion des modes ST3 et ST4"
+    ],
+    "bonnes_reponses": [1],
+    "explication": "R1 2014 définissait ST1 à ST6 + ST8. R1 2020 a ajouté le mode ST9 pour le stockage cantilever. R1 2025 va de ST1 à ST9 (ST7 désaffecté).",
+    "reference": "R1 §5.1.3 — évolution 2014→2020→2025"
+  }
+]
