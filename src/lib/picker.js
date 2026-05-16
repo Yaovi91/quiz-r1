@@ -1,14 +1,20 @@
 // Algorithme de tirage de la prochaine question.
 import { isDue } from "./srs.js";
+import { todayKey } from "./storage.js";
 
-// Filtres durs en fonction du niveau.
-function passesLevelFilter(q, level) {
+// Mémoire de session : IDs des dernières questions tirées.
+// Persiste pendant la session (jusqu'au reload), pas en localStorage.
+let recentIds = [];
+
+// Filtre niveau : très permissif au début (variété), strict ensuite.
+function passesLevelFilter(q, level, answered) {
+  if ((answered || 0) < 30) return q.difficulte <= 4;
   if (q.difficulte > level + 1) return false;
   return true;
 }
 
-// Proportion de questions multi-réponses tolérée selon niveau.
-function multiAllowed(level, rand) {
+function multiAllowed(level, rand, answered) {
+  if ((answered || 0) < 30) return rand() < 0.3;
   if (level <= 2) return false;
   const target = level === 3 ? 0.10 : level === 4 ? 0.30 : 0.50;
   return rand() < target;
@@ -32,7 +38,7 @@ function weakestChapter(byChapter) {
   return worst;
 }
 
-function seededRand(seedStr) {
+function seedRand(seedStr) {
   let h = 2166136261;
   for (let i = 0; i < seedStr.length; i++) h = Math.imul(h ^ seedStr.charCodeAt(i), 16777619);
   let s = h >>> 0;
@@ -44,16 +50,19 @@ function seededRand(seedStr) {
   };
 }
 
+function seenToday(card) {
+  if (!card || !card.lastSeen) return false;
+  return card.lastSeen === todayKey();
+}
+
 /**
  * Pick une question dans le pool selon les règles.
- * @param {Object[]} pool — questions chargées
- * @param {Object} state — état persisté
- * @param {Object} opts — { mode: "libre"|"daily"|"survival"|"audit"|"revision", chapter?, seed? }
  */
 export function pickQuestion(pool, state, opts = {}) {
   const { mode = "libre", chapter = null, seed = null, excludeIds = [] } = opts;
   const level = state.level || 1;
-  const rand = seed ? seededRand(seed) : Math.random;
+  const answered = state.answered || 0;
+  const rand = seed ? seedRand(seed) : Math.random;
 
   // 1. Filtrage par mode.
   let candidates = pool.filter(q => !excludeIds.includes(q.id));
@@ -63,9 +72,8 @@ export function pickQuestion(pool, state, opts = {}) {
   } else if (mode === "revision" && chapter) {
     candidates = candidates.filter(q => q.chapitre.startsWith(chapter));
   } else {
-    candidates = candidates.filter(q => passesLevelFilter(q, level));
-    // Multi : si autorisé par niveau, ok ; sinon filtrer.
-    const allowMulti = multiAllowed(level, rand);
+    candidates = candidates.filter(q => passesLevelFilter(q, level, answered));
+    const allowMulti = multiAllowed(level, rand, answered);
     if (!allowMulti) candidates = candidates.filter(q => !q.multi);
   }
 
@@ -78,35 +86,51 @@ export function pickQuestion(pool, state, opts = {}) {
     if (filtered.length > 0) candidates = filtered;
   }
 
-  // 3. Spaced repetition : ne garder que les dues — sauf si pool trop maigre.
+  // 3. Anti-boucle : éviter les 5 dernières questions tirées si possible.
+  const recentSet = new Set(recentIds.slice(-5));
+  const filteredRecent = candidates.filter(q => !recentSet.has(q.id));
+  if (filteredRecent.length >= 2) candidates = filteredRecent;
+
+  // 4. Spaced repetition : préférer les non-dues si on en a au moins 3.
   const due = candidates.filter(q => isDue(state.cards[q.id]));
   if (due.length >= 3) candidates = due;
 
-  // 4. Pondération par chapitre faible.
+  // 5. Pondération chapitre faible + déprio forte des vues aujourd'hui.
   const weights = candidates.map(q => {
+    const card = state.cards[q.id];
+    if (seenToday(card)) return 0.1; // vraiment déprio
     const rate = rateChapter(state.byChapter || {}, q.chapitre);
-    let w = 1 + (1 - rate); // chapitre raté → poids plus fort
-    // Cap [0.5, 2]
-    w = Math.max(0.5, Math.min(2, w));
-    return w;
+    let w = 1 + (1 - rate);
+    return Math.max(0.5, Math.min(2, w));
   });
 
-  // 5. Tirage pondéré.
+  // 6. Tirage pondéré.
   const total = weights.reduce((a, b) => a + b, 0);
-  let r = rand() * total;
-  for (let i = 0; i < candidates.length; i++) {
-    r -= weights[i];
-    if (r <= 0) return candidates[i];
+  let picked;
+  if (total <= 0) {
+    picked = candidates[Math.floor(rand() * candidates.length)];
+  } else {
+    let r = rand() * total;
+    picked = candidates[candidates.length - 1];
+    for (let i = 0; i < candidates.length; i++) {
+      r -= weights[i];
+      if (r <= 0) { picked = candidates[i]; break; }
+    }
   }
-  return candidates[candidates.length - 1];
+
+  // 7. Mémoriser pour les prochains tirages.
+  if (picked) {
+    recentIds.push(picked.id);
+    if (recentIds.length > 10) recentIds = recentIds.slice(-10);
+  }
+  return picked;
 }
 
 /** Pour le mode Daily Challenge : 10 questions seedées sur la date. */
 export function pickDailyTen(pool, state, dateKey) {
   const seed = "daily-" + dateKey;
-  const rand = seededRand(seed);
-  // Filtre simple : conformité niveau.
-  let pickable = pool.filter(q => passesLevelFilter(q, state.level || 1));
+  const rand = seedRand(seed);
+  let pickable = pool.filter(q => passesLevelFilter(q, state.level || 1, state.answered || 0));
   const picked = [];
   const used = new Set();
   let safety = 0;
