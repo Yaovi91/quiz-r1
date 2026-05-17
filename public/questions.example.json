@@ -14134,5 +14134,3818 @@
     ],
     "explication": "La NF S62-200 (§4) impose 2 heures d'autonomie pour les PI/BI. La R1 (§15) fixe l'autonomie selon la classe de risque (Risque Léger, Ordinaire 1-2-3, Grave 1-2-3, Stockage), généralement entre 30 et 90 minutes pour les configurations courantes. Ces deux exigences ne sont pas comparables directement car les usages diffèrent : intervention secours (PI) vs extinction automatique (sprinkleur).",
     "reference": "NF S62-200 §4 + R1 §15 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-period-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.5",
+    "theme": "Q1 — Périodicité",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon la R1 2025, à quelle fréquence un système sprinkleur doit-il être vérifié par un vérificateur certifié E1 ?",
+    "propositions": [
+      "Une fois par an",
+      "Au moins deux fois par an",
+      "Tous les 18 mois",
+      "Tous les 2 ans"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.5 R1 2025 impose une vérification AU MOINS DEUX FOIS PAR AN par un vérificateur certifié. Cette périodicité semestrielle existe depuis 1936 — un des chiffres-clés les plus stables de la R1. Le rapport produit est le S1B (compte rendu de vérification semestrielle, Q1).",
+    "reference": "R1 §3.5 / §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-period-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.5",
+    "theme": "Q1 — Délai transmission",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans quel délai le compte rendu Q1 (S1B) doit-il parvenir à CNPP après la visite ?",
+    "propositions": [
+      "15 jours",
+      "30 jours",
+      "45 jours",
+      "60 jours"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.5 R1 2025 impose la transmission à CNPP dans un délai de 30 jours après la visite. Ce délai est commun à l'envoi à l'assuré. Hors délai, la traçabilité du suivi devient problématique en cas de sinistre.",
+    "reference": "R1 §3.5 / §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-period-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Q1 — Qualification vérificateur",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle certification est requise pour réaliser une vérification semestrielle Q1 ?",
+    "propositions": [
+      "IF1 (installateur certifié)",
+      "E1 (vérificateur certifié)",
+      "APSAD R5",
+      "Aucune, formation interne suffit"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.5 R1 2025 impose un vérificateur CERTIFIÉ E1. La certification IF1 concerne l'INSTALLATEUR (responsable des opérations techniques annuelles/triennales/décennales). E1 garantit l'indépendance et la compétence de la vérification semestrielle.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-period-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Q1 — Audit transmission Q1 retardée",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors d'un audit, vous constatez que le précédent Q1 a été transmis à CNPP 45 jours après la visite. Que devez-vous conclure ?",
+    "propositions": [
+      "Conforme : le délai est de 60 jours",
+      "Non-conformité : le délai R1 est de 30 jours maximum",
+      "Conforme avec réserve : il faut une justification écrite",
+      "Non applicable : le délai concerne uniquement l'assuré, pas CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.5 et §18.5 R1 2025 fixent le délai de transmission à 30 jours, à la fois pour l'assuré et pour CNPP. À 45 jours, c'est un dépassement à signaler dans le Q1 suivant (§1 du formulaire — événements depuis la dernière visite).",
+    "reference": "R1 §3.5 / §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-period-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Q1 — Niveaux de constatation",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Selon le §18.5 R1 2025, les constatations d'un Q1 se classent en trois niveaux. Lesquels ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "NC avec risque de mise en échec",
+      "NC sans risque de mise en échec",
+      "Observations §11",
+      "Réserves majeures",
+      "Anomalies critiques"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Le §18.5 R1 2025 distingue : (1) NC avec risque de mise en échec — action corrective urgente, date de 1ère signalisation obligatoire ; (2) NC sans risque — à lever avant le prochain Q1, date de 1ère signalisation obligatoire ; (3) Observations §11 — améliorations suggérées sans obligation de levée. \"Réserves majeures\" et \"anomalies critiques\" ne sont pas le vocabulaire R1.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-period-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Q1 — Date de 1ère signalisation",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous rédigez un Q1 avec une NC. Pourquoi la date de 1ère signalisation est-elle critique ?",
+    "propositions": [
+      "C'est purement administratif, sans conséquence",
+      "Son absence peut engager la responsabilité du vérificateur",
+      "Elle conditionne le délai de remise en service",
+      "Elle est utilisée pour calculer la prime d'assurance"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.5 R1 2025 et le guide vérificateur précisent que la date de première signalisation d'une NC est obligatoire et que son absence peut ENGAGER LA RESPONSABILITÉ du vérificateur. C'est un point de vigilance Q1 majeur : tracer chaque NC dans le temps.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-period-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.5",
+    "theme": "Q1 — Responsabilité globale",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon la R1 2025, qui a la responsabilité totale des opérations de surveillance et de maintenance d'un système sprinkleur ?",
+    "propositions": [
+      "L'installateur certifié IF1",
+      "Le vérificateur certifié E1",
+      "Le propriétaire / exploitant",
+      "CNPP"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §3.5 R1 2025 affirme : « Le propriétaire d'un système sprinkleurs a la responsabilité totale des opérations. » Cette responsabilité n'est en rien diminuée par les visites IF1 / E1 / assureurs. C'est un principe fondamental en cas de sinistre.",
+    "reference": "R1 §3.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-period-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Q1 — Préparation visite",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous préparez un Q1. Parmi les documents à consulter EN AMONT, lesquels sont indispensables ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Le Q1 précédent (pour vérifier la levée des NC)",
+      "Les S1A de la période (pour identifier les lacunes hebdomadaires)",
+      "Le dossier technique (pour les valeurs Si1/Si2)",
+      "Les fiches de postes (pour les modifications déclarées)",
+      "Les N100 des 12 derniers mois",
+      "Le bilan financier de l'exploitant"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explication": "Le guide vérificateur liste 5 documents à préparer AVANT la visite : Q1 précédent, S1A de la période, dossier technique avec Si1/Si2, fiches postes, N100 des 12 derniers mois. Sans ces éléments, la visite est aveugle. Le bilan financier n'a évidemment rien à voir.",
+    "reference": "R1 §18.5 + Guide R1 Vérificateur (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-period-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Q1 — Responsabilité opérations",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Qui est responsable des opérations courantes (quotidiennes + hebdomadaires) et des formulaires S1A ?",
+    "propositions": [
+      "L'exploitant",
+      "L'installateur IF1",
+      "Le vérificateur E1",
+      "CNPP"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Le §18.1 R1 2025 attribue clairement les opérations quotidiennes et hebdomadaires (S1A POSTES et S1A SOURCES) à l'EXPLOITANT. L'IF1 est responsable des opérations annuelles/triennales/décennales. Le E1 fait les vérifications semestrielles indépendantes (Q1).",
+    "reference": "R1 §18.1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-period-010",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Q1 — Responsabilité annuelles/décennales",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Qui est responsable des opérations techniques annuelles, triennales et décennales ?",
+    "propositions": [
+      "L'exploitant",
+      "L'installateur certifié IF1",
+      "Le vérificateur certifié E1",
+      "L'assureur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.1 R1 2025 attribue les opérations techniques périodiques (annuelles, triennales — ex. Point F, décennales — épreuve hydraulique) à l'INSTALLATEUR certifié IF1. C'est lui qui remet aussi les consignes à l'exploitant.",
+    "reference": "R1 §18.1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.8",
+    "theme": "Documents — Dossier technique",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le dossier technique d'une installation sprinkleur doit être conservé :",
+    "propositions": [
+      "Au siège social de l'entreprise",
+      "Dans les bureaux de l'assureur",
+      "En permanence dans le local des sources",
+      "Chez l'installateur IF1"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §3.8 R1 2025 impose la conservation du dossier technique EN PERMANENCE DANS LE LOCAL DES SOURCES, accessible immédiatement lors de toute vérification. Cela permet l'accès rapide aux Si1/Si2, plans tels que construits, courbes, etc. Pas au siège social, pas chez l'installateur.",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.8",
+    "theme": "Documents — Contenu dossier technique",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Parmi les documents suivants, lesquels font partie du dossier technique obligatoire d'une installation sprinkleur ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Plans « tels que construits »",
+      "Calculs hydrauliques Si1 et Si2",
+      "Fiches descriptives de postes à jour",
+      "Tableau signalétique des sources avec courbes",
+      "Notices fabricants pour sprinkleurs spéciaux (ESFR, CMSA, antigel)",
+      "Bons de commande des équipements"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explication": "Le §3.8 R1 2025 liste exhaustivement le contenu du dossier technique : plans tels que construits, Si1/Si2, fiches postes, tableau signalétique, courbes essai sources, N1 en cours, 2 derniers Q1, S1A en cours, N100 12 derniers mois, notices spéciales. Les bons de commande ne sont pas exigés.",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.8",
+    "theme": "Documents — Audit dossier absent",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En vérification, l'exploitant ne peut produire ni le dossier technique, ni le N1, ni les derniers Q1 malgré relances. Quelle classification de NC retenir ?",
+    "propositions": [
+      "Observation §11 (rappel réglementaire simple)",
+      "NC sans risque de mise en échec",
+      "NC avec risque de mise en échec — rapport en risque",
+      "Aucune NC : c'est de la responsabilité de l'installateur, pas de l'exploitant"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "L'absence répétée du dossier technique malgré relances est classée en NC AVEC RISQUE D'ÉCHEC selon le catalogue Q1 (§3.8) : sans calculs hydrauliques à jour, classement du risque, densités par zones et nombre de sprinkleurs par poste, IL EST IMPOSSIBLE DE STATUER SUR LA CONFORMITÉ. Le rapport est mis en risque.",
+    "reference": "R1 §3.8 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.8",
+    "theme": "Documents — Plans tels que construits",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quand les plans « tels que construits » doivent-ils être mis à jour ?",
+    "propositions": [
+      "Tous les 5 ans, en routine",
+      "Après chaque modification significative",
+      "Uniquement lors de la révision trentenaire",
+      "Jamais — ils sont figés à la mise en service"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.8 R1 2025 indique que les plans « tels que construits » doivent être mis à jour APRÈS CHAQUE MODIFICATION SIGNIFICATIVE par l'installateur IF1. Sans cette MAJ, les vérifications futures se font sur des données fausses (densités, débits, zonage).",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.8",
+    "theme": "Documents — Suivi S1B",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Combien de Q1 (S1B) doivent être conservés en permanence dans le dossier de suivi ?",
+    "propositions": [
+      "Le dernier uniquement",
+      "Les 2 derniers",
+      "Les 5 derniers",
+      "Tous les Q1 depuis la mise en service"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.8 R1 2025 (et le guide vérificateur) exigent la conservation des 2 DERNIERS Q1 (S1B) dans le dossier de suivi. Cela permet au vérificateur en cours de visite de comparer aux deux périodes précédentes et de tracer les NC.",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.8",
+    "theme": "Documents — Courbes essai sources",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les courbes d'essai des sources d'eau (Q0%/Q100%/Q130%) sont produites par :",
+    "propositions": [
+      "L'exploitant lors des essais hebdomadaires",
+      "Le vérificateur E1 à chaque Q1",
+      "L'installateur IF1 et CNPP lors de chaque VdC",
+      "L'assureur lors de l'inspection annuelle"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §3.8 R1 2025 indique que les courbes essai des sources (Q0%, Q100%, Q130%) sont produites par l'installateur IF1 ET CNPP lors de chaque visite de conformité (VdC). Elles servent de référence pour vérifier la pérennité des performances hydrauliques entre VdC.",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.8",
+    "theme": "Documents — Tableau signalétique sources",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le tableau signalétique des sources d'eau doit être :",
+    "propositions": [
+      "Conservé au bureau de l'exploitant",
+      "Affiché dans le local des sources",
+      "Transmis annuellement à CNPP",
+      "Inclus dans le rapport Q1"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.8 R1 2025 impose l'AFFICHAGE du tableau signalétique des sources DANS LE LOCAL DES SOURCES. Cela permet aux intervenants d'identifier immédiatement les caractéristiques (type, débit, pression) sans consulter de dossier externe.",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "1.5.3",
+    "theme": "Documents — S1A POSTES et SOURCES",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les formulaires S1A correspondent à :",
+    "propositions": [
+      "Le rapport semestriel Q1 du vérificateur",
+      "Les enregistrements d'entretien hebdomadaire (postes et sources)",
+      "Les avis de mise hors service",
+      "La fiche technique du poste de contrôle"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Les S1A sont les formulaires d'ENTRETIEN HEBDOMADAIRE en deux versions : S1A POSTES et S1A SOURCES. Ils sont renseignés par l'exploitant dès la réalisation de chaque opération, et constituent la mémoire de l'entretien. Leur lacune peut être invoquée par l'assureur en cas de sinistre.",
+    "reference": "Guide R1 Vérificateur §1.5.3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Documents — Audit S1A incomplets",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En audit, vous constatez que les S1A des 8 dernières semaines sont vierges (pas d'opération renseignée). Classification ?",
+    "propositions": [
+      "Observation §11",
+      "NC sans risque de mise en échec",
+      "NC AVEC risque de mise en échec",
+      "Aucune NC : c'est anecdotique"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "S1A non renseignés sur plusieurs semaines = lacunes hebdomadaires multiples. Le catalogue Q1 et le §12.1 classent ça en NC AVEC RISQUE D'ÉCHEC : l'entretien n'est pas tracé, donc on ne peut pas garantir le bon fonctionnement de l'installation. C'est un point classique de vérification.",
+    "reference": "R1 §12.1 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-010",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.8",
+    "theme": "Documents — Notices fabricants spéciaux",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour quels types de sprinkleurs les notices fabricants doivent-elles être obligatoirement conservées dans le dossier de suivi ?",
+    "propositions": [
+      "Tous les sprinkleurs standards",
+      "ESFR, CMSA, antigel, inox uniquement",
+      "Uniquement les têtes de plus de 10 ans",
+      "Aucune notice n'est requise"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.8 R1 2025 exige les notices fabricants pour les sprinkleurs SPÉCIAUX : ESFR, CMSA, antigel, inox. Ces têtes ont des conditions d'emploi spécifiques (espacement, T°, K-factor) que le vérificateur doit pouvoir consulter pour valider la conformité d'usage.",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-011",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Documents — Mise en risque",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quel(s) constat(s) peuvent conduire à un Q1 « en risque » (NC avec risque d'échec) ?",
+    "propositions": [
+      "Absence répétée du dossier technique",
+      "Vanne de barrage trouvée fermée et non scellée",
+      "S1A lacunaires sur plusieurs semaines",
+      "Source d'eau B.8 absente, remplacée par source moins redondante",
+      "Une rosace de sprinkleur manquante"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Les NC avec risque d'échec regroupent : absence dossier technique répétée, vannes principales fermées non scellées, S1A lacunaires, modification de source diminuant la redondance, marchandises incompatibles, sources B absentes, etc. La rosace manquante est une NC sans risque (à lever avant prochain Q1), pas avec risque.",
+    "reference": "Catalogue Q1 + Guide vérificateur (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-doc-012",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.7",
+    "theme": "Documents — Durée de validité",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la durée de validité réglementaire d'un système sprinkleur selon la R1 2025 ?",
+    "propositions": [
+      "20 ans",
+      "25 ans",
+      "30 ans",
+      "Illimitée si bien entretenu"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §3.7 R1 2025 fixe la durée de validité à 30 ans (depuis l'édition 1984 — c'était 25 ans avant). À l'échéance : remise en conformité avec la R1 EN VIGUEUR à la date de la révision, remplacement des têtes de plus de 30 ans, nouvelle VdC. Préparation à partir de la 25e année.",
+    "reference": "R1 §3.7 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-n100-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.2",
+    "theme": "N100 — Définition",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est l'objet du formulaire N100 dans la R1 2025 ?",
+    "propositions": [
+      "Notification d'extension d'installation",
+      "Avis de mise hors service",
+      "Rapport de vérification semestrielle",
+      "Demande de réception CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le N100 est l'AVIS DE MISE HORS SERVICE depuis 2002 (nom actuel). Il est obligatoire pour toute mise hors service, quelle que soit sa durée. Note historique : en 1994, le formulaire s'appelait « Avis de remise en service », mais le fond des obligations est identique. C'est le formulaire de référence aujourd'hui.",
+    "reference": "R1 §18.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-n100-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.2",
+    "theme": "N100 — Délai préavis programmé",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour une interruption programmée, l'assureur doit être prévenu :",
+    "propositions": [
+      "Au moins 24 h avant",
+      "Au moins 48 h avant",
+      "Au moins 72 h avant",
+      "Pas d'obligation de préavis"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.2 R1 2025 impose un préavis d'AU MOINS 72 HEURES avant toute interruption programmée. Cette obligation d'informer existe depuis 1898 (« trois jours au moins avant »). Pour une interruption ACCIDENTELLE, c'est immédiat.",
+    "reference": "R1 §18.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-n100-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.2",
+    "theme": "N100 — Diffusion étendue",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "À partir de quelle durée d'interruption le N100 doit-il être diffusé à l'assureur + CNPP + services de secours ?",
+    "propositions": [
+      "Toute interruption, quelle que soit la durée",
+      "Plus de 12 heures",
+      "Plus de 24 heures",
+      "Plus de 72 heures"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.2 R1 2025 impose la diffusion étendue (assureur + CNPP + pompiers) dès lors que la durée de mise hors service DÉPASSE 12 HEURES. En dessous, le N100 reste interne mais doit exister.",
+    "reference": "R1 §18.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-n100-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.2",
+    "theme": "N100 — Audit interruption accidentelle",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'exploitant vous informe qu'une fuite a entraîné une interruption de 8 heures, et qu'il n'a pas établi de N100 « parce que c'était court ». Que dites-vous ?",
+    "propositions": [
+      "Conforme : le N100 ne s'applique qu'aux interruptions programmées",
+      "Conforme : pas obligatoire en dessous de 12 h",
+      "NC : le N100 est obligatoire pour TOUTE mise hors service, quelle que soit la durée",
+      "Conforme : le N100 ne s'applique qu'aux interruptions supérieures à 24 h"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.2 R1 2025 est très clair : le N100 est OBLIGATOIRE pour TOUTE mise hors service, quelle que soit sa durée. La distinction des 12 h concerne uniquement la DIFFUSION ÉTENDUE (assureur + CNPP + pompiers). En dessous, le N100 doit exister, mais reste interne. Une interruption non documentée est une NC.",
+    "reference": "R1 §18.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-n100-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.2",
+    "theme": "N100 — Conservation",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pendant combien de temps les N100 doivent-ils être conservés dans le dossier de suivi ?",
+    "propositions": [
+      "3 mois",
+      "6 mois",
+      "12 derniers mois",
+      "Indéfiniment depuis la mise en service"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §3.8 R1 2025 impose la conservation des N100 des 12 DERNIERS MOIS dans le dossier de suivi. Cela permet au vérificateur Q1 de tracer les interruptions de l'année écoulée, leur durée et leur cause.",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-n100-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.2",
+    "theme": "N100 — Préavis accidentel",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour une interruption ACCIDENTELLE (rupture, sinistre annexe), l'information à l'assureur doit être :",
+    "propositions": [
+      "Différée de 48 h",
+      "72 heures avant si possible",
+      "Immédiate",
+      "Pas d'obligation"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.2 R1 2025 impose une information IMMÉDIATE à l'assureur pour toute interruption accidentelle. Logique : on ne peut pas anticiper, donc l'obligation devient l'instantanéité de la notification. Le 72 h ne concerne QUE les interruptions programmées.",
+    "reference": "R1 §18.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-n100-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "1.5.4",
+    "theme": "N100 — Confusion nom 1994",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Vous tombez sur une installation 1994 qui utilise un formulaire intitulé « Avis de remise en service ». Que faut-il en conclure ?",
+    "propositions": [
+      "Non conformité : le bon nom est N100",
+      "C'est un formulaire obsolète à remplacer immédiatement",
+      "C'est l'intitulé historique du N100 en 1994 ; le fond est identique au N100 actuel",
+      "C'est un formulaire d'extension, pas un N100"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "En 1994, le formulaire N100 était intitulé « Avis de REMISE en service » (et non « Avis de mise hors service » comme depuis 2002). Le fond des obligations est strictement identique. Si l'installation date de 1994 et que les documents historiques utilisent l'ancien intitulé, ce n'est pas une NC — c'est juste l'historique.",
+    "reference": "Guide R1 Vérificateur §1.5.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.2",
+    "theme": "Marquage — Vannes principales",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les vannes principales d'une installation sprinkleur doivent être marquées avec :",
+    "propositions": [
+      "Uniquement un numéro de série",
+      "Le type, le numéro et la position normale (ouverte/fermée)",
+      "Aucun marquage : la couleur suffit",
+      "Le nom du fabricant et la date de pose"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §4.2 R1 2025 exige sur les vannes principales le type, le numéro et la position normale (ouverte ou fermée). C'est essentiel pour qu'un opérateur intervenant en urgence comprenne immédiatement le rôle de chaque vanne. Cadenas ou scellés viennent en complément du marquage.",
+    "reference": "R1 §4.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Marquage — Sprinkleur K-factor",
+    "difficulte": 1,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Quelles informations doivent figurer sur le corps d'un sprinkleur ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Le K-factor",
+      "La température de déclenchement",
+      "L'année de fabrication",
+      "Le logo / marque du fabricant",
+      "Le nom du propriétaire du site"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Le §13.3 R1 2025 (et NF EN 12259) imposent sur le sprinkleur : K-factor, température de déclenchement (souvent codée couleur du bulbe), année de fabrication, marque fabricant, et parfois type (rapide, standard, ESFR…). Le nom du propriétaire n'a évidemment rien à y faire.",
+    "reference": "R1 §13.3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Marquage — Couleur bulbe T°",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Un sprinkleur à bulbe rouge se déclenche à environ :",
+    "propositions": [
+      "57 °C (orange)",
+      "68 °C (rouge)",
+      "79 °C (jaune)",
+      "93 °C (vert)"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le code couleur des bulbes liquide est normalisé : orange = 57 °C, rouge = 68 °C, jaune = 79 °C, vert = 93 °C, bleu = 141 °C, violet = 182 °C, noir = 204 °C. Le rouge à 68 °C est la T° standard pour la majorité des installations en bâtiment courant. À retenir comme code Q1 incontournable.",
+    "reference": "R1 §13.3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Marquage — Audit T° inadaptée",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En vérification d'un local technique avec T° ambiante constante de 50 °C, vous trouvez des sprinkleurs à bulbe rouge (68 °C). Que faut-il faire ?",
+    "propositions": [
+      "Conforme : 68 °C est la T° standard",
+      "NC : risque de déclenchement intempestif, T° de classement insuffisante (différence < 30 °C recommandée)",
+      "NC : il faut systématiquement du bulbe vert (93 °C)",
+      "Conforme : la T° du local est inférieure à 68 °C"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §13.3 R1 2025 recommande une marge d'au moins 30 °C entre la T° ambiante MAX et la T° de déclenchement du sprinkleur. À 50 °C ambiant, un sprinkleur à 68 °C est trop proche : risque de déclenchement intempestif (intumescence du bulbe). Il faudrait du jaune (79 °C) ou vert (93 °C).",
+    "reference": "R1 §13.3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.2",
+    "theme": "Marquage — Conduites couleur",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les canalisations d'une installation sprinkleur doivent être identifiées par :",
+    "propositions": [
+      "Aucun marquage spécifique",
+      "Un marquage permettant d'identifier le réseau sprinkleur (couleur rouge ou bande d'identification)",
+      "Uniquement le numéro de pièce sur les raccords",
+      "Une étiquette plastique tous les 50 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §4 R1 2025 exige que les canalisations sprinkleur soient identifiables visuellement, généralement par PEINTURE ROUGE (couleur sécurité) ou bande d'identification continue. Cela permet de distinguer le réseau sprinkleur d'un réseau eau de service ou eau industrielle, en particulier en zone technique complexe.",
+    "reference": "R1 §4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Marquage — Stock sprinkleurs LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Combien de sprinkleurs de rechange minimum doivent être conservés sur site pour une installation en classe LH ?",
+    "propositions": [
+      "3 têtes",
+      "6 têtes",
+      "12 têtes",
+      "24 têtes"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.8 R1 2025 (et le guide vérificateur) imposent : 6 têtes pour LH, 24 têtes pour OH, 36 têtes pour HHP/HHS. Ces réserves permettent un remplacement rapide en cas d'éclatement ou de modification. La valeur 20/1000 n'existe pas dans la R1.",
+    "reference": "R1 §3.8 + Guide vérificateur (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Marquage — Stock sprinkleurs OH/HHP",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour une installation OH (ordinaire), combien de sprinkleurs de rechange faut-il sur site ?",
+    "propositions": [
+      "6 têtes",
+      "12 têtes",
+      "24 têtes",
+      "36 têtes"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Stock rechange selon classe : LH = 6 têtes, OH = 24 têtes, HHP/HHS = 36 têtes. Pour OH (ordinaire — la majorité des installations industrielles et tertiaires), la réserve est de 24 têtes minimum. À retenir comme chiffre Q1.",
+    "reference": "R1 §3.8 + Guide vérificateur (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4",
+    "theme": "Marquage — Poste de contrôle",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Sur un poste de contrôle sprinkleur (vanne d'alarme), quelles informations doivent être marquées de façon visible ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Numéro du poste",
+      "Zone(s) protégée(s)",
+      "Type de poste (sous eau, sous air, alternatif…)",
+      "Pression amont nominale",
+      "Date de pose du fabricant"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Le §4 R1 2025 impose sur le poste de contrôle : numéro du poste, zone protégée, type (sous eau, sous air, alternatif, déluge), pression amont nominale, et alarme associée. La date de pose fabricant est sur la plaque constructeur, pas dans le marquage opérationnel.",
+    "reference": "R1 §4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4",
+    "theme": "Marquage — Audit poste non identifié",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En vérification, vous trouvez 3 postes de contrôle dans un local, mais aucun n'a de marquage de zone protégée. Conclusion ?",
+    "propositions": [
+      "Observation §11 : améliorer la signalétique",
+      "NC sans risque : à lever avant prochain Q1",
+      "NC avec risque : impossible d'identifier rapidement le poste à isoler en cas d'incendie ou d'intervention",
+      "Conforme : le marquage de zone n'est pas obligatoire"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Sans identification claire des zones par poste, en cas d'incendie ou d'intervention urgente, l'opérateur ne peut PAS isoler la bonne zone — il risque de fermer le mauvais poste et de laisser un autre démuni. Le §4 R1 2025 impose ce marquage. NC avec risque d'échec selon catalogue Q1.",
+    "reference": "R1 §4 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-010",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Marquage — Sprinkleur peint",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors d'une vérification, vous trouvez plusieurs sprinkleurs RECOUVERTS DE PEINTURE BLANCHE (peinture du local après travaux). Action ?",
+    "propositions": [
+      "Conforme : la peinture protège la tête",
+      "Conforme s'il reste moins de 5 têtes peintes",
+      "NC avec risque d'échec : les têtes peintes doivent être remplacées — la peinture peut empêcher le déclenchement thermique",
+      "Observation §11 : nettoyer délicatement à la prochaine intervention"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "La peinture sur un sprinkleur est une NC AVEC RISQUE D'ÉCHEC : elle peut isoler thermiquement le bulbe et empêcher le déclenchement (le temps de réponse devient imprévisible). La R1 §13.3 et catalogue Q1 imposent le REMPLACEMENT immédiat (pas le nettoyage, jugé non fiable). Piège terrain classique après travaux de peinture.",
+    "reference": "R1 §13.3 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-011",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Marquage — Sprinkleur corrosion",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous constatez de la corrosion modérée sur la frette d'un sprinkleur ancien (>15 ans), sans déformation. Conclusion ?",
+    "propositions": [
+      "Conforme : la corrosion superficielle n'altère pas le fonctionnement",
+      "NC : remplacement préventif de la tête recommandé",
+      "NC avec risque : remplacement immédiat",
+      "Aucune NC, observation §11 uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "La corrosion modérée sur frette/composants est une NC SANS RISQUE D'ÉCHEC (à lever avant prochain Q1) : la corrosion peut, à terme, gripper le mécanisme ou modifier la T° de déclenchement. Remplacement préventif recommandé. En cas de corrosion sévère ou déformation visible, ça passe en NC avec risque (remplacement immédiat).",
+    "reference": "R1 §13.3 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-012",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.6",
+    "theme": "Marquage — Vannes scellement",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Toutes les vannes principales de barrage et de contre-barrage doivent être :",
+    "propositions": [
+      "Cadenassées en position fermée",
+      "Cadenassées et scellées en position OUVERTE",
+      "Manuelles, à fermeture rapide",
+      "Motorisées avec retour automatique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §4.6 R1 2025 impose pour toutes les vannes principales : POSITION OUVERTE + CADENAS + SCELLÉS. Cela empêche toute fermeture intempestive ou malveillante. C'est un point Q1 contrôlé systématiquement. Une vanne fermée non scellée est une NC avec risque d'échec immédiat.",
+    "reference": "R1 §4.6 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-marq-013",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.6",
+    "theme": "Marquage — Audit vanne fermée",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En vérification, vous trouvez une vanne de barrage principale FERMÉE et sans scellé. L'exploitant explique qu'elle a été fermée pour des travaux le matin même. Que faites-vous ?",
+    "propositions": [
+      "Conforme : c'est temporaire, un N100 a sûrement été établi",
+      "Vous vérifiez immédiatement la présence du N100 ET reportez en NC avec risque d'échec",
+      "Vous demandez à l'exploitant de la rouvrir avant de continuer la visite",
+      "Vous reportez en NC sans risque, puisque c'est temporaire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Une vanne principale fermée sans scellé est une situation de mise hors service. (1) Vérifier IMMÉDIATEMENT que le N100 a bien été établi et diffusé selon §18.2 (et si > 12 h, à l'assureur+CNPP+pompiers). (2) Reporter en NC avec risque d'échec : tant que la vanne n'est pas rouverte ET scellée, la zone protégée n'est PAS PROTÉGÉE. Le pire piège terrain — ne JAMAIS demander à l'exploitant de manipuler les vannes : c'est sa responsabilité.",
+    "reference": "R1 §4.6 / §18.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Essais — Pompe électrique hebdo",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon la R1 2025, la pompe électrique doit faire l'objet d'un essai hebdomadaire d'une durée minimale de :",
+    "propositions": [
+      "3 minutes",
+      "5 minutes",
+      "10 minutes",
+      "20 minutes"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.4 R1 2025 impose un essai hebdomadaire de la pompe électrique d'une durée d'AU MOINS 10 MINUTES à Q100% (débit nominal). Cette durée existe depuis 1936. C'est un point Q1 vérifié sur les S1A SOURCES.",
+    "reference": "R1 §18.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Essais — Pompe diesel hebdo",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Et pour la pompe DIESEL, la durée minimum de l'essai hebdomadaire est de :",
+    "propositions": [
+      "5 minutes",
+      "10 minutes",
+      "20 minutes",
+      "30 minutes"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.4 R1 2025 impose 20 minutes minimum pour l'essai hebdomadaire de la pompe diesel (Q100%), soit le double du diesel par rapport à l'électrique (10 min). Cette durée plus longue permet de monter en T° et de vérifier le bon fonctionnement du circuit de refroidissement et le maintien des paramètres.",
+    "reference": "R1 §18.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Essais — Audit pompe",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors d'un audit, le S1A SOURCES indique que la pompe électrique a été testée 7 min en semaine 18. Conclusion ?",
+    "propositions": [
+      "Conforme : c'est un essai valable",
+      "Conforme si compensé par un essai diesel plus long la même semaine",
+      "Non conforme : la durée minimum R1 est de 10 minutes",
+      "Conforme si le débit Q100% a été atteint pendant les 7 minutes"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.4 R1 2025 fixe une durée MINIMUM de 10 minutes pour la pompe électrique. À 7 minutes, c'est en dessous du minimum réglementaire, donc NC. Catalogue Q1 : « Essai pompe électrique < 10 min ou essai diesel < 20 min ». À reporter sur le formulaire Q1.",
+    "reference": "R1 §18.4 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Essais — Gong hydraulique",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon la R1 2025, l'essai du gong hydraulique doit durer au minimum :",
+    "propositions": [
+      "5 secondes",
+      "10 secondes",
+      "30 secondes",
+      "1 minute"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.4 R1 2025 impose un essai du gong d'au moins 10 SECONDES via la vanne d'essai de 12 mm. Si le gong ne sonne pas dans ce délai, l'alarme hydraulique est en défaut. C'est un essai hebdomadaire, listé sur le S1A POSTES.",
+    "reference": "R1 §18.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Essais — Diesel pré-essais",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Avant un essai pompe diesel, quels contrôles doivent être réalisés ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Préchauffage fonctionnel",
+      "Niveaux (huile, eau, gazole)",
+      "Tension statique batteries (≥ 12,5 V / 12 V)",
+      "Densité électrolyte",
+      "État courroies et durites",
+      "Test de robotique du moteur"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explication": "Le §18.4.2 R1 (formalisé en Annexe IV depuis 1994) liste les contrôles diesel avant essai : préchauffage, niveaux, tension batteries, densité électrolyte, courroies/durites. Le « test robotique » est inventé. Ces points figurent au catalogue Q1 et sont vérifiés sur S1A SOURCES.",
+    "reference": "R1 §18.4.2 / Annexe IV (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.7",
+    "theme": "Essais — Triennal Point F",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon la R1 2025, l'essai du Point F (essai triennal) doit être réalisé :",
+    "propositions": [
+      "Tous les 6 mois",
+      "Tous les ans",
+      "Tous les 3 ans",
+      "Tous les 10 ans"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.7 R1 2025 impose un essai triennal au Point F (tous les 3 ans), qui mesure le délai d'arrivée d'eau au point hydrauliquement le plus défavorisé. C'est un test capital pour valider la pérennité des performances hydrauliques globales. Ne pas confondre avec l'essai annuel des sources.",
+    "reference": "R1 §18.7 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.7",
+    "theme": "Essais — Manomètres remplacement",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "À quelle fréquence les manomètres de sources doivent-ils être remplacés ?",
+    "propositions": [
+      "Tous les 1 an",
+      "Tous les 3 ans",
+      "Tous les 5 ans",
+      "Tous les 10 ans"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.7 R1 2025 impose le remplacement des manomètres de sources tous les 3 ans. La précision des manomètres se dégrade avec le temps (chocs, vibrations, vieillissement du Bourdon). Sans remplacement, les valeurs lues lors des essais ne sont plus fiables. Point Q1 fréquemment oublié.",
+    "reference": "R1 §18.7 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.8",
+    "theme": "Essais — Épreuve hydraulique décennale",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "L'épreuve hydraulique des équipements sous pression (réservoirs, ballons) doit être réalisée :",
+    "propositions": [
+      "Tous les 5 ans",
+      "Tous les 10 ans",
+      "Tous les 15 ans",
+      "Uniquement à la mise en service"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.8 R1 2025 (et la réglementation Équipements Sous Pression) imposent une épreuve hydraulique tous les 10 ans pour les ESP. Cette épreuve vérifie l'intégrité mécanique sous pression d'épreuve. Le PV est conservé dans le dossier technique.",
+    "reference": "R1 §18.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.9",
+    "theme": "Essais — Révision trentenaire",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "La révision trentenaire d'un système sprinkleur est exigée :",
+    "propositions": [
+      "Tous les 20 ans",
+      "Tous les 25 ans",
+      "Tous les 30 ans",
+      "Tous les 50 ans"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.9 R1 2025 confirme la révision trentenaire (tous les 30 ans), avec préparation à partir de la 25e année. Cette obligation existe depuis 1984. À 30 ans : mise en conformité avec la R1 EN VIGUEUR à la date de révision (pas l'originale), remplacement des têtes > 30 ans, nouvelle VdC, nouveau N1.",
+    "reference": "R1 §18.9 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-010",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.8",
+    "theme": "Essais — Délai 1er sprinkleur",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est le délai maximum d'asservissement d'eau au 1er sprinkleur sur un système sous air ?",
+    "propositions": [
+      "10 secondes",
+      "30 secondes",
+      "60 secondes",
+      "2 minutes"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §4.8 R1 2025 fixe le délai maximum d'asservissement (arrivée d'eau au 1er sprinkleur après ouverture du poste) à 30 SECONDES sur un système sous air. C'est mesuré au Point F lors de l'essai triennal. Au-delà, le retard d'extinction est inacceptable.",
+    "reference": "R1 §4.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-011",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "11.3",
+    "theme": "Essais — Groupe électrogène",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le délai de reprise sur groupe électrogène est de :",
+    "propositions": [
+      "10 secondes maximum",
+      "15 secondes maximum (valeur historique)",
+      "30 secondes maximum (R1 2014+)",
+      "60 secondes maximum"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Depuis 2014, la R1 fixe le délai de reprise sur groupe électrogène à 30 secondes maximum. Avant 2014, c'était 15 secondes. La détente vient d'une harmonisation avec d'autres référentiels et de la prise en compte de la fiabilité moderne des GE. Point d'évolution à connaître.",
+    "reference": "R1 §11.3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-012",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "14.1",
+    "theme": "Essais — Autonomie source secondaire ECS",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour une source secondaire ECS (Eau Connue Sûre), l'autonomie minimale est de :",
+    "propositions": [
+      "4 heures",
+      "12 heures",
+      "24 heures",
+      "72 heures"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §14.1 R1 2025 impose 24 heures d'autonomie minimum pour une source secondaire ECS. Cette autonomie longue permet d'absorber des incidents sur le réseau principal (rupture, maintenance, dépressurisation) sans laisser l'installation sans source.",
+    "reference": "R1 §14.1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-essai-013",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Essais — Délai remplissage réserve",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le délai maximum de remplissage d'une réserve d'eau sprinkleur est de :",
+    "propositions": [
+      "6 heures",
+      "12 heures",
+      "24 heures",
+      "48 heures"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §9 R1 2025 impose un remplissage complet de la réserve EN MOINS DE 12 HEURES. Au-delà, en cas d'incendie suivi d'un second sinistre, l'installation pourrait se retrouver à sec. Le débit du circuit de remplissage est dimensionné pour respecter ce délai.",
+    "reference": "R1 §9 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-visuel-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Visuel — Distance libre stockage",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Au-dessus du sommet d'un stockage, la distance libre minimum jusqu'au sprinkleur doit être de :",
+    "propositions": [
+      "0,5 m",
+      "1 m",
+      "1,5 m",
+      "2 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §9 R1 2025 impose une DISTANCE LIBRE MINIMALE DE 1 m entre le sommet du stockage et le sprinkleur (mesurée verticale au déflecteur). Cela permet à l'eau projetée d'avoir l'espace nécessaire pour développer son cône de pulvérisation. Distance < 1 m = NC AVEC RISQUE D'ÉCHEC.",
+    "reference": "R1 §9 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-visuel-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.2",
+    "theme": "Visuel — Sprinkleur obstrué",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous trouvez un sprinkleur dont le déflecteur est masqué par une poutre située à 15 cm au-dessus du déflecteur. Conclusion ?",
+    "propositions": [
+      "Conforme : la poutre ne touche pas le sprinkleur",
+      "NC : la poutre crée une obstruction qui perturbe la distribution",
+      "Conforme : la distance horizontale au sprinkleur est suffisante",
+      "Observation §11 uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §13.2 R1 2025 impose qu'aucun obstacle ne soit situé dans le cône de pulvérisation du sprinkleur. Une poutre à 15 cm au-dessus du déflecteur crée une obstruction directe sur la formation du cône d'eau et son obstruction. NC à reporter, niveau dépend de l'étendue (multiple têtes affectées = NC avec risque).",
+    "reference": "R1 §13.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-visuel-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Visuel — Rosace manquante",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Plusieurs sprinkleurs ont leur rosace décrochée (toujours présente côté plafond mais détachée du sprinkleur). Action ?",
+    "propositions": [
+      "Conforme : la rosace est purement esthétique",
+      "Observation §11 : à remettre lors d'une intervention",
+      "NC sans risque : à lever avant prochain Q1 (rosace bien positionnée = bonne couverture thermique)",
+      "NC avec risque : remplacement immédiat des têtes"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "La rosace assure la couverture thermique correcte de la tête : sans elle, la chambre thermique entre le plafond et le bulbe est perturbée, ce qui peut altérer le temps de déclenchement. Le catalogue Q1 §13.2.3 classe ça en NC SANS RISQUE D'ÉCHEC : à lever avant prochain Q1. Pas anodin.",
+    "reference": "R1 §13.2.3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-visuel-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.2.4",
+    "theme": "Visuel — Distance sprinkleur mur LH",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "En classe LH (risque léger), quelle est la distance MAXIMUM entre un sprinkleur et un mur parallèle ?",
+    "propositions": [
+      "1,5 m",
+      "1,8 m",
+      "2,0 m",
+      "2,3 m"
+    ],
+    "bonnes_reponses": [
+      3
+    ],
+    "explication": "Le §13.2.4 R1 2025 (et Tableau 6.1) fixe : 2,3 m maxi en LH, 2,0 m maxi en OH, 1,8 m maxi en HHP/HHS. En LH (bureaux, hôtels, hôpitaux), la distance max au mur est la plus généreuse car les densités sont faibles.",
+    "reference": "R1 §13.2.4 / T6.1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-visuel-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.2.4",
+    "theme": "Visuel — Distance mur HHP",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "En classe HHP (risque grave de production), la distance MAX sprinkleur-mur parallèle est :",
+    "propositions": [
+      "1,5 m",
+      "1,8 m",
+      "2,0 m",
+      "2,3 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §13.2.4 R1 2025 fixe la distance MAX à 1,8 m en HHP et HHS. La densité élevée et la rapidité d'extension d'un feu en risque grave imposent un maillage plus serré, donc une distance plus courte au mur. En audit, NE PAS confondre LH (2,3 m), OH (2,0 m) et HHP/HHS (1,8 m).",
+    "reference": "R1 §13.2.4 / T6.1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-visuel-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.2.4",
+    "theme": "Visuel — Distance min cloison",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la distance horizontale MINIMUM entre un sprinkleur et une cloison ou un mur ?",
+    "propositions": [
+      "5 cm",
+      "10 cm",
+      "15 cm",
+      "30 cm"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §13.2.4 R1 2025 impose une distance MINIMUM DE 15 cm entre la tête et la cloison/mur. En dessous, le mur perturbe la formation du cône d'eau et la circulation du panache thermique au-dessus du sprinkleur (retard de déclenchement, distribution déformée).",
+    "reference": "R1 §13.2.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-visuel-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Visuel — Ans sprinkleur > 30 ans",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous identifiez des sprinkleurs datés de 1992 sur une installation R1. Action ?",
+    "propositions": [
+      "Conforme : pas de limite d'âge tant que pas de corrosion",
+      "NC sans risque : remplacement préventif recommandé",
+      "NC avec risque : remplacement obligatoire — au-delà de 30 ans, fiabilité non garantie",
+      "Aucune action — la R1 ne fixe pas d'âge limite"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §3.7 et §18.9 R1 2025 imposent le remplacement des têtes > 30 ans lors de la révision trentenaire. Des têtes de 1992 (33 ans en 2025) doivent être remplacées. C'est une NC AVEC RISQUE D'ÉCHEC : le mécanisme bulbe/lien fusible n'est plus garanti dans le temps.",
+    "reference": "R1 §3.7 / §18.9 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-visuel-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Visuel — Sprinkleur déformé",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous trouvez un sprinkleur dont le déflecteur est légèrement plié (probablement choc lors de manutention). Conclusion ?",
+    "propositions": [
+      "Conforme : la fonction thermique n'est pas affectée",
+      "NC avec risque d'échec : la déformation altère la distribution d'eau",
+      "Observation §11 : à surveiller au prochain Q1",
+      "NC sans risque uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Un déflecteur déformé modifie le cône de pulvérisation et compromet la couverture conçue (densité au sol non uniforme, zones \"d'ombre\"). C'est une NC AVEC RISQUE D'ÉCHEC : remplacement immédiat. Le risque n'est pas le déclenchement mais la performance d'extinction.",
+    "reference": "R1 §13.3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-visuel-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Visuel — Distance libre stockage 0,8 m",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous mesurez 0,8 m de distance libre entre un stockage et les sprinklers en zone HHS. Conclusion ?",
+    "propositions": [
+      "Conforme : c'est à la limite",
+      "Conforme si la densité hydraulique est suffisante",
+      "NC avec risque d'échec — la distance minimale est de 1 m",
+      "NC sans risque : à régulariser avant prochain Q1"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §9 R1 2025 impose 1 m minimum de distance libre au-dessus du stockage. À 0,8 m, c'est sous le seuil. C'est une NC AVEC RISQUE D'ÉCHEC selon catalogue Q1 (« Distance libre < 1 m au-dessus du sommet du stockage »). Il faut soit baisser le stockage, soit remonter le sprinkler, ou ajouter un réseau intermédiaire.",
+    "reference": "R1 §9 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-visuel-010",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.2.4",
+    "theme": "Visuel — Audit OH > 2 m mur",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En audit OH, un sprinkleur est à 2,5 m du mur parallèle. Action ?",
+    "propositions": [
+      "Conforme : OH admet jusqu'à 2,3 m",
+      "NC : limite OH = 2,0 m, ajouter un sprinkleur ou recentrer",
+      "Conforme si l'espacement entre têtes est respecté",
+      "Observation §11 : à surveiller"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §13.2.4 / T6.1 R1 2025 fixe la limite à 2,0 m maxi en OH. À 2,5 m, c'est non conforme : la zone près du mur risque de ne pas être couverte. Solutions : recentrer la tête, ou ajouter un sprinkleur dédié près du mur. À NE PAS confondre avec la limite LH (2,3 m).",
+    "reference": "R1 §13.2.4 / T6.1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-vanne-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.6",
+    "theme": "Vannes — Position normale",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon la R1 2025, les vannes principales de barrage doivent normalement être :",
+    "propositions": [
+      "Fermées",
+      "Ouvertes et scellées",
+      "À demi-ouvertes",
+      "Au choix de l'exploitant"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §4.6 R1 2025 impose que les vannes principales soient OUVERTES et SCELLÉES en position ouverte. C'est la position de service nominal. Toute fermeture = mise hors service = N100 obligatoire.",
+    "reference": "R1 §4.6 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-vanne-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.6",
+    "theme": "Vannes — Contrôle scellés",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Que doit-on vérifier sur les scellés de vannes lors d'un Q1 ?",
+    "propositions": [
+      "Uniquement leur présence",
+      "Présence + intégrité (non rompus, non manipulés)",
+      "Présence + date d'apposition < 3 mois",
+      "Couleur conforme à la charte CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.4.1 R1 2025 impose la vérification de la PRÉSENCE et de l'INTÉGRITÉ des scellés. Un scellé rompu = vanne potentiellement manipulée = mise hors service non documentée. C'est un point capital de chaque Q1.",
+    "reference": "R1 §18.4.1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-vanne-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.6",
+    "theme": "Vannes — Cadenas seul",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une vanne principale peut-elle être sécurisée uniquement par un cadenas (sans scellé) ?",
+    "propositions": [
+      "Oui, le cadenas suffit",
+      "Non, cadenas + scellé sont exigés",
+      "Oui si la clé est en lieu sécurisé",
+      "Oui sur les vannes secondaires uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §4.6 R1 2025 exige cadenas ET scellé pour les vannes principales. Le cadenas empêche la manipulation, le scellé trace toute intervention (rupture = manipulation détectée). Les deux sont complémentaires.",
+    "reference": "R1 §4.6 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-vanne-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.6",
+    "theme": "Vannes — Vanne entre poste et réseau",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une vanne d'isolement située ENTRE le poste de contrôle et le réseau de sprinkleurs (vanne secondaire) doit-elle être scellée ?",
+    "propositions": [
+      "Non, elle n'est pas concernée par le scellement",
+      "Oui, position ouverte, cadenassée et scellée",
+      "Seulement si > DN 100",
+      "Au choix de l'installateur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Toutes les vannes pouvant isoler une partie du réseau sprinkleur — qu'elles soient principales OU secondaires (entre poste et réseau, entre nourrice et postes) — doivent être en position ouverte, cadenassées et scellées. Une vanne secondaire fermée = zone privée d'eau = NC.",
+    "reference": "R1 §4.6 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-vanne-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.6",
+    "theme": "Vannes — Audit scellé rompu",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous trouvez un scellé rompu sur une vanne principale, qui est néanmoins ouverte. L'exploitant ne sait pas pourquoi. Action ?",
+    "propositions": [
+      "Conforme : la vanne est ouverte, c'est l'essentiel",
+      "Observation §11 : remplacer le scellé",
+      "NC : impossibilité de tracer une éventuelle manipulation, traçabilité rompue",
+      "Recommandation : changer le scellé à la prochaine intervention"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Un scellé rompu = perte de traçabilité. Même si la vanne est ouverte AU MOMENT du contrôle, on ne peut pas affirmer qu'elle ne l'a pas été entretemps (peut-être pendant l'incendie hypothétique). Le §18.4.1 R1 2025 impose la vérification d'intégrité des scellés : rompu = NC à reporter avec demande d'enquête interne.",
+    "reference": "R1 §4.6 / §18.4.1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-vanne-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.6",
+    "theme": "Vannes — Pression amont aval",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Lors du Q1, on relève au poste de contrôle :",
+    "propositions": [
+      "Uniquement la pression amont (avant le poste)",
+      "Uniquement la pression aval (après le poste)",
+      "Les deux pressions, amont et aval",
+      "Aucune mesure pression au poste"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.4.3 R1 2025 impose le relevé DES PRESSIONS AMONT ET AVAL au poste de contrôle. La différence indique le bon état du clapet d'alarme et permet de détecter une fuite interne ou un encrassement. C'est une opération de routine Q1.",
+    "reference": "R1 §18.4.3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-vanne-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4",
+    "theme": "Vannes — Test alarmes reports",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pendant un Q1, quels tests sont à réaliser sur les alarmes et reports ?",
+    "propositions": [
+      "Aucun test : c'est annuel uniquement",
+      "Uniquement les alarmes feu",
+      "Toutes les alarmes (feu + dérangements) un par un",
+      "Uniquement un test global sans détail"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.4.3 R1 2025 impose le test de TOUTES les alarmes et reports UN PAR UN — alarme feu mais aussi tous les dérangements (perte pression, manque eau, perte 230 V, surveillance vanne…). Le test global ne permet pas de détecter une alarme isolée défectueuse.",
+    "reference": "R1 §18.4.3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-vanne-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4",
+    "theme": "Vannes — Manomètre enregistreur",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le manomètre enregistreur (bande) doit être :",
+    "propositions": [
+      "Remplacé chaque semaine",
+      "Remplacé chaque mois",
+      "Soit remplacement bande, soit vérification adéquation manomètre électronique avec manomètre étalonné",
+      "Pas concerné par les contrôles Q1"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.4.3 R1 2025 impose le REMPLACEMENT GRAPHIQUE manomètre bande OU vérification adéquation manomètre électronique (par comparaison avec manomètre de référence étalonné). La bande est archivée 1 an minimum (§15.2). C'est la mémoire des variations de pression du réseau.",
+    "reference": "R1 §18.4.3 / §15.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-vanne-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "15.2",
+    "theme": "Vannes — Archivage manomètre",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pendant combien de temps les bandes du manomètre enregistreur doivent-elles être archivées ?",
+    "propositions": [
+      "3 mois",
+      "6 mois",
+      "1 an minimum",
+      "5 ans"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §15.2 R1 2025 impose un archivage des bandes manomètre d'AU MOINS 1 AN. Cela permet de reconstituer l'historique des pressions du réseau et d'identifier des incidents tracés (chutes anormales, pics liés à coups de bélier, etc.).",
+    "reference": "R1 §15.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-source-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Sources — Essai Q100% pompe",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "L'essai hebdomadaire de la pompe doit être réalisé :",
+    "propositions": [
+      "À débit nul",
+      "À Q50% (mi-régime)",
+      "À Q100% (débit nominal)",
+      "À Q130% (sur-débit)"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §18.4 R1 2025 impose un essai hebdomadaire à Q100% (débit nominal de la pompe), de 10 min en électrique et 20 min en diesel. C'est cet essai en charge nominale qui valide la performance réelle, et non un simple test à vide.",
+    "reference": "R1 §18.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-source-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.8",
+    "theme": "Sources — Courbes Q0/Q100/Q130",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les courbes d'essai des sources comportent obligatoirement les points :",
+    "propositions": [
+      "Q0% uniquement",
+      "Q0% et Q100%",
+      "Q0%, Q100% et Q130%",
+      "Q50% et Q100%"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §3.8 R1 2025 exige les courbes essai aux trois points : Q0% (débit nul, pression statique), Q100% (débit nominal, pression nominale), Q130% (sur-débit, vérification de marge). Ces trois points permettent de tracer la courbe complète et de vérifier la pérennité hydraulique de la source.",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-source-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "Sources — Modification source",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'exploitant vous informe qu'il a remplacé la source B redondante par une source moins performante pour réduire les coûts. Que faites-vous ?",
+    "propositions": [
+      "Conforme si la source remplaçante répond aux Si1",
+      "NC avec risque d'échec : modification de source = nouvelle VdC obligatoire + dossier",
+      "Observation §11 : informer CNPP",
+      "Conforme tant que les essais hebdomadaires passent"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Toute modification d'une source d'eau (notamment source B) impose une NOUVELLE VdC selon §3.4 R1 2025 (cas nécessitant VdC : installation ou remplacement d'une source B, modification hydraulique source B). C'est une NC AVEC RISQUE D'ÉCHEC selon catalogue Q1 (« Source B.8 absente — remplacée par une source moins redondante »).",
+    "reference": "R1 §3.4 / §8 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-source-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Sources — Audit manomètre périmé",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous identifiez un manomètre de source sans étalonnage daté, posé il y a 5 ans. Action ?",
+    "propositions": [
+      "Conforme : il fonctionne visuellement",
+      "NC : remplacement obligatoire tous les 3 ans selon §18.7",
+      "Observation §11 : à remplacer à la prochaine intervention",
+      "Conforme tant que la lecture est cohérente avec d'autres manomètres"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.7 R1 2025 impose le remplacement des manomètres de sources tous les 3 ans. À 5 ans, c'est dépassé : la précision n'est plus garantie. NC à reporter. Sans manomètre fiable, toutes les mesures Q1 sur les sources deviennent suspectes.",
+    "reference": "R1 §18.7 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-source-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "12.1",
+    "theme": "Sources — Vérification pompe avant essai",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Avant tout essai de pompe, l'exploitant doit vérifier :",
+    "propositions": [
+      "Cadenas et scellés sur toutes les vannes du circuit pompe",
+      "Niveau du réservoir + pression d'alimentation",
+      "État général de la pompe + absence de fuite",
+      "Aucune vérification préalable n'est exigée"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Avant un essai pompe, plusieurs vérifications préalables : cadenas/scellés sur les vannes du circuit (§4.6), niveau réserve et pression alimentation (§9, §12), état général + fuites visibles. Si une vanne est fermée pendant l'essai, on risque la cavitation ou l'absence de débit mesurable.",
+    "reference": "R1 §12.1 / §4.6 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-source-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "12.1",
+    "theme": "Sources — Lacunes S1A",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous constatez en Q1 que les S1A SOURCES manquent sur 6 semaines consécutives. Classification ?",
+    "propositions": [
+      "Observation §11 simple",
+      "NC sans risque : à régulariser avant prochain Q1",
+      "NC AVEC RISQUE D'ÉCHEC : lacunes hebdomadaires multiples",
+      "Information à l'exploitant uniquement"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §12.1 R1 2025 et catalogue Q1 classent les « S1A non renseignés — lacunes hebdomadaires multiples » en NC AVEC RISQUE D'ÉCHEC (🔴). Sans tracabilité d'entretien sur 6 semaines, on ne peut pas garantir que la pompe a été testée, que les niveaux sont OK, etc. Risque pour l'installation.",
+    "reference": "R1 §12.1 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-source-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "Sources — Source unique R1",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une installation R1 peut-elle être alimentée par une source UNIQUE ?",
+    "propositions": [
+      "Oui, toujours",
+      "Oui pour LH uniquement, double source exigée à partir de OH",
+      "Non, double source toujours exigée",
+      "Cela dépend du nombre de têtes"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §8 R1 2025 admet la SOURCE UNIQUE pour les installations LH (risque léger, faible enjeu). À partir de OH (ordinaire), la R1 exige une double source pour redondance. C'est une caractéristique fondamentale du dimensionnement R1 par rapport à d'autres référentiels.",
+    "reference": "R1 §8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-source-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Sources — Réserve gravitaire",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une réserve gravitaire est admise comme source d'eau si :",
+    "propositions": [
+      "Sa capacité dépasse 100 m³",
+      "Elle peut fournir le débit et la pression requis pendant la durée d'autonomie sans appoint",
+      "Elle est uniquement utilisée en LH",
+      "Elle est connectée au réseau de ville"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §9 R1 2025 admet la réserve gravitaire comme source à condition qu'elle puisse fournir Q et P requis pendant l'autonomie sans appoint extérieur. La capacité dépend du calcul Si2. Pas de minimum absolu : tout dépend de la classe et de la zone d'application.",
+    "reference": "R1 §9 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-source-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "8",
+    "theme": "Sources — Source B types",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Parmi les types de sources B (source principale fiable) suivants, lesquels sont admis ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "B.1 : Réseau public d'eau potable avec capacité reconnue",
+      "B.3 : Pompe en aspiration sur réserve",
+      "B.4 : Pompe en charge sur réserve",
+      "B.8 : Réserve d'eau à charge gravitaire",
+      "B.99 : Pompage en rivière non protégée (inexistant en R1)"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "La R1 §8 définit plusieurs types de sources B numérotés : B.1 (réseau public reconnu), B.3 (aspiration), B.4 (en charge), B.8 (gravitaire), entre autres. Le B.99 est une invention pour piéger. La hiérarchie de sources B impose une combinaison redondante (au-delà LH).",
+    "reference": "R1 §8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-source-010",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Sources — Si2 modifié sans déclaration",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous constatez sur le dossier que le Si2 a été recalculé en interne par l'exploitant et que le dossier n'a jamais été remis à jour avec ces nouvelles valeurs. Action ?",
+    "propositions": [
+      "Conforme : le Si2 est interne",
+      "Observation §11 : à mettre à jour",
+      "NC avec risque : le dossier technique doit refléter les valeurs hydrauliques réelles — sans ça, impossible de vérifier la conformité",
+      "Aucune action : c'est de la responsabilité de l'installateur"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §3.8 R1 2025 impose que les calculs hydrauliques Si1 et Si2 soient TOUJOURS À JOUR dans le dossier technique. Un Si2 modifié non répercuté = impossible de vérifier la conformité d'aval. NC avec risque selon catalogue Q1 (« Absence répétée du dossier technique »).",
+    "reference": "R1 §3.8 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reg-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.8",
+    "theme": "Registres — Dossier suivi local sources",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le dossier de suivi du système sprinkleur doit être conservé :",
+    "propositions": [
+      "Au bureau du chef de sécurité",
+      "En permanence dans le local des sources",
+      "Sur le poste informatique principal",
+      "Chez l'assureur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.8 R1 2025 impose que le dossier de suivi soit conservé EN PERMANENCE DANS LE LOCAL DES SOURCES. Cela permet l'accès immédiat lors d'intervention, vérification, ou contrôle. Une copie au bureau peut exister, mais l'original reste sur place.",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reg-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Registres — Mentions Q1 obligatoires",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Une NC reportée dans un Q1 doit obligatoirement comporter :",
+    "propositions": [
+      "Le constat précis + l'action corrective demandée",
+      "La référence § R1 applicable",
+      "La date de PREMIÈRE signalisation",
+      "Le nom du responsable de l'exploitation"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Le §18.5 R1 2025 impose pour chaque NC : constat précis, action corrective demandée, référence R1, et DATE DE PREMIÈRE SIGNALISATION (engagement de la responsabilité du vérificateur). Le nom du responsable d'exploitation est plus une bonne pratique qu'une obligation R1 stricte.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reg-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Registres — S1A POSTES vs SOURCES",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les S1A POSTES tracent les opérations sur :",
+    "propositions": [
+      "Les sources d'eau (pompes, réserves)",
+      "Les postes de contrôle (vannes, gong, manomètres)",
+      "Les sprinkleurs individuellement",
+      "L'ensemble des opérations annuelles"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Les S1A POSTES tracent l'entretien hebdomadaire des POSTES DE CONTRÔLE (test gong, pressions, état vannes locales). Les S1A SOURCES tracent les essais hebdomadaires des sources (pompes, niveaux). Deux formulaires distincts mais complémentaires.",
+    "reference": "R1 §18.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reg-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Registres — Conservation S1B",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Combien de Q1 (S1B) doivent rester en permanence dans le dossier de suivi ?",
+    "propositions": [
+      "Le dernier seulement",
+      "Les 2 derniers",
+      "Tous les Q1",
+      "Aucun, ils sont chez CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.8 R1 2025 exige les 2 DERNIERS Q1 dans le dossier de suivi. Cela permet de comparer les NC d'un Q1 à l'autre et de tracer leur levée (ou non). Les anciens Q1 sont archivés ailleurs par CNPP et l'exploitant.",
+    "reference": "R1 §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reg-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Registres — Conclusion Q1",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "La conclusion générale du Q1 (page de garde) doit être :",
+    "propositions": [
+      "Toujours \"conforme\"",
+      "Cohérente avec §10 (NC) et §11 (observations) du même formulaire",
+      "Au choix du vérificateur",
+      "Validée par l'assureur avant édition"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.5 R1 2025 et la grille du formulaire Q1 imposent une CONCLUSION GÉNÉRALE COHÉRENTE avec le détail des NC et observations. Une conclusion « conforme » avec NC avec risque d'échec dans le détail = incohérence grave, susceptible d'invalidation.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reg-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Registres — Levée NC précédente",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous préparez un Q1 et constatez qu'une NC avec risque d'échec du Q1 PRÉCÉDENT n'est pas levée. Action ?",
+    "propositions": [
+      "Vous la reportez à nouveau comme NC sans risque (en cours de levée)",
+      "Vous la reportez à nouveau comme NC AVEC RISQUE, avec date de 1ère signalisation = celle du Q1 précédent",
+      "Vous n'en reparlez pas dans le Q1 actuel",
+      "Vous lui donnez un délai supplémentaire de 6 mois"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Une NC avec risque non levée doit IMPÉRATIVEMENT être reportée à l'identique (avec sa date de 1ère signalisation antérieure) sur le Q1 actuel. Plus le délai s'allonge, plus la responsabilité de l'exploitant ET du vérificateur s'engage. Ne JAMAIS minimiser une NC qui se répète.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reg-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Registres — Page de garde",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Quels éléments doivent figurer sur la PAGE DE GARDE d'un Q1 ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Éditions R1 applicables cochées",
+      "Dates : mise en service, VdC, dernier N1, N° PAA",
+      "Installateurs d'origine et actuel renseignés",
+      "Conclusion générale cohérente",
+      "Le bilan financier annuel de l'installation"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Selon le guide vérificateur, la page de garde Q1 contient : éditions R1 cochées (§1), dates clés (mise en service, VdC, N1, PAA — §3.4), installateurs d'origine et actuel (§3), conclusion générale (§18.5). Le bilan financier n'a évidemment pas sa place.",
+    "reference": "R1 §18.5 / Guide vérificateur (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reg-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "19",
+    "theme": "Registres — Tableau §1 modifications",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'exploitant vous informe avoir étendu l'installation de 50 têtes depuis le dernier Q1, mais le tableau §1 du formulaire n'est pas renseigné. Action ?",
+    "propositions": [
+      "Conforme : l'extension est minime",
+      "NC : le tableau §1 doit être renseigné dès toute modification déclarée par l'exploitant",
+      "Observation §11 uniquement",
+      "Conforme tant que l'extension est < 200 têtes (pas de VdC requise)"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §19 R1 2025 et le guide vérificateur imposent le renseignement du tableau §1 dès qu'il y a modification déclarée — qu'elle déclenche une VdC ou non. C'est la trace écrite des évolutions. Même 50 têtes (sous le seuil 200 de VdC) doivent être renseignées. NC à reporter.",
+    "reference": "R1 §19 / §3.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reg-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3",
+    "theme": "Registres — Identification installateur",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Sur la page de garde du Q1, on doit identifier :",
+    "propositions": [
+      "Uniquement l'installateur actuel",
+      "L'installateur d'origine ET l'installateur actuel",
+      "Uniquement l'installateur d'origine",
+      "Le seul installateur certifié IF1 ayant validé la dernière modification"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3 R1 2025 (et la grille Q1) impose l'identification des DEUX installateurs : d'origine (lors de la pose initiale) et actuel (qui assure la maintenance). Cette double identification permet de tracer les responsabilités en cas de défauts liés à la pose vs liés à la maintenance.",
+    "reference": "R1 §3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reg-010",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "1",
+    "theme": "Registres — Événements depuis dernière visite",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Dans la rubrique §1 du formulaire Q1 (\"Événements et modifications\"), on doit notamment indiquer :",
+    "propositions": [
+      "Tout fonctionnement sur incendie, explosion ou accidentel depuis la visite précédente",
+      "Toute mise hors service > 72 h (N100 établi ?)",
+      "Toutes les extensions/modifications déclarées par l'exploitant (tableau)",
+      "Modifications de sources d'eau depuis mise en service (oui/non)",
+      "Le chiffre d'affaires de l'exploitant"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Le §1 du formulaire Q1 trace : fonctionnement sur sinistre, mises hors service > 72 h (avec N100 ?), extensions/modifications, modifications de sources. C'est le « tableau de bord » des événements de la période. Le CA n'a évidemment rien à faire ici.",
+    "reference": "Formulaire Q1 §1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Pièges — Sprinkleur peint",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous comptez 12 sprinkleurs entièrement recouverts de peinture après travaux de plafond. Classification et action ?",
+    "propositions": [
+      "Observation §11 : à nettoyer à la prochaine intervention",
+      "NC sans risque : grattage suffisant",
+      "NC AVEC RISQUE : remplacement obligatoire des 12 têtes",
+      "Conforme si la peinture est récente (< 6 mois)"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Un sprinkleur peint est une NC AVEC RISQUE D'ÉCHEC. La peinture peut isoler thermiquement le bulbe et empêcher (ou retarder de façon imprévisible) le déclenchement. La R1 §13.3 et le catalogue Q1 imposent le REMPLACEMENT (pas le nettoyage, jugé non fiable car on ne sait pas si la peinture a pénétré dans le mécanisme).",
+    "reference": "R1 §13.3 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9.2",
+    "theme": "Pièges — Marchandises incompatibles ESFR",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En audit d'un entrepôt protégé ESFR, vous trouvez du stockage HHS#5 (aérosols cat. 3) en zone protégée par les seuls ESFR sans réseau intermédiaire. Action ?",
+    "propositions": [
+      "Conforme : ESFR couvre tous les types de stockage",
+      "Observation §11 : étudier l'ajout d'un réseau intermédiaire",
+      "NC AVEC RISQUE D'ÉCHEC : ESFR INSUFFISANT pour HHS#5/aérosols sans réseau intermédiaire",
+      "NC sans risque : modifier le stockage"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §9.2 R1 2025 et catalogue Q1 sont catégoriques : HHS#5, aérosols cat. 3, pneumatiques NE DOIVENT PAS être stockés sous ESFR seul. Un réseau intermédiaire (in-rack) est requis pour atteindre l'extinction. C'est une NC AVEC RISQUE D'ÉCHEC majeure, signalée systématiquement.",
+    "reference": "R1 §9.2 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4.6",
+    "theme": "Pièges — Vanne fermée non scellée",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En audit, vous découvrez une vanne de barrage principale fermée et sans scellé. L'exploitant explique \"avoir oublié\" depuis 2 mois. Action immédiate ?",
+    "propositions": [
+      "Demander à l'exploitant de la rouvrir devant vous",
+      "Reporter en NC sans risque",
+      "NC AVEC RISQUE — l'installation est DE FAIT mise hors service depuis 2 mois sans N100",
+      "Conforme si la zone protégée a été désaffectée"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Une vanne principale fermée depuis 2 mois sans N100 = mise hors service NON DOCUMENTÉE de 2 mois. C'est un défaut majeur. Le rapport Q1 doit indiquer : (1) NC avec risque d'échec, (2) absence de N100 sur la période, (3) responsabilité de l'exploitant engagée vis-à-vis assureur. Ne JAMAIS demander à l'exploitant de manipuler la vanne durant la visite (c'est sa responsabilité).",
+    "reference": "R1 §4.6 / §18.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.2",
+    "theme": "Pièges — Obstruction tardive",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Une mezzanine a été ajoutée DEPUIS la dernière visite, créant une obstruction sous les sprinkleurs existants. Cette modification n'est pas dans le tableau §1. Action ?",
+    "propositions": [
+      "Conforme : la mezzanine est légère",
+      "Observation §11 : déclaration administrative à régulariser",
+      "NC : modification non déclarée + obstruction des sprinkleurs (couverture compromise)",
+      "Conforme si la mezzanine ne masque que < 50 % des têtes"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Double NC : (1) modification non déclarée — tableau §1 non renseigné, §19 R1 2025 ; (2) obstruction des sprinkleurs sous la mezzanine — couverture non assurée, §13.2. Il faut soit ajouter un réseau sous mezzanine, soit retirer celle-ci. À reporter avec gravité selon l'étendue de la zone affectée.",
+    "reference": "R1 §19 / §13.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "19.2.4",
+    "theme": "Pièges — Sonde T° basse modifications",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "À partir de combien de têtes modifiées (extension cumulée) une sonde T° basse devient-elle obligatoire ?",
+    "propositions": [
+      "10 têtes",
+      "20 têtes",
+      "31 têtes",
+      "50 têtes"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §19.2.4 R1 2025 impose une sonde T° basse obligatoire dès 31 têtes modifiées (extension cumulée). En dessous, la dispense est admise. Point Q1 souvent oublié sur les sites avec extensions régulières.",
+    "reference": "R1 §19.2.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "19.2.5",
+    "theme": "Pièges — VdC + N1 nouveau",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "À partir de combien de têtes ajoutées une nouvelle visite de conformité CNPP et un nouveau N1 deviennent-ils requis ?",
+    "propositions": [
+      "100 têtes",
+      "150 têtes",
+      "> 200 têtes",
+      "> 500 têtes"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §19.2.5 R1 2025 (depuis 2002) impose une nouvelle VdC + N1 dès que l'extension dépasse 200 têtes. C'est un seuil charnière pour l'exploitant qui doit budgétiser ces interventions. En dessous, l'extension peut être traitée en simple modification.",
+    "reference": "R1 §19.2.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.4",
+    "theme": "Pièges — Extensions cumulées 500 têtes",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quand une nouvelle VdC est-elle requise même sans extension > 200 têtes en une seule fois ?",
+    "propositions": [
+      "Tous les 10 ans",
+      "Dès que les extensions cumulées totalisent > 500 têtes depuis la dernière VdC",
+      "Jamais — seul le seuil unitaire 200 compte",
+      "Tous les 30 ans uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.4 R1 2025 impose une nouvelle VdC : (a) extension > 200 têtes en une fois, (b) installation/remplacement source B, (c) modification hydraulique source B, (d) révision trentenaire, (e) EXTENSIONS CUMULÉES > 500 têtes depuis la dernière VdC. Cumul important à tracer.",
+    "reference": "R1 §3.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Pièges — Seuil têtes non-certifié",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel pourcentage maximum de têtes non-certifiées CNPP peut être admis par poste et par an (hors ESFR/CMSA) ?",
+    "propositions": [
+      "Aucune, certification obligatoire à 100 %",
+      "5 têtes/poste/an maximum",
+      "10 % du nombre total",
+      "20 % du nombre total"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le guide vérificateur (depuis 1898) admet jusqu'à 5 têtes non-certifiées par poste et par an (hors ESFR et CMSA qui nécessitent toujours du certifié). Cette tolérance permet le remplacement d'urgence quand la tête certifiée exacte n'est pas disponible. Au-delà, NC.",
+    "reference": "Guide R1 Vérificateur (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "1",
+    "theme": "Pièges — Fonctionnement sur incendie",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'exploitant vous informe que l'installation s'est déclenchée sur un incendie il y a 4 mois, sans le mentionner dans le Q1 précédent. Action ?",
+    "propositions": [
+      "Conforme : le déclenchement a réussi son rôle",
+      "Observation §11 : à mentionner dans le rapport en cours",
+      "NC : tout fonctionnement sur incendie depuis dernière visite DOIT être déclaré au §1 du Q1, plus PV de remise en état requis",
+      "Conforme si le sinistre est clos"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §1 du formulaire Q1 impose la déclaration de tout fonctionnement (incendie, explosion, accidentel) depuis la visite précédente. Sans cette déclaration, le Q1 précédent était incomplet (NC rétroactive). De plus, après tout déclenchement : PV de remise en état, vérification des têtes ayant fonctionné, contrôle des sources. Point critique.",
+    "reference": "Formulaire Q1 §1 / R1 §18.6 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-010",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13.3",
+    "theme": "Pièges — Tête de réserve manquante",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'exploitant a un stock de seulement 4 têtes de rechange OH (au lieu de 24). Action ?",
+    "propositions": [
+      "Conforme : c'est un stock de sécurité",
+      "NC : stock OH = 24 têtes minimum",
+      "Conforme si une commande est en cours",
+      "Observation §11 : à compléter à la prochaine intervention"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.8 R1 2025 et catalogue Q1 imposent un stock de 24 têtes pour OH. À 4 têtes, c'est non conforme : en cas d'éclatement multiple ou de modifications, le stock est insuffisant. NC à reporter avec demande de réapprovisionnement immédiat.",
+    "reference": "R1 §3.8 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-011",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "1",
+    "theme": "Pièges — Activité changée",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'exploitant a changé son activité (entrepôt vide → stockage HHS) sans déclaration ni recalcul. Action ?",
+    "propositions": [
+      "Conforme tant qu'aucun sinistre n'a eu lieu",
+      "NC AVEC RISQUE : changement d'activité = recalcul Si1/Si2 et probablement nouvelle VdC obligatoires",
+      "Observation §11 : à régulariser",
+      "Conforme si les sprinkleurs ne sont pas modifiés"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Tout changement d'activité, de produits, d'emballages, de modes ou de hauteurs impose un recalcul Si1/Si2. Passer de \"vide\" à HHS implique souvent un changement de classe (LH → HHS), donc débit/densité non adaptés. NC AVEC RISQUE D'ÉCHEC selon catalogue Q1 (incompatibilité produit/classement).",
+    "reference": "R1 §1 / §6 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-012",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "11.3",
+    "theme": "Pièges — Source électrique non dédiée",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "La pompe électrique est alimentée par un câble qui passe par le tableau général de l'établissement avant d'arriver à la pompe. Conforme ?",
+    "propositions": [
+      "Conforme : tant que l'alimentation arrive",
+      "NC : l'alimentation pompe doit être dédiée et indépendante de l'alimentation générale",
+      "Conforme si le tableau général est protégé contre l'incendie",
+      "Observation §11"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §11.3 R1 2025 impose une alimentation électrique DÉDIÉE à la pompe sprinkleur, indépendante du tableau général. Sinon, une coupure générale (ou un incendie sur le tableau lui-même) prive la pompe d'énergie au pire moment. NC importante à reporter.",
+    "reference": "R1 §11.3 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-013",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "4",
+    "theme": "Pièges — Réunion ESFR avant installation",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Un site a installé des sprinklers ESFR sans tenir la réunion préalable de fiche contact ESFR avec CNPP. Conséquence Q1 ?",
+    "propositions": [
+      "Conforme : la réunion est une recommandation",
+      "Observation §11 : à régulariser",
+      "NC : la réunion fiche contact ESFR avec CNPP est obligatoire AVANT installation (niveau de risque 🟠)",
+      "Conforme si l'installateur est certifié IF1"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "L'installation d'ESFR impose une réunion préalable de fiche contact entre installateur, CNPP et exploitant pour valider l'adéquation produit/risque. Le catalogue Q1 classe ce manquement en niveau 🟠 (orange — NC sans risque mais à régulariser). Sans cette validation, l'ESFR peut être inadapté.",
+    "reference": "R1 §1 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-014",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Pièges — Gong remplacé par alarme électrique",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Le gong hydraulique a été supprimé et remplacé par une simple alarme électrique. Conforme ?",
+    "propositions": [
+      "Conforme : l'alarme électrique est plus moderne",
+      "NC : le gong hydraulique est imposé en plus de l'alarme électrique (alarme physique autonome, ne dépend pas du 230 V)",
+      "Conforme si l'alarme électrique est sur ASS",
+      "Observation §11"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §4.8 R1 2025 impose un gong hydraulique fonctionnel comme alarme physique autonome. C'est une alarme qui sonne du seul fait de l'eau qui circule, sans dépendre du 230 V ou de la batterie. L'alarme électrique est COMPLÉMENTAIRE, pas substituable. NC à reporter.",
+    "reference": "R1 §4.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-piege-015",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "12.1",
+    "theme": "Pièges — Tension batterie diesel",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "La tension statique des batteries diesel mesurée pendant le Q1 est de 11,8 V (pour batterie 12 V). Conforme ?",
+    "propositions": [
+      "Conforme : c'est très proche de 12 V",
+      "NC : seuil minimal R1 = 12,5 V (statique)",
+      "Conforme si la tension monte en charge",
+      "Observation §11 : à surveiller"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.4.2 R1 2025 (Annexe IV) impose une tension statique minimale de 12,5 V pour une batterie 12 V (et 25 V pour une 24 V). À 11,8 V, la batterie est en sous-tension, risque de défaillance lors d'un démarrage urgence pompe diesel. NC à reporter, généralement avec changement de batterie.",
+    "reference": "R1 §18.4.2 / Annexe IV (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reserve-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Réserves — Niveau hebdomadaire",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "À quelle fréquence le niveau de la réserve d'eau doit-il être contrôlé ?",
+    "propositions": [
+      "Quotidien",
+      "Hebdomadaire (S1A)",
+      "Mensuel",
+      "Trimestriel"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.4 R1 2025 impose un contrôle hebdomadaire du niveau de réserve, tracé sur le S1A SOURCES. Cela permet de détecter une fuite progressive ou un défaut du système de remplissage avant qu'il ne devienne critique.",
+    "reference": "R1 §18.4 / S1A SOURCES (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reserve-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Réserves — Audit niveau bas",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous constatez que la réserve est à 75 % de son niveau nominal lors du Q1. Conclusion ?",
+    "propositions": [
+      "Conforme : variation normale",
+      "Conforme si la consommation est tracée (essais, fuites mineures)",
+      "NC sans risque : à compléter avant prochain Q1",
+      "NC AVEC RISQUE : niveau insuffisant pour assurer l'autonomie réglementaire"
+    ],
+    "bonnes_reponses": [
+      3
+    ],
+    "explication": "Le §9 R1 2025 exige le niveau NOMINAL en permanence — pas un niveau dégradé. À 75 %, l'autonomie réglementaire (calculée Si2) n'est plus garantie. NC AVEC RISQUE D'ÉCHEC : si un sinistre survient sur cette période, l'extinction peut être interrompue avant la durée prévue.",
+    "reference": "R1 §9 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reserve-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Réserves — Charge nourrice",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "La nourrice (collecteur entre les sources et les postes) doit être :",
+    "propositions": [
+      "Sous pression statique en permanence",
+      "Sous pression dynamique en marche",
+      "Vide entre deux essais",
+      "Au choix de l'installateur"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "La nourrice doit être en charge (sous pression statique) en permanence. C'est ce qui permet à la première goutte d'eau d'arriver immédiatement au poste lors d'un déclenchement, sans temps de remplissage. Une nourrice vide = délai d'asservissement allongé = NC.",
+    "reference": "R1 §4 / §11 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reserve-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Réserves — Pression nourrice",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quand vérifie-t-on la pression de la nourrice ?",
+    "propositions": [
+      "Uniquement lors de la VdC initiale",
+      "Lors de chaque essai hebdomadaire (S1A SOURCES)",
+      "Tous les 6 mois lors du Q1 uniquement",
+      "Jamais : c'est l'installateur qui gère"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "La pression de la nourrice fait partie des relevés HEBDOMADAIRES sur le S1A SOURCES. Une chute progressive de pression peut indiquer une fuite, un défaut de jockey pump, ou une pollution de la pression d'alimentation. C'est un indicateur précoce.",
+    "reference": "R1 §18.4 / S1A SOURCES (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reserve-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Réserves — Jockey pump",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "La pompe de maintien de pression (jockey pump) sert à :",
+    "propositions": [
+      "Démarrer en cas d'incendie pour fournir le débit nominal",
+      "Maintenir la pression nourrice en compensant les micro-fuites",
+      "Remplir la réserve d'eau",
+      "Activer l'alarme"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "La jockey pump est une PETITE pompe qui maintient la pression de la nourrice en compensant les micro-fuites inévitables. Elle n'a pas vocation à fournir le débit incendie : sur déclenchement, la chute de pression franchit le seuil de démarrage des grosses pompes (électrique/diesel) qui prennent le relais.",
+    "reference": "R1 §11 / §12 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reserve-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Réserves — Jockey démarrages excessifs",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous constatez que la jockey pump démarre 30 fois par jour (relevé sur S1A). Conclusion ?",
+    "propositions": [
+      "Conforme : c'est sa fonction de cycler",
+      "NC : démarrages excessifs = fuite anormale sur le réseau, à investiguer",
+      "Observation §11 : à surveiller",
+      "Conforme si la pression nominale est maintenue"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Une jockey pump qui démarre 30×/jour cycle bien plus que normal (typiquement quelques démarrages/jour pour compenser les fuites résiduelles). Cela indique une fuite importante non identifiée sur le réseau. NC à reporter avec demande d'investigation et de réparation.",
+    "reference": "R1 §11 / §12 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-reserve-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9",
+    "theme": "Réserves — Trop-plein réserve",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous constatez que le trop-plein de la réserve déborde régulièrement. Action ?",
+    "propositions": [
+      "Conforme : le trop-plein évacue le surplus",
+      "NC : un trop-plein qui fonctionne en routine indique un défaut du flotteur ou un appoint mal réglé",
+      "Observation §11 : à régler à la prochaine intervention",
+      "Conforme si la réserve est au niveau"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le trop-plein est un dispositif de SÉCURITÉ : il doit fonctionner UNIQUEMENT en cas de défaillance du système d'appoint principal (flotteur bloqué, vanne d'appoint défectueuse). Un trop-plein qui déborde en routine = défaut à corriger. Sinon : risque d'inondation et gel hivernal.",
+    "reference": "R1 §9 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Pompe — Démarrage automatique",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Lors d'un essai hebdomadaire, comment doit s'effectuer le démarrage de la pompe ?",
+    "propositions": [
+      "Démarrage manuel direct au tableau",
+      "Démarrage automatique par chute de pression (test pressostat)",
+      "Démarrage par bouton-poussoir uniquement",
+      "Démarrage par commande à distance"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.4 R1 2025 impose l'essai du démarrage AUTOMATIQUE de la pompe en provoquant une chute de pression (vanne d'essai). C'est le mode réel d'engagement en cas d'incendie. Un démarrage manuel ne valide pas la chaîne pressostat → contacteur → démarreur.",
+    "reference": "R1 §18.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Pompe — Seuil pressostat",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le seuil de démarrage du pressostat principal de pompe est typiquement :",
+    "propositions": [
+      "Identique à la pression nominale",
+      "Légèrement inférieur à la pression nominale (chute de 0,5 à 1,5 bar)",
+      "À 0 bar (démarrage uniquement sur perte totale)",
+      "À 30 % de la pression nominale"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le pressostat doit déclencher AVANT que la pression ne devienne critique pour l'extinction. Typiquement, seuil = pression nominale - 0,5 à 1,5 bar. Cela permet à la pompe de démarrer dès le début d'un déclenchement (avant que la chute de pression ne s'aggrave). Valeurs précises selon installation.",
+    "reference": "R1 §11.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Pompe — Temps montée pression",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Après démarrage de la pompe, en combien de temps doit-elle atteindre la pression nominale ?",
+    "propositions": [
+      "Immédiatement (< 5 secondes)",
+      "Dans les 30 secondes",
+      "Dans la minute",
+      "Pas de critère R1"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §4.8 R1 2025 impose 30 secondes maximum pour l'arrivée d'eau au 1er sprinkleur. Cela inclut le démarrage pompe + montée en pression + remplissage canalisation jusqu'à la tête. La montée en pression de la pompe se fait en quelques secondes en réalité. Mesure au Point F lors de l'essai triennal.",
+    "reference": "R1 §4.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Pompe — Arrêt manuel obligatoire",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une fois démarrée par chute de pression, comment la pompe s'arrête-t-elle ?",
+    "propositions": [
+      "Automatiquement quand la pression remonte au-dessus du seuil",
+      "Automatiquement après 10 minutes",
+      "Uniquement par arrêt MANUEL au tableau (sécurité incendie)",
+      "Sur commande à distance via alarme"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §11.4 R1 2025 impose l'ARRÊT MANUEL de la pompe principale. Raison : en cas d'incendie réel, on ne veut surtout pas que la pompe s'arrête juste parce que la pression remonte momentanément (sprinkleurs qui résistent quelques secondes). L'arrêt manuel est une décision humaine après confirmation que tout est terminé.",
+    "reference": "R1 §11.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Pompe — Test débit nominal",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "L'essai hebdomadaire à Q100% doit être réalisé avec :",
+    "propositions": [
+      "La vanne d'essai partiellement ouverte (pour économiser l'eau)",
+      "La vanne d'essai entièrement ouverte (Q nominal réel mesuré au débitmètre)",
+      "Une réinjection dans la réserve (boucle fermée)",
+      "Aucun débit : test à vide uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "L'essai à Q100% se fait avec la vanne d'essai EN PLEINE OUVERTURE, débit mesuré au débitmètre intégré ou par mesure de différence de pression sur orifice calibré. Sans débit réel mesuré, on ne valide pas la performance hydraulique de la pompe — on valide juste son démarrage.",
+    "reference": "R1 §18.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Pompe — Diesel temps préchauffe",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un moteur diesel, quel élément doit être fonctionnel AVANT démarrage ?",
+    "propositions": [
+      "La climatisation cabine",
+      "Le préchauffage (résistance bloc moteur)",
+      "Le démarreur électronique",
+      "Le filtre à particules"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.4.2 R1 2025 (Annexe IV) impose la vérification du préchauffage fonctionnel avant tout essai diesel. Un moteur diesel froid démarre mal — le préchauffage du bloc moteur (résistance électrique permanente) garantit un démarrage rapide et fiable en toutes saisons.",
+    "reference": "R1 §18.4.2 / Annexe IV (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Pompe — Audit absence essai 8 sem",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous découvrez que la pompe électrique n'a pas été testée depuis 8 semaines (S1A vide). Action ?",
+    "propositions": [
+      "Conforme : c'est rattrapable",
+      "NC sans risque : à régulariser la semaine prochaine",
+      "NC AVEC RISQUE : lacunes hebdomadaires multiples, fiabilité pompe non garantie",
+      "Conforme si l'installateur intervient en urgence"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "8 semaines sans essai = lacunes hebdomadaires multiples (catalogue Q1 🔴). La pompe peut avoir un défaut latent (joint sec, blocage clapet) qui ne se révèle qu'à l'usage. Sans essai régulier, on ne peut pas garantir sa fiabilité. NC AVEC RISQUE D'ÉCHEC à reporter.",
+    "reference": "R1 §18.4 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "11",
+    "theme": "Pompe — Réamorçage",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour une pompe en aspiration (B.3), quel équipement garantit le réamorçage en cas de désamorçage ?",
+    "propositions": [
+      "Une vanne de purge manuelle",
+      "Un clapet anti-retour de pied + dispositif d'amorçage automatique",
+      "Aucun, l'amorçage initial suffit",
+      "Un manchon flexible"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §11 R1 2025 pour les pompes en aspiration impose : un clapet de pied (anti-retour) pour maintenir la colonne d'eau, et un dispositif d'amorçage automatique (généralement réservoir d'amorçage avec flotteur ou pompe d'amorçage). Sans cela, après désamorçage, la pompe tourne à sec et ne démarre pas le débit.",
+    "reference": "R1 §11 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "12",
+    "theme": "Pompe — Caractéristiques Q/H",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "La courbe Q/H d'une pompe sprinkleur doit présenter :",
+    "propositions": [
+      "Une pression constante à tout débit",
+      "Une caractéristique stable et continûment décroissante (pression diminue quand débit augmente)",
+      "Une pression maximale à Q100%",
+      "Un palier de débit à pression nulle"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §12 R1 2025 impose que la courbe Q/H soit STABLE et CONTINÛMENT DÉCROISSANTE : à plus grand débit, plus basse pression, sans inversion. Une courbe « instable » (à creux ou à plateau) peut entraîner des oscillations ou des refus de démarrage en charge variable. C'est une caractéristique du dimensionnement initial.",
+    "reference": "R1 §12 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-010",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "12",
+    "theme": "Pompe — Q130% surdébit",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Que représente Q130% sur la courbe d'une pompe sprinkleur ?",
+    "propositions": [
+      "Le débit maximum admissible",
+      "Le débit à 130 % du nominal, utilisé pour vérifier la marge de la pompe",
+      "Le débit pendant un essai prolongé",
+      "Le débit dégradé en mode secours"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Q130% (ou Q1.3) est le débit à 1,3 fois le débit nominal. Il sert à vérifier que la pompe garde une pression suffisante même en surdébit (cas par exemple où plusieurs zones se déclenchent ensemble). Si la pression à Q130% s'effondre, la pompe est sous-dimensionnée ou usée.",
+    "reference": "R1 §12 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-pompe-011",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.4",
+    "theme": "Pompe — Audit pompe ne démarre pas",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors d'un essai, la pompe électrique ne démarre pas malgré la chute de pression. Action immédiate ?",
+    "propositions": [
+      "Reporter en NC mineure et passer à l'essai suivant",
+      "STOP : c'est une NC AVEC RISQUE majeure, intervention installateur IF1 immédiate + N100 si l'installation n'a qu'une source",
+      "Tenter un démarrage manuel et conclure",
+      "Conforme si la diesel démarre en relais"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Une pompe qui ne démarre pas est une défaillance MAJEURE. Si c'est la seule pompe (LH) ou si la diesel est aussi défaillante : l'installation est de FAIT hors service → N100 immédiat + appel installateur IF1 + assureur informé. C'est une situation d'urgence, pas une simple NC à reporter en fin de Q1.",
+    "reference": "R1 §18.4 / §18.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-class-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Classification — NC avec risque",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une « NC avec risque de mise en échec » correspond à :",
+    "propositions": [
+      "Une simple recommandation d'amélioration",
+      "Une non-conformité grave nécessitant une action corrective urgente",
+      "Une observation à classer en bibliothèque",
+      "Un point de discussion avec l'exploitant"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.5 R1 2025 définit la NC avec risque comme une non-conformité grave nécessitant une ACTION CORRECTIVE URGENTE. Date de 1ère signalisation obligatoire. Si elle persiste, le rapport peut être mis en RISQUE (système non garanti). C'est le niveau le plus critique.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-class-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Classification — NC sans risque",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une « NC sans risque de mise en échec » doit être levée :",
+    "propositions": [
+      "Immédiatement",
+      "Avant le prochain Q1 (6 mois)",
+      "Dans l'année",
+      "Dans les 3 ans"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.5 R1 2025 impose la levée des NC SANS RISQUE avant le prochain Q1 (donc dans les 6 mois). Date de 1ère signalisation obligatoire aussi. Si la NC traîne sur plusieurs Q1, elle peut être requalifiée en NC AVEC RISQUE.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-class-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Classification — Observation §11",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une observation §11 dans un Q1 correspond à :",
+    "propositions": [
+      "Une non-conformité critique",
+      "Une amélioration suggérée sans obligation de levée dans un délai fixé",
+      "Un point à exclure du suivi",
+      "Une note interne entre vérificateur et CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.5 R1 2025 définit les observations §11 comme des AMÉLIORATIONS SUGGÉRÉES — sans obligation de levée dans un délai fixé. C'est le niveau le plus léger de la grille : ni NC, ni obligation. Utile pour anticiper, suggérer, sensibiliser sans engager juridiquement.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-class-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Classification — Bon classement",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Classez les constats suivants par criticité décroissante : (1) vanne principale fermée non scellée — (2) rosace de sprinkleur manquante — (3) suggestion d'ajouter une signalisation",
+    "propositions": [
+      "(3) > (2) > (1)",
+      "(1) > (3) > (2)",
+      "(1) > (2) > (3)",
+      "(2) > (1) > (3)"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Ordre correct : (1) NC AVEC RISQUE (vanne fermée = installation hors service), (2) NC SANS RISQUE (rosace = à lever avant prochain Q1), (3) OBSERVATION §11 (suggestion, sans obligation). C'est la grille des 3 niveaux du §18.5 R1 2025.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-class-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Classification — Récurrence",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une NC sans risque qui n'est pas levée sur 3 Q1 consécutifs peut être :",
+    "propositions": [
+      "Ignorée car trop ancienne",
+      "Maintenue à l'identique",
+      "Requalifiée en NC AVEC RISQUE (récurrence = mauvaise gestion)",
+      "Transférée comme observation §11"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Une NC qui persiste sur plusieurs Q1 démontre un défaut de gestion par l'exploitant ou un blocage. La pratique professionnelle veut qu'on la requalifie en NC AVEC RISQUE après plusieurs récurrences, pour accélérer la résolution. À documenter en tant que tel dans le Q1.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-class-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Classification — Audit classement difficile",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous trouvez un sprinkleur avec un défaut visible (frette légèrement déformée) mais sans certitude sur l'impact fonctionnel. Quelle classification ?",
+    "propositions": [
+      "Conforme par principe de précaution",
+      "Observation §11 : à surveiller au prochain Q1",
+      "NC sans risque : remplacement avant prochain Q1 (impact non certifié mais probable)",
+      "NC AVEC RISQUE : remplacement immédiat"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "En cas de défaut visible avec impact incertain mais probable, la pratique prudente est de classer en NC SANS RISQUE : remplacement avant prochain Q1. Cela permet la correction sans paniquer, mais sans laisser traîner non plus. NC AVEC RISQUE serait réservé à un défaut clairement impactant.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-class-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Classification — Vocabulaire R1",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Lequel de ces termes N'EST PAS utilisé dans la classification officielle R1 2025 ?",
+    "propositions": [
+      "NC avec risque de mise en échec",
+      "NC sans risque de mise en échec",
+      "Observation §11",
+      "Anomalie critique majeure"
+    ],
+    "bonnes_reponses": [
+      3
+    ],
+    "explication": "« Anomalie critique majeure » n'est PAS un vocabulaire R1. La classification officielle (§18.5) ne connaît que 3 niveaux : NC avec risque, NC sans risque, Observations §11. Utiliser un vocabulaire approximatif dans un Q1 peut affaiblir la valeur du rapport.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-class-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Classification — Suivi temporel",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour assurer le suivi d'une NC dans le temps, quelle information est OBLIGATOIRE ?",
+    "propositions": [
+      "Le nom de l'exploitant",
+      "La date de 1ère signalisation",
+      "Le coût de la correction estimé",
+      "La signature du chef de sécurité"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §18.5 R1 2025 impose la DATE DE PREMIÈRE SIGNALISATION pour toute NC (avec et sans risque). Sans cette date, on perd la traçabilité du temps écoulé depuis la détection — élément clé pour évaluer la responsabilité de chacun en cas de sinistre.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-rapport-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Rapport — Destinataires",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le rapport Q1 (S1B) doit être transmis à :",
+    "propositions": [
+      "L'exploitant uniquement",
+      "L'assuré (exploitant ou propriétaire) ET CNPP",
+      "L'installateur IF1 uniquement",
+      "L'assureur uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §1.5.2 R1 2025 (Guide vérificateur) impose la transmission du S1B à L'ASSURÉ ET À CNPP dans les 30 jours. L'assureur reçoit l'info via l'assuré ou via CNPP. L'installateur n'est pas destinataire systématique — sauf si NC nécessite son intervention.",
+    "reference": "R1 §1.5.2 / §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-rapport-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Rapport — Forme officielle",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le formulaire Q1 officiel est :",
+    "propositions": [
+      "Libre, au choix du vérificateur",
+      "Le formulaire CNPP officiel, reproduit en Annexe 1 de la R1",
+      "Une simple lettre de constat",
+      "Un PV au format AFNOR"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.5 R1 2025 indique que le formulaire Q1 (compte rendu de vérification semestrielle) est REPRODUIT EN ANNEXE 1 de la R1. C'est un formulaire CNPP officiel, structuré (page de garde, §1 événements, §10 NC, §11 observations…). Toute reformulation libre est à proscrire.",
+    "reference": "R1 §3.5 + Annexe 1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-rapport-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Rapport — Signature E1",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le rapport Q1 doit être signé par :",
+    "propositions": [
+      "L'exploitant uniquement",
+      "Le vérificateur certifié E1 (signature engageant sa responsabilité)",
+      "L'installateur IF1",
+      "Le chef de sécurité"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le vérificateur certifié E1 signe le S1B et engage ainsi sa responsabilité professionnelle. La signature certifie : la réalité de la visite, l'exactitude des constats, la classification des NC, et la date de 1ère signalisation. C'est un acte engageant.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-rapport-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Rapport — Conclusion incohérente",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous relisez un Q1 d'un collègue : conclusion « système conforme » mais §10 liste 3 NC avec risque non levées. Conclusion ?",
+    "propositions": [
+      "Conforme : la conclusion est positive",
+      "Incohérence grave : la conclusion doit refléter les NC. Le rapport est INVALIDE",
+      "Acceptable si l'installateur est intervenu",
+      "Acceptable si l'assureur ne conteste pas"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le guide vérificateur impose une CONCLUSION COHÉRENTE avec le détail §10 (NC) et §11 (observations). Conclure « conforme » avec 3 NC avec risque est une incohérence majeure, susceptible d'invalider le rapport et d'engager la responsabilité du vérificateur (faux en écriture professionnelle).",
+    "reference": "R1 §18.5 / Guide vérificateur (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-rapport-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Rapport — Annexes obligatoires",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Parmi les éléments suivants, lesquels DOIVENT figurer dans le Q1 ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Date et heure de la visite",
+      "Identifiants vérificateur certifié E1 (nom, n° certif)",
+      "Identifiants installation (n° PAA, mise en service)",
+      "Liste des NC avec dates 1ère signalisation",
+      "Conclusion générale signée",
+      "Le coût de la prestation Q1"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explication": "Le formulaire Q1 officiel impose : date/heure visite, identité E1 + certification, identifiants installation (n° PAA, dates clés), liste NC datées, conclusion signée. Le coût de la prestation n'a pas sa place dans le rapport technique (relation commerciale séparée).",
+    "reference": "R1 §18.5 / Annexe 1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-rapport-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Rapport — Mode opératoire visite",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Lors d'une visite Q1, l'ordre logique est :",
+    "propositions": [
+      "Visite physique d'abord, documentation après",
+      "Préparation documentaire AVANT la visite (Q1 précédent, S1A, dossier technique), puis visite physique, puis rédaction",
+      "Rédaction d'abord, visite après pour confirmation",
+      "Aucun ordre imposé"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le guide vérificateur impose une préparation documentaire AVANT la visite : Q1 précédent (NC non levées ?), S1A (lacunes ?), dossier technique (Si1/Si2). Cela permet une visite ciblée et efficace. La rédaction se fait après la visite, avec retour bureau pour vérifier les points incertains.",
+    "reference": "Guide vérificateur (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-rapport-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Rapport — Mise en risque",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Un rapport Q1 « en risque » signifie :",
+    "propositions": [
+      "Le vérificateur n'est plus engagé",
+      "Le système est jugé suffisamment dégradé pour que la garantie d'extinction ne soit plus assurée — alerte majeure assureur",
+      "Une option marketing",
+      "L'installation est désactivée par CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Un rapport « en risque » est l'alerte ultime du vérificateur E1 : NC AVEC RISQUE multiples ou particulièrement graves → la garantie d'extinction n'est plus assurée. L'assureur peut alors demander action corrective immédiate, voire suspendre la couverture. C'est une décision lourde, prise avec discernement.",
+    "reference": "R1 §18.5 / Catalogue Q1 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-rapport-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "18.5",
+    "theme": "Rapport — Délai 30 jours dépassé",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous n'avez pas pu transmettre le S1B dans les 30 jours suite à un retard administratif. Action ?",
+    "propositions": [
+      "Ne pas transmettre : trop tard",
+      "Transmettre dès que possible AVEC justification du retard + mention sur le Q1",
+      "Modifier la date de visite pour cacher le retard",
+      "Demander à l'assuré de signer une décharge"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le délai 30 jours est réglementaire, mais un retard administratif n'invalide pas le contenu du rapport. À TRANSMETTRE DÈS QUE POSSIBLE avec justification écrite. Modifier la date est un faux en écriture, à proscrire absolument. La transparence protège le vérificateur.",
+    "reference": "R1 §18.5 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-statut-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.4",
+    "theme": "Statut — N1 définition",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le certificat N1 d'une installation sprinkleur correspond à :",
+    "propositions": [
+      "Un simple PV interne d'installation",
+      "L'attestation de conformité CNPP suite à la visite de conformité (VdC) — valeur contractuelle vis-à-vis de l'assureur",
+      "Un avis technique d'experts indépendants",
+      "Un label commercial"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le N1 est l'attestation de conformité CNPP, délivrée suite à la VdC en présence de l'assureur apériteur. Sa valeur est CONTRACTUELLE vis-à-vis de la police d'assurance : avec N1, l'installation est reconnue conforme R1. Sans N1, la couverture peut être refusée. Document fondamental.",
+    "reference": "R1 §3.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-statut-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.4",
+    "theme": "Statut — VdC participants",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Lors d'une visite de conformité (VdC), quels participants sont obligatoirement présents ?",
+    "propositions": [
+      "CNPP, l'installateur IF1, le maître d'ouvrage",
+      "Plus l'assureur apériteur (systématiquement convié) — sa présence conditionne la valeur contractuelle du N1",
+      "Uniquement le vérificateur E1",
+      "L'exploitant uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §3.4 R1 2025 impose la présence de CNPP + installateur IF1 + maître d'ouvrage + assureur apériteur (systématiquement convié). Sa présence conditionne la valeur contractuelle du N1. Sans assureur convié, le N1 perd sa portée vis-à-vis de l'assurance.",
+    "reference": "R1 §3.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-statut-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.4",
+    "theme": "Statut — N1 nombre exemplaires",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le N1 est délivré en :",
+    "propositions": [
+      "1 exemplaire unique",
+      "2 exemplaires",
+      "3 exemplaires minimum",
+      "5 exemplaires"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §3.4 R1 2025 prévoit la délivrance du N1 en 3 EXEMPLAIRES MINIMUM : 1 pour le propriétaire/exploitant, 1 pour l'assureur, 1 pour CNPP (archivage). Chaque exemplaire est signé par CNPP.",
+    "reference": "R1 §3.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-statut-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.4",
+    "theme": "Statut — Cas nouvelle VdC",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Une nouvelle VdC est exigée notamment dans les cas suivants : (plusieurs bonnes réponses)",
+    "propositions": [
+      "Extension > 200 têtes",
+      "Installation ou remplacement d'une source B",
+      "Modification hydraulique source B",
+      "Révision trentenaire",
+      "Extensions cumulées > 500 têtes total sur le site depuis dernière VdC",
+      "Changement de gérant du site"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "explication": "Le §3.4 R1 2025 liste les cas : extension > 200 têtes, installation/remplacement source B, modification hydraulique source B, révision trentenaire, et extensions cumulées > 500 têtes. Un changement de gérant n'impose pas de nouvelle VdC (sauf si lui-même change l'activité).",
+    "reference": "R1 §3.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-statut-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.4",
+    "theme": "Statut — Audit N1 absent",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En Q1, vous constatez que le N1 en cours de validité n'est pas présent dans le dossier de suivi. Action ?",
+    "propositions": [
+      "Conforme : ce n'est pas grave",
+      "NC SANS RISQUE : à régulariser",
+      "NC AVEC RISQUE : sans N1 en vigueur, la conformité de l'installation n'est pas démontrée — alerte assureur",
+      "Conforme si l'installateur est certifié IF1"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le §3.8 R1 2025 impose la présence du N1 EN COURS DE VALIDITÉ dans le dossier de suivi. Sans N1, l'installation n'a plus de garantie de conformité reconnue → impact direct sur la couverture d'assurance. NC AVEC RISQUE D'ÉCHEC à reporter.",
+    "reference": "R1 §3.4 / §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-statut-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "3.4",
+    "theme": "Statut — Suspension N1",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le N1 peut être suspendu par CNPP en cas de :",
+    "propositions": [
+      "Désaccord commercial avec l'exploitant",
+      "NC graves non levées entraînant la perte du caractère opérationnel du système",
+      "Demande de l'assureur uniquement",
+      "Changement de propriétaire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "CNPP peut suspendre le N1 si des NC graves non levées font perdre au système son caractère opérationnel (par exemple : source défaillante non remplacée, vannes principales fermées sur durée, dégradations majeures). La suspension est une mesure de sauvegarde, déclenchée sur signalement E1 ou audit CNPP.",
+    "reference": "R1 §3.4 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-trav-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "19",
+    "theme": "Travaux — Déclaration",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Toute modification d'une installation sprinkleur doit être :",
+    "propositions": [
+      "Déclarée à CNPP UNIQUEMENT si > 200 têtes",
+      "Déclarée à l'installateur IF1 et reportée dans le tableau §1 du prochain Q1",
+      "Réalisée discrètement sans formalisme",
+      "Validée par l'assureur uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §19 R1 2025 impose la déclaration de TOUTE modification à l'installateur IF1, et son report dans le tableau §1 du prochain Q1. Le seuil 200 têtes concerne la nécessité d'une nouvelle VdC, pas la déclaration en elle-même. Une modification non déclarée est une NC.",
+    "reference": "R1 §19 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-trav-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "19",
+    "theme": "Travaux — Recalcul Si",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une extension de 30 têtes en zone OH nécessite-t-elle un recalcul Si1/Si2 ?",
+    "propositions": [
+      "Non, c'est négligeable",
+      "Oui : toute extension impose un recalcul hydraulique pour vérifier la cohérence avec les sources",
+      "Uniquement si la zone change de classe",
+      "Uniquement si on dépasse 50 têtes"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §19 R1 2025 impose le recalcul Si1/Si2 pour toute extension, même petite. 30 têtes en plus = densité, débit Q et perte de charge modifiés → il faut vérifier que les sources peuvent toujours suivre. Sans recalcul, on installe à l'aveugle.",
+    "reference": "R1 §19 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-trav-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "19",
+    "theme": "Travaux — Audit modif non tracée",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'exploitant a ajouté 80 têtes pour couvrir une nouvelle zone, sans informer l'installateur IF1, sans déclaration, sans recalcul. Action Q1 ?",
+    "propositions": [
+      "Observation §11 : à régulariser",
+      "NC sans risque : régulariser avant prochain Q1",
+      "NC AVEC RISQUE : modification non maîtrisée, conformité hydraulique non démontrée + violation §19",
+      "Conforme si les 80 têtes fonctionnent visuellement"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Modification SAUVAGE = NC AVEC RISQUE. L'installation a peut-être perdu sa conformité hydraulique (Si1/Si2 non vérifié), et le §19 a été violé. Il faut : (1) déclaration à l'installateur IF1, (2) recalcul Si1/Si2, (3) certificat de modification, (4) éventuellement nouvelle VdC si seuils franchis.",
+    "reference": "R1 §19 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-trav-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "19.2",
+    "theme": "Travaux — Installation provisoire",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une installation modifiée DE FAÇON PROVISOIRE (chantier) pour 6 mois requiert :",
+    "propositions": [
+      "Aucun formalisme",
+      "Un N100 + déclaration des modifications temporaires + couverture des têtes désactivées",
+      "Un simple accord verbal",
+      "Une simple mention au S1A"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Une modification provisoire significative (chantier) est traitée comme une MISE HORS SERVICE partielle → N100 + déclaration formelle. Les zones non protégées doivent être identifiées et compensées par des mesures temporaires (extincteurs, ronde sécurité…). À la fin du chantier : remise en état + vérification.",
+    "reference": "R1 §19.2 / §18.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-trav-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "19",
+    "theme": "Travaux — Certificat modification",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Après modification, l'installateur IF1 doit produire :",
+    "propositions": [
+      "Un mail récapitulatif",
+      "Un certificat de modification + mise à jour des plans tels que construits + recalculs Si1/Si2",
+      "Aucun document",
+      "Une simple facture"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §19 R1 2025 impose un livrable formel post-modification : certificat de modification de l'IF1 + plans à jour + recalculs Si1/Si2. Ces documents alimentent le dossier technique (§3.8) et permettent au prochain Q1 de tracer la modification.",
+    "reference": "R1 §19 / §3.8 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-spe-001",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "16",
+    "theme": "Spéciaux — Installation déluge",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une installation déluge se caractérise par :",
+    "propositions": [
+      "Des sprinkleurs auto-déclenchants individuellement",
+      "Des têtes ouvertes (sans bulbe), déclenchement collectif par détection externe",
+      "Un réseau d'eau permanent sous pression",
+      "Une utilisation uniquement en risque léger"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §16 R1 2025 décrit le déluge : têtes OUVERTES (sans bulbe), réseau VIDE en attente, déclenchement par DÉTECTION EXTERNE (détecteur incendie, thermovélocimétrique…) qui ouvre une vanne déluge. Toutes les têtes pulvérisent simultanément. Utilisé pour risques HHS, hangars d'avions, transformateurs, etc.",
+    "reference": "R1 §16 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-spe-002",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "16",
+    "theme": "Spéciaux — Vanne déluge essai",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "La vanne déluge doit être testée :",
+    "propositions": [
+      "Jamais (test endommage)",
+      "Hebdomadaire en partie sec (sans actionner la vanne)",
+      "Annuel en charge réelle (déclenchement avec eau)",
+      "À la mise en service uniquement"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "La vanne déluge est testée ANNUELLEMENT en CHARGE RÉELLE : déclenchement avec eau pour vérifier le bon fonctionnement de l'ensemble détection → électrovanne → ouverture → projection. C'est lourd mais indispensable. Les tests partiels sont admis en relais entre deux essais en charge.",
+    "reference": "R1 §16 / §18 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-spe-003",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13",
+    "theme": "Spéciaux — ESFR définition",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "ESFR signifie :",
+    "propositions": [
+      "Extincteur Sprinkleur Fiable Régulé",
+      "Early Suppression Fast Response (Suppression Précoce Réponse Rapide)",
+      "Equipment Sprinkleur Fixe Réservoir",
+      "Extinction Standard Feu Rapide"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ESFR = Early Suppression Fast Response. Ce sont des sprinkleurs HAUTE PERFORMANCE conçus pour SUPPRIMER l'incendie (et pas seulement le contrôler) dès son démarrage. Coefficient K élevé (≥ 200), réponse rapide. Utilisés en stockage HHS pour éliminer le besoin de sprinklers in-rack.",
+    "reference": "R1 §13 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-spe-004",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13",
+    "theme": "Spéciaux — ESFR conditions emploi",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "L'installation d'ESFR sans réseau intermédiaire (in-rack) est INTERDITE pour quelles marchandises ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Cartons standards",
+      "Aérosols catégorie 3",
+      "Pneumatiques",
+      "Marchandises HHS#5",
+      "Textiles standards"
+    ],
+    "bonnes_reponses": [
+      1,
+      2,
+      3
+    ],
+    "explication": "Le §9.2 R1 2025 et catalogue Q1 INTERDISENT l'ESFR seul (sans in-rack) pour : aérosols cat. 3, pneumatiques, HHS#5. Ces matériaux développent une intensité de feu que l'ESFR ne peut pas maîtriser seul. Cartons et textiles standards peuvent être protégés par ESFR seul selon la configuration.",
+    "reference": "R1 §9.2 / §13 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-spe-005",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "16",
+    "theme": "Spéciaux — Système sous air conditions",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Un système sous air (à pré-action ou sec) est utilisé typiquement dans :",
+    "propositions": [
+      "Les bureaux climatisés à 22 °C",
+      "Les zones froides où le gel pourrait endommager un réseau en eau (parkings, frigos…)",
+      "Les hôtels 4*",
+      "Aucun cas spécifique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §16 R1 2025 décrit l'usage des systèmes sous air pour les zones à risque de GEL : parkings non chauffés, entrepôts frigorifiques, locaux extérieurs. L'air comprimé maintient le réseau jusqu'au sprinkleur ; l'eau n'arrive qu'après ouverture du poste sec. Délai d'asservissement plus long → §4.8 (30 s).",
+    "reference": "R1 §16 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-spe-006",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "13",
+    "theme": "Spéciaux — CMSA",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les sprinkleurs CMSA sont :",
+    "propositions": [
+      "Des sprinkleurs Multi-Surface Action (gamme standard)",
+      "Control Mode Specific Application — sprinkleurs spécialisés haute performance, conditions d'emploi strictes (similaire à ESFR)",
+      "Une marque commerciale particulière",
+      "Des sprinkleurs ordinaires renommés"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "CMSA = Control Mode Specific Application. Sprinkleurs spécialisés, K élevé (généralement ≥ 160), pour applications haute densité (stockage HHS). Conditions d'emploi strictes : espacement, T°, configurations validées. Comme l'ESFR, requièrent une fiche contact CNPP avant installation.",
+    "reference": "R1 §13 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-spe-007",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "16",
+    "theme": "Spéciaux — Audit système sous air gel",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Un parking non chauffé est protégé par sprinkleurs SOUS EAU (et non sous air). Conclusion en visite hivernale ?",
+    "propositions": [
+      "Conforme : l'eau ne gèle pas en France métropolitaine",
+      "NC AVEC RISQUE : risque de gel des canalisations, rupture, perte protection — système doit être sous air ou caloriporté",
+      "Observation §11 : à surveiller",
+      "Conforme si la T° n'est jamais descendue sous 0 °C"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le §16 R1 2025 impose un système sous air OU un calorifugeage avec maintien de T° dans les zones à risque de gel. Un système sous eau dans un parking non chauffé est une NC AVEC RISQUE D'ÉCHEC : gel = rupture canalisations + perte de protection + dégâts collatéraux importants. À reporter immédiatement.",
+    "reference": "R1 §16 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-spe-008",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "9.2",
+    "theme": "Spéciaux — Stockage interdit ESFR",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "L'utilisation d'ESFR seul (sans réseau intermédiaire) est-elle admise pour du stockage HHS#3 ?",
+    "propositions": [
+      "Oui, ESFR couvre tous les HHS",
+      "Oui, à condition que la hauteur de stockage soit < 7,5 m",
+      "Cela dépend du type de marchandise (HHS#5, aérosols cat.3, pneumatiques INTERDITS sans in-rack)",
+      "Non, HHS impose toujours du in-rack"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "L'ESFR seul peut être admis pour certains HHS de catégories standards, mais EST INTERDIT pour les configurations à risque accentué : HHS#5, aérosols cat. 3, pneumatiques. Pour HHS#3 standard, l'ESFR est généralement admis sous conditions (hauteur, espacement, T° plafond). Toujours valider via fiche contact CNPP.",
+    "reference": "R1 §9.2 (édition Septembre 2025)"
+  },
+  {
+    "id": "r1-2025-q1-spe-009",
+    "type": "SPK",
+    "referentiel": "R1",
+    "edition": "2025",
+    "chapitre": "16",
+    "theme": "Spéciaux — Post-action / pré-action",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Un système à PRÉ-ACTION (têtes fermées + détection externe) se déclenche :",
+    "propositions": [
+      "Sur ouverture d'un sprinkleur SEUL",
+      "Sur détection externe SEULE (DI)",
+      "Sur la CONCATÉNATION des deux : détection externe + ouverture d'un sprinkleur (double validation)",
+      "Sur action manuelle uniquement"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Le système à pré-action requiert DEUX validations : (1) la détection externe (incendie) qui ouvre une vanne pré-action, et (2) l'ouverture d'un sprinkleur (fusion bulbe). Sans détection externe, même si un sprinkleur s'ouvre, l'eau n'arrive pas. Cela protège contre les fausses alarmes (chocs accidentels) en milieux sensibles : data centers, archives.",
+    "reference": "R1 §16 (édition Septembre 2025)"
   }
 ]
