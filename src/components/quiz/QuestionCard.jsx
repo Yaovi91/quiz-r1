@@ -1,7 +1,15 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import Pill from "../ui/Pill.jsx";
 import { Check, X } from "lucide-react";
+
+// Couleurs des badges par type de référentiel
+const TYPE_COLORS = {
+  SPK: "#E63946", // Sprinkleur - rouge accent app
+  RIA: "#06B6D4", // RIA - cyan
+  PI:  "#FB923C", // Poteau Incendie - orange
+  BI:  "#10B981", // Bouche Incendie - vert
+  PIA: "#A78BFA", // Poste Incendie Additivé - violet
+};
 
 /**
  * Affiche une question.
@@ -20,7 +28,9 @@ export default function QuestionCard({ question, state, result, onValidate, xpMu
   if (!question) return null;
 
   const isMulti = question.multi;
+  const isAudit = question.mode_audit;
   const canValidate = selected.size > 0 && state === "asking";
+  const typeBg = TYPE_COLORS[question.type] || "rgba(255,255,255,0.18)";
 
   function toggle(i) {
     if (state !== "asking") return;
@@ -41,15 +51,87 @@ export default function QuestionCard({ question, state, result, onValidate, xpMu
 
   return (
     <div className="flex-1 flex flex-col px-5">
-      {/* Métadonnées */}
-      <div className="flex items-center gap-1.5 flex-wrap mb-4">
-        <Pill tone="accent">§ {question.chapitre}</Pill>
-        <Pill>Éd. {question.edition}</Pill>
-        <Pill tone="muted">{question.theme}</Pill>
-        {question.mode_audit && <Pill tone="accent">Audit terrain</Pill>}
-        {isMulti && <Pill tone="muted">Plusieurs bonnes réponses</Pill>}
+      {/* Bandeau meta — style Linear compact mono */}
+      <div className="flex items-center gap-1.5 flex-wrap mb-2.5">
+        {/* Type (SPK, RIA, PI, BI, PIA) */}
+        {question.type && (
+          <span
+            className="font-mono text-[10px] font-medium tracking-wider px-1.5 py-0.5 rounded"
+            style={{ background: typeBg, color: "#FFFFFF" }}
+          >
+            {question.type}
+          </span>
+        )}
+
+        {/* MULTI — visible et insistant */}
+        {isMulti && (
+          <span
+            className="font-mono text-[10px] font-medium tracking-wider px-1.5 py-0.5 rounded inline-flex items-center gap-1"
+            style={{
+              background: "rgba(250,204,21,0.16)",
+              color: "#FCD34D",
+              border: "0.5px solid rgba(250,204,21,0.4)",
+            }}
+          >
+            <Check size={9} strokeWidth={3} />
+            MULTI
+          </span>
+        )}
+
+        {/* AUDIT terrain */}
+        {isAudit && (
+          <span
+            className="font-mono text-[10px] font-medium tracking-wider px-1.5 py-0.5 rounded"
+            style={{
+              background: "rgba(56,189,248,0.16)",
+              color: "#7DD3FC",
+              border: "0.5px solid rgba(56,189,248,0.4)",
+            }}
+          >
+            AUDIT
+          </span>
+        )}
+
+        {/* XP multiplier */}
         {xpMul > 1 && state === "asking" && (
-          <Pill tone="accent">×{xpMul} XP</Pill>
+          <span
+            className="font-mono text-[10px] font-medium tracking-wider px-1.5 py-0.5 rounded"
+            style={{
+              background: "rgba(230,57,70,0.16)",
+              color: "#FCA5A5",
+              border: "0.5px solid rgba(230,57,70,0.4)",
+            }}
+          >
+            ×{xpMul} XP
+          </span>
+        )}
+
+        {/* Référentiel · Édition */}
+        {(question.referentiel || question.edition) && (
+          <span className="font-mono text-[11px] text-[var(--color-fg-tertiary)] ml-0.5">
+            {[question.referentiel, question.edition].filter(Boolean).join(" · ")}
+          </span>
+        )}
+
+        {/* Chapitre — auto-aligné à droite */}
+        {question.chapitre && (
+          <span className="font-mono text-[11px] text-[var(--color-fg-muted)] ml-auto">
+            §{question.chapitre}
+          </span>
+        )}
+      </div>
+
+      {/* Thème + mention multi (sous le bandeau) */}
+      <div className="mb-4">
+        {question.theme && (
+          <p className="text-[11px] uppercase tracking-wider text-[var(--color-fg-muted)]">
+            {question.theme}
+          </p>
+        )}
+        {isMulti && (
+          <p className="text-[11px] mt-1 font-medium" style={{ color: "#FCD34D" }}>
+            Plusieurs bonnes réponses
+          </p>
         )}
       </div>
 
@@ -78,6 +160,9 @@ export default function QuestionCard({ question, state, result, onValidate, xpMu
             else tone = "dim";
           } else if (isSel) tone = "sel";
 
+          // Forme de l'indicateur — rond pour single, carré pour multi
+          const indicatorShape = isMulti ? "rounded-md" : "rounded-full";
+
           return (
             <motion.button
               key={i}
@@ -97,9 +182,10 @@ export default function QuestionCard({ question, state, result, onValidate, xpMu
               ].filter(Boolean).join(" ")}
               style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.03)" }}
             >
-              {/* Lettre / case */}
+              {/* Indicateur — forme adaptative (rond=single, carré=multi) */}
               <span className={[
-                "shrink-0 inline-flex items-center justify-center w-7 h-7 rounded-md border font-mono text-[11px] tabular",
+                "shrink-0 inline-flex items-center justify-center w-7 h-7 border font-mono text-[11px] tabular",
+                indicatorShape,
                 tone === "idle" && "border-[var(--color-border-strong)] text-[var(--color-fg-tertiary)]",
                 tone === "sel" && "border-[var(--color-accent)] text-[var(--color-accent)] bg-[var(--color-accent-soft)]",
                 tone === "correct" && "border-[rgba(74,222,128,0.5)] text-[var(--color-success)] bg-[var(--color-success-soft)]",
