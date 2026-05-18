@@ -30164,5 +30164,2443 @@
     "explication": "NC. La configuration 2 suppose une présence \"effective\" pendant les heures ouvrées. Si le local est isolé acoustiquement (porte fermée, alarmes sonores du tableau peu puissantes), l'opérateur ne peut pas réagir. Vérification audibilité requise. Demande corrective : repositionner le tableau OU prévoir un répétiteur sonore dans la zone occupée OU laisser la porte ouverte.",
     "reference": "R1 §14.1 (édition 2025)",
     "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST1 définition",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode de stockage \"ST1\" correspond à :",
+    "propositions": [
+      "Stockage en empilage libre (sans rack)",
+      "Stockage sur palettes en rangées multiples avec rehausses",
+      "Stockage sur rack simple",
+      "Stockage en silo vertical"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "ST1 = empilage libre. Marchandises empilées directement sans support spécifique. Le mode le plus simple, applicable aux marchandises stables. Implique une analyse stabilité (hauteur, base).",
+    "reference": "R1 §5.1.3 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST2 définition",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode de stockage \"ST2\" se distingue par :",
+    "propositions": [
+      "Empilage libre",
+      "Palettes simples superposées (sans rack)",
+      "Palettes avec rehausses (gerbage simple)",
+      "Rack à simple profondeur"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "ST2 = palettes avec rehausses (gerbage stabilisé). La rehausse permet d'empiler plusieurs niveaux de palettes sans rack. Création d'un volume sans pression d'écrasement sur les marchandises inférieures.",
+    "reference": "R1 §5.1.3 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST3 définition",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode de stockage \"ST3\" correspond à :",
+    "propositions": [
+      "Stockage sur rack à simple profondeur",
+      "Palettes à rehausses en rangées multiples",
+      "Stockage à plat ST1 sur deux niveaux",
+      "Stockage cantilever"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ST3 = palettes à rehausses en rangées MULTIPLES. Sans îlot interne entre rangées (par opposition à ST2 isolé). Plus dense au sol. Impose une analyse particulière (cf. figure F6.3.1.3, îlot 150 m² requis sans espacement 150 mm).",
+    "reference": "R1 §5.1.3 / §6.3.1.3 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST4 définition",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode de stockage \"ST4\" est le stockage sur :",
+    "propositions": [
+      "Rack à palettes (simple ou double)",
+      "Empilage avec rehausses",
+      "Rayonnage léger pour pièces détachées",
+      "Stockage automatisé carrousel"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "ST4 = stockage sur rack à palettes (simple ou double). Le mode le plus courant dans les entrepôts logistiques. Densité importante, accès par chariot frontal ou rétractable. Allées ≥ 1,2 m sinon requalification en ST8.",
+    "reference": "R1 §5.1.3 / §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-005",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST5 définition",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode \"ST5\" concerne :",
+    "propositions": [
+      "Rack accumulation profondeur > 4 niveaux",
+      "Rayonnage fixe avec étagères pleines ou ajourées, largeur ≤ 1 m",
+      "Stockage à plat sur palettes simples",
+      "Cantilever pour matières longues"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ST5 = rayonnage fixe avec étagères (pleines ou ajourées) de largeur ≤ 1 m. Petits articles (pièces détachées, archives). En LH/OH, hauteur limitée à 2,2 m. Distance libre 1 m. Cf. T13.2.2.1.",
+    "reference": "R1 §5.1.3 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-006",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST6 définition",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode \"ST6\" se distingue de ST5 par :",
+    "propositions": [
+      "L'utilisation de matériaux différents",
+      "La largeur des étagères > 1 m (au lieu de ≤ 1 m)",
+      "La hauteur de stockage",
+      "L'usage de palettes"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ST6 = même principe que ST5 (rayonnage fixe avec étagères) MAIS largeur > 1 m. Au-delà de 1 m, les étagères font écran à l'eau des sprinkleurs de toiture → sprinkleurs intermédiaires obligatoires sous chaque étagère.",
+    "reference": "R1 §5.1.3 / §6.3.2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-007",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST7 définition",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode \"ST7\" correspond à :",
+    "propositions": [
+      "Stockage en silos",
+      "Stockage sur rayonnages dynamiques (push-back, drive-in mobile)",
+      "Stockage suspendu (vêtements)",
+      "Stockage en vrac"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ST7 = rayonnages dynamiques (push-back, gravitaires, dynamique gravité). Les palettes se déplacent sur rouleaux ou plans inclinés. Configuration dense mais plus complexe à protéger. À distinguer de ST8 (accumulation statique).",
+    "reference": "R1 §5.1.3 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-008",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST8 définition",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode \"ST8\" correspond à :",
+    "propositions": [
+      "Stockage en empilage libre",
+      "Stockage par accumulation (drive-in, racks compacts)",
+      "Rack simple à palettes",
+      "Cantilever"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ST8 = stockage par ACCUMULATION (drive-in, drive-through, racks compacts). Palettes serrées sans allée intermédiaire. Densité maximale au sol. Protection : ESFR au plafond sous conditions (§17.1.4.4) OU réseaux intermédiaires complexes.",
+    "reference": "R1 §5.1.3 / §17.1.4.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-009",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — ST9 définition",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le mode \"ST9\" est le stockage en rack de type :",
+    "propositions": [
+      "Drive-in",
+      "Cantilever",
+      "Push-back",
+      "Mezzanine"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ST9 = stockage en rack CANTILEVER. Bras horizontaux fixés sur colonne verticale, sans face avant. Utilisé pour matières longues (tubes, profilés, planches). Marchandises de 3 m max (alignement espace transversal 0,08 m), plus longues admises uniquement au sol.",
+    "reference": "R1 §5.1.3 / §17.1.4.5 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-010",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Modes ST — Allée et ST8",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans un stockage ST4, si la largeur d'allée tombe sous 1,2 m :",
+    "propositions": [
+      "Sans conséquence",
+      "Le stockage doit être assimilé à du ST8 (accumulation) nécessitant des réseaux intermédiaires",
+      "Réduction de 10 % de la hauteur autorisée",
+      "Vérification CNPP obligatoire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Allée < 1,2 m → requalification en ST8. Logique : sans allée, les sprinkleurs de toiture ne peuvent plus protéger efficacement (effet de tunnel, accès limité). Réseaux intermédiaires requis comme pour les racks à accumulation. Piège Q1 fréquent quand l'exploitant rétrécit les allées au fil du temps.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-011",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Modes ST — Espace longitudinal ST4",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans un rack ST4 (palettes sur rack), l'espace longitudinal central (\"cheminée\") doit faire au minimum :",
+    "propositions": [
+      "0,10 m",
+      "0,15 m garantis par moyens mécaniques permanents",
+      "0,20 m",
+      "0,30 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "0,15 m minimum, garantis par MOYENS MÉCANIQUES PERMANENTS (butées, séparateurs). Pas juste \"laisser un espace\" qui sera comblé par dérive. La cheminée permet à l'eau et à la chaleur de circuler verticalement entre les deux rangées de palettes du rack double.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-012",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Modes ST — Espace transversal ST4",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans un rack ST4, les espaces transversaux entre palettes doivent être :",
+    "propositions": [
+      "0,15 m tous les 3,7 m maximum",
+      "0,10 m tous les 3,7 m maximum",
+      "0,20 m tous les 5 m maximum",
+      "Pas d'exigence"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "0,10 m minimum, tous les 3,7 m maximum de palettes. Évite que de longues files de palettes ne forment un mur compact. L'espace transversal complète la cheminée longitudinale (0,15 m) pour assurer la circulation des fluides dans les racks.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-013",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Modes ST — Butées filantes",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur des racks ST4 avec butées filantes à l'arrière des palettes :",
+    "propositions": [
+      "L'espace longitudinal de 0,15 m se mesure entre les palettes",
+      "L'espace longitudinal de 0,15 m se mesure ENTRE LES BUTÉES",
+      "L'espace passe à 0,10 m",
+      "Les butées doivent être démontées"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Mesure ENTRE LES BUTÉES. Les butées filantes peuvent réduire la cheminée effective ; la R1 exige donc que la mesure soit faite au point le plus contraint (entre butées) pour garantir le passage réel des fluides. Piège Q1 : butées installées après réception, jamais vérifiées.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-014",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — Pneumatiques",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le stockage de pneumatiques est assimilé aux modes :",
+    "propositions": [
+      "ST1 ST2 ou ST3 selon agencement, classés HHS#5",
+      "ST4 toujours",
+      "ST8 systématiquement",
+      "ST9 systématiquement"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Pneumatiques = type de stockage assimilable à ST2 ou ST3 selon l'agencement (à plat / sur flanc / debout). Classement HHS#5 systématique (risque très aggravé). Particularité : réseaux SOUS AIR INTERDITS pour le stockage de pneus.",
+    "reference": "R1 §6.10 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-st-015",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Modes ST — Piège ST4 vers ST8",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 entrepôt initialement ST4 (allées 1,3 m). Vous mesurez aujourd'hui des allées à 0,9 m car l'exploitant a élargi les racks. Statut ?",
+    "propositions": [
+      "Sans suite, allées encore praticables",
+      "NC AVEC RISQUE : requalification ST8 → réseaux intermédiaires requis, non installés. Couverture hydraulique compromise",
+      "Information : recommander élargissement allée",
+      "Conforme si chariots passent"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. Sous 1,2 m d'allée, ST4 devient automatiquement ST8 (§6.3.1.4) → cela exige des réseaux intermédiaires de protection dans les racks. Sans ces RI, la couverture hydraulique est insuffisante. Demande corrective : soit rétablir 1,2 m d'allée, soit installer les RI manquants. Anomalie classique sur sites évolutifs.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-hhs-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Classes HHS — Définition",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Que désigne la classification \"HHS\" ?",
+    "propositions": [
+      "High Hazard Sprinkler",
+      "Risque très aggravé — Stockage",
+      "Haut Habitat de Stockage",
+      "Hyper Haute Sécurité"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "HHS = Risque Très Aggravé pour le STOCKAGE (par opposition à HHP = process). Le \"H\" double signale le niveau aggravé. Classement français spécifique R1, divisé en 5 niveaux HHS#1 (le moins sévère) à HHS#5 (le plus sévère).",
+    "reference": "R1 §6.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-hhs-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Classes HHS — Niveaux",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les classes HHS vont de :",
+    "propositions": [
+      "HHS#1 (plus sévère) à HHS#5 (moins sévère)",
+      "HHS#1 (moins sévère) à HHS#5 (plus sévère)",
+      "HHS#A à HHS#E",
+      "HHS#0 à HHS#10"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "HHS#1 = moins sévère, HHS#5 = plus sévère. Plus le numéro est élevé, plus la marchandise présente un risque d'incendie aggravé (matières plastiques, mousses, etc.). Densité d'eau et durée d'application croissent avec le numéro.",
+    "reference": "R1 §6.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-hhs-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Classes HHS — Exemples HHS#1",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Lequel de ces stockages est typiquement classé HHS#1 ?",
+    "propositions": [
+      "Mousse polyuréthane en bloc",
+      "Papiers et cartons standards en colis",
+      "Pneumatiques",
+      "Plastiques alvéolaires"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Papiers/cartons standards = HHS#1 typique (faible vitesse de combustion, peu de matériaux fortement combustibles). Mousses PU et plastiques alvéolaires → HHS#4 ou HHS#5. Pneus → HHS#5. La classification exacte se fait via l'annexe 2.",
+    "reference": "R1 §6.1 / Annexe 2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-hhs-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Classes HHS — Plastiques expansés",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les matières plastiques alvéolaires (expansées) en stockage sont typiquement classées :",
+    "propositions": [
+      "HHS#1 ou HHS#2",
+      "HHS#3 toujours",
+      "HHS#4 ou HHS#5 (selon proportion et exposition)",
+      "HHP1"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "HHS#4 ou HHS#5 selon proportion et exposition. Les plastiques expansés (mousses, polystyrène, polyuréthane) ont une combustion très rapide. Si > 25 % du volume du colis = HHS#4 minimum, souvent HHS#5. Critère utilisé aussi pour ESFR/CMSA (§16 et §17).",
+    "reference": "R1 §6.1 / §16.2 / Annexe 2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-hhs-005",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Classes HHS — Huiles < 5 L",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les huiles de point d'éclair > 200°C en contenants ≤ 5 L sont traitées comme :",
+    "propositions": [
+      "HHS#5 systématiquement",
+      "HHS#3 jusqu'à 3,20 m de hauteur — au-delà HHS#5",
+      "HHS#1 (non considérées comme à risque)",
+      "Liquides inflammables R12"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "HHS#3 jusqu'à 3,20 m de hauteur, HHS#5 au-delà. Les huiles haute température (point d'éclair > 200°C) en petit conditionnement ne sont pas considérées comme ayant un risque aggravé de feu de flaque. Au-delà de 3,20 m, le risque s'accroît (effet propagation). Application aux RI : toiture min 10 l/m²/min sur 260 m² (max 7,6 m).",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-hhs-006",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Classes HHS — Alcools de bouche",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les alcools de bouche titre ≤ 60° et volume unitaire ≤ 5 L :",
+    "propositions": [
+      "Sont des liquides inflammables traités en R12",
+      "Sont traités comme marchandises HHS#3 (spray, ESFR ou CMSA acceptés)",
+      "Sont traités HHS#5",
+      "Doivent être isolés en local séparé"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Pas considérés comme liquides inflammables. Traités comme HHS#3, protection acceptable en spray, ESFR ou CMSA. Concerne les rayons spiritueux des surfaces de vente. La règle exclut au-dessus de 60° ou conditionnements plus grands (passage en liquides inflammables).",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-hhs-007",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Classes HHS — Évolution Q1",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 dans un entrepôt initialement HHS#2 (cartons). L'exploitant a ajouté un rayon pneumatiques sur 200 m². Statut ?",
+    "propositions": [
+      "Sans suite — la zone est petite",
+      "NC : changement de classement local (pneumatiques = HHS#5), à recalculer en hydraulique. Densité actuelle probablement insuffisante",
+      "Information : informer l'exploitant",
+      "Conforme si moins de 5 % du volume"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC. L'apparition d'un risque HHS#5 dans une installation conçue pour HHS#2 = sous-dimensionnement hydraulique. Densité HHS#2 typiquement 10 l/m²/min, HHS#5 plutôt 17,5+ l/m²/min sur 300 m². Demande : étude hydraulique + reclassement OU isolement de la zone. Pratique fréquente sur sites multi-activités.",
+    "reference": "R1 §6.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-hhs-008",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.1",
+    "theme": "Classes HHS — Liquides miscibles",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les liquides miscibles à concentration de produit combustible ≤ 50 % en contenants métalliques sont protégés :",
+    "propositions": [
+      "En R12 obligatoirement",
+      "Comme HHS#3 (spray, ESFR ou CMSA admis)",
+      "Toujours en HHS#5",
+      "Avec sprinkleurs déluge obligatoires"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Comme HHS#3. Conditions : miscibles (eau soluble) + concentration combustible ≤ 50 % + contenants métalliques. Pour les stockages en empilage libre ST1, la concentration peut aller jusqu'à 50 % ; pour les autres ST2-ST8, plafond 20 %.",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-tab-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "T6.3.1.4 — Surface impliquée 7,5-17,5",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans le tableau T6.3.1.4 (HHS ST4), pour les densités 7,5 à 17,5 l/m²/min, la surface impliquée est de :",
+    "propositions": [
+      "100 m²",
+      "260 m²",
+      "300 m²",
+      "500 m²"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "260 m² pour densités 7,5 / 10 / 12,5 / 15 / 17,5 l/m²/min. Surface impliquée = surface hydrauliquement défavorisée à dimensionner. Au-delà (20 / 22,5 / 25 / 27,5 / 30 l/m²/min), la surface passe à 300 m². Plus la densité augmente, plus la zone à protéger s'élargit.",
+    "reference": "R1 §6.3.1.4 / Tableau T6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-tab-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "T6.3.1.4 — Surface 20-30",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans le tableau T6.3.1.4, pour les densités 20 à 30 l/m²/min, la surface impliquée est :",
+    "propositions": [
+      "260 m²",
+      "300 m²",
+      "500 m²",
+      "Selon analyse hydraulique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "300 m². Les plus hautes densités correspondent aux configurations les plus défavorables (hauteurs élevées, marchandises plus sévères). La surface plus grande couvre le périmètre élargi de propagation potentielle.",
+    "reference": "R1 §6.3.1.4 / Tableau T6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-tab-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "T6.3.1.4 — HHS#1 hauteur 7,5",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon T6.3.1.4, pour un stockage ST4 HHS#1, hauteur 4,8 m, la densité est :",
+    "propositions": [
+      "5 l/m²/min",
+      "7,5 l/m²/min",
+      "10 l/m²/min",
+      "15 l/m²/min"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "7,5 l/m²/min. Lecture du tableau : ligne HHS#1, hauteur 4,8 m → densité 7,5 l/m²/min, surface 260 m². Hauteurs plus élevées HHS#1 : 5,8 m → 10 l/m²/min, 6,8 m → 12,5 l/m²/min. La densité augmente avec la hauteur car la masse combustible croît verticalement.",
+    "reference": "R1 §6.3.1.4 / Tableau T6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-tab-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "T6.3.1.4 — HHS#5 hauteur 2,9",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon T6.3.1.4, pour un stockage ST4 HHS#5, hauteur 2,9 m, la densité est :",
+    "propositions": [
+      "10 l/m²/min",
+      "15 l/m²/min",
+      "17,5 l/m²/min",
+      "20 l/m²/min"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "17,5 l/m²/min, surface 260 m². Le HHS#5 demande des densités élevées même à hauteur modeste (2,9 m). HHS#5 max sur sous-toiture en ST4 = 4,4 m à 30 l/m²/min (300 m²). Au-delà, RI obligatoires.",
+    "reference": "R1 §6.3.1.4 / Tableau T6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-tab-005",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "T6.3.1.4 — Hauteur \"en gras\"",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans T6.3.1.4, les hauteurs imprimées EN GRAS indiquent :",
+    "propositions": [
+      "Les valeurs recommandées",
+      "Des limites au-delà desquelles la protection sous-toiture seule est compromise",
+      "Les valeurs habituellement rencontrées",
+      "Une indication décorative"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Limites au-delà desquelles l'efficacité de la protection par sprinkleurs en sous-toiture seule est COMPROMISE. C'est un avertissement explicite : au-delà de ces hauteurs, mettre en place des RI ou changer de stratégie de protection (ESFR, CMSA). Lecture critique en Q1.",
+    "reference": "R1 §6.3.1.4 / Tableau T6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-tab-006",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "T6.3.1.4 — Distance libre limites",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon les notes de T6.3.1.4, la distance libre maxi entre sprinkleurs de toiture et hauteur de stockage est :",
+    "propositions": [
+      "4 m pour tous HHS",
+      "6 m pour HHS#1 et HHS#2 ; 4 m pour HHS#3 à HHS#5",
+      "Toujours 1 m",
+      "Selon classe de risque"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "6 m maxi pour HHS#1/HHS#2, 4 m maxi pour HHS#3/HHS#4/HHS#5. Distance libre minimale toujours 1 m. La marge plus grande sur HHS#1/HHS#2 reflète une combustibilité modérée ; les HHS sévères demandent une proximité plus stricte des sprinkleurs.",
+    "reference": "R1 §13.2.2 / Tableau T6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-tab-007",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.2",
+    "theme": "Tableaux — Pneumatiques HHS#5",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un stockage de pneumatiques sur flanc, ST1 hauteur 3,7 m, bâtiment 10 m, le dimensionnement est :",
+    "propositions": [
+      "10 l/m²/min sur 260 m²",
+      "12,5 l/m²/min sur 260 m², 2 h de fonctionnement",
+      "20 l/m²/min sur 300 m²",
+      "ESFR obligatoire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "12,5 l/m²/min sur 260 m², 2 h de fonctionnement. Alternative R1 explicite §6.10.1. Pour ST2/ST4 simple sur flanc 3,7 m / 10 m : même valeur. Au-delà (6 m), 17,5 l/m²/min sur 260 m² + RI 12 sprinkleurs K115 à 1 bar.",
+    "reference": "R1 §6.10.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-tab-008",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Tableaux — Hauteur > limite \"gras\"",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Sur un stockage ST4 HHS#2 (cartons) avec hauteur dépassant la limite \"en gras\" du tableau et bâtiment < 12 m, la solution est :",
+    "propositions": [
+      "Reclassement HHS#1",
+      "Mettre en place un seul niveau de RI sous le dernier niveau de pose, sans majoration densité toiture",
+      "Diviser la hauteur par 2",
+      "Refus définitif — ESFR obligatoire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Bâtiment < 12 m : ajouter UN niveau de RI sous le dernier niveau de pose, sans majoration de la densité en toiture (§6.3.1.4). Solution simple, classique en pratique. Si bâtiment > 12 m : RI multiples conformes §6.3.2.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-tab-009",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Tableaux — Distance libre majorée",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans le cas d'une distance libre majorée (>0,15 m) sous RI, sans augmentation de la hauteur de stockage sous RI :",
+    "propositions": [
+      "La densité doit être doublée",
+      "Le RI peut être placé plus haut, sans modification de la densité toiture",
+      "L'installation devient non conforme",
+      "Il faut un accord CNPP systématique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Le RI peut être positionné plus haut tant que la hauteur stockée sous le RI ne change pas. Permet une flexibilité d'aménagement (gain d'espace utile sous RI) sans dégrader la protection. Lecture précise de §6.3.1.4.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-tab-010",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Tableaux — Q1 calcul hydraulique",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 ST4 HHS#3 hauteur 4 m, bâtiment 8 m. Installation dimensionnée à 12,5 l/m²/min sur 260 m². Conforme ?",
+    "propositions": [
+      "Oui (lecture directe T6.3.1.4)",
+      "Non : pour HHS#3 hauteur 4 m, le tableau exige 22,5 l/m²/min sur 300 m²",
+      "Non : besoin ESFR",
+      "Conforme uniquement avec RI"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Lecture T6.3.1.4 ligne HHS#3, hauteur 3,2-4,2 m : densités 12,5 puis 15 l/m²/min. À 4 m on est dans la zone 12,5-15. À recroiser avec les hauteurs exactes. Densité 12,5 l/m²/min sur 260 m² est dans la fourchette valide pour 3,2 m maxi (sous toiture). 4 m demande 15 l/m²/min. Lecture précise requise au Q1.",
+    "reference": "R1 §6.3.1.4 / Tableau T6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-haut-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Hauteurs — ST5 LH/OH",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un stockage ST5 (rayonnage fixe, largeur ≤ 1 m) en LH/OH, la hauteur est limitée à :",
+    "propositions": [
+      "1,5 m",
+      "2,2 m",
+      "3 m",
+      "4 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "2,2 m maximum pour ST5 en LH/OH, avec distance libre 1 m. Au-delà : passage en ST6 (avec sprinkleurs intermédiaires). Limite fréquente en archives, magasins de stockage interne.",
+    "reference": "R1 §5.1.3 / §5.2 / §5.3 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-haut-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17.1.4.4",
+    "theme": "Hauteurs — ST8 ESFR",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un stockage par accumulation ST8 protégé ESFR, la hauteur stockage est limitée à :",
+    "propositions": [
+      "3,20 m",
+      "3,7 m",
+      "6 m",
+      "Selon hauteur bâtiment"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "3,20 m maximum. Condition : ménager un espace transversal de 0,15 m minimum entre chaque ligne de palettes (§17.1.4.4). Si caillebotis présent, ajouré ≥ 70 %. Au-delà : ESFR non admis sur ST8.",
+    "reference": "R1 §17.1.4.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-haut-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17.1.4.5",
+    "theme": "Hauteurs — ST9 cantilever",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Sur un stockage ST9 cantilever, les marchandises peuvent atteindre quelle longueur maximale tout en respectant l'alignement transversal ?",
+    "propositions": [
+      "2 m",
+      "3 m (au-delà uniquement au sol)",
+      "5 m",
+      "Pas de limite"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "3 m maxi avec alignement des espaces transversaux 0,08 m de large sur la hauteur du cantilever. Au-delà de 3 m : marchandises admises mais uniquement au sol. Lié à la capacité des sprinkleurs à atteindre verticalement les niveaux intermédiaires.",
+    "reference": "R1 §17.1.4.5 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-haut-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.10",
+    "theme": "Hauteurs — Pneumatiques",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un stockage de pneumatiques, les réseaux sous air sont :",
+    "propositions": [
+      "Autorisés sans condition",
+      "INTERDITS",
+      "Autorisés en LH seulement",
+      "Sur accord CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "INTERDITS. Le pneumatique brûle très vite et libère beaucoup d'énergie ; le délai d'arrivée d'eau d'un poste sous air n'est pas compatible avec ce risque. Seuls les postes sous eau, alternatif (mode eau) ou déluge sont admis pour le stockage de pneus.",
+    "reference": "R1 §6.10 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-haut-005",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.2.4",
+    "theme": "Hauteurs — CMSA K280 limites",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un CMSA K280 sur ST1 HHS#1/2/3 avec poste EAU (15 sprinkleurs à 1,1 bar) :",
+    "propositions": [
+      "Hauteur toiture 7,6 m, stockage 6,1 m",
+      "Hauteur toiture 9,1 m, stockage 7,6 m",
+      "Hauteur toiture 10,7 m, stockage 9,1 m",
+      "Hauteur toiture 12,2 m, stockage 10,7 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "9,1 m toiture / 7,6 m stockage à 1,1 bar (Tableau T16.2.4). Passage à 1,7 bar : 10,7 m / 9,1 m (mais air non admis). Passage à 2,1 bar : 12,2 m / 10,7 m. Le CMSA K280 monte plus haut que le K160 ou K240, mais sa configuration EAU est limitée.",
+    "reference": "R1 §16.2.4 / Tableau T16.2.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-haut-006",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.2.4",
+    "theme": "Hauteurs — CMSA HHS#4/5",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon T16.2.4, le CMSA K280 sur ST1 pour HHS#4 et HHS#5 :",
+    "propositions": [
+      "Est admis jusqu'à 9,1 m",
+      "Est admis en air uniquement",
+      "Non admis (NA)",
+      "Admis uniquement avec RI"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "NA = Non Admis. Le CMSA K280 n'est pas autorisé pour HHS#4 et HHS#5 sur ST1, peu importe la pression. Ces classes très sévères nécessitent une autre stratégie (ESFR adapté, ou CMSA K160/K240 selon table, voire combinaison avec RI).",
+    "reference": "R1 §16.2.4 / Tableau T16.2.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-haut-007",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Hauteurs — ST5 caillebotis",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Sur un ST5, l'utilisation de platelage plein ou indice de vide < 70 % :",
+    "propositions": [
+      "Est toujours admise",
+      "Est interdite",
+      "Peut être envisagée ponctuellement, après ACCORD CNPP, pour hauteurs très limitées",
+      "Demande des sprinkleurs sous chaque platelage"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Accord CNPP requis, au cas par cas, pour hauteurs de stockage très limitées. Le caillebotis ≥ 70 % vide est la règle normale. Permet des exceptions documentées pour certains stockages spécifiques (ex. : niches en bois sous étagères).",
+    "reference": "R1 §5.1.3 / §17.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-haut-008",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Hauteurs — Îlots réglementaires",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un stockage ST7 ou ST8 sans îlot \"R1\" requis, peuvent être imposés :",
+    "propositions": [
+      "Des îlots R1 à 150 m²",
+      "Des îlots réglementaires à 500 m² lorsque les allées entre rayonnages sont < 1,2 m",
+      "Des îlots à 1 000 m² systématiques",
+      "Aucun îlot"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Îlots de 500 m² imposés par CONTRAINTES RÉGLEMENTAIRES (ICPE, code du travail) quand allées < 1,2 m, distincts des îlots R1 (typiquement 150 m²). Mention explicite §17. À ne pas confondre les deux contextes d'îlots.",
+    "reference": "R1 §17.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-haut-009",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "13",
+    "theme": "Hauteurs — Distance libre HHS limites",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon le rappel Phrases Q1 sur T13.2.2.1, la distance libre maxi pour HHS#3 à HHS#5 est :",
+    "propositions": [
+      "1 m",
+      "4 m maxi (et 6 m pour HHS#1/#2)",
+      "Aucune limite",
+      "2 m maxi"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "4 m maxi pour HHS#3/#4/#5, 6 m maxi pour HHS#1/#2. Distance libre min toujours 1 m. Lecture du tableau T13.2.2.1. Au-delà = perte d'efficacité (sprinkleurs trop éloignés de la combustion). Piège Q1 : stockage qui \"monte\" sans réajustement.",
+    "reference": "R1 §13.2.2.1 / Tableau T13.2.2.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-haut-010",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "13",
+    "theme": "Hauteurs — Audit montée stockage",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 entrepôt HHS#3 conçu pour 4 m de stockage (sous toiture 8 m). Vous mesurez aujourd'hui 5,5 m. Statut ?",
+    "propositions": [
+      "Conforme : 5,5 m < toiture 8 m",
+      "NC AVEC RISQUE : distance libre tombée à 2,5 m (sous le \"min 1 m\" non, mais sortie de la fenêtre du tableau densité) — sous-dimensionnement probable",
+      "Recommandation simple",
+      "Conforme avec contrôle annuel"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. Hauteur stockage passée de 4 m à 5,5 m (+ 37%). Distance libre tombée à 2,5 m. Si T6.3.1.4 HHS#3 ST4 avait été dimensionné pour 4 m (env. 15 l/m²/min sur 260 m²), à 5,5 m il faudrait 20 l/m²/min sur 300 m². L'installation est désormais sous-dimensionnée. Demande corrective : abaissement stockage OU étude de mise à niveau hydraulique.",
+    "reference": "R1 §6.3.1.4 / §13.2.2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ri-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.2",
+    "theme": "RI — Quand obligatoires",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les réseaux intermédiaires (RI) deviennent obligatoires dans un rack quand :",
+    "propositions": [
+      "Plus de 3 niveaux de palettes",
+      "Distance libre > limites du tableau OU bâtiment > 12 m avec hauteur stockage élevée",
+      "Marchandise inflammable seule",
+      "Allée > 1,5 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "RI obligatoires quand la distance libre dépasse les limites du tableau (T6.3.1.4) OU dans les bâtiments > 12 m avec stockage élevé. Logique : sans RI, l'eau de toiture ne pénètre plus assez profondément dans les racks pour étouffer le foyer. Cas typique : entrepôts modernes de 14-18 m.",
+    "reference": "R1 §6.3.2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ri-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.5.4.1",
+    "theme": "RI — Racks doubles cheminée",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour des racks doubles avec RI, l'implantation des sprinkleurs intermédiaires se fait :",
+    "propositions": [
+      "Sur les façades extérieures uniquement",
+      "Dans la cheminée centrale entre les deux rangées",
+      "Sur chaque palette individuellement",
+      "En toiture seule"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Dans la cheminée centrale, conformément à F6.5.4.1d. La cheminée 0,15 m est la zone hydrauliquement la plus favorable pour atteindre les niveaux inférieurs. Si palettes < 0,80 m de large : possible de mettre dans l'espace transversal toutes les 2 palettes avec quinconce.",
+    "reference": "R1 §6.5.4.1 / Figure F6.5.4.1d (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ri-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.5.4.1",
+    "theme": "RI — Têtes complémentaires",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Sur racks doubles avec distance entre montants > 3 m, le RI doit :",
+    "propositions": [
+      "Être doublé en hauteur",
+      "Ajouter des têtes complémentaires en façade pour respecter la distance max 3 m entre têtes",
+      "Être remplacé par ESFR",
+      "Calculer avec K115 obligatoire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Têtes complémentaires en façade pour respecter 3 m max entre têtes (F6.5.4.1f). Sans ces têtes, les zones loin des montants ne sont pas couvertes. Lié à la géométrie des racks : entre 2,5 m et 3 m, OK ; au-delà, ajustement nécessaire.",
+    "reference": "R1 §6.5.4.1 / Figure F6.5.4.1f (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ri-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.5.4.1",
+    "theme": "RI — Racks simples ST4",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour les racks SIMPLES ST4, l'implantation du RI peut être :",
+    "propositions": [
+      "Au centre du rack entre chaque palette OU sur les 2 façades en quinconce",
+      "Uniquement au centre",
+      "Uniquement en façade",
+      "Tous les 2 m fixement"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Au choix : (a) centre du rack entre chaque palette, ou (b) sur les deux façades en quinconce. Flexibilité pour s'adapter aux contraintes mécaniques du rack (poteaux, contreventements). L'implantation doit toutefois être documentée et cohérente sur toute la longueur du rack.",
+    "reference": "R1 §6.5.4.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ri-005",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.5.4.1",
+    "theme": "RI — ST8 plancher plein",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour les racks à accumulation ST8 (note 5 de F6.5.4.1c), l'implantation du RI exige :",
+    "propositions": [
+      "Un sprinkleur par palette",
+      "Un plancher plein recouvrant l'ensemble du rack (sauf note 4), chaque palette entourée d'espaces 0,15 m, 4 sprinkleurs autour de chaque palette",
+      "Pas de sprinkleur intermédiaire",
+      "ESFR obligatoire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Plancher plein + espaces de 0,15 m autour de chaque palette + 4 sprinkleurs aux intersections (donc chaque palette \"entourée\" de 4 têtes). Configuration extrêmement dense, justifiée par l'absence d'allée et la compacité du ST8. Note 4 = exception explicite.",
+    "reference": "R1 §6.5.4.1 / Figure F6.5.4.1c (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ri-006",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.5.4.1",
+    "theme": "RI — Espaces 0,15 m calcul",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour les RI dans les racks, les espaces longitudinaux et transversaux entre palettes sont :",
+    "propositions": [
+      "Exactement 0,15 m, sans tolérance",
+      "0,15 m minimum, transversal justifiable par moyenne et longitudinal par écart racks accru",
+      "0,10 m minimum",
+      "Libres"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "0,15 m minimum, avec deux flexibilités : (1) le transversal peut être justifié EN MOYENNE (sur plusieurs palettes, pas point par point), (2) le longitudinal peut être justifié par AUGMENTATION DE L'ÉCARTEMENT entre racks. Permet d'absorber les irrégularités réelles de stockage.",
+    "reference": "R1 §6.5.4.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ri-007",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.5.4.1",
+    "theme": "RI — Position dans rack",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le réseau intermédiaire dans un rack doit être positionné :",
+    "propositions": [
+      "Au sol",
+      "Entre la moitié et les 2/3 de la hauteur totale du stockage",
+      "Au sommet du rack",
+      "Exactement à 5 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Entre la moitié et les 2/3 de la hauteur totale du stockage (référence §16.2 pour CMSA). Position pour maximiser la couverture verticale : pas trop bas (l'eau de toiture peut encore atteindre les niveaux supérieurs), pas trop haut (les niveaux inférieurs ne seraient pas couverts).",
+    "reference": "R1 §16.2 / §6.3.2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ri-008",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.2",
+    "theme": "RI — Calcul hydraulique 8 sprinkleurs",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Le calcul hydraulique d'un RI doit prendre en compte :",
+    "propositions": [
+      "4 sprinkleurs minimum",
+      "8 sprinkleurs (spray 68°C réponse rapide), K80 à 2 bar minimum OU K≥115 à 1 bar",
+      "12 sprinkleurs en tous cas",
+      "Seulement les sprinkleurs immédiatement au-dessus de la palette"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "8 sprinkleurs sur une même antenne (1,40 m entre chaque). Spray 68°C réponse rapide. Au choix : K80 à pression mini 2 bar, OU K≥115 à pression mini 1 bar. Le K plus grand permet une pression plus basse (plus facile à garantir).",
+    "reference": "R1 §16.2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ri-009",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.10.1",
+    "theme": "RI — Pneumatiques disposition",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour les pneumatiques sur rack avec RI, les sprinkleurs RI doivent être disposés :",
+    "propositions": [
+      "Tous les 2,40 m maxi, 1 sprinkleur dans chaque espace transversal",
+      "Tous les 5 m maxi",
+      "Sur les deux façades seulement",
+      "Au plafond uniquement"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Tous les 2,40 m maximum, avec 1 sprinkleur dans chaque espace transversal. Pour rack simple : RI centré (F6.10.1b). Pour rack double : configuration spécifique cf. R1 §6.10.1. Densité plus serrée que les RI génériques (2,40 m vs 1,40 m sur l'antenne).",
+    "reference": "R1 §6.10.1 / Figure F6.10.1b (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ri-010",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.5.4.1",
+    "theme": "RI — Audit absent",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 dans un entrepôt 14 m HHS#3, stockage 8 m hauteur. Pas de réseau intermédiaire installé. Statut ?",
+    "propositions": [
+      "Conforme si dimensionnement toiture suffisant",
+      "NC AVEC RISQUE : bâtiment > 12 m + stockage élevé → RI obligatoires §6.3.2 ; absence = sous-dimensionnement",
+      "Recommandation",
+      "Demande accord CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. La règle §6.3.2 impose des RI dès qu'on dépasse les limites du tableau OU bâtiment > 12 m avec stockage élevé. Ici 14 m / stockage 8 m : RI obligatoires. Sans eux, l'eau de toiture (à 14 m de hauteur) ne pénètre pas assez profond pour étouffer un foyer à 8 m. Demande corrective : étude RI + installation.",
+    "reference": "R1 §6.3.2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-eta-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Étagères — Caillebotis 70%",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les caillebotis métalliques sont considérés comme \"platelages ajourés\" au sens R1 si :",
+    "propositions": [
+      "Indice de vide ≥ 50 %",
+      "Indice de vide ≥ 70 %",
+      "Indice de vide ≥ 90 %",
+      "Métalliques quelle que soit l'ajourage"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Indice de vide ≥ 70 % minimum. Au-dessus, le caillebotis ne fait pas obstacle au passage de l'eau et n'impose pas de RI sous platelage. À 50-69 %, situation intermédiaire (cf. règles spécifiques). En dessous de 50 %, considéré comme étagère pleine.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-eta-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Étagères — Lisse basse pleine",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Sur un ST4, l'installation d'une étagère pleine sur la LISSE BASSE est admise si :",
+    "propositions": [
+      "Toujours admise",
+      "Située à moins de 0,50 m du sol, avec respect de la cheminée 0,15 m",
+      "Située à moins de 1 m du sol",
+      "Jamais admise"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Lisse basse pleine admise à moins de 0,50 m du sol, sous réserve : (a) cheminée 0,15 m respectée dans l'axe rack, (b) cheminée 0,15 m sur chaque ligne transversale des montants verticaux. Si pas possible : cloisonnement de l'espace caché.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-eta-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Étagères — 1ère lisse > 50 cm",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Au-dessus de 0,50 m du sol, la première lisse peut comporter une étagère :",
+    "propositions": [
+      "Pleine sans condition",
+      "Ajourée constituée de lattes < 0,15 m largeur et indice de vide 50 %",
+      "Caillebotis 70 % uniquement",
+      "Aucune étagère admise"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Étagère AJOURÉE, lattes < 0,15 m largeur, indice de vide 50 % (cf. F6.3.1.4c). Différent du caillebotis 70 % standard. Permet une optimisation entre stockage et écoulement d'eau.",
+    "reference": "R1 §6.3.1.4 / Figure F6.3.1.4c (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-eta-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Étagères — Platelage < 70% RI",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans les autres cas (platelages indice ajourage < 70 % hors exceptions précédentes), il faut :",
+    "propositions": [
+      "Mettre en place des réseaux intermédiaires dans les racks dont un niveau SOUS chaque platelage",
+      "Augmenter la densité toiture seulement",
+      "Refuser le stockage",
+      "Demander CNPP"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "RI dans les racks avec un niveau SOUS chaque platelage. Logique : si l'eau ne passe pas (platelage trop plein), il faut amener l'eau directement sous le platelage. Solution exigeante en tuyauterie mais nécessaire pour conserver la fonction de protection.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-eta-005",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17.1.4",
+    "theme": "Étagères — Platelage ESFR exception",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour la protection ESFR de stockage ST8, le platelage doit être ajouré à :",
+    "propositions": [
+      "50 % minimum",
+      "70 % minimum",
+      "90 % minimum",
+      "Toujours plein"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "70 % minimum. Règle générale ESFR §17.1.4. L'ESFR repose sur une suppression rapide du feu par gouttes lourdes traversant rapidement vers le foyer ; si le platelage gêne, l'efficacité ESFR s'effondre.",
+    "reference": "R1 §17.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-eta-006",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Étagères — Cheminée cloisonnement",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Si la cheminée 0,15 m ne peut pas être respectée dans un rack avec étagère pleine en lisse basse :",
+    "propositions": [
+      "On accepte sans condition",
+      "Le cloisonnement de l'espace caché doit être envisagé",
+      "On augmente la densité de 50 %",
+      "On installe des sprinkleurs spray"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Cloisonnement de l'espace caché. Solution : créer une zone non communicante, évitant la propagation horizontale du feu dans un volume où l'eau ne pénètre pas. Le cloisonnement remplace mécaniquement la fonction \"cheminée\" qui ne peut pas exister physiquement.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-eta-007",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Étagères — Q1 mur palettes",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 ST4 : exploitant a ajouté des plaques pleines sur toutes les lisses pour éviter chutes de marchandises. Statut ?",
+    "propositions": [
+      "Bonne pratique sécurité — sans suite",
+      "NC AVEC RISQUE : modification non conforme au §6.3.1.4. Sans RI installés sous chaque platelage, l'eau ne descend plus dans le rack",
+      "Recommandation : ajouter des sprinkleurs",
+      "Demande accord CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. Plaques pleines ajoutées = équivalent étagères pleines partout. Sans modification de la protection (RI sous chaque niveau), l'eau de toiture est bloquée. La sécurité \"chute de marchandises\" est obtenue au détriment de la sécurité incendie. Demande corrective : retirer les plaques OU installer les RI.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-eta-008",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Étagères — Bandes Q1 stock rack sans réseau",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon le rappel Phrases Q1 sur les doubles racks SANS réseau, les étagères admises sont :",
+    "propositions": [
+      "Pleines partout",
+      "Pleines en lisse basse < 50 cm ; ajourées 50% sur 1ère lisse > 50 cm ; au-delà caillebotis ≥ 70 %",
+      "Toujours caillebotis 90 %",
+      "Pas d'étagère du tout"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Synthèse du Phrases Q1 : (1) lisse basse < 50 cm : pleine OK, (2) 1ère lisse > 50 cm : ajourée 50 %, (3) au-delà : caillebotis ≥ 70 %. Combinaison à vérifier en Q1 sur les ST4 sans RI. Largeur d'allée ≥ 1,2 m partout.",
+    "reference": "R1 §5.1.3 / §6.3.1.4 / Phrases Q1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-eta-009",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "13",
+    "theme": "Étagères — Caillebotis dégradé",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 entrepôt avec caillebotis indice de vide 65 % constaté (au lieu de 70 % d'origine, dépôts colmatants). Statut ?",
+    "propositions": [
+      "Sans suite si majorité ≥ 70 %",
+      "NC : le seuil 70 % est l'exigence — caillebotis colmaté ne remplit plus sa fonction, demande nettoyage",
+      "Information : nettoyer dans les 6 mois",
+      "Recommandation : remplacer le caillebotis"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC. Le 70 % est un seuil non négociable (caillebotis = platelage ajouré au sens R1). Un colmatage progressif (poussières, papiers, sciures) ramène l'indice sous le seuil et l'eau ne passe plus suffisamment. Demande corrective : nettoyage par soufflage/lavage. Anomalie classique sur sites industriels avec émissions de poussières.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-eta-010",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Étagères — Rayonnage > 1m ST6",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un stockage sur rayonnage fixe ST6 (largeur > 1 m) avec étagères pleines ou ajourées :",
+    "propositions": [
+      "Pas de sprinkleur intermédiaire",
+      "Sprinkleurs intermédiaires requis EN-DESSOUS de chaque étagère",
+      "RI partagé tous les 2 niveaux",
+      "ESFR obligatoire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Sprinkleurs intermédiaires en-dessous de chaque étagère pour ST6 (largeur > 1 m). Logique : la largeur > 1 m fait écran à l'eau de toiture, chaque niveau doit avoir sa protection propre. Différent de ST5 (largeur ≤ 1 m) où on accepte une seule protection toiture.",
+    "reference": "R1 §5.1.3 / §6.3.2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17",
+    "theme": "ESFR — Définition",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Que signifie l'acronyme \"ESFR\" pour les sprinkleurs ?",
+    "propositions": [
+      "Extended Sprinkler Fire Response",
+      "Early Suppression Fast Response",
+      "Efficient Sprinkler For Risk",
+      "Emergency Suppression Field Reactive"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "ESFR = Early Suppression Fast Response. Concept : suppression précoce par gouttes lourdes à réponse rapide, capables de traverser les flammes ascendantes et atteindre directement le foyer. Permet souvent de se passer de réseaux intermédiaires sur les stockages élevés.",
+    "reference": "R1 §17 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17.1",
+    "theme": "ESFR — Quand utiliser",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "L'ESFR est principalement utilisé pour :",
+    "propositions": [
+      "Stockages HHS élevés sans réseaux intermédiaires",
+      "Bureaux et locaux LH",
+      "Cuisines industrielles",
+      "Locaux à risques spéciaux exclusivement"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Stockages HHS élevés (typiquement HHS#1 à HHS#4 selon configurations) en hauteur, où l'on souhaite éviter les contraintes des réseaux intermédiaires. Limitations : marchandises et emballages incompatibles, pente toiture limitée, distance libre 1 m mini.",
+    "reference": "R1 §17.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17.2.1",
+    "theme": "ESFR — Connaissance marchandises",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon le principe de base ESFR (§17.2.1), une protection ESFR pour le certificat N1 :",
+    "propositions": [
+      "Peut être installée sans connaître les marchandises",
+      "Ne devrait être réalisée QUE si la nature des marchandises et emballages stockés est connue",
+      "Nécessite seulement la connaissance de la hauteur",
+      "Demande systématiquement un accord CNPP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Connaissance des marchandises ET emballages REQUISE. Pourquoi : l'ESFR a une compatibilité stricte (matières plastiques, aérosols, certains liquides peuvent être incompatibles). Sans cette connaissance, le certificat N1 ne peut pas être délivré avec confiance. Listes non exhaustives présentées au §17.2.",
+    "reference": "R1 §17.2.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17.1.4.4",
+    "theme": "ESFR — ST8 espace transversal",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour protéger un ST8 (accumulation) par ESFR, l'espace transversal minimum entre lignes de palettes est :",
+    "propositions": [
+      "0,10 m",
+      "0,15 m",
+      "0,30 m",
+      "0,50 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "0,15 m minimum entre chaque ligne de palettes (cf. F17.1.4.4). Sans cet espace, les gouttes ESFR ne pénètrent pas suffisamment entre les palettes denses. Distance libre 1 m mini (entre toiture sprinkleurs et sommet stockage), platelage éventuel ≥ 70 % ajouré.",
+    "reference": "R1 §17.1.4.4 / Figure F17.1.4.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-005",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17.1.4.4",
+    "theme": "ESFR — ST8 îlot conception",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un ST8 protégé ESFR, les îlots de stockage liés à la conception ESFR :",
+    "propositions": [
+      "Sont obligatoires (150 m²)",
+      "Ne sont pas requis par la conception ESFR (mais des îlots réglementaires 500 m² peuvent être imposés si allées < 1,2 m)",
+      "Sont à 500 m² systématiques",
+      "Sont à 1000 m² toujours"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Pas d'îlot \"R1 ESFR\" requis. Mais contraintes RÉGLEMENTAIRES (ICPE) imposent souvent 500 m² quand allées < 1,2 m. Distinction importante : la R1 ESFR n'impose pas d'îlot intrinsèque, mais d'autres règles s'appliquent.",
+    "reference": "R1 §17.1.4.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-006",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17.1.4.5",
+    "theme": "ESFR — ST9 cantilever",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour la protection ESFR d'un stockage ST9 cantilever, les marchandises doivent avoir au maximum :",
+    "propositions": [
+      "2 m de long",
+      "3 m de long (au-delà uniquement au sol), espaces transversaux 0,08 m alignés sur la hauteur",
+      "5 m de long",
+      "Aucune limite"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Marchandises ≤ 3 m de long avec alignement des espaces transversaux 0,08 m sur la hauteur. Plus longues admises uniquement au sol. Platelage éventuel ≥ 70 % ajouré. L'alignement vertical des espaces transversaux permet aux gouttes ESFR de descendre verticalement.",
+    "reference": "R1 §17.1.4.5 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-007",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17",
+    "theme": "ESFR — Distance libre",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "La distance libre minimale entre le diffuseur des sprinkleurs ESFR et le sommet du stockage est :",
+    "propositions": [
+      "0,5 m",
+      "1 m",
+      "1,5 m",
+      "2 m"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "1 m minimum. Distance libre essentielle pour que les gouttes ESFR atteignent leur trajectoire et leur taille optimales avant d'arriver au foyer. Trop proche du stockage = jet non encore formé. Différent de la distance libre maxi (variable selon HHS).",
+    "reference": "R1 §17 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-008",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17",
+    "theme": "ESFR — Bobines papier vertical",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour les bobines de papier stockées verticalement, la protection :",
+    "propositions": [
+      "Peut être ESFR sans condition",
+      "CMSA doit être traitée en risque RS (Risque Spécial)",
+      "Toujours spray densité 25 l/m²/min",
+      "Refus systématique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Pour les bobines de papier stockées VERTICALEMENT en CMSA → risque RS (Risque Spécial). L'ESFR est envisageable mais étude selon chapitre 17. La protection des bobines de papier est délicate (combustion par les bords, effet cheminée intérieur).",
+    "reference": "R1 §6 / §17 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-009",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17",
+    "theme": "ESFR — Volume réserve bobines",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour les bobines de papier en risque spécial RS, le volume de réserve d'eau est calculé sur :",
+    "propositions": [
+      "60 minutes de QSi1",
+      "90 minutes de QSi1",
+      "120 minutes de QSi1",
+      "180 minutes de QSi1"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "120 min de QSi1 (point Si1 = point hydrauliquement le plus favorable). Durée allongée par rapport au standard (60-90 min) car risque très aggravé avec propagation lente mais soutenue. Réserve dimensionnée \"large\" pour absorber l'incendie profond.",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-010",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17",
+    "theme": "ESFR — Sprinkleur toiture type",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour la protection des bobines de papier verticales, les sprinkleurs de toiture sont :",
+    "propositions": [
+      "Spray 68°C standard",
+      "Spray 141°C",
+      "ESFR uniquement",
+      "Pulvérisateurs ouverts"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Spray 141°C. Pourquoi température élevée : la combustion lente des bobines verticales peut générer un dégagement de chaleur progressif. Le 68°C standard déclencherait trop tôt sur des élévations modérées (effets papier-papier, lumière indirecte). Le 141°C cible la vraie élévation \"incendie\".",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-011",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17",
+    "theme": "ESFR — Audit incompatibilité",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 dans un entrepôt protégé ESFR. Vous découvrez un nouveau stockage d'aérosols (300 m²) ajouté en zone protégée. Statut ?",
+    "propositions": [
+      "Sans suite — la zone est petite",
+      "NC AVEC RISQUE : aérosols incompatibles ESFR (cf. §17.2.1) — protection invalidée localement, certificat N1 menacé",
+      "Recommandation : retirer les aérosols",
+      "Conforme si bidons < 1 L"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. Les aérosols figurent typiquement dans les listes d'incompatibilités ESFR (§17.2.1). L'introduction d'un risque incompatible invalide la protection ESFR pour cette zone (potentiellement plus large). Le certificat N1 ne peut plus être maintenu sans modification. Demande corrective immédiate : isoler les aérosols OU prévoir une protection adaptée (déluge spécifique).",
+    "reference": "R1 §17.2.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-esfr-012",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17",
+    "theme": "ESFR — Pente toiture",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "La pente maximale de toiture admise pour une protection ESFR est typiquement :",
+    "propositions": [
+      "10 %",
+      "17 %",
+      "25 %",
+      "Sans limite"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "17 % maximum (référence courante R1). Au-delà, la trajectoire des gouttes ESFR (très calibrée) est perturbée par les écoulements d'air et l'effet \"course\" sur la toiture inclinée. Le CMSA K280 a la même limite (§16.3). Distinct du sprinkleur spray standard plus tolérant.",
+    "reference": "R1 §17 / §16.3 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16",
+    "theme": "CMSA — Définition",
+    "difficulte": 1,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "L'acronyme \"CMSA\" pour les sprinkleurs signifie :",
+    "propositions": [
+      "Control Mode Specific Application",
+      "Closed Mode Sprinkler Activation",
+      "Critical Mass Sprinkler Action",
+      "Customized Mode Suppression Apparatus"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "CMSA = Control Mode Specific Application. Concept : mode contrôle (contrairement à l'ESFR qui supprime), pour application spécifique. Sprinkleurs à gros débit (K160, K240, K280) destinés au contrôle du feu sur stockages élevés. Alternative à l'ESFR avec contraintes différentes.",
+    "reference": "R1 §16 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.2",
+    "theme": "CMSA — Coefficients K disponibles",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les coefficients K des sprinkleurs CMSA disponibles selon la R1 sont :",
+    "propositions": [
+      "K80, K115, K160",
+      "K160, K240, K280",
+      "K200, K300, K400",
+      "K115, K200, K360"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "K160, K240, K280. K plus grand = plus de débit à pression donnée (Q = K × √P). K280 est le plus puissant, utilisé pour atteindre les hauteurs maxi. Chaque K a son propre tableau de critères (T16.2.X).",
+    "reference": "R1 §16.2 / Tableaux T16.2.X (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.2.4",
+    "theme": "CMSA — K280 HHS#3 plastiques",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un CMSA K280 sur HHS#3 (matières plastiques non expansées exposées classées HHS#4, <25% plastique alvéolaire), poste EAU :",
+    "propositions": [
+      "15 sprinkleurs, hauteur toiture 9,1 m, stockage 7,6 m, air NON admis, allée mini 2,4 m entre racks",
+      "30 sprinkleurs, sans contrainte",
+      "Refus systématique",
+      "Spray 141°C seulement"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "15 sprinkleurs en fonctionnement, hauteur toiture 9,1 m, stockage 7,6 m. Air non admis. Allée minimale 2,4 m entre racks (cf. note T16.2.4). Avec RI (30 sprinkleurs) : toiture passe à 10,7 m, stockage 7,6 m, air toujours non admis.",
+    "reference": "R1 §16.2.4 / Tableau T16.2.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.2.4",
+    "theme": "CMSA — K280 NA configurations",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans le tableau T16.2.4 du CMSA K280, certaines cases portent \"NA\". Cela signifie :",
+    "propositions": [
+      "Non applicable (configuration acceptée sans condition)",
+      "Non admis (configuration interdite pour cette combinaison)",
+      "Nouveau air",
+      "Non aéré"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NA = Non Admis. La configuration n'est pas autorisée par la R1 (typiquement HHS#4 ou HHS#5 sur certains modes ST). À distinguer de \"air non admis\" qui signifie que la configuration EAU est OK mais air interdit.",
+    "reference": "R1 §16.2.4 / Tableau T16.2.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-005",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.2.4",
+    "theme": "CMSA — K280 pente",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour le CMSA K280, quelle pente de toiture est tolérée ?",
+    "propositions": [
+      "Aucune limite",
+      "Aucune pente supérieure à 17 % n'est tolérée",
+      "Jusqu'à 25 %",
+      "Jusqu'à 10 %"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "17 % maximum (comme l'ESFR §17). Au-delà, la trajectoire des gouttes est perturbée. Le K280 a beaucoup d'inertie (grosses gouttes lourdes) mais reste sensible aux écoulements d'air sur toitures fortement inclinées.",
+    "reference": "R1 §16.2.4 / §16.3 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-006",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.3.1",
+    "theme": "CMSA — Vitesse soufflage",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans une zone protégée CMSA, la vitesse de soufflage des aérothermes, brasseurs d'air et climatiseurs est limitée à :",
+    "propositions": [
+      "3 m/s",
+      "5 m/s (mesure à 0,5 m de l'ouïe)",
+      "10 m/s",
+      "Pas de limite"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "5 m/s maximum, mesuré à 0,5 m de l'ouïe (sortie du diffuseur). Au-delà, la trajectoire des gouttes CMSA est perturbée. Vérification en Q1 : un brasseur récent peut souffler 8-10 m/s et invalider la protection. Mesure à l'anémomètre.",
+    "reference": "R1 §16.3.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-007",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.3.1",
+    "theme": "CMSA — Extracteurs",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Dans une zone protégée CMSA, les extracteurs sont :",
+    "propositions": [
+      "Autorisés sans condition",
+      "Interdits SAUF si leur arrêt est asservi conformément au §4.8",
+      "Autorisés uniquement en LH",
+      "Toujours obligatoires pour évacuer la chaleur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Interdits sauf si arrêt asservi au déclenchement sprinkleur (§4.8). Logique : un extracteur en marche pendant l'incendie évacue les fumées chaudes ET diminue le tirage thermique nécessaire au bon fonctionnement CMSA. L'asservissement coupe l'extracteur dès que les sprinkleurs s'activent.",
+    "reference": "R1 §16.3.1 / §4.8 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-008",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.2",
+    "theme": "CMSA — RI position",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quand un RI est requis sur installation CMSA, il doit être placé :",
+    "propositions": [
+      "Au plus bas du rack",
+      "Au niveau de la lisse située entre la moitié et les 2/3 de la hauteur totale du stockage",
+      "Au sommet du stockage",
+      "Au choix concepteur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Entre 1/2 et 2/3 de la hauteur totale du stockage. Même règle que les RI génériques. Calcul hydraulique RI CMSA : 8 sprinkleurs spray 68°C réponse rapide, K80 à 2 bar OU K≥115 à 1 bar, 1,40 m entre chaque sprinkleur sur l'antenne.",
+    "reference": "R1 §16.2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-009",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.2.4",
+    "theme": "CMSA — Air \"non admis\"",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Sur les tableaux CMSA K280, la mention \"air non admis\" signifie :",
+    "propositions": [
+      "Local non ventilé requis",
+      "Poste sous air interdit — poste sous eau obligatoire",
+      "Air comprimé impossible",
+      "Pas de circulation d'air"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Poste sous air INTERDIT. Le délai d'arrivée d'eau d'un poste sous air est incompatible avec les stockages CMSA aux configurations sévères (hauteur, HHS). Seul le poste sous eau est admis. Distinction à bien lire dans T16.2.X.",
+    "reference": "R1 §16.2.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-010",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16.3",
+    "theme": "CMSA — Hauteur sous toiture mini",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quel est l'écart minimum entre les déflecteurs CMSA et la toiture ?",
+    "propositions": [
+      "10 cm",
+      "Référence à §13 (distance toit-déflecteur) — typiquement liée au type de toiture",
+      "1 m",
+      "Pas d'exigence"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Référence §13 (distance toit-déflecteur). Dépend du type de toit : isolation, présence de pannes, parquet métallique. Pour CMSA, écart classique 0,15 à 0,30 m. Trop proche du toit = effet de plafond perturbant le jet ; trop loin = perte d'effet thermique.",
+    "reference": "R1 §16 / §13 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-011",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16",
+    "theme": "CMSA — Audit pente excédante",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 : zone CMSA K280 avec toiture à 20 % de pente (constat ardoise neuve). Statut ?",
+    "propositions": [
+      "Sans suite — légère",
+      "NC AVEC RISQUE : limite CMSA K280 = 17 % de pente. Protection invalidée structurellement, certificat N1 menacé",
+      "Recommandation simple",
+      "Conforme si étude CFD"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. La limite 17 % est explicite (§16.3 + §17). Une pente à 20 % invalide structurellement la protection CMSA K280 : les calculs de portée des gouttes ne sont plus garantis. Cas typique de réhabilitation où la toiture a été modifiée. Pas de \"léger dépassement\" admissible. Demande : retour à 17 % ou changement de protection.",
+    "reference": "R1 §16.3 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-cmsa-012",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16",
+    "theme": "CMSA — vs ESFR différence",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "La différence fondamentale CMSA vs ESFR est :",
+    "propositions": [
+      "CMSA = contrôle du feu, ESFR = suppression précoce",
+      "ESFR = contrôle, CMSA = suppression",
+      "Ils sont identiques",
+      "ESFR = électronique, CMSA = mécanique"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "CMSA = Control Mode (le feu est contrôlé, brûle jusqu'à épuisement avec déversement maintenu) ; ESFR = Early Suppression Fast Response (le feu est ÉTOUFFÉ par densité massive de gouttes lourdes très tôt). Conséquences : ESFR ouvre moins de têtes (12 max typiquement) mais demande un dimensionnement strict. CMSA peut ouvrir plus mais accepte plus de variations.",
+    "reference": "R1 §16 / §17 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-li-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6",
+    "theme": "LI — Stockages ponctuels",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour les stockages PONCTUELS de liquides inflammables dans une protection sprinkleur non dédiée :",
+    "propositions": [
+      "Refus systématique",
+      "Traités ponctuellement : gondoles avec rétentions incombustibles + sprinkleurs à chaque niveau",
+      "Toujours par déluge",
+      "Sans protection particulière"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Traités ponctuellement (cas typique : rayons de surfaces de vente, stockage d'appoint). Solution : gondoles avec rétentions INCOMBUSTIBLES à chaque niveau + sprinkleurs à chaque niveau. Distinct du stockage massif de liquides inflammables qui relève d'un référentiel dédié (R12).",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-li-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6",
+    "theme": "LI — Palette autoprotégée",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Une palette autoprotégée pour stockage de liquides inflammables doit avoir :",
+    "propositions": [
+      "3 parois pleines",
+      "5 faces incombustibles empêchant la chute des bidons + rétention locale (50% du volume total ou volume du plus grand contenant) + sprinkleur K115 mini local",
+      "Aucun équipement spécifique",
+      "Un détecteur incendie intégré"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "5 faces pleines incombustibles + rétention 50% volume ou plus grand contenant + sprinkleur à réponse rapide K115 minimum local. Raccordement possible sur antenne poste toiture avec vanne scellée ouverte, SANS cumul hydraulique. Solution complète et autosuffisante.",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-li-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6",
+    "theme": "LI — Gondole autoprotégée",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Les gondoles autoprotégées pour liquides inflammables doivent être :",
+    "propositions": [
+      "Standard du marché",
+      "Dimensionnées pour ce stockage spécifique ET entretenues pour être en permanence fonctionnelles",
+      "Visitées trimestriellement",
+      "Validées par le fournisseur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Dimensionnement SPÉCIFIQUE au stockage + entretien CONTINU pour rester fonctionnelles. Pas une solution \"clé en main\". L'entretien est essentiel : têtes encrassées, rétentions percées, etc. = invalidation du dispositif. Vérification en Q1 : fonctionnement réel observable.",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-li-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6",
+    "theme": "LI — IBC d'appoint",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Pour un stockage d'appoint de 1-2 IBC/GRV dans une activité industrielle, on peut utiliser :",
+    "propositions": [
+      "Refus systématique",
+      "Mêmes dispositions que les stockages ponctuels en surfaces de vente (gondole ou palette autoprotégée)",
+      "Sprinkleur déluge dédié",
+      "Mousse à bas foisonnement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Mêmes dispositions que stockages ponctuels (gondole ou palette autoprotégée). L'IBC (1000 L) n'est pas un stockage massif justifiant un référentiel R12, mais doit être protégé localement. Solution proportionnée au volume. Si plusieurs IBC = passage au référentiel R12 (liquides inflammables dédié).",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-li-005",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6",
+    "theme": "LI — Q1 stockage non protégé",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 : entrepôt général HHS#3 dans lequel apparaissent 3 GRV de solvant (huiles, point éclair < 60°C) sans protection spécifique. Statut ?",
+    "propositions": [
+      "Sans suite — volume modéré",
+      "NC AVEC RISQUE : stockage de liquides inflammables non traité — solution : palette autoprotégée OU passage R12 (selon évolution)",
+      "Information : déplacer en local séparé",
+      "Recommandation simple"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. Les solvants à point d'éclair < 60°C sont des liquides inflammables ; en stockage sans dispositif autoprotégé, ils créent un risque de feu de flaque non maîtrisé par les sprinkleurs HHS#3 toiture standards. Demande corrective : (a) palette autoprotégée immédiate, OU (b) étude protection R12 si volume croît, OU (c) reclassement de la zone.",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ext-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "4.1",
+    "theme": "Extérieur — Cours réception 10 m",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon §4.1, le stockage de matières combustibles dans les cours et zones de réception doit respecter une distance de :",
+    "propositions": [
+      "5 m du bâtiment",
+      "10 m OU 1,5 fois la hauteur du matériau stocké (la plus grande des deux)",
+      "20 m systématiques",
+      "Distance libre du concepteur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "10 m minimum OU 1,5 × hauteur stockage (la plus grande des deux). Logique : (a) seuil minimum 10 m, (b) règle proportionnelle si stockage haut (un mur de palettes 8 m → 12 m de distance). Empêche la propagation d'un feu extérieur vers le bâtiment via rayonnement et chute de matériaux enflammés.",
+    "reference": "R1 §4.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ext-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "4.1",
+    "theme": "Extérieur — Distance dynamique",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Dans la pratique terrain Q1, comment vérifier la conformité au critère 10 m / 1,5×H ?",
+    "propositions": [
+      "Vérification annuelle seulement",
+      "Mesure réelle des distances + hauteur stockage extérieur observée le jour J",
+      "Calcul théorique sur plan",
+      "Pas de vérification Q1"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Mesure réelle des distances + hauteur stockage observée. Le critère est dynamique : un stockage qui \"monte\" en hauteur (saison de pointe) modifie la distance minimale réglementaire. Vérification au moment du Q1. Anomalie classique : stockage palettes vides extérieur qui empiète sur les 10 m réglementaires.",
+    "reference": "R1 §4.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ext-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "4.1",
+    "theme": "Extérieur — Q1 palettes vides",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 : palettes vides empilées sur 4,5 m à 8 m du bâtiment. Statut ?",
+    "propositions": [
+      "Conforme : > 5 m",
+      "NC : critère 10 m OU 1,5×H (1,5 × 4,5 = 6,75 m). Le plus grand des deux = 10 m. Présence à 8 m → non conforme",
+      "Recommandation",
+      "Conforme avec consigne"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC. Calcul : 10 m OU 1,5×4,5 = 6,75 m. On retient le plus grand = 10 m. Présence à 8 m = non conforme. Anomalie courante sur sites logistiques (palettes vides, déchets cartons, conteneurs). Demande corrective : repositionner > 10 m OU abaisser la hauteur sous 6,67 m (où 1,5×H devient < 10 et 10 m s'applique).",
+    "reference": "R1 §4.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-ext-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "4.1",
+    "theme": "Extérieur — Stockage extérieur non protégé",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 : entrepôt avec auvent extérieur de 200 m² protégeant des matériels sans sprinkleur. Statut ?",
+    "propositions": [
+      "Sans suite si auvent ouvert",
+      "À analyser : (1) si extension du bâtiment, soumis sprinkleur ; (2) si vraiment extérieur, distance 10 m / 1,5×H à respecter avec bâtiment",
+      "Toujours conforme",
+      "Conforme sans condition"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "À analyser selon configuration. Un auvent peut être considéré comme extension du bâtiment (et donc devoir être sprinklé) OU comme stockage extérieur (et donc respecter les distances). Critère : ouvertures, isolation, fonction. Cas fréquent en logistique. Au Q1, vérifier la nature de l'aménagement et la cohérence avec le certificat N1.",
+    "reference": "R1 §4.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-piege-001",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6",
+    "theme": "Piège — Reclassement marchandise",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 : entrepôt initialement papier (HHS#1) reconverti en stockage plastiques (HHS#3 à HHS#5 selon ratio). Sprinkleurs inchangés. Statut ?",
+    "propositions": [
+      "Conforme : densité initiale large",
+      "NC AVEC RISQUE : reclassement HHS sans étude hydraulique. Sous-dimensionnement probable, exigible étude+ remise à niveau",
+      "Recommandation",
+      "Conforme si moins de 25 %"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. Le passage HHS#1 → HHS#3+ représente typiquement un doublement de densité requise (10 → 20+ l/m²/min) et une surface élargie. Sans étude+ travaux, l'installation est sous-dimensionnée. Anomalie majeure et fréquente lors de reconversions logistiques. Demande : audit + mise à niveau.",
+    "reference": "R1 §6.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-piege-002",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Piège — Cheminée comblée",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 ST4 rack double : exploitant a placé une planche bois pleine dans la cheminée centrale \"pour stabiliser les palettes\". Statut ?",
+    "propositions": [
+      "Bonne pratique stabilité",
+      "NC AVEC RISQUE : cheminée 0,15 m comblée → eau ne descend plus dans le rack ; en plus, planche combustible. Demande retrait immédiat",
+      "Recommandation",
+      "Conforme si planche métallique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. La cheminée 0,15 m est non négociable. Une planche dans la cheminée empêche l'eau de descendre verticalement dans le rack — exactement la fonction protégée. De plus, le bois est combustible. Demande corrective IMMÉDIATE : retirer la planche, sensibiliser. Si stabilité requise → butées ou séparateurs au-dessus de la cheminée.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-piege-003",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Piège — Palettes débordantes",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 ST4 : palettes débordant des montants côté allée (charges dépassant la palette de 30 cm). Statut ?",
+    "propositions": [
+      "Sans suite",
+      "NC : débordement modifie la distance libre entre sprinkleurs et stockage — couverture compromise",
+      "Information",
+      "Conforme si débordement < 50 cm"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC. Les charges dépassant la palette réduisent la distance horizontale au sprinkleur de toiture. Si l'installation a été dimensionnée pour palettes en gabarit (800×1200), des charges débordantes invalident le calcul couverture. Anomalie fréquente en saison de pic. Demande : remise dans le gabarit OU étude de couverture étendue.",
+    "reference": "R1 §6.3.1.4 / §13.2.2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-piege-004",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6.3.1.4",
+    "theme": "Piège — Stockage chaque allée",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 logistique : palettes au sol DANS les allées (entre les racks) pour pic d'activité. Statut ?",
+    "propositions": [
+      "Acceptable temporaire",
+      "NC AVEC RISQUE : transformation ST4 en équivalent ST8 (accumulation), couverture sous-toiture insuffisante",
+      "Recommandation",
+      "Conforme si circulation maintenue"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. Palettes au sol dans les allées = comblement des espaces libres → équivalent fonctionnel d'un ST8 (accumulation). Sans RI dimensionnés pour ST8, la couverture est sous-toiture seulement → insuffisante en cas de feu profond. Très fréquent en logistique au moment des pics. Demande : dégager les allées.",
+    "reference": "R1 §6.3.1.4 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-piege-005",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "13",
+    "theme": "Piège — Sprinkleurs obstrués par stock",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 : sprinkleurs de toiture obstrués par stockage qui s'est rapproché à 0,7 m du diffuseur (au lieu de 1 m mini). Statut ?",
+    "propositions": [
+      "Sans suite — 0,3 m de plus inutiles",
+      "NC : distance libre min 1 m violée — coupure du jet imminente, ouverture du parapluie compromise",
+      "Recommandation",
+      "Conforme si température < 50°C"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC. Distance libre min 1 m sous le diffuseur (§13.2.2.1). À 0,7 m, le \"parapluie\" du jet sprinkleur ne se forme pas correctement → couverture latérale réduite, eau qui coule sur la palette au lieu de pulvériser sur la zone. Anomalie courante quand stockage monte au fil du temps. Demande : abaisser stockage.",
+    "reference": "R1 §13.2.2.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-piege-006",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "5.1.3",
+    "theme": "Piège — Étagères ajoutées",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 ST4 : exploitant a remplacé les lisses simples par des étagères pleines bois sur tous les niveaux. Statut ?",
+    "propositions": [
+      "Bonne pratique — stockage stable",
+      "NC AVEC RISQUE : configuration équivalente à ST6 sans RI requis — eau bloquée à chaque niveau, et bois = matière combustible ajoutée",
+      "Recommandation : ajouter sprinkleurs",
+      "Conforme si étagères métalliques"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE GRAVE. Multiple problèmes : (1) étagères pleines transforment ST4 en équivalent ST6 → RI obligatoires sous chaque étagère, non installés ici ; (2) bois = matière combustible ajoutée au stockage, modifiant le classement HHS éventuel ; (3) eau de toiture ne descend pas. Demande corrective : retirer étagères pleines OU installer RI complet.",
+    "reference": "R1 §5.1.3 / §6.3.2 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-piege-007",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "16",
+    "theme": "Piège — Brasseur CMSA dépassement",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 zone CMSA : nouveau brasseur d'air à 8 m/s installé pour confort été. Statut ?",
+    "propositions": [
+      "Bonne pratique confort",
+      "NC AVEC RISQUE : limite CMSA 5 m/s violée — trajectoire des gouttes perturbée, certificat N1 menacé",
+      "Information : signaler à l'exploitant",
+      "Recommandation simple"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. Limite explicite §16.3.1 = 5 m/s. À 8 m/s, la trajectoire des grosses gouttes CMSA est significativement perturbée → couverture incertaine. Anomalie typique : exploitant cherchant le confort sans coordination avec l'équipe HSE/sprinkler. Demande : réduire vitesse à 5 m/s OU déplacer brasseur OU arrêt asservi au sprinkler.",
+    "reference": "R1 §16.3.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-piege-008",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "17",
+    "theme": "Piège — ESFR aérosols introduits",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 entrepôt ESFR : exploitant a stocké des aérosols (peintures et désodorisants) sur 80 m². Statut ?",
+    "propositions": [
+      "Conforme < 100 m²",
+      "NC AVEC RISQUE : aérosols incompatibles ESFR §17.2.1 — protection invalidée, certificat menacé",
+      "Recommandation",
+      "Conforme si bidons < 1 L"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. Les aérosols figurent dans les listes d'incompatibilités ESFR. Une zone de 80 m² d'aérosols invalide la protection ESFR localement. Risque réel : combustion explosive des aérosols, projection de flammes, propagation au-delà du périmètre ESFR. Demande corrective : retirer les aérosols OU protection spécifique adaptée (déluge mousse).",
+    "reference": "R1 §17.2.1 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-piege-009",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "13",
+    "theme": "Piège — Stockage entre lignes RI",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 entrepôt avec RI installés : exploitant stocke des matériels au sol entre les antennes RI (sous le RI). Statut ?",
+    "propositions": [
+      "Sans suite — sous RI",
+      "NC : matériels au sol non couverts par RI (RI = niveau supérieur). Couverture sous-toiture seule sur cette zone, à analyser hydrauliquement",
+      "Recommandation",
+      "Conforme"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC. Le RI couvre les niveaux supérieurs du rack ; le sol entre les antennes RI est couvert UNIQUEMENT par la toiture. Si l'installation a été dimensionnée avec stockage en racks uniquement (sans stockage au sol), cette modification n'est pas couverte. Demande : étude couverture toiture sur la nouvelle configuration au sol.",
+    "reference": "R1 §6.3.2 / §13 (édition 2025)",
+    "referentiel": "R1"
+  },
+  {
+    "id": "r1-2025-d-piege-010",
+    "type": "SPK",
+    "edition": "2025",
+    "chapitre": "6",
+    "theme": "Piège — Mixage HHS",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Q1 entrepôt logistique multi-clients : zone HHS#2 (cartons standard) côtoyant zone HHS#4 (plastiques expansés). Pas de séparation, sprinkleurs uniformes dimensionnés HHS#2. Statut ?",
+    "propositions": [
+      "Conforme — densité moyenne",
+      "NC AVEC RISQUE : zone HHS#4 sous-dimensionnée. Soit séparation physique entre zones, soit dimensionnement uniforme au plus défavorable (HHS#4)",
+      "Recommandation",
+      "Conforme si HHS#4 < 100 m²"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "NC AVEC RISQUE. Règle générale : dans une même zone hydrauliquement non séparée, dimensionnement au plus défavorable. Si on garde HHS#2, il faut une séparation physique (mur coupe-feu R15 minimum) entre les deux zones. Cas typique multi-clients sans coordination. Demande corrective : séparation OU mise à niveau de la zone HHS#2 → HHS#4.",
+    "reference": "R1 §6 (édition 2025)",
+    "referentiel": "R1"
   }
 ]
