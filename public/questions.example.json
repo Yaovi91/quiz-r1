@@ -1272,7 +1272,7 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "S max spray HHS = 9 m² (standard, distance libre ≥ 0,6 m). Si distance libre 0,6-1,0 m : 7,5 m². Si distance libre 0,3-0,6 m : 6 m².",
+    "explication": "T6.1 R1 2025 : surface max spray HHS = 9 m² (standard, distance libre ≥ 1 m selon T13.2.2.1). Possibilité de réduction §6.1 : si distance libre 0,6-1 m → 7,5 m² (espacement ≤ 3 m) ; si distance libre 0,3-0,6 m → 6 m² (espacement ≤ 2,5 m). Cette réduction ne s'applique pas aux CMSA ni ESFR.",
     "reference": "R1 T6.1 / §6.3 (édition 2025)",
     "referentiel": "R1"
   },
@@ -1515,18 +1515,18 @@
     "difficulte": 3,
     "multi": false,
     "mode_audit": true,
-    "enonce": "En HHS, pour une distance libre de 0,5 m sous sprinkleur, quelle est la surface maximale par tête ?",
+    "enonce": "Selon §6.1, en cas de distance libre RÉDUITE entre 0,3 et 0,6 m sous sprinkleur traditionnel, la surface maximale par tête devient :",
     "propositions": [
-      "6 m²",
+      "9 m² (sans changement)",
       "7,5 m²",
-      "9 m²",
-      "12 m²"
+      "6 m²",
+      "4 m²"
     ],
     "bonnes_reponses": [
-      0
+      2
     ],
-    "explication": "T6.3 : distance libre 0,3-0,6 m → S max = 6 m² et espacement max 2,5 m. Distance 0,6-1,0 m → 7,5 m² / 3,0 m. Distance ≥ 1,0 m (standard) → 9 m² / 3,7 m. Plus c'est proche du stockage, plus la couverture doit être resserrée.",
-    "reference": "R1 §6.3 / T6.3 (édition 2025)",
+    "explication": "§6.1 R1 2025 : pour distance libre 0,3 à 0,6 m → S max réduite à 6 m² + espacement max 2,5 m. Pour 0,6 à 1 m → 7,5 m² + espacement max 3 m. Standard ≥ 1 m → 9 m² + espacement 3,7 m. Cette disposition s'applique aux sprinkleurs traditionnels uniquement, PAS aux CMSA ni ESFR. Attention : T13.2.2.1 fixe par ailleurs une distance libre min HHS = 1 m dans le cas général.",
+    "reference": "R1 §6.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -1676,18 +1676,18 @@
     "difficulte": 2,
     "multi": false,
     "mode_audit": false,
-    "enonce": "Quelle est la surface maximale d'une installation sous eau (par poste) ?",
+    "enonce": "Quelle est la surface développée maximale d'un poste de contrôle sous eau en LH ou OH ?",
     "propositions": [
-      "4 000 m²",
-      "5 000 m²",
-      "10 000 m²",
-      "20 000 m²"
+      "4 500 m²",
+      "6 000 m²",
+      "9 000 m²",
+      "12 000 m²"
     ],
     "bonnes_reponses": [
-      2
+      3
     ],
-    "explication": "Sous eau (canalisations en permanence sous pression d'eau) : surface max 10 000 m² par poste. Sous air : 4 000 m² (2 000 m² si enterré aval). Alternatif : 4 000 m².",
-    "reference": "R1 §7.1 (édition 2025)",
+    "explication": "Tableau T4.5.1 R1 2025 §4.5.1 : poste sous eau (ou sous antigel) = 12 000 m² en LH/OH, 9 000 m² en HH ou RS (Risques Spéciaux). Surfaces différentes selon la classe de risque — c'est en LH/OH qu'on a la plus grande tolérance.",
+    "reference": "R1 §4.5.1 / Tableau T4.5.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -1699,18 +1699,18 @@
     "difficulte": 2,
     "multi": false,
     "mode_audit": false,
-    "enonce": "Quelle est la surface maximale d'une installation sous air par poste ?",
+    "enonce": "Quelle est la surface développée maximale d'un poste de contrôle sous air en LH ou OH ?",
     "propositions": [
       "2 000 m²",
-      "4 000 m²",
-      "10 000 m²",
-      "20 000 m²"
+      "4 500 m²",
+      "6 000 m²",
+      "12 000 m²"
     ],
     "bonnes_reponses": [
-      1
+      2
     ],
-    "explication": "Sous air : surface max 4 000 m² par poste, réduite à 2 000 m² si le poste est enterré aval. Justification : retard de mise en eau lié au temps d'évacuation de l'air.",
-    "reference": "R1 §7.2 (édition 2025)",
+    "explication": "Tableau T4.5.1 R1 2025 §4.5.1 : poste sous air = 6 000 m² en LH/OH, 4 500 m² en HH ou RS. Les limites du sous air sont plus restrictives que celles du sous eau (12 000 / 9 000 m²) à cause du délai d'arrivée d'eau dans le réseau.",
+    "reference": "R1 §4.5.1 / Tableau T4.5.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -2309,7 +2309,7 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "Source A : 30 min en LH/OH, 60 min en HHP/HHS. Source B : 60 min en LH/OH, 90 min en HHP/HHS. La source B est toujours plus exigeante (plus fiable, autonomie plus longue).",
+    "explication": "Source A : 30 min en toutes classes (LH/OH/HHP/HHS) selon §9.2 R1 2025. Source B varie selon classe (60 min en LH/OH, 90 min en HHP/HHS). La source A a une autonomie unique car son rôle est d'assurer le démarrage rapide ; la source B prend le relais pour la durée. À noter : ne pas confondre avec d'anciennes éditions où la source A montait à 60 min en HH.",
     "reference": "R1 §9 (édition 2025)",
     "referentiel": "R1"
   },
@@ -2322,17 +2322,17 @@
     "difficulte": 2,
     "multi": false,
     "mode_audit": false,
-    "enonce": "Quelle est l'autonomie minimale d'une source A en classe HHP ou HHS ?",
+    "enonce": "Quelle est l'autonomie minimale d'une source A en classe HHP ou HHS selon la R1 2025 ?",
     "propositions": [
+      "15 min",
       "30 min",
       "60 min",
-      "90 min",
-      "120 min"
+      "90 min"
     ],
     "bonnes_reponses": [
       1
     ],
-    "explication": "Source A en HHP/HHS : 60 min. En LH/OH : 30 min. Le doublement s'explique par le risque accru de propagation et la nécessité de prolonger l'action sprinkleur en attendant les secours.",
+    "explication": "30 min. Le §9.2 R1 2025 fixe une autonomie UNIQUE de 30 minutes pour la source A, quelle que soit la classe de risque (LH, OH, HHP ou HHS). Piège classique : on pourrait croire que l'autonomie augmente avec le risque, mais ce n'est pas le cas pour la source A. C'est la source B qui prend le relais avec une autonomie plus longue (60 min en LH/OH, 90 min en HHP/HHS).",
     "reference": "R1 §9 (édition 2025)",
     "referentiel": "R1"
   },
@@ -4429,18 +4429,18 @@
     "difficulte": 2,
     "multi": false,
     "mode_audit": true,
-    "enonce": "Distance libre minimale sous sprinkleur en HHS ?",
+    "enonce": "Selon T13.2.2.1, la distance libre minimale sous sprinkleur en HHS (cas général) est :",
     "propositions": [
       "0,3 m",
-      "0,5 m",
       "0,6 m",
-      "1,0 m"
+      "1 m",
+      "1,5 m"
     ],
     "bonnes_reponses": [
       2
     ],
-    "explication": "Distance libre min 0,6 m sous sprinkleur HHS (T13.2.2.1). Demi-sphère de distribution : si < 0,6 m, le cône d'arrosage est obstrué. NC rouge §9 Q1.",
-    "reference": "R1 §13.2.2 / T13.2.2.1 (édition 2025)",
+    "explication": "Tableau T13.2.2.1 R1 2025 §13.2.2.1 : HHS = 1 m minimum dans le cas général (valeur inférieure possible selon conditions §6.1). À ne pas confondre avec LH/OH/HHP1 = 0,3 m + demi-sphère 0,9 m, HHP2/3 = 0,6 m. Distance libre max HHS : 6 m en HHS#1/#2 ; 4 m en HHS#3 à HHS#5.",
+    "reference": "R1 §13.2.2.1 / Tableau T13.2.2.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -5063,29 +5063,6 @@
       1
     ],
     "explication": "Vérification semestrielle = 2 fois par an, par vérificateur certifié E1. Règle inchangée depuis 1936 (89 ans). Le rapport Q1 est transmis à CNPP dans les 30 jours (R1 2025 §3.5).",
-    "reference": "R1 §18.5 (édition 2025)",
-    "referentiel": "R1"
-  },
-  {
-    "id": "r1-2025-18-5-003",
-    "type": "SPK",
-    "edition": "2025",
-    "chapitre": "18.5",
-    "theme": "Niveaux de constatations",
-    "difficulte": 3,
-    "multi": false,
-    "mode_audit": true,
-    "enonce": "Combien de niveaux de constatations distingue le §18.5 R1 2025 ?",
-    "propositions": [
-      "2 : NC et observations",
-      "3 : NC avec risque, NC sans risque, observations §11",
-      "4 : critique, majeur, mineur, observation",
-      "Un seul niveau"
-    ],
-    "bonnes_reponses": [
-      1
-    ],
-    "explication": "3 niveaux : NC avec risque de mise en échec (action urgente, date 1ère signalisation obligatoire), NC sans risque (à lever avant prochain Q1, date 1ère signalisation), observations §11 (améliorations, pas de délai).",
     "reference": "R1 §18.5 (édition 2025)",
     "referentiel": "R1"
   },
@@ -14155,7 +14132,7 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "Le §3.5 R1 2025 impose une vérification AU MOINS DEUX FOIS PAR AN par un vérificateur certifié. Cette périodicité semestrielle existe depuis 1936 — un des chiffres-clés les plus stables de la R1. Le rapport produit est le S1B (compte rendu de vérification semestrielle, Q1).",
+    "explication": "Le §3.5 R1 2025 impose une vérification AU MOINS DEUX FOIS PAR AN par un vérificateur certifié. Cette périodicité semestrielle existe depuis 1936 — un des chiffres-clés les plus stables de la R1. Le rapport produit est le Q1 (compte rendu de vérification semestrielle).",
     "reference": "R1 §3.5 / §18.5 (édition Septembre 2025)"
   },
   {
@@ -14168,7 +14145,7 @@
     "difficulte": 1,
     "multi": false,
     "mode_audit": false,
-    "enonce": "Dans quel délai le compte rendu Q1 (S1B) doit-il parvenir à CNPP après la visite ?",
+    "enonce": "Dans quel délai le compte rendu Q1 doit-il parvenir à CNPP après la visite ?",
     "propositions": [
       "15 jours",
       "30 jours",
@@ -14178,7 +14155,7 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "Le §3.5 R1 2025 impose la transmission à CNPP dans un délai de 30 jours après la visite. Ce délai est commun à l'envoi à l'assuré. Hors délai, la traçabilité du suivi devient problématique en cas de sinistre.",
+    "explication": "Le §3.5 R1 2025 impose la transmission du Q1 (rapport de vérification semestrielle) à CNPP dans un délai de 30 jours après la visite. Ce délai est commun à l'envoi à l'assuré. Hors délai, la traçabilité du suivi devient problématique en cas de sinistre. À ne pas confondre avec le S1B (registre de suivi annuel qui reste dans le local sources).",
     "reference": "R1 §3.5 / §18.5 (édition Septembre 2025)"
   },
   {
@@ -14482,7 +14459,7 @@
     "difficulte": 2,
     "multi": false,
     "mode_audit": false,
-    "enonce": "Combien de Q1 (S1B) doivent être conservés en permanence dans le dossier de suivi ?",
+    "enonce": "Combien de Q1 doivent être conservés en permanence dans le dossier de suivi ?",
     "propositions": [
       "Le dernier uniquement",
       "Les 2 derniers",
@@ -14492,7 +14469,7 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "Le §3.8 R1 2025 (et le guide vérificateur) exigent la conservation des 2 DERNIERS Q1 (S1B) dans le dossier de suivi. Cela permet au vérificateur en cours de visite de comparer aux deux périodes précédentes et de tracer les NC.",
+    "explication": "Le §3.8 R1 2025 (et le guide vérificateur) exigent la conservation des 2 DERNIERS Q1 dans le dossier de suivi. Cela permet au vérificateur en cours de comparer aux NC précédentes et de tracer leur levée éventuelle. À ne pas confondre avec le S1B (registre de suivi annuel des interventions, qui reste dans le local sources).",
     "reference": "R1 §3.8 (édition Septembre 2025)"
   },
   {
@@ -16187,7 +16164,7 @@
     "difficulte": 2,
     "multi": false,
     "mode_audit": false,
-    "enonce": "Combien de Q1 (S1B) doivent rester en permanence dans le dossier de suivi ?",
+    "enonce": "Combien de Q1 doivent rester en permanence dans le dossier de suivi ?",
     "propositions": [
       "Le dernier seulement",
       "Les 2 derniers",
@@ -16197,7 +16174,7 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "Le §3.8 R1 2025 exige les 2 DERNIERS Q1 dans le dossier de suivi. Cela permet de comparer les NC d'un Q1 à l'autre et de tracer leur levée (ou non). Les anciens Q1 sont archivés ailleurs par CNPP et l'exploitant.",
+    "explication": "Le §3.8 R1 2025 exige les 2 DERNIERS Q1 (rapports semestriels) dans le dossier de suivi. Cela permet de comparer les NC d'un Q1 à l'autre et de tracer leur levée (ou non). Le S1B, lui, est un registre permanent de suivi des interventions de l'année, qui reste dans le local sources.",
     "reference": "R1 §3.8 (édition Septembre 2025)"
   },
   {
@@ -17299,7 +17276,7 @@
     "difficulte": 2,
     "multi": false,
     "mode_audit": false,
-    "enonce": "Le rapport Q1 (S1B) doit être transmis à :",
+    "enonce": "Le rapport Q1 doit être transmis à :",
     "propositions": [
       "L'exploitant uniquement",
       "L'assuré (exploitant ou propriétaire) ET CNPP",
@@ -17309,7 +17286,7 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "Le §1.5.2 R1 2025 (Guide vérificateur) impose la transmission du S1B à L'ASSURÉ ET À CNPP dans les 30 jours. L'assureur reçoit l'info via l'assuré ou via CNPP. L'installateur n'est pas destinataire systématique — sauf si NC nécessite son intervention.",
+    "explication": "Le §1.5.2 R1 2025 (Guide vérificateur) impose la transmission du rapport Q1 à L'ASSURÉ ET À CNPP dans les 30 jours. L'assureur reçoit l'info via l'assuré ou via CNPP. L'installateur n'est pas destinataire systématique — sauf si NC nécessite son intervention. Distinct du S1B qui est un registre de suivi annuel restant dans le local sources, mis à jour à chaque intervention.",
     "reference": "R1 §1.5.2 / §18.5 (édition Septembre 2025)"
   },
   {
@@ -17355,7 +17332,7 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "Le vérificateur certifié E1 signe le S1B et engage ainsi sa responsabilité professionnelle. La signature certifie : la réalité de la visite, l'exactitude des constats, la classification des NC, et la date de 1ère signalisation. C'est un acte engageant.",
+    "explication": "Le vérificateur certifié E1 signe le rapport Q1 et engage ainsi sa responsabilité professionnelle. La signature certifie : la réalité de la visite, l'exactitude du contenu, la qualification du signataire. Le rapport Q1 non signé n'a pas de valeur réglementaire.",
     "reference": "R1 §18.5 (édition Septembre 2025)"
   },
   {
@@ -17466,7 +17443,7 @@
     "difficulte": 4,
     "multi": false,
     "mode_audit": true,
-    "enonce": "Vous n'avez pas pu transmettre le S1B dans les 30 jours suite à un retard administratif. Action ?",
+    "enonce": "Vous n'avez pas pu transmettre le rapport Q1 dans les 30 jours suite à un retard administratif. Action ?",
     "propositions": [
       "Ne pas transmettre : trop tard",
       "Transmettre dès que possible AVEC justification du retard + mention sur le Q1",
@@ -17476,7 +17453,7 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "Le délai 30 jours est réglementaire, mais un retard administratif n'invalide pas le contenu du rapport. À TRANSMETTRE DÈS QUE POSSIBLE avec justification écrite. Modifier la date est un faux en écriture, à proscrire absolument. La transparence protège le vérificateur.",
+    "explication": "Le délai 30 jours pour la transmission du rapport Q1 est réglementaire, mais un retard administratif n'invalide pas le contenu du rapport. À TRANSMETTRE DÈS QUE POSSIBLE avec justification écrite (mention sur le rapport). Modifier la date de visite est un faux en écriture, à proscrire absolument. La transparence protège le vérificateur.",
     "reference": "R1 §18.5 (édition Septembre 2025)"
   },
   {
@@ -18974,17 +18951,17 @@
     "difficulte": 3,
     "multi": false,
     "mode_audit": false,
-    "enonce": "HHP3 a une densité de :",
+    "enonce": "HHP3 a une densité de calcul de :",
     "propositions": [
+      "5 mm/min",
       "7,5 mm/min",
       "10 mm/min",
-      "12,5 mm/min",
-      "15 mm/min"
+      "12,5 mm/min"
     ],
     "bonnes_reponses": [
-      1
+      3
     ],
-    "explication": "HHP3 : densité 10 mm/min sur surface impliquée 260 m². Palier maximum HHP, densité doublée par rapport à OH. Activités à très forte charge calorifique (plasturgie haute, peintures process complexes). Au-delà, configurations spéciales (foam, eau pulvérisée).",
+    "explication": "T6.1 R1 2025 : HHP1 = 7,5 mm/min, HHP2 = 10 mm/min, HHP3 = 12,5 mm/min. Surface impliquée 260 m² pour tous les HHP. HHP3 est le palier le plus sévère de la famille HHP (densité = 2,5× OH). Activités à très forte charge calorifique : plasturgie haute, peintures process. Au-delà : configurations spéciales (HHP4 = déluge, RS = risques spéciaux).",
     "reference": "R1 §7 / Tableau 7.2 (édition Septembre 2025)"
   },
   {
@@ -19099,7 +19076,7 @@
     "bonnes_reponses": [
       2
     ],
-    "explication": "HHP3 : surface impliquée 260 m². Densité 10 mm/min → débit 2600 L/min minimum. Le couple densité×surface des HHP est nettement supérieur aux OH (charge calorifique du procédé). Au-delà de HHP3, on bascule sur configurations spéciales.",
+    "explication": "HHP3 : surface impliquée 260 m² (cf. T6.1). Densité 12,5 mm/min → débit total 12,5 × 260 = 3 250 L/min minimum. Le couple densité × surface des HHP est nettement supérieur aux OH (charge calorifique du procédé). Au-delà de HHP3, on bascule en HHP4 (déluge) ou en risques spéciaux (RS).",
     "reference": "R1 §7 / Tableau 7.2 (édition Septembre 2025)"
   },
   {
@@ -19342,17 +19319,17 @@
     "difficulte": 2,
     "multi": false,
     "mode_audit": false,
-    "enonce": "Le K-factor d'un sprinkleur STANDARD est typiquement :",
+    "enonce": "Le K-factor d'un sprinkleur STANDARD couramment utilisé en LH/OH est typiquement :",
     "propositions": [
-      "K40",
-      "K80 (équivalent K57 en système imperial)",
+      "K57",
+      "K80",
       "K115",
-      "K360"
+      "K160"
     ],
     "bonnes_reponses": [
       1
     ],
-    "explication": "Le K-factor standard pour la majorité des sprinkleurs ordinaires (LH/OH) est K80 (système métrique, équivalent au K=5.6 en imperial GPM). Sprinkleurs spéciaux (HHP/HHS) montent à K115, K160, K200, K360. Information sur le corps du sprinkleur (à vérifier en Q1).",
+    "explication": "T6.1 R1 2025 : K minimum K57 en LH, K80 en OH (K57 admis aussi en OH pour surfaces < 9 m²). K80 (système métrique en l/min/bar^0,5, équivalent K=5,6 GPM/psi^0,5 imperial) est le plus courant pour la majorité des installations LH/OH. Pour HHP/HHS : K115 pour densité ≥ 12,5 l/m²/min, K160 pour densité ≥ 20 l/m²/min. Information à vérifier sur le corps du sprinkleur en Q1.",
     "reference": "R1 §13 (édition Septembre 2025)"
   },
   {
@@ -19434,17 +19411,17 @@
     "difficulte": 4,
     "multi": false,
     "mode_audit": true,
-    "enonce": "Vous trouvez des sprinkleurs K57 (imperial) installés dans une zone HHS#4 prévue pour K115 minimum. Conclusion ?",
+    "enonce": "Vous trouvez des sprinkleurs K57 (métrique) installés dans une zone HHS#3 prévue à densité 12,5 l/m²/min. Conclusion ?",
     "propositions": [
-      "Conforme : le K imperial est plus précis",
-      "NC AVEC RISQUE : K57 ≈ K80, INSUFFISANT pour HHS#4 — débit individuel trop faible",
+      "Conforme : K57 standard partout",
+      "NC AVEC RISQUE : à 12,5 l/m²/min, K115 minimum requis (T6.1). K57 = débit individuel trop faible",
       "Observation §11 : à surveiller",
       "Conforme si la pression résiduelle est augmentée"
     ],
     "bonnes_reponses": [
       1
     ],
-    "explication": "K57 imperial ≈ K80 métrique. Pour HHS#4, il faut typiquement K115 ou K160 selon hauteur stockage. Avec K trop faible, le débit individuel ne suffit pas pour atteindre la densité requise, même à pression élevée. NC AVEC RISQUE : la suppression de l'incendie n'est plus garantie.",
+    "explication": "T6.1 R1 2025 : K minimum HHS = K80, K115 pour densité ≥ 12,5 l/m²/min, K160 pour densité ≥ 20 l/m²/min. Avec K57 (le plus faible) à 12,5 l/m²/min, le débit individuel est insuffisant — il faudrait une pression irréaliste pour compenser (Q = K × √P). La couverture hydraulique n'est plus garantie. À ne pas confondre avec le K imperial (en GPM/psi^0,5) qui s'exprime différemment (K=5,6 ≈ K80 métrique).",
     "reference": "R1 §13 (édition Septembre 2025)"
   },
   {
@@ -23006,18 +22983,18 @@
     "difficulte": 4,
     "multi": false,
     "mode_audit": true,
-    "enonce": "Distance entre sprinkleur et un mur perpendiculaire (mur fin du local) : 3 m. En OH. Conformité ?",
+    "enonce": "Distance entre sprinkleur et mur en bout d'antenne (mur perpendiculaire à la rangée) : 3 m. En OH. Conformité ?",
     "propositions": [
       "Conforme : > 2 m",
-      "À vérifier : la règle 2,0 m max mur OH s'applique aussi aux murs perpendiculaires. NC si > 2 m",
-      "Conforme : règle uniquement pour murs parallèles",
+      "NC : la distance entre le dernier sprinkleur et le mur en bout d'antenne ≤ ½ pas max entre sprinkleurs (soit 2 m en OH)",
+      "Conforme : règle uniquement pour murs parallèles à la rangée",
       "Conforme avec marge"
     ],
     "bonnes_reponses": [
       1
     ],
-    "explication": "La règle distance max au mur (OH 2,0 m) s'applique à TOUS les murs adjacents (parallèles ET perpendiculaires). À 3 m, bande non couverte au mur. NC, ajouter sprinkleur près du mur. Confusion fréquente : on pense \"parallèle\" car la ligne de sprinkleurs est parallèle, mais le mur perpendiculaire à la ligne compte aussi.",
-    "reference": "R1 §13.2.4 (édition Septembre 2025)"
+    "explication": "Pour le mur en bout d'antenne (perpendiculaire à la rangée), la R1 utilise la règle de la mi-distance : distance ≤ ½ pas max entre sprinkleurs. En OH, pas max = 4 m → mi-distance = 2 m. À 3 m, la zone près du mur fin n'est pas couverte. À distinguer du mur PARALLÈLE à la rangée où T6.1 fixe explicitement 2 m max en OH (2,3 m en LH, 1,8 m en HHP/HHS).",
+    "reference": "R1 §13.2 / T6.1 (édition 2025)"
   },
   {
     "id": "r1-2025-c-piege-009",
@@ -28293,8 +28270,8 @@
     "bonnes_reponses": [
       0
     ],
-    "explication": "Canalisations en permanence sous pression d'eau. Le poste le plus simple, le plus rapide et le plus courant. Utilisé dans tous les locaux hors gel. Surface max : 10 000 m². Origine 1898.",
-    "reference": "R1 §7.1 / §15.2 (édition 2025)",
+    "explication": "Canalisations en permanence sous pression d'eau. Le poste le plus simple, le plus rapide et le plus courant. Utilisé dans tous les locaux hors gel. Surface max (T4.5.1) : 12 000 m² en LH/OH, 9 000 m² en HH ou RS. Origine 1898.",
+    "reference": "R1 §7.1 / §4.5.1 / Tableau T4.5.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -28316,8 +28293,8 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "Locaux à risque de gel (entrepôts non chauffés, parkings, abords extérieurs). Canalisations sous pression d'air comprimé qui retient l'eau au poste — pas d'eau dans le réseau jusqu'au déclenchement. Surface max : 4 000 m² (2 000 m² si réseau enterré aval). Origine 1898.",
-    "reference": "R1 §7.2 / §15.2 (édition 2025)",
+    "explication": "Locaux à risque de gel (entrepôts non chauffés, parkings, abords extérieurs). Canalisations sous pression d'air comprimé qui retient l'eau au poste — pas d'eau dans le réseau jusqu'au déclenchement. Surface max (T4.5.1) : 6 000 m² en LH/OH, 4 500 m² en HH ou RS. Origine 1898.",
+    "reference": "R1 §7.2 / §4.5.1 / Tableau T4.5.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -28339,8 +28316,8 @@
     "bonnes_reponses": [
       1
     ],
-    "explication": "Bascule saisonnière : sous eau en été (réponse rapide), sous air en hiver (protection gel). Concerne les locaux à gel saisonnier uniquement. Surface max 4 000 m² (en mode air). Origine 1979. Aujourd'hui en déclin face aux postes antigel et sous air.",
-    "reference": "R1 §7.3 / §15.2 (édition 2025)",
+    "explication": "Bascule saisonnière : sous eau en été (réponse rapide), sous air en hiver (protection gel). Concerne les locaux à gel saisonnier uniquement. En mode air (le plus défavorable), les règles du sous air s'appliquent : 6 000 m² max en LH/OH, 4 500 m² en HH ou RS (T4.5.1). Origine 1979. Aujourd'hui en déclin face aux postes antigel et sous air.",
+    "reference": "R1 §7.3 / §4.5.1 / Tableau T4.5.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -29067,18 +29044,18 @@
     "difficulte": 2,
     "multi": false,
     "mode_audit": false,
-    "enonce": "La surface maximale couverte par un poste de contrôle sous eau est :",
+    "enonce": "La surface maximale développée couverte par un poste de contrôle sous eau (ou sous antigel) est :",
     "propositions": [
-      "4 000 m²",
-      "6 000 m²",
-      "10 000 m²",
-      "Aucune limite"
+      "4 500 m²",
+      "9 000 m² en HH ou RS",
+      "12 000 m² en LH/OH (et 9 000 m² en HH ou RS)",
+      "10 000 m² toutes classes"
     ],
     "bonnes_reponses": [
       2
     ],
-    "explication": "10 000 m² maximum sous eau. Au-delà : prévoir un autre poste (sectorisation). Dérogation CNPP possible dans des cas particuliers (process spécifique, contraintes architecturales). Limite codifiée depuis 2002 (avant : règles plus souples).",
-    "reference": "R1 §15.2 / Guide vérificateur §4.5 (édition 2025)",
+    "explication": "Tableau T4.5.1 R1 2025 §4.5.1 : poste sous eau ou sous antigel = 12 000 m² en LH/OH, 9 000 m² en HH ou RS (Risques Spéciaux). Surfaces différentes selon la classe de risque. Note : pour CMSA, voir §16.4.1 (limite 4 500 m² ou 9 000 m² avec by-pass) ; pour ESFR, voir §17.3.1 (4 500 m² ou 9 000 m² avec by-pass).",
+    "reference": "R1 §4.5.1 / Tableau T4.5.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -29090,18 +29067,18 @@
     "difficulte": 2,
     "multi": false,
     "mode_audit": false,
-    "enonce": "La surface maximale couverte par un poste sous air est :",
+    "enonce": "La surface maximale développée couverte par un poste de contrôle sous air est :",
     "propositions": [
       "4 000 m² (2 000 m² si réseau enterré aval)",
-      "10 000 m² comme le sous eau",
-      "6 000 m² standard",
-      "Selon analyse de risque"
+      "4 500 m² en HH ou RS, 6 000 m² en LH/OH",
+      "10 000 m² toutes classes",
+      "12 000 m² toutes classes"
     ],
     "bonnes_reponses": [
-      0
+      1
     ],
-    "explication": "4 000 m² standard, 2 000 m² si présence d'un réseau enterré aval. Le sous air a plus de contraintes (remplissage retarde l'eau, point F obligatoire). Le réseau enterré aval impose une surface plus réduite car le remplissage prend encore plus de temps.",
-    "reference": "R1 §15.2 / Guide vérificateur §4.5 (édition 2025)",
+    "explication": "Tableau T4.5.1 R1 2025 §4.5.1 : poste sous air = 4 500 m² en HH ou RS, 6 000 m² en LH/OH. Le sous air a des limites plus restrictives que le sous eau à cause du délai d'arrivée d'eau dans le réseau. À ne pas confondre avec d'anciennes éditions ou résumés où les valeurs étaient différentes.",
+    "reference": "R1 §4.5.1 / Tableau T4.5.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -29113,18 +29090,18 @@
     "difficulte": 3,
     "multi": false,
     "mode_audit": false,
-    "enonce": "La surface maximale par poste alternatif est :",
+    "enonce": "La surface maximale couverte par un poste à préaction (A, B, C) est :",
     "propositions": [
-      "10 000 m² (mode eau été)",
-      "4 000 m² (mêmes règles que sous air en mode air)",
-      "Variable selon saison",
-      "8 000 m²"
+      "4 500 m² (limite unique, toutes classes)",
+      "10 000 m² toutes classes",
+      "Selon analyse de risque uniquement",
+      "Sans limite"
     ],
     "bonnes_reponses": [
-      1
+      0
     ],
-    "explication": "4 000 m² fixe, mêmes règles que le sous air (la contrainte est le fonctionnement hivernal en mode air, qui est le plus défavorisé). On ne dimensionne jamais sur le cas favorable (mode eau été) mais sur le cas défavorable.",
-    "reference": "R1 §15.2 / Guide vérificateur §4.5 (édition 2025)",
+    "explication": "Tableau T4.5.1 R1 2025 §4.5.1 : poste à préaction (types A, B et C) = 4 500 m² maximum. Limite unique, contrairement au sous eau et sous air qui distinguent LH/OH vs HH. La préaction étant utilisée typiquement en zones sensibles (data centers, archives), la limite plus contraignante reflète la complexité de cette protection.",
+    "reference": "R1 §4.5.1 / Tableau T4.5.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -29136,18 +29113,18 @@
     "difficulte": 3,
     "multi": false,
     "mode_audit": false,
-    "enonce": "La surface par poste préaction A, B ou C est :",
+    "enonce": "La surface maximale couverte par un poste de contrôle DÉDIÉ à des réseaux intermédiaires est :",
     "propositions": [
-      "4 000 m² uniforme",
-      "10 000 m² uniforme",
-      "Selon analyse de risque — accord CNPP pour grandes surfaces",
-      "1 000 m² maximum"
+      "1 000 m²",
+      "4 500 m² (allées de circulation entre racks incluses)",
+      "9 000 m²",
+      "12 000 m²"
     ],
     "bonnes_reponses": [
-      2
+      1
     ],
-    "explication": "Pas de chiffre fixe — selon analyse de risque. Accord CNPP requis pour grandes surfaces. La préaction est utilisée en zones sensibles (data centers, archives) où la surface dépend du process et de la stratégie de protection. Dimensionnement au cas par cas.",
-    "reference": "R1 §15.2 / Guide vérificateur §4.5 (édition 2025)",
+    "explication": "Tableau T4.5.1 R1 2025 §4.5.1 : poste réseau intermédiaire (sous eau, sous air ou sous antigel) = 4 500 m² maximum, allées de circulation entre racks incluses. Mesure différente d'un poste toiture standard car la zone réellement protégée par les RI est plus restreinte.",
+    "reference": "R1 §4.5.1 / Tableau T4.5.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -29182,18 +29159,18 @@
     "difficulte": 4,
     "multi": false,
     "mode_audit": true,
-    "enonce": "Sur un Q1, vous calculez qu'un poste sous air couvre 2 800 m² avec réseau partiellement enterré aval. Statut ?",
+    "enonce": "Sur un Q1, un poste sous air en LH/OH alimente 6 800 m² de surface développée. Statut ?",
     "propositions": [
-      "Conforme : on est sous 4 000 m²",
-      "NC AVEC RISQUE : la limite est 2 000 m² (réseau enterré aval) — pas 4 000",
-      "Recommandation simple",
-      "Conforme si validé hydrauliquement"
+      "Conforme : < 10 000 m²",
+      "NC AVEC RISQUE : limite poste sous air LH/OH = 6 000 m² (T4.5.1). Dépassement de 13 %",
+      "Conforme : la limite ne s'applique qu'en HH",
+      "Conforme si la pression est vérifiée"
     ],
     "bonnes_reponses": [
       1
     ],
-    "explication": "NC AVEC RISQUE. Dès qu'il y a réseau enterré aval, la limite tombe à 2 000 m² (le remplissage est plus long, le délai d'arrivée d'eau au point F devient critique). 2 800 m² > 2 000 m² → dépassement de 40 %. Sans accord CNPP documenté pour dérogation, NC obligatoire au rapport.",
-    "reference": "R1 §15.2 / Guide vérificateur §4.5 (édition 2025)",
+    "explication": "NC AVEC RISQUE. Limite T4.5.1 R1 2025 §4.5.1 pour poste sous air en LH/OH = 6 000 m². Ici 6 800 m² = dépassement de 13 %, sans dérogation CNPP documentée. Sans accord formel, sous-dimensionnement réglementaire avéré. Demande corrective : soit séparer la zone en deux postes, soit obtenir dérogation, soit modifier la configuration hydraulique.",
+    "reference": "R1 §4.5.1 / Tableau T4.5.1 (édition 2025)",
     "referentiel": "R1"
   },
   {
@@ -30912,15 +30889,15 @@
     "mode_audit": true,
     "enonce": "Q1 ST4 HHS#3 hauteur 4 m, bâtiment 8 m. Installation dimensionnée à 12,5 l/m²/min sur 260 m². Conforme ?",
     "propositions": [
-      "Oui (lecture directe T6.3.1.4)",
-      "Non : pour HHS#3 hauteur 4 m, le tableau exige 22,5 l/m²/min sur 300 m²",
-      "Non : besoin ESFR",
+      "Oui : 12,5 l/m²/min suffit pour HHS#3 jusqu'à 4 m",
+      "Non : HHS#3 hauteur 4 m demande au minimum 15 l/m²/min (T6.3.1.4, lecture ligne 3,7 m) — installation sous-dimensionnée",
+      "Non : ESFR obligatoire au-delà de 3 m HHS#3",
       "Conforme uniquement avec RI"
     ],
     "bonnes_reponses": [
-      0
+      1
     ],
-    "explication": "Lecture T6.3.1.4 ligne HHS#3, hauteur 3,2-4,2 m : densités 12,5 puis 15 l/m²/min. À 4 m on est dans la zone 12,5-15. À recroiser avec les hauteurs exactes. Densité 12,5 l/m²/min sur 260 m² est dans la fourchette valide pour 3,2 m maxi (sous toiture). 4 m demande 15 l/m²/min. Lecture précise requise au Q1.",
+    "explication": "T6.3.1.4 HHS#3 : la ligne 3,7 m correspond à 15 l/m²/min, ligne 4,2 m à 17,5 l/m²/min. Une hauteur réelle de 4 m exige donc 15 l/m²/min minimum (lecture stricte) sur 260 m². Densité 12,5 l/m²/min n'est valide qu'à 3,2 m maximum. À 4 m, NC avec sous-dimensionnement. Demande corrective : étude hydraulique de mise à niveau OU abaissement du stockage à 3,2 m max.",
     "reference": "R1 §6.3.1.4 / Tableau T6.3.1.4 (édition 2025)",
     "referentiel": "R1"
   },
