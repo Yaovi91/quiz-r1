@@ -509,6 +509,115 @@ const GLOBAL_CSS = `
   }
   .q-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--text-4); }
 
+  /* Lot 3b.2 — bandeau référentiel/édition plus visible */
+  .q-context-strip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    padding: 0 4px;
+  }
+  .ref-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 11px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(245,158,11,0.18), rgba(245,158,11,0.08));
+    border: 1px solid rgba(245,158,11,0.35);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+    box-shadow: 0 0 12px rgba(245,158,11,0.08);
+  }
+  .ref-pill .ref-sep {
+    color: rgba(245,158,11,0.45);
+    margin: 0 2px;
+  }
+  .ref-pill .ref-edition {
+    color: var(--text-2);
+    font-weight: 500;
+  }
+  .q-context-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--text-2);
+    font-family: var(--font-mono);
+    letter-spacing: 0.03em;
+  }
+  .q-context-info .ctx-chapter {
+    color: var(--text-1);
+    font-weight: 600;
+  }
+  .q-context-info .ctx-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--text-3);
+  }
+
+  /* Lot 3b.2 — navigation arrière (chevrons) */
+  .q-nav-arrows {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .q-nav-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    color: var(--text-2);
+    cursor: pointer;
+    transition: background 0.15s ease, opacity 0.15s ease;
+  }
+  .q-nav-btn:active { background: var(--surface-2); }
+  .q-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+  .q-consult-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(245,158,11,0.12);
+    border: 1px solid rgba(245,158,11,0.28);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .q-resume-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 14px;
+    background: var(--accent);
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 0 24px rgba(245,158,11,0.3);
+  }
   .q-card {
     margin-top: 12px;
     padding: 24px 22px;
@@ -3205,17 +3314,21 @@ function QuestionScreen({ state, dispatch }) {
     questionData, selected, validated, isCorrect, isBonus, isGolden,
     x3Remaining, comboStreak, streak, xp, ripples, showXpFly, xpGain,
     showBurst, onBack, onNext,
+    // Lot 3b.2 — navigation arrière
+    isConsulting, historyLength, historyIdx,
+    canGoPrev, canGoNext,
+    onHistoryPrev, onHistoryNext, onResume,
   } = state;
 
   const handleSelect = useCallback((idx, evt) => {
-    if (validated) return;
+    if (validated || isConsulting) return;
     // Ripple
     const rect = evt.currentTarget.getBoundingClientRect();
     const x = evt.clientX - rect.left;
     const y = evt.clientY - rect.top;
     dispatch({ type: 'ADD_RIPPLE', payload: { x, y, propIdx: idx } });
     setTimeout(() => dispatch({ type: 'VALIDATE', payload: idx }), 320);
-  }, [validated, dispatch]);
+  }, [validated, dispatch, isConsulting]);
 
   const comboClass = comboStreak >= 10 ? 'fire' : comboStreak >= 5 ? 'hot' : '';
 
@@ -3229,23 +3342,58 @@ function QuestionScreen({ state, dispatch }) {
     >
       {/* Q top bar */}
       <div className="q-top">
-        <motion.button className="q-back" onClick={onBack} whileTap={{ scale: 0.92 }}>
-          <ArrowRight size={16} style={{ transform: 'rotate(180deg)' }} />
-        </motion.button>
-        <motion.div
-          className={`combo-meter ${comboClass}`}
-          animate={comboClass ? { boxShadow: ['0 0 20px rgba(245,158,11,0.3)', '0 0 32px rgba(245,158,11,0.5)', '0 0 20px rgba(245,158,11,0.3)'] } : {}}
-          transition={{ duration: 1.4, repeat: Infinity }}
-        >
-          {comboClass === 'fire' && (
-            <motion.span animate={{ scale: [1, 1.2, 1], rotate: [0, -5, 5, 0] }} transition={{ duration: 1, repeat: Infinity }}>
-              <Flame size={14} fill="var(--danger)" stroke="var(--danger)" />
-            </motion.span>
+        <div className="q-nav-arrows">
+          <motion.button className="q-back" onClick={onBack} whileTap={{ scale: 0.92 }} aria-label="Quitter">
+            <ArrowRight size={16} style={{ transform: 'rotate(180deg)' }} />
+          </motion.button>
+          {/* Lot 3b.2 — chevron Précédent (visible si historique disponible) */}
+          {(canGoPrev || isConsulting) && (
+            <motion.button
+              className="q-nav-btn"
+              onClick={onHistoryPrev}
+              whileTap={{ scale: 0.92 }}
+              disabled={!canGoPrev}
+              aria-label="Question précédente"
+              initial={{ opacity: 0, x: -4 }}
+              animate={{ opacity: 1, x: 0 }}
+            >
+              <ChevronRight size={16} style={{ transform: 'rotate(180deg)' }} />
+            </motion.button>
           )}
-          {comboClass === 'hot' && <Flame size={13} fill="var(--accent)" stroke="var(--accent)" />}
-          <span className="combo-label">Combo</span>
-          <span className="combo-num"><AnimatedNumber value={comboStreak} /></span>
-        </motion.div>
+          {/* Lot 3b.2 — chevron Suivant (en mode consultation uniquement) */}
+          {isConsulting && (
+            <motion.button
+              className="q-nav-btn"
+              onClick={onHistoryNext}
+              whileTap={{ scale: 0.92 }}
+              aria-label="Question suivante"
+              initial={{ opacity: 0, x: -4 }}
+              animate={{ opacity: 1, x: 0 }}
+            >
+              <ChevronRight size={16} />
+            </motion.button>
+          )}
+        </div>
+        {isConsulting ? (
+          <div className="q-consult-tag">
+            Consultation · {historyIdx + 1}/{historyLength}
+          </div>
+        ) : (
+          <motion.div
+            className={`combo-meter ${comboClass}`}
+            animate={comboClass ? { boxShadow: ['0 0 20px rgba(245,158,11,0.3)', '0 0 32px rgba(245,158,11,0.5)', '0 0 20px rgba(245,158,11,0.3)'] } : {}}
+            transition={{ duration: 1.4, repeat: Infinity }}
+          >
+            {comboClass === 'fire' && (
+              <motion.span animate={{ scale: [1, 1.2, 1], rotate: [0, -5, 5, 0] }} transition={{ duration: 1, repeat: Infinity }}>
+                <Flame size={14} fill="var(--danger)" stroke="var(--danger)" />
+              </motion.span>
+            )}
+            {comboClass === 'hot' && <Flame size={13} fill="var(--accent)" stroke="var(--accent)" />}
+            <span className="combo-label">Combo</span>
+            <span className="combo-num"><AnimatedNumber value={comboStreak} /></span>
+          </motion.div>
+        )}
         <div className="pill" style={{ color: 'var(--text-1)', position: 'relative' }}>
           {x3Remaining > 0 && (
             <motion.span
@@ -3299,13 +3447,18 @@ function QuestionScreen({ state, dispatch }) {
         )}
       </AnimatePresence>
 
-      {/* Question meta */}
-      <div className="q-meta">
-        <span>R1 §{questionData.chapitre}</span>
-        <span className="q-meta-dot" />
-        <span>{questionData.theme}</span>
-        <span className="q-meta-dot" />
-        <span>Édition {questionData.edition}</span>
+      {/* Lot 3b.2 — Bandeau référentiel/édition prominent */}
+      <div className="q-context-strip">
+        <span className="ref-pill">
+          <span>{questionData.referentiel || 'R1'}</span>
+          <span className="ref-sep">·</span>
+          <span className="ref-edition">Éd. {questionData.edition}</span>
+        </span>
+        <span className="q-context-info">
+          <span className="ctx-chapter">§{questionData.chapitre}</span>
+          <span className="ctx-dot" />
+          <span>{questionData.theme}</span>
+        </span>
       </div>
 
       {/* Question */}
@@ -3392,19 +3545,23 @@ function QuestionScreen({ state, dispatch }) {
         )}
       </AnimatePresence>
 
-      {/* Next */}
+      {/* Next / Resume — Lot 3b.2 */}
       <AnimatePresence>
         {validated && (
           <motion.button
             className="next-btn next-btn-floating"
-            onClick={onNext}
+            onClick={isConsulting
+              ? (canGoNext ? onHistoryNext : onResume)
+              : onNext}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             whileTap={{ scale: 0.98 }}
             transition={{ delay: 0.15, type: 'spring', stiffness: 220 }}
           >
-            Question suivante
+            {isConsulting
+              ? (canGoNext ? 'Suivante (consultation)' : 'Reprendre le quizz')
+              : 'Question suivante'}
             <ArrowRight size={16} />
           </motion.button>
         )}
@@ -3796,6 +3953,14 @@ export default function App() {
   const [xpGain, setXpGain] = useState(0);
   const [showBurst, setShowBurst] = useState(false);
 
+  // ---- Lot 3b.2 — Historique session (navigation arrière) ----
+  // Liste des questions répondues dans la session courante (max 30, oldest dropped)
+  // Pas persisté (session-only).
+  const [questionHistory, setQuestionHistory] = useState([]);
+  // null en mode normal, index dans questionHistory en mode consultation
+  const [historyIdx, setHistoryIdx] = useState(null);
+  const HISTORY_MAX = 30;
+
   // ---- Overlay states ----
   const [showRecord, setShowRecord] = useState(false);
   const [showLevelUp, setShowLevelUp] = useState(false);
@@ -4001,6 +4166,12 @@ export default function App() {
     setTotalQ(n => n + 1);
     if (correct) setCorrectQ(n => n + 1);
 
+    // Lot 3b.2 — ajout à l'historique de session
+    setQuestionHistory(h => {
+      const next = [...h, { q: currentQ, selectedIdx: idx, isCorrect: correct }];
+      return next.length > HISTORY_MAX ? next.slice(next.length - HISTORY_MAX) : next;
+    });
+
     // Lot 3b.1.1 — incrémentation des quêtes du jour
     // Q1 : "10 questions aujourd'hui" → +1 à chaque réponse (juste ou fausse)
     // Q2 : "5 bonnes d'affilée" → suit le comboStreak (jusqu'à target)
@@ -4034,6 +4205,26 @@ export default function App() {
       return;
     }
     resetQuestion();
+  };
+
+  // Lot 3b.2 — Navigation arrière en Quizz libre
+  const handleHistoryPrev = () => {
+    if (questionHistory.length === 0) return;
+    setHistoryIdx(i => {
+      if (i === null) return questionHistory.length - 1;
+      return Math.max(0, i - 1);
+    });
+  };
+  const handleHistoryNext = () => {
+    if (historyIdx === null) return;
+    setHistoryIdx(i => {
+      if (i === null) return null;
+      if (i >= questionHistory.length - 1) return null; // sort de la consultation
+      return i + 1;
+    });
+  };
+  const handleResumeFromHistory = () => {
+    setHistoryIdx(null);
   };
 
   const closeMbox = (reward) => {
@@ -4195,20 +4386,45 @@ export default function App() {
               onOpenGuest={() => setScreen('guest')}
             />
           )}
-          {screen === 'question' && (
-            <QuestionScreen
-              key="question"
-              state={{
-                questionData: currentQ,
-                selected, validated, isCorrect, isBonus, isGolden,
-                x3Remaining, comboStreak, streak, xp,
-                ripples, showXpFly, xpGain, showBurst,
-                onBack: handleBack,
-                onNext: handleNext,
-              }}
-              dispatch={dispatch}
-            />
-          )}
+          {screen === 'question' && (() => {
+            // Lot 3b.2 — Mode consultation (lecture seule) si historyIdx défini
+            const isConsulting = historyIdx !== null;
+            const histItem = isConsulting ? questionHistory[historyIdx] : null;
+            const dispQ = isConsulting ? histItem.q : currentQ;
+            const dispSelected = isConsulting ? histItem.selectedIdx : selected;
+            const dispValidated = isConsulting ? true : validated;
+            const dispIsCorrect = isConsulting ? histItem.isCorrect : isCorrect;
+            return (
+              <QuestionScreen
+                key={isConsulting ? `hist-${historyIdx}` : 'question'}
+                state={{
+                  questionData: dispQ,
+                  selected: dispSelected,
+                  validated: dispValidated,
+                  isCorrect: dispIsCorrect,
+                  isBonus: isConsulting ? false : isBonus,
+                  isGolden: isConsulting ? false : isGolden,
+                  x3Remaining, comboStreak, streak, xp,
+                  ripples: isConsulting ? [] : ripples,
+                  showXpFly: isConsulting ? false : showXpFly,
+                  xpGain,
+                  showBurst: isConsulting ? false : showBurst,
+                  onBack: handleBack,
+                  onNext: handleNext,
+                  // Lot 3b.2 — navigation arrière
+                  isConsulting,
+                  historyLength: questionHistory.length,
+                  historyIdx,
+                  canGoPrev: questionHistory.length > 0 && (historyIdx === null || historyIdx > 0),
+                  canGoNext: historyIdx !== null && historyIdx < questionHistory.length - 1,
+                  onHistoryPrev: handleHistoryPrev,
+                  onHistoryNext: handleHistoryNext,
+                  onResume: handleResumeFromHistory,
+                }}
+                dispatch={dispatch}
+              />
+            );
+          })()}
           {screen === 'stats' && (
             <StatsScreen
               key="stats"
