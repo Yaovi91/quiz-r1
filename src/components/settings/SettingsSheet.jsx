@@ -132,6 +132,7 @@ const SHEET_CSS = `
     font-family: var(--font-mono);
     line-height: 1.3;
   }
+  /* Toggle switch */
   .toggle {
     width: 46px;
     height: 26px;
@@ -158,6 +159,7 @@ const SHEET_CSS = `
     background: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
+  /* Slider */
   .slider-row {
     display: flex;
     flex-direction: column;
@@ -183,30 +185,37 @@ const SHEET_CSS = `
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: 6px;
+    height: 8px;
     border-radius: 999px;
     background: var(--surface-3);
     outline: none;
-    margin: 4px 0;
+    margin: 8px 0;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
   }
   .slider-track::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
     border-radius: 999px;
     background: var(--accent);
-    cursor: pointer;
-    border: 2px solid var(--surface-1);
+    cursor: grab;
+    border: 3px solid var(--surface-1);
     box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
   }
+  .slider-track::-webkit-slider-thumb:active {
+    cursor: grabbing;
+    transform: scale(1.1);
+  }
   .slider-track::-moz-range-thumb {
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
     border-radius: 999px;
     background: var(--accent);
-    cursor: pointer;
-    border: 2px solid var(--surface-1);
+    cursor: grab;
+    border: 3px solid var(--surface-1);
     box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
   }
   .slider-ticks {
@@ -217,6 +226,7 @@ const SHEET_CSS = `
     color: var(--text-3);
     font-variant-numeric: tabular-nums;
   }
+  /* Action button (export/import/reset) */
   .action-btn {
     width: 100%;
     display: flex;
@@ -260,6 +270,7 @@ const SHEET_CSS = `
     font-family: var(--font-mono);
     margin-top: 2px;
   }
+  /* Reset btn variants */
   .action-btn.danger {
     border-color: rgba(230, 57, 70, 0.25);
     background: linear-gradient(180deg, rgba(230, 57, 70, 0.04), var(--surface-1));
@@ -278,6 +289,7 @@ const SHEET_CSS = `
     background: rgba(245, 158, 11, 0.12);
     color: var(--accent);
   }
+  /* Confirmation overlay */
   .confirm-overlay {
     position: fixed;
     inset: 0;
@@ -401,14 +413,16 @@ const SHEET_CSS = `
 // ============================================================================
 export default function SettingsSheet({ open, onClose, onPrefsChange }) {
   const [prefs, setPrefs] = useState(() => loadPrefs());
-  const [confirm, setConfirm] = useState(null);
-  const [toast, setToast] = useState(null);
+  const [confirm, setConfirm] = useState(null); // { type, title, body, dangerText, onConfirm }
+  const [toast, setToast] = useState(null); // { kind, text }
   const fileInputRef = useRef(null);
 
+  // Reload prefs au mount (au cas où elles auraient changé ailleurs)
   useEffect(() => {
     if (open) setPrefs(loadPrefs());
   }, [open]);
 
+  // Auto-dismiss toast
   useEffect(() => {
     if (!toast) return;
     const t = setTimeout(() => setToast(null), 2400);
@@ -421,6 +435,7 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
     onPrefsChange && onPrefsChange(next);
   };
 
+  // === Actions de reset ===
   const handleResetToday = () => {
     setConfirm({
       type: 'today',
@@ -447,6 +462,7 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
         resetStatsAndProgression();
         setToast({ kind: 'success', text: 'Progression réinitialisée — recharge l\'app' });
         setConfirm(null);
+        // Recharge l'app après un court délai pour repartir propre
         setTimeout(() => window.location.reload(), 800);
       },
     });
@@ -485,7 +501,7 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
     const file = e.target.files && e.target.files[0];
     if (!file) return;
     const result = await importAllData(file);
-    e.target.value = '';
+    e.target.value = ''; // reset input
     if (result.success) {
       setToast({ kind: 'success', text: 'Import réussi — recharge l\'app' });
       setTimeout(() => window.location.reload(), 800);
@@ -494,6 +510,7 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
     }
   };
 
+  // Formatters
   const fmtMin = (sec) => `${Math.round(sec / 60)} min`;
   const fmtMmSs = (sec) => {
     const m = Math.floor(sec / 60);
@@ -539,6 +556,7 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
 
                 <div className="settings-body">
 
+                  {/* ====== CHRONO DAILY ====== */}
                   <div className="settings-section">
                     <div className="settings-section-title">
                       <Clock size={11} />
@@ -556,10 +574,13 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
                       />
                     </div>
 
-                    <motion.div
+                    <div
                       className="slider-row"
-                      animate={{ opacity: prefs.dailyTimerEnabled ? 1 : 0.4 }}
-                      style={{ pointerEvents: prefs.dailyTimerEnabled ? 'auto' : 'none' }}
+                      style={{
+                        opacity: prefs.dailyTimerEnabled ? 1 : 0.4,
+                        pointerEvents: prefs.dailyTimerEnabled ? 'auto' : 'none',
+                        transition: 'opacity 0.2s ease',
+                      }}
                     >
                       <div className="slider-head">
                         <div className="settings-row-title">Durée totale</div>
@@ -573,15 +594,17 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
                         step={30}
                         value={prefs.dailyTimerDurationSec}
                         onChange={(e) => update('dailyTimerDurationSec', parseInt(e.target.value, 10))}
+                        onInput={(e) => update('dailyTimerDurationSec', parseInt(e.target.value, 10))}
                       />
                       <div className="slider-ticks">
                         <span>5 min</span>
                         <span>10 min</span>
                         <span>15 min</span>
                       </div>
-                    </motion.div>
+                    </div>
                   </div>
 
+                  {/* ====== BONUS XP TEMPS ====== */}
                   <div className="settings-section">
                     <div className="settings-section-title">
                       <Zap size={11} />
@@ -599,10 +622,13 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
                       />
                     </div>
 
-                    <motion.div
+                    <div
                       className="settings-section"
-                      animate={{ opacity: prefs.dailyBonusEnabled ? 1 : 0.4 }}
-                      style={{ pointerEvents: prefs.dailyBonusEnabled ? 'auto' : 'none' }}
+                      style={{
+                        opacity: prefs.dailyBonusEnabled ? 1 : 0.4,
+                        pointerEvents: prefs.dailyBonusEnabled ? 'auto' : 'none',
+                        transition: 'opacity 0.2s ease',
+                      }}
                     >
                       <div className="slider-row">
                         <div className="slider-head">
@@ -620,6 +646,7 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
                           step={5}
                           value={prefs.dailyBonusFastXp}
                           onChange={(e) => update('dailyBonusFastXp', parseInt(e.target.value, 10))}
+                          onInput={(e) => update('dailyBonusFastXp', parseInt(e.target.value, 10))}
                         />
                       </div>
 
@@ -639,11 +666,13 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
                           step={5}
                           value={prefs.dailyBonusBlazeXp}
                           onChange={(e) => update('dailyBonusBlazeXp', parseInt(e.target.value, 10))}
+                          onInput={(e) => update('dailyBonusBlazeXp', parseInt(e.target.value, 10))}
                         />
                       </div>
-                    </motion.div>
+                    </div>
                   </div>
 
+                  {/* ====== DONNÉES ====== */}
                   <div className="settings-section">
                     <div className="settings-section-title">
                       <Database size={11} />
@@ -684,6 +713,7 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
                     />
                   </div>
 
+                  {/* ====== RESET ====== */}
                   <div className="settings-section">
                     <div className="settings-section-title">
                       <AlertTriangle size={11} />
@@ -736,6 +766,7 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
         )}
       </AnimatePresence>
 
+      {/* Confirmation overlay (par-dessus le sheet) */}
       <AnimatePresence>
         {confirm && (
           <ConfirmSheet
@@ -746,6 +777,7 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
         )}
       </AnimatePresence>
 
+      {/* Toast */}
       <AnimatePresence>
         {toast && (
           <motion.div
@@ -765,6 +797,10 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
     </>
   );
 }
+
+// ============================================================================
+// SOUS-COMPOSANTS
+// ============================================================================
 
 function ToggleSwitch({ on, onChange }) {
   return (
