@@ -96,7 +96,7 @@ const GLOBAL_CSS = `
     min-height: 100vh;
     position: relative;
     z-index: 2;
-    padding: 16px 16px 24px;
+    padding: 16px 16px 120px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -559,6 +559,21 @@ const GLOBAL_CSS = `
     box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset, 0 8px 24px rgba(245,158,11,0.25);
   }
   .next-btn:active { transform: scale(0.98); }
+
+  /* Variante : ancrée en bas de l'écran, toujours visible */
+  .next-btn-floating {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: calc(env(safe-area-inset-bottom, 8px) + 12px);
+    max-width: 388px;
+    margin: 0 auto;
+    z-index: 50;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.3) inset,
+      0 -8px 24px rgba(10,11,15,0.6),
+      0 12px 32px rgba(245,158,11,0.35);
+  }
 
   /* ============ FLY ============ */
   .xp-fly-host { position: fixed; inset: 0; pointer-events: none; z-index: 50; display: grid; place-items: center; }
@@ -3104,7 +3119,7 @@ function DailyScreen({ onExit, onXpGain }) {
       <AnimatePresence>
         {validated && (
           <motion.button
-            className="next-btn"
+            className="next-btn next-btn-floating"
             onClick={handleNext}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -3281,7 +3296,7 @@ function AuditScreen({ onExit, onXpGain }) {
       <AnimatePresence>
         {validated && (
           <motion.button
-            className="next-btn"
+            className="next-btn next-btn-floating"
             onClick={handleNext}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -3675,7 +3690,7 @@ function QuestionScreen({ state, dispatch }) {
       <AnimatePresence>
         {validated && (
           <motion.button
-            className="next-btn"
+            className="next-btn next-btn-floating"
             onClick={onNext}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -3913,6 +3928,19 @@ const DAILY_BANK = [
   },
 ];
 
+// Pool de questions pour le mode Quizz libre (toutes éditions confondues)
+const LIBRE_POOL = [Q_SAMPLE, ...DAILY_BANK];
+const pickQuestion = (exclude = null) => {
+  if (LIBRE_POOL.length <= 1) return LIBRE_POOL[0];
+  let q;
+  let safety = 0;
+  do {
+    q = LIBRE_POOL[Math.floor(Math.random() * LIBRE_POOL.length)];
+    safety++;
+  } while (exclude && q === exclude && safety < 10);
+  return q;
+};
+
 const AUDIT_BANK = [
   {
     edition: '2025', chapitre: '12', theme: 'Audit Q1',
@@ -3980,6 +4008,7 @@ export default function App() {
   const questsDone = quests.filter(q => q.done).length;
 
   // ---- Question state ----
+  const [currentQ, setCurrentQ] = useState(() => pickQuestion());
   const [selected, setSelected] = useState(null);
   const [validated, setValidated] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -4037,6 +4066,7 @@ export default function App() {
     setIsGolden(forceGolden || Math.random() < 0.05); // ~5% golden
     setForceBonus(false);
     setForceGolden(false);
+    setCurrentQ(prev => pickQuestion(prev));
   };
 
   const handleStartQuestion = (mode = 'libre') => {
@@ -4068,7 +4098,7 @@ export default function App() {
   };
 
   const handleAnswer = (idx) => {
-    const correct = forceCorrect !== null ? forceCorrect : (idx === Q_SAMPLE.bonneReponse);
+    const correct = forceCorrect !== null ? forceCorrect : (idx === currentQ.bonneReponse);
     setForceCorrect(null);
 
     setIsCorrect(correct);
@@ -4290,7 +4320,7 @@ export default function App() {
             <QuestionScreen
               key="question"
               state={{
-                questionData: Q_SAMPLE,
+                questionData: currentQ,
                 selected, validated, isCorrect, isBonus, isGolden,
                 x3Remaining, comboStreak, streak, xp,
                 ripples, showXpFly, xpGain, showBurst,
