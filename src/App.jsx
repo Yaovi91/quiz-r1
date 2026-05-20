@@ -3764,11 +3764,23 @@ export default function App() {
   const xpPrevLevel = 2500;
   const xpNextLevel = 4000;
 
-  const [quests, setQuests] = useState([
-    { id: 1, text: '10 questions aujourd\'hui', current: 6, target: 10, xp: 50, Icon: Target, done: false },
-    { id: 2, text: '5 bonnes d\'affilée', current: 0, target: 5, xp: 50, Icon: TrendingUp, done: false },
-    { id: 3, text: '1 intervention aujourd\'hui', current: 0, target: 1, xp: 50, Icon: Crosshair, done: false, locked: true, lockedReason: 'Mode Intervention bientôt disponible' },
-  ]);
+  const [quests, setQuests] = useState(() => {
+    const persisted = persistedRef.current?.quests;
+    const defaults = [
+      { id: 1, text: '10 questions aujourd\'hui', current: 0, target: 10, xp: 50, Icon: Target, done: false },
+      { id: 2, text: '5 bonnes d\'affilée', current: 0, target: 5, xp: 50, Icon: TrendingUp, done: false },
+      { id: 3, text: '1 intervention aujourd\'hui', current: 0, target: 1, xp: 50, Icon: Crosshair, done: false, locked: true, lockedReason: 'Mode Intervention bientôt disponible' },
+    ];
+    // Si persisté, on fusionne les champs `current` et `done` sur les defaults (le reste reste fixe)
+    if (Array.isArray(persisted)) {
+      return defaults.map((d, i) => {
+        const p = persisted.find(q => q.id === d.id);
+        if (!p) return d;
+        return { ...d, current: p.current ?? 0, done: p.done ?? false };
+      });
+    }
+    return defaults;
+  });
   const questsDone = quests.filter(q => q.done).length;
 
   // ---- Question state ----
@@ -3829,11 +3841,18 @@ export default function App() {
   // À chaque changement d'un état persistant, on sauvegarde.
   // Le debounce naturel de React (batch) suffit, pas besoin de timer.
   useEffect(() => {
+    // On sérialise les quêtes sans les Icon (fonctions React non sérialisables)
+    const serializedQuests = quests.map(q => ({
+      id: q.id,
+      current: q.current,
+      done: q.done,
+    }));
     saveAppState({
       xp, xpToday, level, streak, bestCombo,
       totalQ, correctQ, rate, freezes, x3Remaining,
+      quests: serializedQuests,
     });
-  }, [xp, xpToday, level, streak, bestCombo, totalQ, correctQ, rate, freezes, x3Remaining]);
+  }, [xp, xpToday, level, streak, bestCombo, totalQ, correctQ, rate, freezes, x3Remaining, quests]);
 
   // À chaque changement des badges, on sauvegarde le Set des ids débloqués.
   useEffect(() => {
@@ -3980,6 +3999,32 @@ export default function App() {
     }
 
     setTotalQ(n => n + 1);
+    if (correct) setCorrectQ(n => n + 1);
+
+    // Lot 3b.1.1 — incrémentation des quêtes du jour
+    // Q1 : "10 questions aujourd'hui" → +1 à chaque réponse (juste ou fausse)
+    // Q2 : "5 bonnes d'affilée" → suit le comboStreak (jusqu'à target)
+    // Q3 : "1 intervention" → verrouillée, on ne touche pas
+    setQuests(prev => prev.map(q => {
+      if (q.locked || q.done) return q;
+      let newCurrent = q.current;
+      if (q.id === 1) {
+        newCurrent = Math.min(q.target, q.current + 1);
+      } else if (q.id === 2) {
+        // Combo qui vient d'être calculé : si correct, comboStreak+1, sinon 0
+        const newCombo = correct ? comboStreak + 1 : 0;
+        newCurrent = Math.min(q.target, newCombo);
+      }
+      const justDone = !q.done && newCurrent >= q.target;
+      if (justDone) {
+        // Bonus XP à la complétion d'une quête
+        setTimeout(() => {
+          setXp(x => x + q.xp);
+          setXpToday(x => x + q.xp);
+        }, 100);
+      }
+      return { ...q, current: newCurrent, done: q.done || justDone };
+    }));
   };
 
   const handleNext = () => {
