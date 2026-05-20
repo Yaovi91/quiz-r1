@@ -2720,7 +2720,8 @@ function PropsList({ propositions, selected, validated, bonneReponse, ripples, o
 // ============================================================================
 // SURVIVAL MODE
 // ============================================================================
-function SurvivalScreen({ onExit, onXpGain, initialBest = 14 }) {
+function SurvivalScreen({ onExit, onXpGain, initialBest = 14, bank }) {
+  const effectiveBank = (bank && bank.length > 0) ? bank : SURVIVAL_BANK;
   const [idx, setIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [best, setBest] = useState(initialBest);
@@ -2731,7 +2732,12 @@ function SurvivalScreen({ onExit, onXpGain, initialBest = 14 }) {
   const [ripples, setRipples] = useState([]);
   const [gameOver, setGameOver] = useState(false);
 
-  const q = SURVIVAL_BANK[idx % SURVIVAL_BANK.length];
+  // Liste de questions aléatoires (renouvelée à chaque restart)
+  const [questions, setQuestions] = useState(() => {
+    const shuffled = [...effectiveBank].sort(() => Math.random() - 0.5);
+    return shuffled.length > 0 ? shuffled : effectiveBank;
+  });
+  const q = questions[idx % questions.length];
   const heatLevel = Math.min(3, Math.floor(score / 4));
 
   const handleSelect = (i, evt) => {
@@ -2764,6 +2770,8 @@ function SurvivalScreen({ onExit, onXpGain, initialBest = 14 }) {
   };
 
   const restart = () => {
+    const shuffled = [...effectiveBank].sort(() => Math.random() - 0.5);
+    setQuestions(shuffled.length > 0 ? shuffled : effectiveBank);
     setIdx(0);
     setScore(0);
     setSelected(null);
@@ -2902,7 +2910,16 @@ function SurvivalScreen({ onExit, onXpGain, initialBest = 14 }) {
 // ============================================================================
 // DAILY MODE
 // ============================================================================
-function DailyScreen({ onExit, onXpGain }) {
+function DailyScreen({ onExit, onXpGain, bank }) {
+  const effectiveBank = (bank && bank.length > 0) ? bank : DAILY_BANK;
+  const total = 10;
+  // 10 questions aléatoires fixées au mount
+  const [questions] = useState(() => {
+    const shuffled = [...effectiveBank].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, total).length === total
+      ? shuffled.slice(0, total)
+      : effectiveBank.slice(0, total);
+  });
   const [idx, setIdx] = useState(0);
   const [results, setResults] = useState([]); // boolean[]
   const [selected, setSelected] = useState(null);
@@ -2911,8 +2928,7 @@ function DailyScreen({ onExit, onXpGain }) {
   const [ripples, setRipples] = useState([]);
   const [finished, setFinished] = useState(false);
 
-  const total = 10;
-  const q = DAILY_BANK[idx % DAILY_BANK.length];
+  const q = questions[idx % questions.length];
   const score = results.filter(Boolean).length;
 
   const handleSelect = (i, evt) => {
@@ -3016,7 +3032,7 @@ function DailyScreen({ onExit, onXpGain }) {
                 >
                   <div>
                     <div className="chap-name">Question {i + 1}</div>
-                    <div className="chap-sub">R1 §{DAILY_BANK[i % DAILY_BANK.length].chapitre} · {DAILY_BANK[i % DAILY_BANK.length].theme}</div>
+                    <div className="chap-sub">R1 §{questions[i % questions.length].chapitre} · {questions[i % questions.length].theme}</div>
                   </div>
                   <div />
                   <div style={{ color: 'var(--danger)', display: 'grid', placeItems: 'center' }}>
@@ -3139,7 +3155,14 @@ function DailyScreen({ onExit, onXpGain }) {
 // ============================================================================
 // AUDIT TERRAIN MODE
 // ============================================================================
-function AuditScreen({ onExit, onXpGain }) {
+function AuditScreen({ onExit, onXpGain, bank }) {
+  const effectiveBank = (bank && bank.length > 0) ? bank : AUDIT_BANK;
+  const TOTAL = 5;
+  // 5 questions aléatoires fixées au mount
+  const [questions] = useState(() => {
+    const shuffled = [...effectiveBank].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, Math.min(TOTAL, shuffled.length));
+  });
   const [idx, setIdx] = useState(0);
   const [results, setResults] = useState([]);
   const [selected, setSelected] = useState(null);
@@ -3148,8 +3171,8 @@ function AuditScreen({ onExit, onXpGain }) {
   const [ripples, setRipples] = useState([]);
   const [finished, setFinished] = useState(false);
 
-  const total = AUDIT_BANK.length;
-  const q = AUDIT_BANK[idx % AUDIT_BANK.length];
+  const total = questions.length;
+  const q = questions[idx % questions.length] || {};
   const score = results.filter(Boolean).length;
 
   const handleSelect = (i, evt) => {
@@ -3250,20 +3273,22 @@ function AuditScreen({ onExit, onXpGain }) {
       >
         <div className="audit-scenario-tag">
           <Crosshair size={10} />
-          SCÉNARIO
+          {q.scenario ? 'SCÉNARIO' : 'AUDIT TERRAIN'}
         </div>
-        <p className="audit-scenario-text">{q.scenario}</p>
+        <p className="audit-scenario-text">{q.scenario || q.enonce}</p>
       </motion.div>
 
-      <motion.p
-        key={`q-${idx}`}
-        className="audit-question-text"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-      >
-        {q.enonce}
-      </motion.p>
+      {q.scenario && (
+        <motion.p
+          key={`q-${idx}`}
+          className="audit-question-text"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          {q.enonce}
+        </motion.p>
+      )}
 
       <PropsList
         propositions={q.propositions}
@@ -3941,6 +3966,37 @@ const pickQuestion = (exclude = null) => {
   return q;
 };
 
+// Helper pur : tire une question depuis le vrai catalogue chargé
+// Options : { audit: bool|null, multi: bool, exclude: questionObject, ratio: float }
+//   audit=true → uniquement scénarios terrain ; false → uniquement non-audit ; null → mix
+//   ratio = part de R1 2025 (par défaut 0.8). Le reste tire dans les autres référentiels/éditions.
+function pickFromCatalog(catalog, options = {}) {
+  if (!Array.isArray(catalog) || catalog.length === 0) return null;
+  const { audit = null, multi = false, exclude = null, ratio = 0.8 } = options;
+
+  // Filtrage de base
+  let pool = catalog.filter(q => q.multi === multi);
+  if (audit === true) pool = pool.filter(q => q.mode_audit === true);
+  else if (audit === false) pool = pool.filter(q => q.mode_audit === false);
+
+  if (pool.length === 0) return null;
+
+  // Pondération par référentiel/édition
+  const primary = pool.filter(q => q.referentiel === 'R1' && q.edition === '2025');
+  const secondary = pool.filter(q => !(q.referentiel === 'R1' && q.edition === '2025'));
+  const useprimary = Math.random() < ratio && primary.length > 0;
+  const finalPool = useprimary ? primary : (secondary.length > 0 ? secondary : primary);
+
+  let q;
+  let safety = 0;
+  do {
+    q = finalPool[Math.floor(Math.random() * finalPool.length)];
+    safety++;
+  } while (exclude && q && exclude.id && q.id === exclude.id && safety < 10);
+  return q;
+}
+
+
 const AUDIT_BANK = [
   {
     edition: '2025', chapitre: '12', theme: 'Audit Q1',
@@ -4008,6 +4064,7 @@ export default function App() {
   const questsDone = quests.filter(q => q.done).length;
 
   // ---- Question state ----
+  const [catalog, setCatalog] = useState(null); // chargé au mount depuis public/questions.json
   const [currentQ, setCurrentQ] = useState(() => pickQuestion());
   const [selected, setSelected] = useState(null);
   const [validated, setValidated] = useState(false);
@@ -4066,7 +4123,13 @@ export default function App() {
     setIsGolden(forceGolden || Math.random() < 0.05); // ~5% golden
     setForceBonus(false);
     setForceGolden(false);
-    setCurrentQ(prev => pickQuestion(prev));
+    // Tire dans le vrai catalogue si chargé, sinon fallback sur le mini pool
+    if (catalog && catalog.length > 0) {
+      const q = pickFromCatalog(catalog, { audit: false, multi: false, exclude: currentQ });
+      if (q) setCurrentQ(q);
+    } else {
+      setCurrentQ(prev => pickQuestion(prev));
+    }
   };
 
   const handleStartQuestion = (mode = 'libre') => {
@@ -4294,6 +4357,32 @@ export default function App() {
     // eslint-disable-next-line
   }, []);
 
+  // Mount: charger le catalogue de questions depuis public/questions.json
+  useEffect(() => {
+    const base = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL) || './';
+    fetch(`${base}questions.json`)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) {
+          // Normaliser : bonnes_reponses[0] → bonneReponse (le reste du code attend ce format)
+          const normalized = data.map(q => ({
+            ...q,
+            bonneReponse: Array.isArray(q.bonnes_reponses) ? q.bonnes_reponses[0] : q.bonneReponse,
+          }));
+          setCatalog(normalized);
+          // Première question depuis le vrai catalogue
+          const q = pickFromCatalog(normalized, { audit: false, multi: false });
+          if (q) setCurrentQ(q);
+        }
+      })
+      .catch(err => {
+        console.warn('Catalogue introuvable, fallback sur le mini pool', err);
+      });
+  }, []);
+
   return (
     <>
       <style>{TOKENS + GLOBAL_CSS}</style>
@@ -4344,6 +4433,7 @@ export default function App() {
               onExit={() => setScreen('home')}
               onXpGain={handleModeXpGain}
               initialBest={bestCombo}
+              bank={catalog ? catalog.filter(q => !q.multi && !q.mode_audit) : null}
             />
           )}
           {screen === 'daily' && (
@@ -4351,6 +4441,7 @@ export default function App() {
               key="daily"
               onExit={() => setScreen('home')}
               onXpGain={handleModeXpGain}
+              bank={catalog ? catalog.filter(q => !q.multi && !q.mode_audit) : null}
             />
           )}
           {screen === 'audit' && (
@@ -4358,6 +4449,7 @@ export default function App() {
               key="audit"
               onExit={() => setScreen('home')}
               onXpGain={handleModeXpGain}
+              bank={catalog ? catalog.filter(q => !q.multi && q.mode_audit) : null}
             />
           )}
         </AnimatePresence>
