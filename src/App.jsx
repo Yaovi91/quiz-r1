@@ -6,6 +6,7 @@ import {
   TrendingUp, Settings, Plus, CheckCircle2, XCircle, Medal,
   Infinity as InfinityIcon, Wrench, GraduationCap, Sliders,
 } from 'lucide-react';
+import SettingsSheet from './components/settings/SettingsSheet.jsx';
 
 /* =========================================================================
    R1 QUIZZ — Flow Home → Question → Level-up
@@ -115,11 +116,27 @@ const GLOBAL_CSS = `
   /* ============ TOP BAR ============ */
   .topbar {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 12px;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 8px;
     align-items: center;
     padding: 6px 4px 2px;
   }
+  .pill-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 999px;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-1);
+    color: var(--text-2);
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .pill-icon:active { background: var(--surface-2); }
   .pill {
     display: inline-flex;
     align-items: center;
@@ -3341,7 +3358,7 @@ function AuditScreen({ onExit, onXpGain, bank }) {
 // ============================================================================
 // HOME SCREEN
 // ============================================================================
-function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, onOpenStats }) {
+function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, onOpenStats, onOpenSettings }) {
   const { streak, level, xp, xpToday, xpNextLevel, xpPrevLevel, questsDone, questsTotal, totalQ, rate, bestCombo, quests, freezes, x3Remaining } = state;
   const progress = ((xp - xpPrevLevel) / (xpNextLevel - xpPrevLevel)) * 100;
 
@@ -3409,6 +3426,14 @@ function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, o
           <Zap size={13} fill="var(--accent)" stroke="var(--accent)" />
           <AnimatedNumber value={xp} />
         </div>
+        <motion.button
+          className="pill-icon"
+          onClick={onOpenSettings}
+          whileTap={{ scale: 0.92 }}
+          aria-label="Réglages"
+        >
+          <Settings size={15} strokeWidth={1.8} />
+        </motion.button>
       </div>
 
       {/* Hero */}
@@ -4110,6 +4135,9 @@ export default function App() {
   const [demoOpen, setDemoOpen] = useState(false);
   const [forceCorrect, setForceCorrect] = useState(null); // null | true | false
 
+  // ---- Settings ----
+  const [settingsOpen, setSettingsOpen] = useState(false);
+
   const resetQuestion = () => {
     setSelected(null);
     setValidated(false);
@@ -4403,6 +4431,7 @@ export default function App() {
               onFlameUp={cancelFlameHold}
               onXpTap={onXpTap}
               onOpenStats={openStats}
+              onOpenSettings={() => setSettingsOpen(true)}
             />
           )}
           {screen === 'question' && (
@@ -4584,6 +4613,12 @@ export default function App() {
             <Sliders size={14} />
           </button>
         </div>
+
+        {/* Settings sheet (Lot 1) */}
+        <SettingsSheet
+          open={settingsOpen}
+          onClose={() => setSettingsOpen(false)}
+        />
       </div>
     </>
   );
