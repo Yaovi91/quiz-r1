@@ -5,8 +5,10 @@ import {
   ArrowRight, Award, BookOpen, Crosshair, Star, Heart, Calendar,
   TrendingUp, Settings, Plus, CheckCircle2, XCircle, Medal,
   Infinity as InfinityIcon, Wrench, GraduationCap, Sliders,
+  UserPlus,
 } from 'lucide-react';
 import SettingsSheet from './components/settings/SettingsSheet.jsx';
+import GuestMode from './components/guest/GuestMode.jsx';
 
 /* =========================================================================
    R1 QUIZZ — Flow Home → Question → Level-up
@@ -375,6 +377,45 @@ const GLOBAL_CSS = `
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--text-3);
+    margin-top: 2px;
+  }
+
+  /* ============ GUEST ENTRY (Lot 2) ============ */
+  .guest-entry {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 36px 1fr 18px;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: var(--surface-1);
+    border: 1px dashed var(--border-strong);
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    color: var(--text-1);
+    transition: background 0.15s ease;
+  }
+  .guest-entry:active { background: var(--surface-2); }
+  .guest-entry-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--surface-3);
+    display: grid;
+    place-items: center;
+    color: var(--text-2);
+  }
+  .guest-entry-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-1);
+  }
+  .guest-entry-sub {
+    font-size: 11px;
+    color: var(--text-3);
+    font-family: var(--font-mono);
     margin-top: 2px;
   }
 
@@ -3358,7 +3399,7 @@ function AuditScreen({ onExit, onXpGain, bank }) {
 // ============================================================================
 // HOME SCREEN
 // ============================================================================
-function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, onOpenStats, onOpenSettings }) {
+function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, onOpenStats, onOpenSettings, onOpenGuest }) {
   const { streak, level, xp, xpToday, xpNextLevel, xpPrevLevel, questsDone, questsTotal, totalQ, rate, bestCombo, quests, freezes, x3Remaining } = state;
   const progress = ((xp - xpPrevLevel) / (xpNextLevel - xpPrevLevel)) * 100;
 
@@ -3537,6 +3578,25 @@ function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, o
           <div className="stat-label">Combo max</div>
         </div>
       </div>
+
+      {/* Mode invité — entrée discrète, isolation totale des stats perso */}
+      <motion.button
+        className="guest-entry"
+        onClick={onOpenGuest}
+        whileTap={{ scale: 0.985 }}
+        initial={{ opacity: 0, y: 6 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+      >
+        <div className="guest-entry-icon">
+          <UserPlus size={16} strokeWidth={1.8} />
+        </div>
+        <div className="guest-entry-text">
+          <div className="guest-entry-title">Mode invité</div>
+          <div className="guest-entry-sub">partage l'app avec un collègue · stats isolées</div>
+        </div>
+        <ChevronRight size={16} style={{ color: 'var(--text-3)' }} />
+      </motion.button>
     </motion.div>
   );
 }
@@ -4432,6 +4492,7 @@ export default function App() {
               onXpTap={onXpTap}
               onOpenStats={openStats}
               onOpenSettings={() => setSettingsOpen(true)}
+              onOpenGuest={() => setScreen('guest')}
             />
           )}
           {screen === 'question' && (
@@ -4479,6 +4540,13 @@ export default function App() {
               onExit={() => setScreen('home')}
               onXpGain={handleModeXpGain}
               bank={catalog ? catalog.filter(q => !q.multi && q.mode_audit) : null}
+            />
+          )}
+          {screen === 'guest' && (
+            <GuestMode
+              key="guest"
+              catalog={catalog}
+              onExit={() => setScreen('home')}
             />
           )}
         </AnimatePresence>
