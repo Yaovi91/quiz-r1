@@ -10,6 +10,11 @@ import {
 import SettingsSheet from './components/settings/SettingsSheet.jsx';
 import GuestMode from './components/guest/GuestMode.jsx';
 import SprintScreen from './components/sprint/SprintScreen.jsx';
+import {
+  loadAppState, saveAppState,
+  loadUnlockedBadges, saveUnlockedBadges,
+  FIRST_RUN_DEFAULTS,
+} from './lib/appStorage.js';
 
 /* =========================================================================
    R1 QUIZZ — Flow Home → Question → Level-up
@@ -301,6 +306,21 @@ const GLOBAL_CSS = `
   .quest.done .quest-prog-fill { background: var(--success); }
   .quest-xp { font-family: var(--font-mono); font-size: 12px; color: var(--accent); font-weight: 500; }
   .quest.done .quest-xp { color: var(--success); }
+
+  /* État verrouillé (Lot 3b — quête Intervention pas encore livré) */
+  .quest.locked {
+    opacity: 0.55;
+    border-style: dashed;
+    background: var(--surface-1);
+  }
+  .quest.locked .quest-icon {
+    background: var(--surface-3);
+    color: var(--text-3);
+  }
+  .quest.locked .quest-text { color: var(--text-2); }
+  .quest.locked .quest-sub { color: var(--text-3); font-style: italic; }
+  .quest.locked .quest-xp { font-size: 14px; }
+  .quest.locked .quest-prog { display: none; }
 
   /* ============ MODES GRID ============ */
   .modes {
@@ -3085,10 +3105,11 @@ function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, o
           {quests.map((q, i) => {
             const Icon = q.Icon;
             const pct = Math.min(100, (q.current / q.target) * 100);
+            const locked = q.locked === true;
             return (
               <motion.div
                 key={q.id}
-                className={`quest ${q.done ? 'done' : ''}`}
+                className={`quest ${q.done ? 'done' : ''} ${locked ? 'locked' : ''}`}
                 initial={{ opacity: 0, x: -8 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 + i * 0.06 }}
@@ -3096,12 +3117,14 @@ function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, o
                 <div className="quest-icon"><Icon size={16} /></div>
                 <div>
                   <div className="quest-text">{q.text}</div>
-                  <div className="quest-sub">{q.current}/{q.target}</div>
+                  <div className="quest-sub">
+                    {locked ? (q.lockedReason || 'Bientôt') : `${q.current}/${q.target}`}
+                  </div>
                   <div className="quest-prog">
-                    <motion.div className="quest-prog-fill" initial={{ width: 0 }} animate={{ width: `${pct}%` }} transition={{ delay: 0.3 + i * 0.06, duration: 0.6 }} />
+                    <motion.div className="quest-prog-fill" initial={{ width: 0 }} animate={{ width: locked ? 0 : `${pct}%` }} transition={{ delay: 0.3 + i * 0.06, duration: 0.6 }} />
                   </div>
                 </div>
-                <div className="quest-xp">+{q.xp}</div>
+                <div className="quest-xp">{locked ? '🔒' : `+${q.xp}`}</div>
               </motion.div>
             );
           })}
@@ -3625,12 +3648,13 @@ const pickQuestion = (exclude = null) => {
 };
 
 // Helper pur : tire une question depuis le vrai catalogue chargé
-// Options : { audit: bool|null, multi: bool, exclude: questionObject, ratio: float }
+// Options : { audit: bool|null, multi: bool, exclude: questionObject, ratio: float, r1Strict: bool }
 //   audit=true → uniquement scénarios terrain ; false → uniquement non-audit ; null → mix
 //   ratio = part de R1 2025 (par défaut 0.8). Le reste tire dans les autres référentiels/éditions.
+//   r1Strict=true → ne tire QUE dans R1 édition 2025 (Lot 3b — Quizz libre, Sprint, Survie, Révision)
 function pickFromCatalog(catalog, options = {}) {
   if (!Array.isArray(catalog) || catalog.length === 0) return null;
-  const { audit = null, multi = false, exclude = null, ratio = 0.8 } = options;
+  const { audit = null, multi = false, exclude = null, ratio = 0.8, r1Strict = false } = options;
 
   // Filtrage de base
   let pool = catalog.filter(q => q.multi === multi);
@@ -3639,7 +3663,20 @@ function pickFromCatalog(catalog, options = {}) {
 
   if (pool.length === 0) return null;
 
-  // Pondération par référentiel/édition
+  // Mode strict R1 2025 : pas de mélange, on garde uniquement les questions R1 / édition 2025
+  if (r1Strict) {
+    pool = pool.filter(q => (q.referentiel === 'R1' || !q.referentiel) && q.edition === '2025');
+    if (pool.length === 0) return null;
+    let q;
+    let safety = 0;
+    do {
+      q = pool[Math.floor(Math.random() * pool.length)];
+      safety++;
+    } while (exclude && q && exclude.id && q.id === exclude.id && safety < 10);
+    return q;
+  }
+
+  // Pondération par référentiel/édition (mode legacy, conservé pour rétrocompat)
   const primary = pool.filter(q => q.referentiel === 'R1' && q.edition === '2025');
   const secondary = pool.filter(q => !(q.referentiel === 'R1' && q.edition === '2025'));
   const useprimary = Math.random() < ratio && primary.length > 0;
@@ -3702,22 +3739,35 @@ const AUDIT_BANK = [
 
 export default function App() {
   // ---- Persistent-ish state (in-memory) ----
+  // Lot 3b — chargement de l'état persistant en localStorage
+  // Au 1er lancement, persistedState est null et les useState prennent leur valeur par défaut (0/1).
+  // Sinon on hydrate avec ce qui est stocké.
+  const persistedRef = useRef(null);
+  if (persistedRef.current === null) {
+    persistedRef.current = loadAppState() || {};
+  }
+  const initFrom = (key, fallback) => {
+    const v = persistedRef.current[key];
+    return (v === undefined || v === null) ? fallback : v;
+  };
+
   const [screen, setScreen] = useState('home'); // home | question | levelup
-  const [xp, setXp] = useState(2840);
-  const [xpToday, setXpToday] = useState(180);
-  const [level, setLevel] = useState(3);
-  const [streak, setStreak] = useState(12);
+  const [xp, setXp] = useState(() => initFrom('xp', FIRST_RUN_DEFAULTS.xp));
+  const [xpToday, setXpToday] = useState(() => initFrom('xpToday', FIRST_RUN_DEFAULTS.xpToday));
+  const [level, setLevel] = useState(() => initFrom('level', FIRST_RUN_DEFAULTS.level));
+  const [streak, setStreak] = useState(() => initFrom('streak', FIRST_RUN_DEFAULTS.streak));
   const [comboStreak, setComboStreak] = useState(0);
-  const [bestCombo, setBestCombo] = useState(14);
-  const [totalQ, setTotalQ] = useState(347);
-  const [rate, setRate] = useState(72);
+  const [bestCombo, setBestCombo] = useState(() => initFrom('bestCombo', FIRST_RUN_DEFAULTS.bestCombo));
+  const [totalQ, setTotalQ] = useState(() => initFrom('totalQ', FIRST_RUN_DEFAULTS.totalQ));
+  const [correctQ, setCorrectQ] = useState(() => initFrom('correctQ', FIRST_RUN_DEFAULTS.correctQ));
+  const [rate, setRate] = useState(() => initFrom('rate', FIRST_RUN_DEFAULTS.rate));
   const xpPrevLevel = 2500;
   const xpNextLevel = 4000;
 
   const [quests, setQuests] = useState([
     { id: 1, text: '10 questions aujourd\'hui', current: 6, target: 10, xp: 50, Icon: Target, done: false },
     { id: 2, text: '5 bonnes d\'affilée', current: 0, target: 5, xp: 50, Icon: TrendingUp, done: false },
-    { id: 3, text: '1 question d\'édition antérieure', current: 0, target: 1, xp: 50, Icon: BookOpen, done: false },
+    { id: 3, text: '1 intervention aujourd\'hui', current: 0, target: 1, xp: 50, Icon: Crosshair, done: false, locked: true, lockedReason: 'Mode Intervention bientôt disponible' },
   ]);
   const questsDone = quests.filter(q => q.done).length;
 
@@ -3749,8 +3799,8 @@ export default function App() {
   const [isGolden, setIsGolden] = useState(false);
   const [forceGolden, setForceGolden] = useState(false);
   const [milestoneValue, setMilestoneValue] = useState(null);
-  const [x3Remaining, setX3Remaining] = useState(0); // count of next questions with ×3 XP
-  const [freezes, setFreezes] = useState(2);
+  const [x3Remaining, setX3Remaining] = useState(() => initFrom('x3Remaining', FIRST_RUN_DEFAULTS.x3Remaining));
+  const [freezes, setFreezes] = useState(() => initFrom('freezes', FIRST_RUN_DEFAULTS.freezes));
 
   // ---- Easter eggs ----
   const [eggText, setEggText] = useState(null);
@@ -3760,7 +3810,11 @@ export default function App() {
   const flameHoldTimer = useRef(null);
 
   // ---- Stats & badges ----
-  const [badges, setBadges] = useState(BADGES);
+  // Lot 3b — réhydrate les badges débloqués depuis localStorage
+  const [badges, setBadges] = useState(() => {
+    const unlocked = loadUnlockedBadges();
+    return BADGES.map(b => ({ ...b, unlocked: unlocked.has(b.id) || b.unlocked }));
+  });
   const [badgeUnlocking, setBadgeUnlocking] = useState(null); // badge object or null
   const [badgeDetail, setBadgeDetail] = useState(null);
 
@@ -3770,6 +3824,22 @@ export default function App() {
 
   // ---- Settings ----
   const [settingsOpen, setSettingsOpen] = useState(false);
+
+  // ---- Lot 3b : persistance localStorage ----
+  // À chaque changement d'un état persistant, on sauvegarde.
+  // Le debounce naturel de React (batch) suffit, pas besoin de timer.
+  useEffect(() => {
+    saveAppState({
+      xp, xpToday, level, streak, bestCombo,
+      totalQ, correctQ, rate, freezes, x3Remaining,
+    });
+  }, [xp, xpToday, level, streak, bestCombo, totalQ, correctQ, rate, freezes, x3Remaining]);
+
+  // À chaque changement des badges, on sauvegarde le Set des ids débloqués.
+  useEffect(() => {
+    const unlockedIds = new Set(badges.filter(b => b.unlocked).map(b => b.id));
+    saveUnlockedBadges(unlockedIds);
+  }, [badges]);
 
   const resetQuestion = () => {
     setSelected(null);
@@ -3786,7 +3856,7 @@ export default function App() {
     setForceGolden(false);
     // Tire dans le vrai catalogue si chargé, sinon fallback sur le mini pool
     if (catalog && catalog.length > 0) {
-      const q = pickFromCatalog(catalog, { audit: false, multi: false, exclude: currentQ });
+      const q = pickFromCatalog(catalog, { audit: false, multi: false, exclude: currentQ, r1Strict: true });
       if (q) setCurrentQ(q);
     } else {
       setCurrentQ(prev => pickQuestion(prev));
@@ -4047,7 +4117,7 @@ export default function App() {
           }));
           setCatalog(normalized);
           // Première question depuis le vrai catalogue
-          const q = pickFromCatalog(normalized, { audit: false, multi: false });
+          const q = pickFromCatalog(normalized, { audit: false, multi: false, r1Strict: true });
           if (q) setCurrentQ(q);
         }
       })
@@ -4068,7 +4138,7 @@ export default function App() {
               key="home"
               state={{
                 streak, level, xp, xpToday, xpPrevLevel, xpNextLevel,
-                questsDone, questsTotal: quests.length,
+                questsDone, questsTotal: quests.filter(q => !q.locked).length,
                 totalQ, rate, bestCombo, quests, freezes, x3Remaining,
               }}
               onStartQuestion={handleStartQuestion}
@@ -4108,13 +4178,22 @@ export default function App() {
               onExit={() => setScreen('home')}
               onXpGain={handleModeXpGain}
               initialBest={bestCombo}
-              bank={catalog ? catalog.filter(q => !q.multi && !q.mode_audit) : null}
+              bank={catalog ? catalog.filter(q =>
+                !q.multi
+                && !q.mode_audit
+                && (q.referentiel === 'R1' || !q.referentiel)
+                && q.edition === '2025'
+              ) : null}
             />
           )}
           {screen === 'sprint' && (
             <SprintScreen
               key="sprint"
-              catalog={catalog}
+              catalog={catalog ? catalog.filter(q =>
+                (q.referentiel === 'R1' || !q.referentiel)
+                && q.edition === '2025'
+                && !q.mode_audit
+              ) : null}
               onExit={() => setScreen('home')}
               onXpGain={handleModeXpGain}
               onSprintComplete={handleSprintComplete}
