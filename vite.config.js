@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 // IMPORTANT : si tu renommes le repo, change la constante REPO ci-dessous.
 // Pour un repo nommé "r1-quizz", l'URL finale sera :
 //   https://<ton-pseudo>.github.io/r1-quizz/
-const REPO = 'r1-quizz'
+const REPO = 'quiz-r1'
 
 export default defineConfig({
   base: `/${REPO}/`,
