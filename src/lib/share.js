@@ -6,20 +6,30 @@ const INVITE_URL = `${APP_URL}?from=invite`;
 
 /**
  * Construit le payload de partage pour un résultat de session invité.
+ * Adapté aux deux modes : Mort Subite + Sprint scoré.
  */
-export function buildGuestShareText({ mode, levelName, score, total, timeSec, isSurvival }) {
-  const formatted = formatTime(timeSec);
-
+export function buildGuestShareText({
+  mode, levelName,
+  score,
+  total,             // Sprint : nb questions répondues (hors skip)
+  questionsAsked,    // Sprint : nb questions vues (avec skip)
+  good, bad, skipped,// Sprint : compteurs détaillés
+  durationMin,       // Sprint : durée en minutes
+  isSurvival,
+}) {
   if (isSurvival) {
-    return `Je viens de tenir ${score} bonnes réponses d'affilée en Mort Subite (niveau ${levelName}) sur Quiz R1.\n\nÀ ton tour : ${INVITE_URL}`;
+    return `J'ai tenu ${score} bonnes réponses d'affilée en Mort Subite (niveau ${levelName}) sur Quiz R1.\n\nÀ ton tour : ${INVITE_URL}`;
   }
 
-  if (total) {
-    const timePart = timeSec !== null && timeSec !== undefined ? ` en ${formatted}` : "";
-    return `J'ai fait ${score}/${total} en ${mode} (niveau ${levelName})${timePart} sur Quiz R1.\n\nÀ ton tour : ${INVITE_URL}`;
-  }
+  // Sprint scoré
+  const details = [];
+  if (typeof good === 'number') details.push(`${good} bonnes`);
+  if (typeof bad === 'number' && bad > 0) details.push(`${bad} fautes`);
+  if (typeof skipped === 'number' && skipped > 0) details.push(`${skipped} passées`);
+  const detailLine = details.length > 0 ? ` (${details.join(' · ')})` : '';
+  const durLine = durationMin ? ` ${durationMin} min` : '';
 
-  return `Découvre Quiz R1 : ${INVITE_URL}`;
+  return `J'ai marqué ${score} pts au Sprint${durLine} R1 — niveau ${levelName}${detailLine}.\n\nÀ ton tour : ${INVITE_URL}`;
 }
 
 /**
@@ -28,20 +38,16 @@ export function buildGuestShareText({ mode, levelName, score, total, timeSec, is
  *   method = 'native' | 'fallback' | 'cancelled'
  */
 export async function shareResult({ title, text, url = INVITE_URL }) {
-  // Tentative Web Share API
   if (navigator.share) {
     try {
       await navigator.share({ title, text, url });
       return { method: "native", ok: true };
     } catch (e) {
-      // L'utilisateur a annulé : c'est OK, on ne fait pas tomber le fallback
       if (e.name === "AbortError") {
         return { method: "cancelled", ok: false };
       }
-      // Autre erreur : on essaie le fallback
     }
   }
-
   return { method: "fallback", ok: false };
 }
 
@@ -54,7 +60,6 @@ export async function copyToClipboard(text) {
       await navigator.clipboard.writeText(text);
       return true;
     }
-    // Fallback legacy
     const ta = document.createElement("textarea");
     ta.value = text;
     ta.style.position = "fixed";
@@ -69,22 +74,14 @@ export async function copyToClipboard(text) {
   }
 }
 
-/**
- * Construit un lien mailto: pour partager par mail.
- */
 export function buildMailtoUrl({ subject, body }) {
   return `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-/**
- * Construit un lien sms: pour partager par SMS (iOS).
- */
 export function buildSmsUrl({ body }) {
-  // iOS attend ?&body=... pour autoriser le pré-remplissage
   return `sms:&body=${encodeURIComponent(body)}`;
 }
 
-// Helper : format mm'ss
 export function formatTime(sec) {
   if (sec === null || sec === undefined) return "—";
   const m = Math.floor(sec / 60);
