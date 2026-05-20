@@ -1,16 +1,17 @@
 // src/components/guest/GuestMode.jsx
 // Mode Invité — isolation totale des stats perso.
-// Flow : LevelPicker → ModePicker → Survival OU Timed → Results (avec partage)
+// Flow : LevelPicker → ModePicker (avec durée Sprint) → Survival OU Sprint → Recap (si erreurs) → Results
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowRight, ArrowLeft, Skull, Clock, Share2, RotateCcw,
   X, Check, Trophy, CheckCircle2, XCircle, UserCircle2,
   Sparkles, AlertCircle, Copy, Mail, MessageSquare,
+  SkipForward, Plus, Minus, ChevronDown, ListChecks,
 } from 'lucide-react';
 import {
   GUEST_LEVELS, GUEST_LEVEL_LIST,
-  filterByGuestLevel, pickGuestQuestion, pickGuestSession,
+  filterByGuestLevel, pickGuestQuestion,
 } from '../../lib/guestPicker.js';
 import {
   shareResult, buildGuestShareText, buildMailtoUrl, buildSmsUrl,
@@ -69,9 +70,7 @@ const GUEST_CSS = `
   }
   .guest-eyebrow-pill svg { color: var(--text-3); }
 
-  .guest-hero {
-    padding: 6px 4px;
-  }
+  .guest-hero { padding: 6px 4px; }
   .guest-hero-eyebrow {
     font-size: 11px;
     text-transform: uppercase;
@@ -100,11 +99,7 @@ const GUEST_CSS = `
   }
 
   /* === Niveaux === */
-  .level-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+  .level-list { display: flex; flex-direction: column; gap: 10px; }
   .level-card {
     width: 100%;
     display: grid;
@@ -121,14 +116,7 @@ const GUEST_CSS = `
     color: var(--text-1);
     transition: all 0.18s ease;
   }
-  .level-card:active {
-    background: var(--surface-2);
-  }
-  .level-card.selected {
-    background: linear-gradient(180deg, rgba(245,158,11,0.08), var(--surface-1));
-    border-color: rgba(245,158,11,0.4);
-    box-shadow: 0 0 0 1px rgba(245,158,11,0.15), 0 0 20px rgba(245,158,11,0.08);
-  }
+  .level-card:active { background: var(--surface-2); }
   .level-num {
     width: 36px;
     height: 36px;
@@ -141,10 +129,6 @@ const GUEST_CSS = `
     font-weight: 600;
     color: var(--text-2);
     font-variant-numeric: tabular-nums;
-  }
-  .level-card.selected .level-num {
-    background: var(--accent);
-    color: #fff;
   }
   .level-meta { min-width: 0; }
   .level-name {
@@ -159,7 +143,6 @@ const GUEST_CSS = `
     font-family: var(--font-mono);
   }
   .level-arrow { color: var(--text-3); }
-  .level-card.selected .level-arrow { color: var(--accent); }
 
   /* === Modes (écran 2) === */
   .mode-grid-guest {
@@ -174,18 +157,21 @@ const GUEST_CSS = `
     background: var(--surface-1);
     border: 1px solid var(--border);
     text-align: left;
-    cursor: pointer;
     font-family: inherit;
     color: var(--text-1);
     overflow: hidden;
     transition: all 0.2s ease;
   }
-  .mode-card-guest:active { background: var(--surface-2); }
+  .mode-card-guest.is-button {
+    cursor: pointer;
+    width: 100%;
+  }
+  .mode-card-guest.is-button:active { background: var(--surface-2); }
   .mode-card-guest.survival {
     background: linear-gradient(180deg, rgba(230,57,70,0.06), var(--surface-1));
     border-color: rgba(230,57,70,0.22);
   }
-  .mode-card-guest.timed {
+  .mode-card-guest.sprint {
     background: linear-gradient(180deg, rgba(245,158,11,0.05), var(--surface-1));
     border-color: rgba(245,158,11,0.2);
   }
@@ -208,7 +194,7 @@ const GUEST_CSS = `
     background: rgba(230,57,70,0.14);
     color: var(--danger);
   }
-  .mode-card-guest.timed .mode-icon-box {
+  .mode-card-guest.sprint .mode-icon-box {
     background: rgba(245,158,11,0.14);
     color: var(--accent);
   }
@@ -225,6 +211,75 @@ const GUEST_CSS = `
     line-height: 1.4;
     margin: 0 0 12px;
   }
+  .scoring-rules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .scoring-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: var(--surface-3);
+    border: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-2);
+    font-variant-numeric: tabular-nums;
+  }
+  .scoring-pill.good { color: var(--success); border-color: rgba(16,185,129,0.25); }
+  .scoring-pill.bad { color: var(--danger); border-color: rgba(230,57,70,0.25); }
+  .scoring-pill.skip { color: var(--text-2); }
+  .scoring-pill svg { opacity: 0.85; }
+
+  .duration-row-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-3);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .duration-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+  .duration-btn {
+    padding: 14px 8px;
+    border-radius: 12px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text-1);
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    transition: all 0.15s ease;
+    min-height: 56px;
+  }
+  .duration-btn:active { transform: scale(0.97); }
+  .duration-btn .dur-num {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .duration-btn .dur-unit {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-3);
+    font-family: var(--font-mono);
+  }
+
   .mode-card-guest-meta {
     display: flex;
     align-items: center;
@@ -235,65 +290,90 @@ const GUEST_CSS = `
     letter-spacing: 0.04em;
   }
 
-  /* === Chrono header (Timed) === */
-  .timed-top {
+  /* === Sprint en cours === */
+  .sprint-top {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr auto;
     gap: 12px;
     align-items: center;
     padding: 6px 4px;
   }
-  .timed-chrono {
+  .sprint-score-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .sprint-score-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-3);
+    font-weight: 600;
+    font-family: var(--font-mono);
+  }
+  .sprint-score-num {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 38px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    color: var(--text-1);
+    transition: color 0.3s ease;
+  }
+  .sprint-score-num.positive { color: var(--success); }
+  .sprint-score-num.negative { color: var(--danger); }
+  .sprint-chrono {
     text-align: right;
     font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
     color: var(--text-1);
     letter-spacing: -0.02em;
     transition: color 0.3s ease;
   }
-  .timed-chrono.warn { color: var(--accent); }
-  .timed-chrono.danger {
+  .sprint-chrono.warn { color: var(--accent); }
+  .sprint-chrono.danger {
     color: var(--danger);
     animation: pulse-danger 0.8s ease-in-out infinite;
-  }
-  .timed-chrono.paused {
-    color: var(--text-3);
   }
   @keyframes pulse-danger {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
   }
-  .timed-progress {
-    flex: 1;
-    height: 4px;
+  .sprint-progress {
+    height: 3px;
     border-radius: 999px;
     background: var(--surface-3);
     overflow: hidden;
-    position: relative;
+    margin: -4px 0 2px;
   }
-  .timed-progress-fill {
+  .sprint-progress-fill {
     height: 100%;
     background: var(--accent);
-    border-radius: inherit;
-    transition: width 0.3s linear;
+    transition: width 1s linear;
   }
-  .timed-stepper {
+  .sprint-counters {
     display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--text-3);
+    font-family: var(--font-mono);
+  }
+  .sprint-counter-chip {
+    display: inline-flex;
+    align-items: center;
     gap: 4px;
-    padding: 4px 0;
-  }
-  .timed-stepper-dot {
-    width: 18px;
-    height: 4px;
+    padding: 3px 8px;
     border-radius: 999px;
-    background: var(--surface-3);
-    transition: background 0.3s ease;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    font-variant-numeric: tabular-nums;
   }
-  .timed-stepper-dot.ok { background: var(--success); }
-  .timed-stepper-dot.ko { background: var(--danger); }
-  .timed-stepper-dot.current { background: var(--accent); }
+  .sprint-counter-chip.good { color: var(--success); }
+  .sprint-counter-chip.bad { color: var(--danger); }
 
   /* === Survival ambient === */
   .surv-heat-guest {
@@ -415,44 +495,160 @@ const GUEST_CSS = `
   .gq-prop.correct .gq-result { color: var(--success); }
   .gq-prop.wrong .gq-result { color: var(--danger); }
 
-  .gq-feedback {
-    padding: 14px 16px;
-    border-radius: 14px;
+  /* Bouton Passer */
+  .skip-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--surface-1);
+    border: 1px dashed var(--border-strong);
+    color: var(--text-2);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.15s ease;
+  }
+  .skip-btn:active { background: var(--surface-2); }
+  .skip-btn .penalty {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-3);
+    padding: 2px 6px;
+    border-radius: 999px;
+    background: var(--surface-3);
+  }
+
+  /* Flash points (animation +2 / -3 / -1) */
+  .points-flash {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 50;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 88px;
+    font-weight: 400;
+    text-shadow: 0 0 40px currentColor;
+    font-variant-numeric: tabular-nums;
+  }
+  .points-flash.good { color: var(--success); }
+  .points-flash.bad { color: var(--danger); }
+  .points-flash.skip { color: var(--text-2); }
+
+  /* === Recap === */
+  .recap-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .recap-cell {
+    padding: 12px;
+    border-radius: 12px;
     background: var(--surface-1);
     border: 1px solid var(--border);
+    text-align: center;
   }
-  .gq-feedback.ok { border-color: rgba(16,185,129,0.3); }
-  .gq-feedback.ko { border-color: rgba(230,57,70,0.3); }
-  .gq-feedback-tag {
+  .recap-cell-num {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .recap-cell-num.good { color: var(--success); }
+  .recap-cell-num.bad { color: var(--danger); }
+  .recap-cell-num.skip { color: var(--text-2); }
+  .recap-cell-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-3);
+    margin-top: 4px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+  }
+
+  .recap-item {
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .recap-item.skipped { border-style: dashed; }
+  .recap-item-tag {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 11px;
-    font-family: var(--font-mono);
-    color: var(--text-3);
-    margin-bottom: 6px;
+    font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.14em;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    align-self: flex-start;
+    padding: 3px 8px;
+    border-radius: 999px;
   }
-  .gq-feedback.ok .gq-feedback-tag { color: var(--success); }
-  .gq-feedback.ko .gq-feedback-tag { color: var(--danger); }
-  .gq-feedback-text {
+  .recap-item-tag.bad {
+    color: var(--danger);
+    background: rgba(230,57,70,0.1);
+  }
+  .recap-item-tag.skip {
+    color: var(--text-2);
+    background: var(--surface-3);
+  }
+  .recap-item-q {
     font-size: 14px;
+    line-height: 1.45;
+    color: var(--text-1);
+    margin: 0;
+  }
+  .recap-answer-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .recap-answer-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-3);
+    font-weight: 600;
+  }
+  .recap-answer-good { color: var(--success); }
+  .recap-answer-bad { color: var(--danger); text-decoration: line-through; }
+  .recap-expl {
+    font-size: 13px;
     line-height: 1.5;
     color: var(--text-2);
+    background: var(--surface-2);
+    padding: 12px 14px;
+    border-radius: 10px;
+    border-left: 2px solid var(--accent);
   }
-  .gq-feedback-ref {
+  .recap-ref {
     font-family: var(--font-mono);
     font-size: 11px;
     color: var(--text-3);
-    margin-top: 8px;
     letter-spacing: 0.04em;
   }
-  .gq-next {
-    margin-top: 4px;
+  .recap-cta {
     width: 100%;
-    padding: 14px;
-    border-radius: 14px;
+    padding: 16px;
+    border-radius: 16px;
     background: var(--accent);
     border: none;
     color: #fff;
@@ -486,16 +682,17 @@ const GUEST_CSS = `
     margin: 8px 0 4px;
     font-variant-numeric: tabular-nums;
   }
-  .results-score .sep {
+  .results-score.negative { color: var(--danger); }
+  .results-score.zero { color: var(--text-2); }
+  .results-score .unit {
+    font-style: normal;
+    font-size: 0.35em;
     color: var(--text-3);
-    font-style: normal;
-    margin: 0 4px;
-  }
-  .results-score .total {
-    color: var(--text-2);
-    font-style: normal;
-    font-size: 0.5em;
+    margin-left: 8px;
     vertical-align: middle;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
   .results-subscore {
     text-align: center;
@@ -553,7 +750,7 @@ const GUEST_CSS = `
     gap: 8px;
   }
 
-  /* === Share fallback sheet === */
+  /* === Share fallback === */
   .share-backdrop {
     position: fixed;
     inset: 0;
@@ -638,17 +835,27 @@ const GUEST_CSS = `
 `;
 
 // ============================================================================
+// CONSTANTES SPRINT
+// ============================================================================
+const SPRINT_SCORING = {
+  good: 2,
+  bad: -3,
+  skip: -1,
+};
+const SPRINT_DURATIONS = [3, 5, 7]; // minutes
+
+// ============================================================================
 // MAIN — orchestrateur des écrans
 // ============================================================================
 export default function GuestMode({ catalog, onExit }) {
-  const [phase, setPhase] = useState('level'); // level | mode | survival | timed | results
+  const [phase, setPhase] = useState('level'); // level | mode | survival | sprint | recap | results
   const [levelId, setLevelId] = useState(null);
-  const [modeId, setModeId] = useState(null); // 'survival' | 'timed'
-  const [result, setResult] = useState(null); // { score, total, timeSec, ... }
+  const [modeId, setModeId] = useState(null); // 'survival' | 'sprint'
+  const [sprintDuration, setSprintDuration] = useState(5); // minutes
+  const [result, setResult] = useState(null);
 
   const level = levelId ? GUEST_LEVELS[levelId] : null;
 
-  // Bank filtrée selon le niveau
   const bank = useMemo(() => {
     if (!catalog || !levelId) return [];
     return filterByGuestLevel(catalog, levelId, { excludeMulti: true, excludeAudit: true });
@@ -659,22 +866,41 @@ export default function GuestMode({ catalog, onExit }) {
     setPhase('mode');
   };
 
-  const handleSelectMode = (id) => {
-    setModeId(id);
-    if (id === 'survival') setPhase('survival');
-    else if (id === 'timed') setPhase('timed');
+  const handleSelectSurvival = () => {
+    setModeId('survival');
+    setPhase('survival');
   };
 
-  const handleFinish = (data) => {
+  const handleSelectSprint = (durationMin) => {
+    setModeId('sprint');
+    setSprintDuration(durationMin);
+    setPhase('sprint');
+  };
+
+  const handleSprintFinish = (data) => {
     setResult(data);
+    // S'il y a au moins une erreur OU un skip, on passe par le récap
+    const hasErrors = (data.history || []).some(h => !h.correct);
+    if (hasErrors) {
+      setPhase('recap');
+    } else {
+      setPhase('results');
+    }
+  };
+
+  const handleSurvivalFinish = (data) => {
+    setResult(data);
+    setPhase('results');
+  };
+
+  const handleSkipRecap = () => {
     setPhase('results');
   };
 
   const handleRetry = () => {
     setResult(null);
-    // Relance le même mode/niveau
     if (modeId === 'survival') setPhase('survival');
-    else if (modeId === 'timed') setPhase('timed');
+    else if (modeId === 'sprint') setPhase('sprint');
   };
 
   const handleChangeMode = () => {
@@ -705,7 +931,9 @@ export default function GuestMode({ catalog, onExit }) {
           <ModePickerScreen
             key="mode"
             level={level}
-            onSelect={handleSelectMode}
+            sprintDuration={sprintDuration}
+            onSelectSurvival={handleSelectSurvival}
+            onSelectSprint={handleSelectSprint}
             onBack={() => setPhase('level')}
           />
         )}
@@ -714,16 +942,27 @@ export default function GuestMode({ catalog, onExit }) {
             key="survival"
             level={level}
             bank={bank}
-            onFinish={handleFinish}
+            onFinish={handleSurvivalFinish}
             onExit={handleChangeAll}
           />
         )}
-        {phase === 'timed' && (
-          <TimedGuestScreen
-            key="timed"
+        {phase === 'sprint' && (
+          <SprintGuestScreen
+            key="sprint"
             level={level}
             bank={bank}
-            onFinish={handleFinish}
+            durationMin={sprintDuration}
+            onFinish={handleSprintFinish}
+            onExit={handleChangeAll}
+          />
+        )}
+        {phase === 'recap' && result && (
+          <RecapScreen
+            key="recap"
+            result={result}
+            level={level}
+            durationMin={sprintDuration}
+            onContinue={handleSkipRecap}
             onExit={handleChangeAll}
           />
         )}
@@ -733,6 +972,7 @@ export default function GuestMode({ catalog, onExit }) {
             result={result}
             level={level}
             modeId={modeId}
+            durationMin={sprintDuration}
             onRetry={handleRetry}
             onChangeMode={handleChangeMode}
             onChangeAll={handleChangeAll}
@@ -798,9 +1038,9 @@ function LevelPickerScreen({ onSelect, onExit }) {
 }
 
 // ============================================================================
-// MODE PICKER
+// MODE PICKER (avec sélecteur durée Sprint)
 // ============================================================================
-function ModePickerScreen({ level, onSelect, onBack }) {
+function ModePickerScreen({ level, sprintDuration, onSelectSurvival, onSelectSprint, onBack }) {
   return (
     <motion.div
       className="guest-phone"
@@ -827,9 +1067,10 @@ function ModePickerScreen({ level, onSelect, onBack }) {
       </div>
 
       <div className="mode-grid-guest">
+        {/* Mort Subite — toute la carte cliquable */}
         <motion.button
-          className="mode-card-guest survival"
-          onClick={() => onSelect('survival')}
+          className="mode-card-guest survival is-button"
+          onClick={onSelectSurvival}
           whileTap={{ scale: 0.985 }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -851,41 +1092,67 @@ function ModePickerScreen({ level, onSelect, onBack }) {
           </div>
         </motion.button>
 
-        <motion.button
-          className="mode-card-guest timed"
-          onClick={() => onSelect('timed')}
-          whileTap={{ scale: 0.985 }}
+        {/* Sprint — carte descriptive + 3 boutons durée */}
+        <motion.div
+          className="mode-card-guest sprint"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15 }}
+          transition={{ delay: 0.18 }}
         >
           <div className="mode-card-guest-head">
             <div className="mode-icon-box">
               <Clock size={20} />
             </div>
-            <h2 className="mode-card-guest-title">10 minutes chrono</h2>
+            <h2 className="mode-card-guest-title">Sprint</h2>
           </div>
           <p className="mode-card-guest-desc">
-            10 questions, {level.timerEnabled ? '10 minutes max' : 'sans chrono en mode Découverte'}. Le temps passe en pause pendant l'explication.
+            Marque un maximum de points avant la fin du chrono. Récap des erreurs à la fin.
           </p>
-          <div className="mode-card-guest-meta">
-            <span>10 questions</span>
-            {level.timerEnabled && <><span>·</span><span>chrono 10 min</span></>}
+
+          <div className="scoring-rules">
+            <span className="scoring-pill good">
+              <Plus size={11} strokeWidth={2.5} />
+              <span>2 bonne</span>
+            </span>
+            <span className="scoring-pill bad">
+              <Minus size={11} strokeWidth={2.5} />
+              <span>3 faute</span>
+            </span>
+            <span className="scoring-pill skip">
+              <SkipForward size={11} strokeWidth={2.5} />
+              <span>−1 passer</span>
+            </span>
           </div>
-        </motion.button>
+
+          <div className="duration-row-label">Choisis la durée</div>
+          <div className="duration-row">
+            {SPRINT_DURATIONS.map((d, i) => (
+              <motion.button
+                key={d}
+                className="duration-btn"
+                onClick={() => onSelectSprint(d)}
+                whileTap={{ scale: 0.97 }}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.28 + i * 0.06 }}
+              >
+                <span className="dur-num">{d}</span>
+                <span className="dur-unit">min</span>
+              </motion.button>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </motion.div>
   );
 }
 
 // ============================================================================
-// SURVIVAL GUEST
+// SURVIVAL GUEST (inchangé fonctionnellement, juste cohérence visuelle)
 // ============================================================================
 function SurvivalGuestScreen({ level, bank, onFinish, onExit }) {
-  const [questions, setQuestions] = useState(() => {
-    return [...bank].sort(() => Math.random() - 0.5);
-  });
-  const [idx, setIdx] = useState(0);
+  const [seenIds] = useState(() => new Set());
+  const [currentQ, setCurrentQ] = useState(() => pickGuestQuestion(bank, seenIds));
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState(null);
   const [validated, setValidated] = useState(false);
@@ -894,8 +1161,9 @@ function SurvivalGuestScreen({ level, bank, onFinish, onExit }) {
   if (!bank || bank.length === 0) {
     return <NoQuestionsScreen onExit={onExit} />;
   }
+  if (!currentQ) return null;
 
-  const q = questions[idx % questions.length];
+  const q = currentQ;
 
   const handleSelect = (i) => {
     if (validated) return;
@@ -907,13 +1175,13 @@ function SurvivalGuestScreen({ level, bank, onFinish, onExit }) {
       if (correct) {
         const newScore = score + 1;
         setScore(newScore);
+        seenIds.add(q.id);
         setTimeout(() => {
-          setIdx(n => n + 1);
+          setCurrentQ(pickGuestQuestion(bank, seenIds));
           setSelected(null);
           setValidated(false);
         }, 700);
       } else {
-        // Fin du jeu après 1.2s pour voir la bonne réponse
         setTimeout(() => {
           onFinish({
             score,
@@ -966,7 +1234,7 @@ function SurvivalGuestScreen({ level, bank, onFinish, onExit }) {
       </div>
 
       <motion.div
-        key={`q-${idx}`}
+        key={`q-${q.id}`}
         className="gq-card"
         initial={{ y: 12, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -1009,103 +1277,123 @@ function SurvivalGuestScreen({ level, bank, onFinish, onExit }) {
 }
 
 // ============================================================================
-// TIMED GUEST (10 min chrono)
+// SPRINT GUEST — nouveau mode scoré
 // ============================================================================
-function TimedGuestScreen({ level, bank, onFinish, onExit }) {
-  const TOTAL = 10;
-  const DURATION_SEC = level.timerEnabled ? 600 : null; // null = sans chrono (Découverte)
+function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
+  const DURATION_SEC = durationMin * 60;
 
-  const [questions] = useState(() => pickGuestSession(bank, TOTAL));
-  const [idx, setIdx] = useState(0);
-  const [results, setResults] = useState([]); // booleans
+  const seenIdsRef = useRef(new Set());
+  const historyRef = useRef([]);
+  const [currentQ, setCurrentQ] = useState(() => pickGuestQuestion(bank, seenIdsRef.current));
+  const [score, setScore] = useState(0);
+  const [good, setGood] = useState(0);
+  const [bad, setBad] = useState(0);
+  const [skipped, setSkipped] = useState(0);
   const [selected, setSelected] = useState(null);
   const [validated, setValidated] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(DURATION_SEC);
-  const [paused, setPaused] = useState(false); // pause pendant explication
-  const [elapsedAtFinish, setElapsedAtFinish] = useState(null);
-  const startedAtRef = useRef(Date.now());
+  const [flash, setFlash] = useState(null); // { kind: 'good'|'bad'|'skip', value: '+2'|'-3'|'-1' }
+  const finishedRef = useRef(false);
 
-  // Tick du chrono — uniquement si chrono actif et pas en pause et pas validé
+  // Tick chrono
   useEffect(() => {
-    if (DURATION_SEC === null) return;
-    if (paused) return;
-    if (secondsLeft === null || secondsLeft <= 0) return;
+    if (finishedRef.current) return;
+    if (secondsLeft <= 0) return;
     const t = setInterval(() => {
-      setSecondsLeft(s => {
-        if (s === null) return null;
-        const next = s - 1;
-        if (next <= 0) return 0;
-        return next;
-      });
+      setSecondsLeft(s => Math.max(0, s - 1));
     }, 1000);
     return () => clearInterval(t);
-  }, [paused, secondsLeft, DURATION_SEC]);
+  }, [secondsLeft]);
 
-  // Fin du temps : on finit la session
+  // Fin du temps
   useEffect(() => {
-    if (DURATION_SEC === null) return;
-    if (secondsLeft === 0) {
-      const score = results.filter(Boolean).length;
-      const elapsed = DURATION_SEC;
-      onFinish({
-        score,
-        total: TOTAL,
-        timeSec: elapsed,
-        isSurvival: false,
-        timeoutHit: true,
-      });
+    if (secondsLeft === 0 && !finishedRef.current) {
+      finishedRef.current = true;
+      // Petit délai pour digérer
+      setTimeout(() => {
+        onFinish({
+          score,
+          good,
+          bad,
+          skipped,
+          questionsAsked: good + bad + skipped,
+          history: historyRef.current,
+          durationMin,
+          isSurvival: false,
+        });
+      }, 400);
     }
-  }, [secondsLeft, DURATION_SEC, results, onFinish]);
+  }, [secondsLeft, score, good, bad, skipped, durationMin, onFinish]);
 
   if (!bank || bank.length === 0) {
     return <NoQuestionsScreen onExit={onExit} />;
   }
+  if (!currentQ) return null;
 
-  const q = questions[idx];
-  const elapsedSec = DURATION_SEC === null ? null : (DURATION_SEC - secondsLeft);
-  const progressPct = DURATION_SEC === null ? 0 : ((idx + (validated ? 1 : 0)) / TOTAL) * 100;
+  const q = currentQ;
+  const progressPct = ((DURATION_SEC - secondsLeft) / DURATION_SEC) * 100;
+
+  const advance = () => {
+    seenIdsRef.current.add(q.id);
+    const next = pickGuestQuestion(bank, seenIdsRef.current);
+    setCurrentQ(next);
+    setSelected(null);
+    setValidated(false);
+    setIsCorrect(false);
+  };
+
+  const showFlash = (kind, value) => {
+    setFlash({ kind, value });
+    setTimeout(() => setFlash(null), 650);
+  };
 
   const handleSelect = (i) => {
-    if (validated) return;
+    if (validated || finishedRef.current) return;
     setSelected(i);
     const correct = i === q.bonneReponse;
     setTimeout(() => {
       setIsCorrect(correct);
       setValidated(true);
-      setResults(r => [...r, correct]);
-      setPaused(true); // pause auto pendant explication
-    }, 300);
-  };
-
-  const handleNext = () => {
-    const nextIdx = idx + 1;
-    if (nextIdx >= TOTAL) {
-      const score = [...results].filter(Boolean).length;
-      const timeSec = DURATION_SEC === null
-        ? Math.round((Date.now() - startedAtRef.current) / 1000)
-        : (DURATION_SEC - secondsLeft);
-      setElapsedAtFinish(timeSec);
-      onFinish({
-        score,
-        total: TOTAL,
-        timeSec,
-        isSurvival: false,
-        timeoutHit: false,
+      if (correct) {
+        setScore(s => s + SPRINT_SCORING.good);
+        setGood(g => g + 1);
+        showFlash('good', `+${SPRINT_SCORING.good}`);
+      } else {
+        setScore(s => s + SPRINT_SCORING.bad);
+        setBad(b => b + 1);
+        showFlash('bad', `${SPRINT_SCORING.bad}`);
+      }
+      historyRef.current.push({
+        q,
+        selectedIdx: i,
+        correct,
+        skipped: false,
       });
-    } else {
-      setIdx(nextIdx);
-      setSelected(null);
-      setValidated(false);
-      setPaused(false); // reprise du chrono
-    }
+      // Avancer après un flash bref
+      setTimeout(advance, 600);
+    }, 250);
   };
 
-  const chronoClass = DURATION_SEC === null ? 'paused'
-    : paused ? 'paused'
-    : secondsLeft <= 10 ? 'danger'
-    : secondsLeft <= 60 ? 'warn'
+  const handleSkip = () => {
+    if (validated || finishedRef.current) return;
+    setScore(s => s + SPRINT_SCORING.skip);
+    setSkipped(sk => sk + 1);
+    showFlash('skip', `${SPRINT_SCORING.skip}`);
+    historyRef.current.push({
+      q,
+      selectedIdx: null,
+      correct: false,
+      skipped: true,
+    });
+    advance();
+  };
+
+  const chronoClass = secondsLeft <= 10 ? 'danger'
+    : secondsLeft <= 30 ? 'warn'
     : '';
+
+  const scoreClass = score > 0 ? 'positive' : score < 0 ? 'negative' : '';
 
   return (
     <motion.div
@@ -1121,30 +1409,43 @@ function TimedGuestScreen({ level, bank, onFinish, onExit }) {
         </motion.button>
         <div className="guest-eyebrow-pill">
           <Clock size={11} />
-          {level.name}
+          Sprint {durationMin} min · {level.name}
         </div>
         <div style={{ width: 38 }} />
       </div>
 
-      <div className="timed-top">
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-3)' }}>
-          {idx + 1}/{TOTAL}
+      <div className="sprint-top">
+        <div className="sprint-score-block">
+          <span className="sprint-score-label">Score</span>
+          <motion.span
+            key={score}
+            className={`sprint-score-num ${scoreClass}`}
+            initial={{ scale: 1.15 }}
+            animate={{ scale: 1 }}
+            transition={{ type: 'spring', stiffness: 320, damping: 18 }}
+          >
+            {score >= 0 ? score : score}
+          </motion.span>
         </div>
-        <div className="timed-progress">
-          <div className="timed-progress-fill" style={{ width: `${progressPct}%` }} />
-        </div>
-        <div className={`timed-chrono ${chronoClass}`}>
-          {DURATION_SEC === null ? '—' : formatTime(secondsLeft)}
+        <div className={`sprint-chrono ${chronoClass}`}>
+          {formatTime(secondsLeft)}
         </div>
       </div>
 
-      <div className="timed-stepper">
-        {Array.from({ length: TOTAL }, (_, i) => {
-          let cls = '';
-          if (i < results.length) cls = results[i] ? 'ok' : 'ko';
-          else if (i === idx) cls = 'current';
-          return <div key={i} className={`timed-stepper-dot ${cls}`} />;
-        })}
+      <div className="sprint-progress">
+        <div className="sprint-progress-fill" style={{ width: `${progressPct}%` }} />
+      </div>
+
+      <div className="sprint-counters">
+        <span className="sprint-counter-chip good">
+          <Check size={11} strokeWidth={2.5} /> {good}
+        </span>
+        <span className="sprint-counter-chip bad">
+          <X size={11} strokeWidth={2.5} /> {bad}
+        </span>
+        <span className="sprint-counter-chip">
+          <SkipForward size={11} strokeWidth={2.5} /> {skipped}
+        </span>
       </div>
 
       <div className="gq-meta">
@@ -1156,11 +1457,11 @@ function TimedGuestScreen({ level, bank, onFinish, onExit }) {
       </div>
 
       <motion.div
-        key={`q-${idx}`}
+        key={`q-${q.id}`}
         className="gq-card"
         initial={{ y: 12, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.25 }}
       >
         <p className="gq-text">{q.enonce}</p>
       </motion.div>
@@ -1180,8 +1481,8 @@ function TimedGuestScreen({ level, bank, onFinish, onExit }) {
               whileTap={!validated ? { scale: 0.985 } : {}}
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.06 + i * 0.04 }}
-              disabled={validated}
+              transition={{ delay: 0.04 + i * 0.03 }}
+              disabled={validated || finishedRef.current}
             >
               <span className="gq-letter">{letter}</span>
               <span>{p}</span>
@@ -1194,40 +1495,32 @@ function TimedGuestScreen({ level, bank, onFinish, onExit }) {
         })}
       </div>
 
-      <AnimatePresence>
-        {validated && (
-          <motion.div
-            className={`gq-feedback ${isCorrect ? 'ok' : 'ko'}`}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ type: 'spring', stiffness: 240, damping: 24 }}
-          >
-            <div className="gq-feedback-tag">
-              {isCorrect ? <CheckCircle2 size={11} /> : <XCircle size={11} />}
-              {isCorrect ? 'Bonne réponse' : 'Mauvaise réponse'}
-              {DURATION_SEC !== null && <span style={{ marginLeft: 'auto', opacity: 0.7 }}>⏸ chrono en pause</span>}
-            </div>
-            <div className="gq-feedback-text">{q.explication}</div>
-            <div className="gq-feedback-ref">{q.reference}</div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <motion.button
+        className="skip-btn"
+        onClick={handleSkip}
+        whileTap={{ scale: 0.985 }}
+        disabled={validated || finishedRef.current}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: validated ? 0.3 : 1 }}
+      >
+        <SkipForward size={14} />
+        Passer cette question
+        <span className="penalty">−1</span>
+      </motion.button>
 
+      {/* Flash points */}
       <AnimatePresence>
-        {validated && (
-          <motion.button
-            className="gq-next"
-            onClick={handleNext}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ delay: 0.15, type: 'spring', stiffness: 220 }}
+        {flash && (
+          <motion.div
+            key={`flash-${flash.value}-${Date.now()}`}
+            className={`points-flash ${flash.kind}`}
+            initial={{ scale: 0.5, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: -10 }}
+            exit={{ scale: 1.1, opacity: 0, y: -40 }}
+            transition={{ type: 'spring', stiffness: 280, damping: 18 }}
           >
-            {idx + 1 < TOTAL ? 'Question suivante' : 'Voir le résultat'}
-            <ArrowRight size={16} />
-          </motion.button>
+            {flash.value}
+          </motion.div>
         )}
       </AnimatePresence>
     </motion.div>
@@ -1235,10 +1528,114 @@ function TimedGuestScreen({ level, bank, onFinish, onExit }) {
 }
 
 // ============================================================================
+// RECAP SCREEN — affichée s'il y a des erreurs/skips
+// ============================================================================
+function RecapScreen({ result, level, durationMin, onContinue, onExit }) {
+  const { good, bad, skipped, history } = result;
+  // On garde uniquement les questions à revoir (erreurs + skips)
+  const toReview = (history || []).filter(h => !h.correct);
+
+  return (
+    <motion.div
+      className="guest-phone"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.35 }}
+    >
+      <div className="guest-topbar">
+        <motion.button className="guest-back" onClick={onExit} whileTap={{ scale: 0.9 }}>
+          <X size={16} />
+        </motion.button>
+        <div className="guest-eyebrow-pill">
+          <ListChecks size={11} />
+          Récap · Sprint {durationMin} min
+        </div>
+        <div style={{ width: 38 }} />
+      </div>
+
+      <div className="guest-hero">
+        <div className="guest-hero-eyebrow">À revoir · {level.name}</div>
+        <h1 className="guest-hero-title">Les <em>questions ratées</em></h1>
+      </div>
+
+      <div className="recap-summary">
+        <div className="recap-cell">
+          <div className="recap-cell-num good">{good}</div>
+          <div className="recap-cell-label">Bonnes</div>
+        </div>
+        <div className="recap-cell">
+          <div className="recap-cell-num bad">{bad}</div>
+          <div className="recap-cell-label">Fautes</div>
+        </div>
+        <div className="recap-cell">
+          <div className="recap-cell-num skip">{skipped}</div>
+          <div className="recap-cell-label">Passées</div>
+        </div>
+      </div>
+
+      {toReview.map((h, idx) => {
+        const q = h.q;
+        const letter = ['A', 'B', 'C', 'D', 'E'];
+        const goodAns = q.propositions[q.bonneReponse];
+        const userAns = h.selectedIdx !== null ? q.propositions[h.selectedIdx] : null;
+        return (
+          <motion.div
+            key={`${q.id}-${idx}`}
+            className={`recap-item ${h.skipped ? 'skipped' : ''}`}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.08 + idx * 0.05 }}
+          >
+            <span className={`recap-item-tag ${h.skipped ? 'skip' : 'bad'}`}>
+              {h.skipped ? <SkipForward size={10} strokeWidth={2.5} /> : <XCircle size={10} />}
+              {h.skipped ? 'Passée' : 'Faute'}
+              <span style={{ opacity: 0.6, marginLeft: 6 }}>· R1 §{q.chapitre}</span>
+            </span>
+            <p className="recap-item-q">{q.enonce}</p>
+
+            {!h.skipped && userAns && (
+              <div className="recap-answer-row">
+                <span className="recap-answer-label">Ta réponse</span>
+                <span className="recap-answer-bad">
+                  {letter[h.selectedIdx]}. {userAns}
+                </span>
+              </div>
+            )}
+
+            <div className="recap-answer-row">
+              <span className="recap-answer-label">Bonne réponse</span>
+              <span className="recap-answer-good">
+                <strong>{letter[q.bonneReponse]}.</strong> {goodAns}
+              </span>
+            </div>
+
+            <div className="recap-expl">{q.explication}</div>
+            <div className="recap-ref">{q.reference}</div>
+          </motion.div>
+        );
+      })}
+
+      <motion.button
+        className="recap-cta"
+        onClick={onContinue}
+        whileTap={{ scale: 0.985 }}
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 + toReview.length * 0.05 }}
+      >
+        Voir mon score
+        <ArrowRight size={16} />
+      </motion.button>
+    </motion.div>
+  );
+}
+
+// ============================================================================
 // RESULTS + SHARE
 // ============================================================================
-function ResultsScreen({ result, level, modeId, onRetry, onChangeMode, onChangeAll, onExit }) {
-  const { score, total, timeSec, isSurvival, timeoutHit } = result;
+function ResultsScreen({ result, level, modeId, durationMin, onRetry, onChangeMode, onChangeAll, onExit }) {
+  const { score, good, bad, skipped, questionsAsked, isSurvival } = result;
   const [shareFallbackOpen, setShareFallbackOpen] = useState(false);
   const [toast, setToast] = useState(null);
 
@@ -1248,7 +1645,8 @@ function ResultsScreen({ result, level, modeId, onRetry, onChangeMode, onChangeA
     return () => clearTimeout(t);
   }, [toast]);
 
-  const modeLabel = isSurvival ? 'Mort Subite' : '10 minutes chrono';
+  const modeLabel = isSurvival ? 'Mort Subite' : `Sprint ${durationMin} min`;
+
   const message = (() => {
     if (isSurvival) {
       if (score === 0) return "Pas de chance ! La 1ʳᵉ question a été fatale.";
@@ -1257,12 +1655,17 @@ function ResultsScreen({ result, level, modeId, onRetry, onChangeMode, onChangeA
       if (score < 20) return "Beau combo. Tu maîtrises clairement.";
       return "Performance exceptionnelle. Niveau vérificateur confirmé.";
     } else {
-      const ratio = score / total;
-      if (timeoutHit) return "Le temps est écoulé. Réessaie avec un meilleur tempo.";
-      if (ratio === 1) return "Sans-faute. Chapeau.";
-      if (ratio >= 0.8) return "Très bon résultat, à quelques détails près.";
-      if (ratio >= 0.5) return "Bonne base, encore quelques zones à revoir.";
-      return "À retravailler. Pas grave, l'exercice paie sur la durée.";
+      const total = questionsAsked || (good + bad + skipped);
+      if (total === 0) return "Aucune question répondue. Réessaie !";
+      if (score < 0) return "Score négatif. Mieux vaut passer que de tenter à l'aveugle.";
+      if (score === 0) return "Score nul. Tu compensais les bonnes par les fautes.";
+      const maxScore = total * 2;
+      const ratio = score / maxScore;
+      if (ratio >= 0.9) return "Performance d'élite. Tu joues sur du velours.";
+      if (ratio >= 0.7) return "Excellent score. Très bon rythme de réflexion.";
+      if (ratio >= 0.5) return "Bon résultat. Tu sais quand tenter et quand passer.";
+      if (ratio >= 0.3) return "À retravailler. Trop de questions tentées trop vite.";
+      return "Reste de la marge. La prochaine sera meilleure.";
     }
   })();
 
@@ -1270,8 +1673,11 @@ function ResultsScreen({ result, level, modeId, onRetry, onChangeMode, onChangeA
     mode: modeLabel,
     levelName: level.name,
     score,
-    total,
-    timeSec,
+    good,
+    bad,
+    skipped,
+    questionsAsked,
+    durationMin: isSurvival ? null : durationMin,
     isSurvival,
   });
 
@@ -1280,12 +1686,9 @@ function ResultsScreen({ result, level, modeId, onRetry, onChangeMode, onChangeA
       title: 'Quiz APSAD R1 — mon score',
       text: shareText,
     });
-    if (r.method === 'native' && r.ok) {
-      // OK, rien à faire — iOS a montré son sheet
-    } else if (r.method === 'fallback') {
+    if (r.method === 'fallback') {
       setShareFallbackOpen(true);
     }
-    // Si cancelled, on ne fait rien
   };
 
   const handleCopy = async () => {
@@ -1293,6 +1696,12 @@ function ResultsScreen({ result, level, modeId, onRetry, onChangeMode, onChangeA
     setShareFallbackOpen(false);
     setToast({ kind: ok ? 'success' : 'error', text: ok ? 'Texte copié' : 'Échec de la copie' });
   };
+
+  const scoreClass = isSurvival
+    ? ''
+    : score < 0 ? 'negative'
+    : score === 0 ? 'zero'
+    : '';
 
   return (
     <motion.div
@@ -1314,28 +1723,21 @@ function ResultsScreen({ result, level, modeId, onRetry, onChangeMode, onChangeA
       </div>
 
       <div className="results-eyebrow">
-        {isSurvival ? 'Mort Subite' : timeoutHit ? 'Temps écoulé' : '10 minutes chrono'}
+        {isSurvival ? 'Mort Subite' : `Sprint ${durationMin} min`}
       </div>
       <motion.div
-        className="results-score"
+        className={`results-score ${scoreClass}`}
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.15, type: 'spring', stiffness: 220, damping: 16 }}
       >
-        {isSurvival ? (
-          <span>{score}</span>
-        ) : (
-          <>
-            <span>{score}</span>
-            <span className="sep">/</span>
-            <span className="total">{total}</span>
-          </>
-        )}
+        <span>{score}</span>
+        {!isSurvival && <span className="unit">pts</span>}
       </motion.div>
 
-      {!isSurvival && timeSec !== null && (
+      {!isSurvival && (
         <div className="results-subscore">
-          Terminé en <strong>{formatTime(timeSec)}</strong>
+          <strong>{good}</strong> bonnes · <strong>{bad}</strong> fautes · <strong>{skipped}</strong> passées
         </div>
       )}
       {isSurvival && (
@@ -1466,7 +1868,7 @@ function ResultsScreen({ result, level, modeId, onRetry, onChangeMode, onChangeA
 }
 
 // ============================================================================
-// NO QUESTIONS (fallback si catalogue vide ou bank vide)
+// NO QUESTIONS
 // ============================================================================
 function NoQuestionsScreen({ onExit }) {
   return (
