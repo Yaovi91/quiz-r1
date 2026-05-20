@@ -21,6 +21,7 @@ const FIRST_RUN_DEFAULTS = {
   lastSessionDate: null,   // ISO date YYYY-MM-DD
   xpTodayResetDate: null,  // pour reset xpToday à minuit
   questsResetDate: null,   // pour reset quotidien des quêtes
+  quests: null,            // array sérialisé des quêtes (current/done par id)
 };
 
 /**
