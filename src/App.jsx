@@ -5,10 +5,11 @@ import {
   ArrowRight, Award, BookOpen, Crosshair, Star, Heart, Calendar,
   TrendingUp, Settings, Plus, CheckCircle2, XCircle, Medal,
   Infinity as InfinityIcon, Wrench, GraduationCap, Sliders,
-  UserPlus,
+  UserPlus, Clock,
 } from 'lucide-react';
 import SettingsSheet from './components/settings/SettingsSheet.jsx';
 import GuestMode from './components/guest/GuestMode.jsx';
+import SprintScreen from './components/sprint/SprintScreen.jsx';
 
 /* =========================================================================
    R1 QUIZZ — Flow Home → Question → Level-up
@@ -2966,435 +2967,8 @@ function SurvivalScreen({ onExit, onXpGain, initialBest = 14, bank }) {
 }
 
 // ============================================================================
-// DAILY MODE
+// (Lot 3a) DailyScreen et AuditScreen supprimés — remplacés par SprintScreen
 // ============================================================================
-function DailyScreen({ onExit, onXpGain, bank }) {
-  const effectiveBank = (bank && bank.length > 0) ? bank : DAILY_BANK;
-  const total = 10;
-  // 10 questions aléatoires fixées au mount
-  const [questions] = useState(() => {
-    const shuffled = [...effectiveBank].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, total).length === total
-      ? shuffled.slice(0, total)
-      : effectiveBank.slice(0, total);
-  });
-  const [idx, setIdx] = useState(0);
-  const [results, setResults] = useState([]); // boolean[]
-  const [selected, setSelected] = useState(null);
-  const [validated, setValidated] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
-  const [ripples, setRipples] = useState([]);
-  const [finished, setFinished] = useState(false);
-
-  const q = questions[idx % questions.length];
-  const score = results.filter(Boolean).length;
-
-  const handleSelect = (i, evt) => {
-    if (validated) return;
-    const rect = evt.currentTarget.getBoundingClientRect();
-    setRipples(r => [...r, { id: Date.now(), x: evt.clientX - rect.left, y: evt.clientY - rect.top, propIdx: i }]);
-    setSelected(i);
-    setTimeout(() => {
-      const correct = i === q.bonneReponse;
-      setIsCorrect(correct);
-      setValidated(true);
-      setResults(r => [...r, correct]);
-      onXpGain && onXpGain(correct ? 10 : 5);
-    }, 320);
-  };
-
-  const handleNext = () => {
-    const nextIdx = idx + 1;
-    if (nextIdx >= total) {
-      // bonus XP +100, +50 if perfect
-      const bonus = 100 + (score + (isCorrect ? 0 : 0) === total ? 50 : 0);
-      onXpGain && onXpGain(bonus);
-      setFinished(true);
-    } else {
-      setIdx(nextIdx);
-      setSelected(null);
-      setValidated(false);
-      setRipples([]);
-    }
-  };
-
-  const today = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' });
-
-  if (finished) {
-    const finalScore = results.filter(Boolean).length;
-    const perfect = finalScore === total;
-    return (
-      <motion.div
-        className="phone"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0 }}
-      >
-        <div className="stats-header">
-          <motion.button className="q-back" onClick={onExit} whileTap={{ scale: 0.92 }}>
-            <ArrowRight size={16} style={{ transform: 'rotate(180deg)' }} />
-          </motion.button>
-          <h1 className="stats-title"><em>Daily</em> · {today}</h1>
-          <div style={{ width: 36 }} />
-        </div>
-
-        <motion.div
-          className="daily-recap"
-          initial={{ y: 12, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.05, duration: 0.5 }}
-        >
-          <div className="daily-recap-eyebrow">
-            {perfect ? 'PERFECTION' : finalScore >= 7 ? 'BIEN JOUÉ' : 'TERMINÉ'}
-          </div>
-          <div className="daily-recap-score">
-            <motion.span
-              initial={{ scale: 0.4, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.2, type: 'spring', stiffness: 200, damping: 14 }}
-            >
-              {finalScore}
-            </motion.span>
-            <span className="sep"> / </span>
-            <span className="total">{total}</span>
-          </div>
-          <div className="daily-recap-subtitle">
-            {perfect ? 'Tu n\'as rien laissé passer.' : `${total - finalScore} erreur${total - finalScore > 1 ? 's' : ''} à revoir.`}
-          </div>
-          <motion.div
-            className="daily-recap-xp"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            <Zap size={13} fill="currentColor" style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
-            +{100 + (perfect ? 50 : 0)} XP {perfect && '· bonus perfect'}
-          </motion.div>
-        </motion.div>
-
-        {/* Breakdown des erreurs si pas perfect */}
-        {!perfect && (
-          <div>
-            <div className="section-title">
-              <span>Questions ratées</span>
-              <span className="count">{total - finalScore}</span>
-            </div>
-            <div className="chap-list">
-              {results.map((r, i) => !r && (
-                <motion.div
-                  key={i}
-                  className="chap-row"
-                  initial={{ opacity: 0, x: -6 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.7 + i * 0.05 }}
-                >
-                  <div>
-                    <div className="chap-name">Question {i + 1}</div>
-                    <div className="chap-sub">R1 §{questions[i % questions.length].chapitre} · {questions[i % questions.length].theme}</div>
-                  </div>
-                  <div />
-                  <div style={{ color: 'var(--danger)', display: 'grid', placeItems: 'center' }}>
-                    <XCircle size={18} />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        <button
-          className="next-btn"
-          onClick={onExit}
-          style={{ marginTop: 8 }}
-        >
-          Terminer
-          <ArrowRight size={16} />
-        </button>
-
-        {perfect && <Confetti active duration={3500} intensity={1.3} />}
-      </motion.div>
-    );
-  }
-
-  return (
-    <motion.div
-      className="phone"
-      initial={{ opacity: 0, x: 24 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -24 }}
-      transition={{ duration: 0.35, ease: [0.2, 0.7, 0.3, 1] }}
-    >
-      <div className="daily-top">
-        <motion.button className="q-back" onClick={onExit} whileTap={{ scale: 0.92 }}>
-          <ArrowRight size={16} style={{ transform: 'rotate(180deg)' }} />
-        </motion.button>
-        <div className="daily-info">
-          <div className="daily-info-head">
-            <span className="date">Daily · {today}</span>
-            <span className="progress">{idx + 1}/{total}</span>
-          </div>
-          <div className="daily-bar">
-            {Array.from({ length: total }, (_, i) => {
-              let state = '';
-              if (i < results.length) state = results[i] ? 'ok' : 'ko';
-              else if (i === idx) state = 'current';
-              return <div key={i} className={`daily-bar-step ${state}`} />;
-            })}
-          </div>
-        </div>
-      </div>
-
-      <div className="q-meta">
-        <span>R1 §{q.chapitre}</span>
-        <span className="q-meta-dot" />
-        <span>{q.theme}</span>
-        <span className="q-meta-dot" />
-        <span>Édition {q.edition}</span>
-      </div>
-
-      <motion.div
-        key={idx}
-        className="q-card"
-        initial={{ y: 12, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        <p className="q-text">{q.enonce}</p>
-      </motion.div>
-
-      <PropsList
-        propositions={q.propositions}
-        selected={selected}
-        validated={validated}
-        bonneReponse={q.bonneReponse}
-        ripples={ripples}
-        onSelect={handleSelect}
-      />
-
-      <AnimatePresence>
-        {validated && (
-          <motion.div
-            className={`feedback ${isCorrect ? 'ok' : 'ko'}`}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ type: 'spring', stiffness: 220, damping: 24 }}
-          >
-            <span className="feedback-tag">
-              {isCorrect ? <CheckCircle2 size={11} /> : <XCircle size={11} />}
-              {isCorrect ? 'Bonne réponse' : 'Mauvaise réponse'}
-            </span>
-            <div className="feedback-text">{q.explication}</div>
-            <div className="feedback-ref">{q.reference}</div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {validated && (
-          <motion.button
-            className="next-btn next-btn-floating"
-            onClick={handleNext}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ delay: 0.15, type: 'spring', stiffness: 220 }}
-          >
-            {idx + 1 < total ? 'Question suivante' : 'Voir le résultat'}
-            <ArrowRight size={16} />
-          </motion.button>
-        )}
-      </AnimatePresence>
-    </motion.div>
-  );
-}
-
-// ============================================================================
-// AUDIT TERRAIN MODE
-// ============================================================================
-function AuditScreen({ onExit, onXpGain, bank }) {
-  const effectiveBank = (bank && bank.length > 0) ? bank : AUDIT_BANK;
-  const TOTAL = 5;
-  // 5 questions aléatoires fixées au mount
-  const [questions] = useState(() => {
-    const shuffled = [...effectiveBank].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, Math.min(TOTAL, shuffled.length));
-  });
-  const [idx, setIdx] = useState(0);
-  const [results, setResults] = useState([]);
-  const [selected, setSelected] = useState(null);
-  const [validated, setValidated] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
-  const [ripples, setRipples] = useState([]);
-  const [finished, setFinished] = useState(false);
-
-  const total = questions.length;
-  const q = questions[idx % questions.length] || {};
-  const score = results.filter(Boolean).length;
-
-  const handleSelect = (i, evt) => {
-    if (validated) return;
-    const rect = evt.currentTarget.getBoundingClientRect();
-    setRipples(r => [...r, { id: Date.now(), x: evt.clientX - rect.left, y: evt.clientY - rect.top, propIdx: i }]);
-    setSelected(i);
-    setTimeout(() => {
-      const correct = i === q.bonneReponse;
-      setIsCorrect(correct);
-      setValidated(true);
-      setResults(r => [...r, correct]);
-      onXpGain && onXpGain(correct ? 15 : 5);
-    }, 320);
-  };
-
-  const handleNext = () => {
-    if (idx + 1 >= total) {
-      setFinished(true);
-    } else {
-      setIdx(n => n + 1);
-      setSelected(null);
-      setValidated(false);
-      setRipples([]);
-    }
-  };
-
-  if (finished) {
-    const finalScore = results.filter(Boolean).length;
-    return (
-      <motion.div
-        className="phone"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <div className="stats-header">
-          <motion.button className="q-back" onClick={onExit} whileTap={{ scale: 0.92 }}>
-            <ArrowRight size={16} style={{ transform: 'rotate(180deg)' }} />
-          </motion.button>
-          <h1 className="stats-title"><em>Audit</em> · terrain</h1>
-          <div style={{ width: 36 }} />
-        </div>
-        <motion.div
-          className="daily-recap"
-          initial={{ y: 12, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.05 }}
-        >
-          <div className="daily-recap-eyebrow">SESSION TERMINÉE</div>
-          <div className="daily-recap-score">
-            <motion.span
-              initial={{ scale: 0.4, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.2, type: 'spring', stiffness: 200, damping: 14 }}
-            >
-              {finalScore}
-            </motion.span>
-            <span className="sep"> / </span>
-            <span className="total">{total}</span>
-          </div>
-          <div className="daily-recap-subtitle">
-            {finalScore === total ? 'Q1 maîtrisé.' : 'Continue à pratiquer ces scénarios.'}
-          </div>
-        </motion.div>
-        <button className="next-btn" onClick={onExit} style={{ marginTop: 8 }}>
-          Terminer
-          <ArrowRight size={16} />
-        </button>
-      </motion.div>
-    );
-  }
-
-  return (
-    <motion.div
-      className="phone"
-      initial={{ opacity: 0, x: 24 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -24 }}
-      transition={{ duration: 0.35, ease: [0.2, 0.7, 0.3, 1] }}
-    >
-      <div className="audit-top">
-        <motion.button className="q-back" onClick={onExit} whileTap={{ scale: 0.92 }}>
-          <ArrowRight size={16} style={{ transform: 'rotate(180deg)' }} />
-        </motion.button>
-        <div className="audit-top-center">
-          <div className="label">Audit terrain</div>
-          <div className="progress">{idx + 1} / {total}</div>
-        </div>
-        <div style={{ width: 36 }} />
-      </div>
-
-      <motion.div
-        key={`scen-${idx}`}
-        className="audit-scenario-card"
-        initial={{ y: 12, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.4 }}
-      >
-        <div className="audit-scenario-tag">
-          <Crosshair size={10} />
-          {q.scenario ? 'SCÉNARIO' : 'AUDIT TERRAIN'}
-        </div>
-        <p className="audit-scenario-text">{q.scenario || q.enonce}</p>
-      </motion.div>
-
-      {q.scenario && (
-        <motion.p
-          key={`q-${idx}`}
-          className="audit-question-text"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          {q.enonce}
-        </motion.p>
-      )}
-
-      <PropsList
-        propositions={q.propositions}
-        selected={selected}
-        validated={validated}
-        bonneReponse={q.bonneReponse}
-        ripples={ripples}
-        onSelect={handleSelect}
-      />
-
-      <AnimatePresence>
-        {validated && (
-          <motion.div
-            className={`feedback ${isCorrect ? 'ok' : 'ko'}`}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ type: 'spring', stiffness: 220, damping: 24 }}
-          >
-            <span className="feedback-tag">
-              {isCorrect ? <CheckCircle2 size={11} /> : <XCircle size={11} />}
-              {isCorrect ? 'Bonne réponse' : 'Mauvaise réponse'}
-            </span>
-            <div className="feedback-text">{q.explication}</div>
-            <div className="feedback-ref">{q.reference}</div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {validated && (
-          <motion.button
-            className="next-btn next-btn-floating"
-            onClick={handleNext}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ delay: 0.15, type: 'spring', stiffness: 220 }}
-          >
-            {idx + 1 < total ? 'Scénario suivant' : 'Voir le résultat'}
-            <ArrowRight size={16} />
-          </motion.button>
-        )}
-      </AnimatePresence>
-    </motion.div>
-  );
-}
 
 // ============================================================================
 // HOME SCREEN
@@ -3405,9 +2979,8 @@ function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, o
 
   const modes = [
     { key: 'libre', title: 'Quizz libre', sub: 'adaptatif · ∞', Icon: InfinityIcon, primary: true },
-    { key: 'daily', title: 'Daily', sub: '10 Q · stable', Icon: Calendar },
+    { key: 'sprint', title: 'Sprint', sub: '3 · 5 · 7 min · chrono', Icon: Clock },
     { key: 'survie', title: 'Survie', sub: 'jusqu\'à la 1ʳᵉ faute', Icon: Heart },
-    { key: 'audit', title: 'Audit terrain', sub: 'scénarios Q1', Icon: Crosshair },
     { key: 'revision', title: 'Révision ciblée', sub: 'choisis un chapitre · sans XP', Icon: BookOpen, full: true },
   ];
 
@@ -4226,10 +3799,8 @@ export default function App() {
       setScreen('question');
     } else if (mode === 'survie') {
       setScreen('survival');
-    } else if (mode === 'daily') {
-      setScreen('daily');
-    } else if (mode === 'audit') {
-      setScreen('audit');
+    } else if (mode === 'sprint') {
+      setScreen('sprint');
     } else if (mode === 'revision') {
       // À implémenter — pour l'instant fallback libre
       resetQuestion();
@@ -4241,6 +3812,20 @@ export default function App() {
     setXp(x => x + amount);
     setXpToday(x => x + amount);
     setTotalQ(n => n + 1);
+  };
+
+  // Lot 3a — Sprint perso : à la fin d'un sprint, on a déjà l'XP via onXpGain.
+  // Ici on peut afficher célébration / milestone / etc. selon les badges débloqués.
+  const handleSprintComplete = (data) => {
+    // data = { score, good, bad, skipped, xp, isPerfect, isNewRecord, newBadges, durationMin, history }
+    // L'XP a déjà été ajoutée via onXpGain. On déclenche juste les célébrations.
+    if (data.isNewRecord || (data.newBadges && data.newBadges.length > 0)) {
+      // Petite célébration douce (réutilise le système existant)
+      const variant = celebrationVariants[Math.floor(Math.random() * celebrationVariants.length)];
+      setCelebVariant(variant);
+      setShowCeleb(true);
+      setTimeout(() => setShowCeleb(false), 1800);
+    }
   };
 
   const handleBack = () => {
@@ -4526,20 +4111,13 @@ export default function App() {
               bank={catalog ? catalog.filter(q => !q.multi && !q.mode_audit) : null}
             />
           )}
-          {screen === 'daily' && (
-            <DailyScreen
-              key="daily"
+          {screen === 'sprint' && (
+            <SprintScreen
+              key="sprint"
+              catalog={catalog}
               onExit={() => setScreen('home')}
               onXpGain={handleModeXpGain}
-              bank={catalog ? catalog.filter(q => !q.multi && !q.mode_audit) : null}
-            />
-          )}
-          {screen === 'audit' && (
-            <AuditScreen
-              key="audit"
-              onExit={() => setScreen('home')}
-              onXpGain={handleModeXpGain}
-              bank={catalog ? catalog.filter(q => !q.multi && q.mode_audit) : null}
+              onSprintComplete={handleSprintComplete}
             />
           )}
           {screen === 'guest' && (
@@ -4668,11 +4246,11 @@ export default function App() {
                 <button className="demo-btn" onClick={() => setScreen('survival')}>
                   Mode Survival
                 </button>
-                <button className="demo-btn" onClick={() => setScreen('daily')}>
-                  Mode Daily
+                <button className="demo-btn" onClick={() => setScreen('sprint')}>
+                  Mode Sprint
                 </button>
-                <button className="demo-btn" onClick={() => setScreen('audit')}>
-                  Mode Audit
+                <button className="demo-btn" onClick={() => setScreen('guest')}>
+                  Mode Invité
                 </button>
               </motion.div>
             )}
