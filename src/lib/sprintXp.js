@@ -3,7 +3,8 @@
 // Pondération par durée : un sprint court vaut plus par point qu'un long.
 
 const DURATION_MULTIPLIERS = {
-  3: 1.5, // 3 min : sprint le plus intense → 1.5 XP par point
+  1: 2.0, // 1 min : sprint éclair → 2.0 XP par point
+  3: 1.5, // 3 min : sprint intense → 1.5 XP par point
   5: 1.0, // 5 min : référence
   7: 0.7, // 7 min : plus confortable → 0.7 XP par point
 };
