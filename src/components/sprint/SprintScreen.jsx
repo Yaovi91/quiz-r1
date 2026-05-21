@@ -17,7 +17,7 @@ import {
 import { formatTime } from '../../lib/share.js';
 
 const SPRINT_SCORING = { good: 2, bad: -3, skip: -1 };
-const SPRINT_DURATIONS = [3, 5, 7];
+const SPRINT_DURATIONS = [1, 3, 5, 7];
 
 // ============================================================================
 // CSS LOCAL
@@ -164,12 +164,12 @@ const SPRINT_CSS = `
   }
   .duration-row-perso {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
   }
   .duration-btn-perso {
-    padding: 14px 8px;
-    border-radius: 14px;
+    padding: 12px 4px;
+    border-radius: 12px;
     background: var(--surface-2);
     border: 1px solid var(--border);
     color: var(--text-1);
@@ -178,7 +178,7 @@ const SPRINT_CSS = `
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
     transition: all 0.15s ease;
     min-height: 80px;
     position: relative;
@@ -920,7 +920,7 @@ export default function SprintScreen({ catalog, onExit, onXpGain, onSprintComple
 // ============================================================================
 function PickerScreen({ onStart, onExit }) {
   const records = loadSprintRecords();
-  const multipliers = { 3: '×1,5', 5: '×1,0', 7: '×0,7' };
+  const multipliers = { 1: '×2,0', 3: '×1,5', 5: '×1,0', 7: '×0,7' };
 
   return (
     <motion.div
@@ -1029,7 +1029,6 @@ function SprintRunScreen({ bank, durationMin, onFinish, onExit }) {
   const [isCorrect, setIsCorrect] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(DURATION_SEC);
   const [flash, setFlash] = useState(null);
-  const [timeUpOverlay, setTimeUpOverlay] = useState(false);
   const finishedRef = useRef(false);
   // Lot 3b.2 fix — stocker onFinish dans une ref pour qu'il ne provoque pas de re-déclenchement de useEffect
   const onFinishRef = useRef(onFinish);
@@ -1042,23 +1041,20 @@ function SprintRunScreen({ bank, durationMin, onFinish, onExit }) {
     return () => clearInterval(t);
   }, [secondsLeft]);
 
+  // Fin du chrono — appel SYNCHRONE direct dans le useEffect
+  // Pas de Promise, pas de setTimeout, pas d'overlay : le parent passe en phase 'recap' ou 'done'
   useEffect(() => {
     if (secondsLeft === 0 && !finishedRef.current) {
       finishedRef.current = true;
-      setTimeUpOverlay(true);
+      onFinishRef.current({
+        score, good, bad, skipped,
+        questionsAsked: good + bad + skipped,
+        history: historyRef.current,
+        durationMin,
+      });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [secondsLeft]);
-
-  // Bouton "Voir le détail" sur l'overlay → transition contrôlée par l'utilisateur
-  const handleSeeResults = () => {
-    onFinishRef.current({
-      score, good, bad, skipped,
-      questionsAsked: good + bad + skipped,
-      history: historyRef.current,
-      durationMin,
-    });
-  };
 
   if (!bank.length) {
     return (
@@ -1243,41 +1239,6 @@ function SprintRunScreen({ bank, durationMin, onFinish, onExit }) {
             transition={{ type: 'spring', stiffness: 280, damping: 18 }}
           >
             {flash.value}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Lot 3b.2 fix — overlay Temps écoulé avec bouton pour voir détail */}
-      <AnimatePresence>
-        {timeUpOverlay && (
-          <motion.div
-            className="time-up-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-          >
-            <motion.div
-              className="time-up-card"
-              initial={{ scale: 0.7, y: 16 }}
-              animate={{ scale: 1, y: 0 }}
-              transition={{ type: 'spring', stiffness: 220, damping: 18 }}
-            >
-              <Clock size={40} strokeWidth={1.5} />
-              <div className="time-up-title">Temps écoulé</div>
-              <div className="time-up-sub">
-                <strong>{good}</strong> bonnes · <strong>{bad}</strong> fautes · <strong>{skipped}</strong> passées
-              </div>
-              <div className="time-up-score">{score} <span>pts</span></div>
-              <motion.button
-                className="time-up-cta"
-                onClick={handleSeeResults}
-                whileTap={{ scale: 0.97 }}
-              >
-                Voir le détail
-                <ArrowRight size={16} />
-              </motion.button>
-            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
