@@ -1009,20 +1009,19 @@ function SprintRunScreen({ bank, durationMin, onFinish, onExit }) {
   useEffect(() => {
     if (secondsLeft === 0 && !finishedRef.current) {
       finishedRef.current = true;
-      // Affiche l'overlay "Temps écoulé" pendant 900ms avant la transition
+      // Affiche l'overlay "Temps écoulé" immédiatement
       setTimeUpOverlay(true);
-      const t = setTimeout(() => {
-        // Snapshot des derniers states pour onFinish
+      // Appelle onFinish de façon synchrone après le tick React courant via Promise.resolve
+      // (plus fiable que setTimeout qui peut être suspendu par Safari pendant les animations)
+      Promise.resolve().then(() => {
         onFinishRef.current({
           score, good, bad, skipped,
           questionsAsked: good + bad + skipped,
           history: historyRef.current,
           durationMin,
         });
-      }, 900);
-      return () => clearTimeout(t);
+      });
     }
-  // On exclut onFinish des deps : il est dans onFinishRef
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [secondsLeft, score, good, bad, skipped, durationMin]);
 
