@@ -1354,7 +1354,8 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
     if (secondsLeft === 0 && !finishedRef.current) {
       finishedRef.current = true;
       setTimeUpOverlay(true);
-      const t = setTimeout(() => {
+      // Transition immédiate via microtâche (plus fiable que setTimeout sur Safari mobile)
+      Promise.resolve().then(() => {
         onFinishRef.current({
           score,
           good,
@@ -1365,8 +1366,7 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
           durationMin,
           isSurvival: false,
         });
-      }, 900);
-      return () => clearTimeout(t);
+      });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [secondsLeft, score, good, bad, skipped, durationMin]);
