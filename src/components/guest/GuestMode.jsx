@@ -246,11 +246,11 @@ const GUEST_CSS = `
   }
   .duration-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
   }
   .duration-btn {
-    padding: 14px 8px;
+    padding: 12px 4px;
     border-radius: 12px;
     background: var(--surface-2);
     border: 1px solid var(--border);
@@ -917,7 +917,7 @@ const SPRINT_SCORING = {
   bad: -3,
   skip: -1,
 };
-const SPRINT_DURATIONS = [3, 5, 7]; // minutes
+const SPRINT_DURATIONS = [1, 3, 5, 7]; // minutes
 
 // ============================================================================
 // MAIN — orchestrateur des écrans
@@ -1369,7 +1369,6 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
   const [isCorrect, setIsCorrect] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(DURATION_SEC);
   const [flash, setFlash] = useState(null);
-  const [timeUpOverlay, setTimeUpOverlay] = useState(false);
   const finishedRef = useRef(false);
   // Lot 3b.2 fix — onFinish stable via ref
   const onFinishRef = useRef(onFinish);
@@ -1385,28 +1384,23 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
     return () => clearInterval(t);
   }, [secondsLeft]);
 
-  // Fin du temps
+  // Fin du chrono — appel SYNCHRONE direct
   useEffect(() => {
     if (secondsLeft === 0 && !finishedRef.current) {
       finishedRef.current = true;
-      setTimeUpOverlay(true);
+      onFinishRef.current({
+        score,
+        good,
+        bad,
+        skipped,
+        questionsAsked: good + bad + skipped,
+        history: historyRef.current,
+        durationMin,
+        isSurvival: false,
+      });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [secondsLeft]);
-
-  // Bouton "Voir le détail" sur l'overlay
-  const handleSeeResults = () => {
-    onFinishRef.current({
-      score,
-      good,
-      bad,
-      skipped,
-      questionsAsked: good + bad + skipped,
-      history: historyRef.current,
-      durationMin,
-      isSurvival: false,
-    });
-  };
 
   if (!bank || bank.length === 0) {
     return <NoQuestionsScreen onExit={onExit} />;
@@ -1602,41 +1596,6 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
             transition={{ type: 'spring', stiffness: 280, damping: 18 }}
           >
             {flash.value}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Lot 3b.2 fix — overlay Temps écoulé avec bouton */}
-      <AnimatePresence>
-        {timeUpOverlay && (
-          <motion.div
-            className="time-up-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-          >
-            <motion.div
-              className="time-up-card"
-              initial={{ scale: 0.7, y: 16 }}
-              animate={{ scale: 1, y: 0 }}
-              transition={{ type: 'spring', stiffness: 220, damping: 18 }}
-            >
-              <Clock size={40} strokeWidth={1.5} />
-              <div className="time-up-title">Temps écoulé</div>
-              <div className="time-up-sub">
-                <strong>{good}</strong> bonnes · <strong>{bad}</strong> fautes · <strong>{skipped}</strong> passées
-              </div>
-              <div className="time-up-score">{score} <span>pts</span></div>
-              <motion.button
-                className="time-up-cta"
-                onClick={handleSeeResults}
-                whileTap={{ scale: 0.97 }}
-              >
-                Voir le détail
-                <ArrowRight size={16} />
-              </motion.button>
-            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
