@@ -105,7 +105,8 @@ const GLOBAL_CSS = `
     min-height: 100vh;
     position: relative;
     z-index: 2;
-    padding: 16px 16px 120px;
+    /* Lot 3b.2 fix — respecter la status bar iPhone */
+    padding: calc(env(safe-area-inset-top, 0) + 16px) 16px 120px;
     display: flex;
     flex-direction: column;
     gap: 16px;
