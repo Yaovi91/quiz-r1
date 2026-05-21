@@ -580,6 +580,42 @@ const GUEST_CSS = `
     color: var(--text-2);
     font-variant-numeric: tabular-nums;
   }
+  .time-up-sub strong { color: var(--text-1); font-weight: 600; }
+  .time-up-score {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 64px;
+    line-height: 1;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    margin: 4px 0;
+  }
+  .time-up-score span {
+    font-style: normal;
+    font-size: 0.32em;
+    color: var(--text-3);
+    margin-left: 6px;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    vertical-align: middle;
+  }
+  .time-up-cta {
+    margin-top: 8px;
+    padding: 14px 24px;
+    border-radius: 14px;
+    background: var(--accent);
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 24px rgba(245,158,11,0.3);
+  }
 
   /* === Recap === */
   .recap-summary {
@@ -1354,22 +1390,23 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
     if (secondsLeft === 0 && !finishedRef.current) {
       finishedRef.current = true;
       setTimeUpOverlay(true);
-      // Transition immédiate via microtâche (plus fiable que setTimeout sur Safari mobile)
-      Promise.resolve().then(() => {
-        onFinishRef.current({
-          score,
-          good,
-          bad,
-          skipped,
-          questionsAsked: good + bad + skipped,
-          history: historyRef.current,
-          durationMin,
-          isSurvival: false,
-        });
-      });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [secondsLeft, score, good, bad, skipped, durationMin]);
+  }, [secondsLeft]);
+
+  // Bouton "Voir le détail" sur l'overlay
+  const handleSeeResults = () => {
+    onFinishRef.current({
+      score,
+      good,
+      bad,
+      skipped,
+      questionsAsked: good + bad + skipped,
+      history: historyRef.current,
+      durationMin,
+      isSurvival: false,
+    });
+  };
 
   if (!bank || bank.length === 0) {
     return <NoQuestionsScreen onExit={onExit} />;
@@ -1569,7 +1606,7 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
         )}
       </AnimatePresence>
 
-      {/* Lot 3b.2 fix — overlay Temps écoulé */}
+      {/* Lot 3b.2 fix — overlay Temps écoulé avec bouton */}
       <AnimatePresence>
         {timeUpOverlay && (
           <motion.div
@@ -1587,7 +1624,18 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
             >
               <Clock size={40} strokeWidth={1.5} />
               <div className="time-up-title">Temps écoulé</div>
-              <div className="time-up-sub">Score final : {score} pts</div>
+              <div className="time-up-sub">
+                <strong>{good}</strong> bonnes · <strong>{bad}</strong> fautes · <strong>{skipped}</strong> passées
+              </div>
+              <div className="time-up-score">{score} <span>pts</span></div>
+              <motion.button
+                className="time-up-cta"
+                onClick={handleSeeResults}
+                whileTap={{ scale: 0.97 }}
+              >
+                Voir le détail
+                <ArrowRight size={16} />
+              </motion.button>
             </motion.div>
           </motion.div>
         )}
