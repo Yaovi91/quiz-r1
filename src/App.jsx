@@ -4076,7 +4076,8 @@ export default function App() {
     // L'XP a déjà été ajoutée via onXpGain. On déclenche juste les célébrations.
     if (data.isNewRecord || (data.newBadges && data.newBadges.length > 0)) {
       // Petite célébration douce (réutilise le système existant)
-      const variant = celebrationVariants[Math.floor(Math.random() * celebrationVariants.length)];
+      const variants = ['rings', 'sparkles', 'wave', 'pulse', 'constellation'];
+      const variant = variants[Math.floor(Math.random() * variants.length)];
       setCelebVariant(variant);
       setShowCeleb(true);
       setTimeout(() => setShowCeleb(false), 1800);
