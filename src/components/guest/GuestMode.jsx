@@ -543,6 +543,44 @@ const GUEST_CSS = `
   .points-flash.bad { color: var(--danger); }
   .points-flash.skip { color: var(--text-2); }
 
+  /* Lot 3b.2 fix — overlay Temps écoulé */
+  .time-up-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+  .time-up-card {
+    text-align: center;
+    padding: 32px 40px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, var(--surface-2), var(--surface-1));
+    border: 1px solid var(--border-strong);
+    box-shadow: 0 0 60px rgba(245,158,11,0.2), var(--shadow-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--accent);
+  }
+  .time-up-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 32px;
+    color: var(--text-1);
+  }
+  .time-up-sub {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--text-2);
+    font-variant-numeric: tabular-nums;
+  }
+
   /* === Recap === */
   .recap-summary {
     display: grid;
@@ -1294,8 +1332,12 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
   const [validated, setValidated] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(DURATION_SEC);
-  const [flash, setFlash] = useState(null); // { kind: 'good'|'bad'|'skip', value: '+2'|'-3'|'-1' }
+  const [flash, setFlash] = useState(null);
+  const [timeUpOverlay, setTimeUpOverlay] = useState(false);
   const finishedRef = useRef(false);
+  // Lot 3b.2 fix — onFinish stable via ref
+  const onFinishRef = useRef(onFinish);
+  useEffect(() => { onFinishRef.current = onFinish; }, [onFinish]);
 
   // Tick chrono
   useEffect(() => {
@@ -1311,9 +1353,9 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
   useEffect(() => {
     if (secondsLeft === 0 && !finishedRef.current) {
       finishedRef.current = true;
-      // Petit délai pour digérer
-      setTimeout(() => {
-        onFinish({
+      setTimeUpOverlay(true);
+      const t = setTimeout(() => {
+        onFinishRef.current({
           score,
           good,
           bad,
@@ -1323,9 +1365,11 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
           durationMin,
           isSurvival: false,
         });
-      }, 400);
+      }, 900);
+      return () => clearTimeout(t);
     }
-  }, [secondsLeft, score, good, bad, skipped, durationMin, onFinish]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [secondsLeft, score, good, bad, skipped, durationMin]);
 
   if (!bank || bank.length === 0) {
     return <NoQuestionsScreen onExit={onExit} />;
@@ -1521,6 +1565,30 @@ function SprintGuestScreen({ level, bank, durationMin, onFinish, onExit }) {
             transition={{ type: 'spring', stiffness: 280, damping: 18 }}
           >
             {flash.value}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Lot 3b.2 fix — overlay Temps écoulé */}
+      <AnimatePresence>
+        {timeUpOverlay && (
+          <motion.div
+            className="time-up-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+          >
+            <motion.div
+              className="time-up-card"
+              initial={{ scale: 0.7, y: 16 }}
+              animate={{ scale: 1, y: 0 }}
+              transition={{ type: 'spring', stiffness: 220, damping: 18 }}
+            >
+              <Clock size={40} strokeWidth={1.5} />
+              <div className="time-up-title">Temps écoulé</div>
+              <div className="time-up-sub">Score final : {score} pts</div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
