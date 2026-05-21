@@ -801,6 +801,51 @@ const SPRINT_CSS = `
 `;
 
 // ============================================================================
+// ERROR BOUNDARY — capture les erreurs React et les affiche au lieu d'un écran noir
+// ============================================================================
+class SprintErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null, errorInfo: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error, errorInfo) {
+    this.setState({ errorInfo });
+    console.error('SprintErrorBoundary caught:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="sprint-phone" style={{ paddingTop: 'calc(env(safe-area-inset-top, 0) + 24px)' }}>
+          <div style={{ padding: 20, borderRadius: 16, background: 'rgba(230,57,70,0.1)', border: '1px solid rgba(230,57,70,0.4)' }}>
+            <h2 style={{ color: 'var(--danger)', fontFamily: 'var(--font-display)', fontStyle: 'italic', margin: '0 0 12px' }}>
+              Erreur Sprint
+            </h2>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-2)', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+              {this.state.error?.message || 'Erreur inconnue'}
+            </div>
+            {this.state.error?.stack && (
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--text-3)', marginTop: 12, maxHeight: 200, overflow: 'auto', whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
+                {this.state.error.stack.split('\n').slice(0, 8).join('\n')}
+              </div>
+            )}
+            <button
+              onClick={() => this.props.onReset && this.props.onReset()}
+              style={{ marginTop: 16, width: '100%', padding: 14, borderRadius: 12, background: 'var(--accent)', border: 'none', color: '#fff', fontFamily: 'inherit', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}
+            >
+              Retour à l'accueil
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+// ============================================================================
 // MAIN — orchestrateur
 // ============================================================================
 export default function SprintScreen({ catalog, onExit, onXpGain, onSprintComplete }) {
@@ -869,9 +914,9 @@ export default function SprintScreen({ catalog, onExit, onXpGain, onSprintComple
   };
 
   return (
-    <>
+    <SprintErrorBoundary onReset={onExit}>
       <style>{SPRINT_CSS}</style>
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {phase === 'picker' && (
           <PickerScreen
             key="picker"
@@ -911,7 +956,7 @@ export default function SprintScreen({ catalog, onExit, onXpGain, onSprintComple
           />
         )}
       </AnimatePresence>
-    </>
+    </SprintErrorBoundary>
   );
 }
 
