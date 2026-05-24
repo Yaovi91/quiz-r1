@@ -66545,5 +66545,2301 @@
     "reference": "R1 §14.2 + T14.2 + NF EN 12845+A2 §H.2.4 (Annexe H normative)",
     "generated_at": "2026-05-24",
     "skill_version": "v8"
+  },
+  {
+    "id": "nfs62200-2009-5-4-2-001",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "5.4.2",
+    "theme": "PI — Volume de dégagement vertical",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous vérifiez un PI installé selon NF S 62-200 (Figure 4). Quelle est la dimension du cylindre vertical de dégagement à respecter AU-DESSUS du poteau ?",
+    "propositions": [
+      "Rayon 0,60 m minimum, hauteur 2 m au-dessus du sol",
+      "Largeur 0,5 m minimum de chaque côté de l'axe, hauteur égale à 2xTA + Pc",
+      "Cylindre de 1 m de diamètre, hauteur 3 m",
+      "Aucune exigence verticale au-dessus du PI"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§5.4.2 NF S 62-200 (Figure 4) : le volume de dégagement vertical au-dessus du PI est un cylindre de largeur 0,5 m minimum de chaque côté de l'axe du poteau, sur une hauteur égale à 2xTA + Pc (TA = hauteur émergente du poteau, Pc = profondeur de couverture). À ne pas confondre avec le volume de dégagement BI (cylindre 0,60 m de rayon × 2 m, §6.4.2 Figure 9) ni avec le volume sphérique de 10 m (zone sans HT non protégée).",
+    "reference": "NF S 62-200 §5.4.2 + Figure 4 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-5-4-2-002",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "5.4.2",
+    "theme": "PI — Cône de dégagement devant demi-raccord",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "NF S 62-200 §5.4.2 / Figure 4 : quelle est la forme du volume de dégagement DEVANT chaque demi-raccord d'un PI ?",
+    "propositions": [
+      "Un parallélépipède rectangle de 1 m × 1 m × 0,5 m",
+      "Un cône d'axe perpendiculaire au demi-raccord, demi-angle au sommet de 45°",
+      "Un cylindre horizontal de 0,6 m de rayon",
+      "Une zone trapézoïdale de 30° d'ouverture"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§5.4.2 NF S 62-200 (Figure 4) : devant chaque demi-raccord se développe un cône de dégagement d'angle 45° de chaque côté de l'axe du raccord. Ce cône garantit l'accès libre pour le branchement du tuyau et du coude. La hauteur H du cône doit permettre la mise en œuvre des équipements. À ne pas confondre avec l'angle 30° de la zone bouche à clé (Figure 2) qui est une zone HORIZONTALE de positionnement du système d'isolement, pas un volume de dégagement.",
+    "reference": "NF S 62-200 §5.4.2 + Figure 4 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-5-4-2-003",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "5.4.2",
+    "theme": "PI — Zone bouche à clé (1 demi-raccord)",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "NF S 62-200 §5.4 / Figure 2 — PI à un demi-raccord. Parmi ces caractéristiques de la zone de positionnement de la bouche à clé du dispositif d'isolement, lesquelles sont correctes ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Cercle intérieur exclu de rayon 2 m centré sur le PI",
+      "Cercle extérieur de rayon 7 m centré sur le PI",
+      "Cône exclu de 3 m de longueur et 30° d'ouverture devant le demi-raccord",
+      "Distance maximale 5 m du bord de la chaussée",
+      "Zone autorisée uniquement entre 4 m et 6 m du poteau"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Figure 2 NF S 62-200 — la zone autorisée pour positionner la bouche à clé est la couronne entre 2 m (cercle intérieur exclu) et 7 m (cercle extérieur) du PI, en excluant un secteur de 3 m × 30° devant le demi-raccord (pour ne pas gêner l'opérateur qui tire le tuyau). La distance 5 m / chaussée concerne l'implantation du PI lui-même (§5.4.1), pas la bouche à clé. La proposition 4-6 m est inventée.",
+    "reference": "NF S 62-200 §5.4 + Figure 2 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-5-5-001",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "5.5.1",
+    "theme": "PI — Types d'installation",
+    "difficulte": 2,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "Selon NF S 62-200 §5.5.1, quels sont les types d'installation possibles pour un poteau d'incendie ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Installé dans le sol",
+      "Accolé à un regard de vidange",
+      "Accolé à une cheminée d'accès au réseau d'assainissement",
+      "Installé en suspension sur façade",
+      "Posé directement sur une dalle béton sans ancrage"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§5.5.1 NF S 62-200 liste trois types d'installation : installé dans le sol (§5.5.1.1, le plus courant), accolé à un regard de vidange (§5.5.1.2), accolé à une cheminée d'accès au réseau d'assainissement (§5.5.1.3). La pose en façade ou sans ancrage n'est pas prévue par la norme. Note : l'installation accolée a été AJOUTÉE par la révision 2009 par rapport à la version 1990 (voir page de garde — modifications).",
+    "reference": "NF S 62-200 §5.5.1 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-5-5-002",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "5.5.1.1",
+    "theme": "PI — Ancrage en maçonnerie",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous réceptionnez un PI dont l'ancrage est constitué d'un ouvrage en maçonnerie. Quelles dimensions minimales NF S 62-200 §5.5.1.1.a exige-t-elle ?",
+    "propositions": [
+      "Épaisseur 20 cm, extension 15 cm autour du poteau",
+      "Épaisseur 30 cm, extension 20 cm autour du poteau",
+      "Épaisseur 15 cm, extension 30 cm autour du poteau",
+      "Épaisseur 60 cm, extension 60 cm autour du poteau"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§5.5.1.1.a NF S 62-200 : ancrage maçonnerie d'épaisseur ≥ 30 cm s'étendant à ≥ 20 cm autour de la paroi extérieure du poteau (ou tout autre dispositif assurant la même fonctionnalité). À ne pas confondre avec le SOCLE DE PROPRETÉ (§5.5.1.1.b) dont les dimensions sont : épaisseur ≥ 15 cm, extension ≥ 30 cm autour du poteau, ≥ 60 cm dans l'axe de chaque demi-raccord. Ce sont deux dispositifs distincts qui se cumulent en terrain naturel.",
+    "reference": "NF S 62-200 §5.5.1.1.a (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-5-5-003",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "5.5.1.1",
+    "theme": "PI — Socle de propreté en terrain naturel",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous vérifiez un PI posé en terrain naturel (sans revêtement bitumineux ni béton). Selon NF S 62-200 §5.5.1.1.b, quelle exigence est SPÉCIFIQUE à la zone située dans l'axe de chaque demi-raccord ?",
+    "propositions": [
+      "Épaisseur du socle portée à 30 cm minimum dans l'axe",
+      "Extension du socle portée à 60 cm minimum dans l'axe",
+      "Pente du socle limitée à 5 % dans l'axe",
+      "Aucune exigence spécifique : la règle générale 30 cm s'applique partout"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§5.5.1.1.b NF S 62-200 : socle de propreté ≥ 15 cm d'épaisseur, ≥ 30 cm autour du poteau, mais ≥ 60 cm DANS L'AXE de chaque demi-raccord (Figures 5 et 6). Cette extension renforcée protège la zone d'écoulement de l'eau (rejet du débit nominal sur 60 m³/h DN 100). Ces distances incluent l'ancrage. À mémoriser pour l'audit terrain : 15/30/60 — épaisseur/extension/axe.",
+    "reference": "NF S 62-200 §5.5.1.1.b + Figures 5 et 6 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-5-5-004",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "5.5.1.1",
+    "theme": "PI — Dispositif de drainage de la vidange",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "NF S 62-200 §5.5.1.1.c : quel volume minimum et quelle granulométrie sont exigés pour le drainage de vidange d'un PI installé dans le sol (configuration cailloux) ?",
+    "propositions": [
+      "100 L de cailloux, granulométrie ≥ 20 mm",
+      "200 L de cailloux, granulométrie ≥ 30 mm, sans fines, sous géotextile",
+      "300 L de sable de drainage avec géotextile",
+      "150 L de cailloux mélangés à du sable fin"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§5.5.1.1.c NF S 62-200 : amas de cailloux de 200 L minimum, granulométrie ≥ 30 mm, ne comportant AUCUNE FINE (sinon colmatage), protégé par un géotextile (anti-racines/anti-fines). L'objectif : permettre le temps de vidange normalisé NF EN 14384. Un PI dont la vidange est colmatée présente un risque de gel hivernal et une NC majeure en maintenance §8.",
+    "reference": "NF S 62-200 §5.5.1.1.c (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-5-5-005",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "5.5.1.1",
+    "theme": "PI — Massif béton de butée du coude à patin",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Quel volume minimum de béton est exigé pour le massif d'appui et butée du coude à patin d'un PI ?",
+    "propositions": [
+      "0,05 m³",
+      "0,1 m³",
+      "0,5 m³",
+      "1 m³"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§5.5.1.1.d NF S 62-200 : massif béton de stabilité ≥ 0,1 m³. Ce massif a deux rôles : (1) reprendre l'effort de poussée hydraulique au niveau du coude à patin, (2) empêcher tout mouvement de la conduite amont en cas de renversement du poteau (choc véhicule notamment). Le dispositif ne doit pas obstruer l'orifice de vidange.",
+    "reference": "NF S 62-200 §5.5.1.1.d (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-5-5-006",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "5.5.1.2",
+    "theme": "PI — Accolé à regard ou cheminée",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous vérifiez un PI accolé à une cheminée d'accès au réseau d'assainissement. Quelle exigence est INDISPENSABLE selon NF S 62-200 §5.5.1.3 pour préserver la qualité de l'eau potable du réseau ?",
+    "propositions": [
+      "Le PI doit être équipé d'un disconnecteur agréé NF EN 1717",
+      "L'installation doit se faire hors d'un collecteur d'assainissement ou d'un avaloir, sans communication directe entre la vidange et le réseau d'assainissement, et la vidange ne doit pouvoir être mise en charge",
+      "Le PI doit faire l'objet d'un agrément ministériel spécifique",
+      "Aucune exigence sanitaire spécifique : l'installation accolée est libre"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§5.5.1.3 NF S 62-200 (cheminée) et §5.5.1.2 (regard) : trois exigences sanitaires cumulatives. (1) Installé dans une niche, hors collecteur ou avaloir. (2) Absence de communication directe entre vidange PI et réseau d'assainissement (risque de retour d'effluents vers réseau d'eau potable). (3) Non-possibilité de mise en charge de la vidange. Le disconnecteur EN 1717 n'est pas exigé par cette norme.",
+    "reference": "NF S 62-200 §5.5.1.2 et §5.5.1.3 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-5-5-007",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "5.5.4",
+    "theme": "PI — Désinfection après pose",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon NF S 62-200 §5.5.4, à quelle norme doit se conformer la désinfection des pièces d'un PI après sa pose ?",
+    "propositions": [
+      "NF EN 805 (eau destinée à la consommation humaine)",
+      "NF EN 14339 (bouches d'incendie)",
+      "NF S 61-221 (signalisation)",
+      "Aucune désinfection n'est requise pour un PI"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "§5.5.4 NF S 62-200 : après la pose, la totalité des pièces installées doit être désinfectée intérieurement conformément à la NF EN 805. Cette désinfection est obligatoire car le PI est raccordé au réseau d'eau potable (sauf cas particuliers). L'attestation des procédures de désinfection doit être remise par l'installateur dans le dossier technique (§7.2).",
+    "reference": "NF S 62-200 §5.5.4 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-6-1-001",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.1",
+    "theme": "BI — Composition de l'installation",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "NF S 62-200 §6.1 : parmi ces éléments, lesquels font partie de l'installation 'bouche d'incendie' au sens de la norme ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Une bouche d'incendie normalisée",
+      "Un socle de propreté lorsque nécessaire",
+      "Un dispositif de drainage pour vidange",
+      "Un appui et une butée du coude à patin",
+      "Un ancrage en maçonnerie de 30 cm d'épaisseur"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "§6.1 NF S 62-200 — composition installation BI : bouche normalisée + socle de propreté (si nécessaire) + drainage vidange + appui/butée coude à patin + dispositif éventuel de mise à niveau (esse de réglage). Différence majeure avec le PI (§5.1) : l'ANCRAGE de 30 cm n'est PAS dans la liste BI (puisque la bouche est enterrée, c'est la colonne montante qui est solidaire du coude à patin par d'autres moyens). C'est une distinction PI/BI à connaître pour la réception.",
+    "reference": "NF S 62-200 §6.1 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-6-1-002",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.1",
+    "theme": "BI — Dispositif d'isolement",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "À quelle distance maximale de la bouche d'incendie doit se trouver le dispositif permettant de l'isoler de la conduite d'arrivée d'eau ?",
+    "propositions": [
+      "3 m",
+      "5 m",
+      "7 m",
+      "10 m"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§6.1 NF S 62-200 : le dispositif d'isolement (vanne) doit être à moins de 7 m de la BI. Même règle que pour le PI (§5.1). L'emplacement de ce dispositif ne doit pas empêcher sa manœuvre. À vérifier en réception (Annexe B : 'Dispositif d'isolement à moins de 7 m') et en maintenance (§8.2). NC fréquente quand la vanne est masquée ou ensevelie.",
+    "reference": "NF S 62-200 §6.1 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-6-1-003",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.1",
+    "theme": "BI — Couvercle ouvert et tête mobile bouche à clé",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "En réception, vous constatez que le couvercle de la BI, lorsqu'il est ouvert (rabattu), vient masquer la tête mobile de la bouche à clé du dispositif d'isolement. Selon NF S 62-200 §6.1, ce résultat est-il acceptable ?",
+    "propositions": [
+      "Acceptable : la norme ne traite pas de l'interaction couvercle / bouche à clé",
+      "Non acceptable : le couvercle en position ouverte ne doit pas masquer la tête mobile de la bouche à clé du dispositif d'isolement",
+      "Acceptable uniquement si la bouche à clé est à moins de 3 m de la BI",
+      "Non acceptable uniquement si la rotation du couvercle dépasse 90°"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.1 NF S 62-200 (dernier paragraphe) : « Lorsqu'il est en position ouverte, le couvercle de la bouche ne doit pas masquer la tête mobile de bouche à clé. » Cette règle protège l'accès rapide à la vanne d'isolement pendant la manœuvre de la BI. Point de vigilance opérationnel : si on doit fermer en urgence (rupture, retour d'eau), l'accès à la bouche à clé doit rester immédiat.",
+    "reference": "NF S 62-200 §6.1 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-6-3-001",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.3",
+    "theme": "BI — Débit nominal DN 100",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon NF S 62-200 §6.3, quel débit minimum doit délivrer une bouche d'incendie DN 100, et sous quelle pression ?",
+    "propositions": [
+      "30 m³/h sous 1 bar minimum en pression statique",
+      "60 m³/h sous 1 bar minimum en régime d'écoulement, mesurée en sortie d'appareil",
+      "120 m³/h sous 2 bar minimum en régime d'écoulement",
+      "Aucune valeur normative : le débit est défini localement par le RDDECI"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.3 NF S 62-200 : chaque installation BI DN 100 doit, sous une pression de 1 bar minimum en RÉGIME D'ÉCOULEMENT (pression dynamique) mesurée en sortie d'appareil, délivrer le débit minimum de 60 m³/h. Trois subtilités à retenir : (1) c'est la pression DYNAMIQUE (en écoulement), pas statique ; (2) la mesure se fait EN SORTIE D'APPAREIL ; (3) la valeur 60 m³/h correspond au DN 100. Pour PI : mêmes valeurs §5.3.",
+    "reference": "NF S 62-200 §6.3 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-6-3-002",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.3",
+    "theme": "BI — Plusieurs appareils en simultané",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'étude de risque impose l'utilisation simultanée de 3 bouches d'incendie. Selon NF S 62-200 §6.3, quelle exigence en découle pour la conduite d'alimentation ?",
+    "propositions": [
+      "La conduite doit fournir le débit nominal d'une seule BI (60 m³/h) : les autres se débrouilleront",
+      "Les conduites doivent être dimensionnées pour assurer le débit nominal de CHACUN des appareils concernés (soit 180 m³/h pour 3 BI DN 100)",
+      "La conduite doit fournir au minimum 50 % du débit total cumulé",
+      "Aucune exigence : la simultanéité n'est jamais prise en compte"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.3 NF S 62-200 alinéa 2 : lorsque l'étude du risque fait ressortir la nécessité d'utiliser simultanément plusieurs PI/BI, les conduites doivent être dimensionnées pour assurer le débit nominal de chacun des appareils concernés. Soit pour 3 BI DN 100 simultanées : 3 × 60 = 180 m³/h disponibles. Le demandeur s'assure auprès du propriétaire du réseau de cette capacité (alinéa 3). Point critique en zone d'activités ou ICPE.",
+    "reference": "NF S 62-200 §6.3 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-cross-deci-001",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.3 (cross DECI)",
+    "theme": "BI — Distinction débit NF S 62-200 vs DECI",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous rédigez un compte rendu de vérification d'un PI. Le maire vous demande pourquoi vous indiquez '60 m³/h sous 1 bar' alors que le Référentiel National DECI (déc. 2015) §2.1.2 mentionne '30 m³/h sous pression dynamique minimum'. Quelle est la bonne explication ?",
+    "propositions": [
+      "Le DECI a remplacé la NF S 62-200 : c'est 30 m³/h qui s'applique désormais",
+      "Ce sont deux exigences distinctes : NF S 62-200 §6.3 fixe le débit nominal du produit DN 100 (60 m³/h à 1 bar en écoulement), tandis que le DECI §2.1.2 fixe un seuil minimum d'intégration d'un PEI à la défense extérieure (30 m³/h sous pression dynamique). Les deux coexistent.",
+      "C'est une erreur de la NF S 62-200 qui sera corrigée en 2019",
+      "Le 60 m³/h est valable en réception, le 30 m³/h en maintenance"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Distinction clé pour le vérificateur : la NF S 62-200 §6.3 est une norme PRODUIT/INSTALLATION qui définit la capacité nominale d'un PI/BI DN 100 (60 m³/h à 1 bar en régime d'écoulement). Le Référentiel National DECI (arrêté 15 déc. 2015) §2.1.2 fixe un seuil MINIMUM d'intégration au service public de DECI (30 m³/h sous pression dynamique). Un PI/BI DN 100 conforme NF S 62-200 délivre largement plus que le minimum DECI — c'est attendu et normal. À mentionner explicitement dans le rapport pour éviter confusion côté collectivité.",
+    "reference": "NF S 62-200 §6.3 (édition août 2009) + Référentiel National DECI §2.1.2 (arrêté 15 déc. 2015)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-cross-deci-002",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.3 (cross DECI B-3)",
+    "theme": "Cross DECI — Quantités d'eau de référence",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon le Référentiel National DECI (déc. 2015) §B-3, quelles sont les quantités d'eau indicatives de référence pour un ensemble de bâtiments à risque courant ORDINAIRE (lotissement de pavillons, immeuble d'habitation collectif) ?",
+    "propositions": [
+      "30 m³ utilisables en 1 heure minimum, sans plafond",
+      "Entre 60 m³ utilisables en 1 h et 120 m³ utilisables en 2 h, ou instantanément disponible",
+      "120 m³ utilisables en 2 heures minimum, sans option intermédiaire",
+      "Aucune valeur indicative : tout est défini au niveau communal"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Référentiel DECI §B-3 (et §1.2.1) : trois sous-catégories de risque courant. (1) FAIBLE (hameau, habitation isolée) : 30 m³ minimum en 1 h. (2) ORDINAIRE (lotissement, immeuble collectif) : 60 à 120 m³ en 1 à 2 h. (3) IMPORTANT (centre-ville dense, vieux quartiers) : ≥ 120 m³ en 2 h, plusieurs sources. Les valeurs intermédiaires (45, 75, 90 m³…) sont admises (Précision §1.2.1). À l'échelle nationale, ce sont des indications ; le RDDECI départemental précise et adapte.",
+    "reference": "Référentiel National DECI §B-3 + §1.2.1 (arrêté 15 déc. 2015)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-6-4-001",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.4.1",
+    "theme": "BI — Volume sphérique de 10 m",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous vérifiez une BI surplombée par une ligne électrique aérienne 20 kV à 8 m du sol. Selon NF S 62-200 §6.4.1, le résultat est-il conforme ?",
+    "propositions": [
+      "Conforme : aucune contrainte d'environnement n'est imposée par la norme",
+      "Conforme : la ligne 20 kV est isolée par nature",
+      "Non conforme : la norme interdit toute installation électrique > 20 kV à conducteurs non protégés dans un volume sphérique de 10 m de rayon centré sur l'intersection axe vertical du raccord / sol fini",
+      "Non conforme uniquement si la ligne est en courant alternatif"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§6.4.1 NF S 62-200 (et §5.4.1 pour PI) : le volume sphérique de 10 m de rayon, centré sur l'intersection axe vertical du raccord BI / sol fini, ne doit pas contenir d'installation électrique SUPÉRIEURE à 20 kV À CONDUCTEURS NON PROTÉGÉS. Ici : 20 kV est limite haute admise, MAIS le critère est aussi 'non protégés'. Une ligne 20 kV nue à 8 m → distance < 10 m → non conforme. Risque d'amorçage en cas de jet d'eau atteignant la ligne.",
+    "reference": "NF S 62-200 §6.4.1 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-6-4-002",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.4.2",
+    "theme": "BI — Volume de dégagement (cylindre vertical)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "NF S 62-200 §6.4.2 / Figure 9 : quelles sont les dimensions du cylindre vertical d'espace libre à respecter au-dessus d'une bouche d'incendie ?",
+    "propositions": [
+      "Cylindre de 0,30 m de rayon, hauteur 1,50 m",
+      "Cylindre de 0,60 m de rayon minimum, hauteur au moins égale à 2 m au-dessus du sol fini",
+      "Cylindre de 1 m de rayon, hauteur 3 m",
+      "Cylindre de 0,50 m de rayon, hauteur égale à 2 × profondeur de couverture"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§6.4.2 NF S 62-200 (Figure 9) : autour de la BI, un espace libre en forme de cylindre vertical de 0,60 m de RAYON minimum (diamètre 1,20 m), à partir du carré de manœuvre. Au-dessus du sol fini, l'espace libre doit avoir une hauteur ≥ 2 m. Distinction PI vs BI : la BI est cylindre 0,60 m × 2 m, le PI est cylindre 0,5 m de chaque côté × hauteur 2xTA+Pc (Figure 4) — deux géométries différentes.",
+    "reference": "NF S 62-200 §6.4.2 + Figure 9 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-6-4-003",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.4.1",
+    "theme": "BI — Emplacement et stationnement",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous vérifiez une BI implantée sur une place de stationnement matérialisée par un marquage au sol. Selon NF S 62-200 §6.4.1, le résultat est-il conforme ?",
+    "propositions": [
+      "Conforme : aucune contrainte spécifique d'emplacement n'est imposée par la norme",
+      "Conforme : la BI peut être implantée partout sauf en pleine chaussée",
+      "Non conforme : la BI doit être implantée sur un emplacement NON RÉSERVÉ au stationnement des véhicules",
+      "Non conforme uniquement si l'emplacement est réservé aux personnes handicapées"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§6.4.1 NF S 62-200 (premier alinéa) : « La bouche d'incendie doit être implantée sur un emplacement non réservé au stationnement des véhicules. » Cette règle protège l'accès opérationnel des secours (un véhicule stationné rend la BI inutilisable). NC à signaler en compte rendu et auprès de la collectivité (qui doit alors faire enlever le marquage ou déplacer la BI — voir aussi DECI §3.2 sur protection/réglementation du stationnement).",
+    "reference": "NF S 62-200 §6.4.1 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-6-5-001",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "6.5.1.2",
+    "theme": "BI — Accolée à un regard de vidange",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Vous vérifiez une BI accolée à un regard de vidange (NF S 62-200 §6.5.1.2). Quelles exigences doivent être satisfaites ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "La partie de la bouche contiguë au regard est installée dans une niche",
+      "Le couvercle de la BI rabattu ne doit PAS déborder sur l'accès au regard de vidange",
+      "La vidange de la bouche peut être directement raccordée à l'égout pour faciliter l'écoulement",
+      "La colonne montante doit être solidement fixée dans le regard (par exemple colliers d'ancrage)",
+      "Le coude à patin doit être maintenu par un dispositif assurant la stabilité de la BI"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "explication": "§6.5.1.2 NF S 62-200 : (1) niche pour la partie contiguë au regard, accès libre à la vidange. (2) Couvercle BI rabattu ne déborde pas sur l'accès regard. (3) Colonne montante fixée solidement. (4) Coude à patin stabilisé. La proposition de raccordement direct à l'égout est FAUSSE : la vidange BI ne doit JAMAIS être mise en communication directe avec un réseau d'assainissement (risque sanitaire — retour d'effluents vers eau potable). Le regard ne doit pas pouvoir être mis en charge.",
+    "reference": "NF S 62-200 §6.5.1.2 + Figure 10 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-7-001",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "7.1",
+    "theme": "Réception — Identification préalable",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon NF S 62-200 §7.1, quelle action est INDISPENSABLE avant de manœuvrer un PI/BI lors d'une visite de réception ?",
+    "propositions": [
+      "Couper l'alimentation amont par mesure de sécurité",
+      "Identifier la marque et le modèle de l'appareil afin de respecter les consignes techniques particulières et modes opératoires du fabricant",
+      "Mettre en place un balisage de 20 m de rayon",
+      "Aucune précaution préalable n'est requise"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§7.1 NF S 62-200 (dernier alinéa) : « Au préalable, avant de manœuvrer l'appareil, il est indispensable d'en identifier la marque et le modèle afin de respecter les consignes techniques particulières et modes opératoires du fabricant. » Le sens d'ouverture de la vanne supérieure, la tension de manœuvre, le couple max, le système renversable… varient selon constructeur. Une mauvaise manœuvre peut endommager le PI ou provoquer un coup de bélier sur le réseau.",
+    "reference": "NF S 62-200 §7.1 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-7-002",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "7.2",
+    "theme": "Réception — Dossier technique",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "NF S 62-200 §7.2 : quels éléments l'installateur doit-il fournir au demandeur ET à l'exploitant du réseau dans le dossier technique ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Le document indiquant la capacité de l'installation à assurer le débit requis",
+      "L'attestation de réception (rapport d'essai + plan de récolement)",
+      "Les consignes d'exploitation et de maintenance du fabricant",
+      "Une attestation indiquant les procédures de désinfection des pièces",
+      "Le bulletin de salaire de l'installateur"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "§7.2 NF S 62-200 : le dossier technique comprend (1) le document capacité débit (§5.3 / §6.3) ; (2) l'attestation de réception : rapport d'essai (Annexes A/B normatives) + plan de récolement y compris dispositif d'isolement ; (3) consignes exploitation/maintenance fabricant ; (4) attestation des procédures de désinfection (§5.5.4 conformément à NF EN 805). À garder dans le dossier du propriétaire pour traçabilité et pour les futures vérifications de maintenance §8.",
+    "reference": "NF S 62-200 §7.2 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-7-003",
+    "type": "PI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "7.2",
+    "theme": "Réception — Modification des conditions d'alimentation",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "L'exploitant du réseau a remplacé le surpresseur d'alimentation amont d'un PI réceptionné il y a 2 ans. Selon NF S 62-200 §7.2, quelle action est requise ?",
+    "propositions": [
+      "Aucune action particulière : la réception initiale reste valable à vie",
+      "Une nouvelle vérification des performances du PI/BI est requise (essai dynamique débit-pression)",
+      "Seule la maintenance annuelle suffit, sans contrôle supplémentaire",
+      "Un nouveau dossier technique complet doit être rédigé, sans essai"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§7.2 NF S 62-200 (dernier alinéa) : « Toute modification des conditions d'alimentation en eau de l'installation nécessitera une vérification des performances du poteau ou de la bouche d'incendie. » Le changement de surpresseur, le remaillage du réseau, l'extension de canalisation, le changement de réservoir… modifient la pression et le débit délivrés. Une nouvelle vérification (essai dynamique selon Annexes A/B) garantit que le PI/BI tient toujours ses 60 m³/h sous 1 bar (DN 100).",
+    "reference": "NF S 62-200 §7.2 (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfs62200-2009-7-004",
+    "type": "BI",
+    "referentiel": "NF S62-200",
+    "edition": "2009",
+    "chapitre": "7.3",
+    "theme": "Réception — Annexes A et B",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la différence entre l'Annexe A et l'Annexe B de la NF S 62-200 ?",
+    "propositions": [
+      "L'Annexe A est informative, l'Annexe B est normative",
+      "L'Annexe A concerne le rapport d'essais de réception d'un poteau d'incendie (PI), l'Annexe B concerne le rapport d'essais de réception d'une bouche d'incendie (BI). Toutes deux sont normatives.",
+      "L'Annexe A traite des PI publics, l'Annexe B des PI privés",
+      "Elles sont identiques : c'est un doublon"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Annexes A et B NF S 62-200 = rapports d'essais de réception NORMATIFS. Annexe A → PI (avec items §5.4 implantation, §5.4.2 dégagement, §5.5 installation, essai dynamique débit à 1 bar / pression au débit requis / volume d'eau prélevé). Annexe B → BI (items §6.4, §6.4.2, §6.5, mêmes essais dynamiques). Les deux PV ont une structure parallèle mais des items de contrôle adaptés au type d'appareil. Distinction utile pour rédiger le bon PV en fonction du PI/BI vérifié.",
+    "reference": "NF S 62-200 Annexes A et B (édition août 2009)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-3-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.3.1",
+    "theme": "FM ITM — Impairment Red Tag Permit System",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous intervenez sur un site assuré par FM Global. Selon FMDS 2-81 §2.3.1, quel système doit obligatoirement être utilisé lorsqu'une protection incendie est mise hors service pour une ITM ?",
+    "propositions": [
+      "Le système APSAD N100 (Avis de mise hors service et remise en service)",
+      "Un programme de gestion d'impairment FM (FM Red Tag Permit System ou équivalent)",
+      "Aucun système formel n'est requis tant que l'arrêt est < 4 heures",
+      "Le système NFPA 25 Out-of-Service Tag (orange)"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.3.1 FMDS 2-81 : utiliser un programme de gestion d'impairment (FM Red Tag Permit System ou équivalent) dès qu'une protection est mise hors service pour conduire des opérations ITM. Voir aussi FMDS 10-7 « Fire Protection Impairment Management ». L'équivalent APSAD N100 (formulaire CNPP) n'est PAS reconnu côté FM, même si la logique opérationnelle est très proche. Distinction utile à connaître quand vous intervenez sur un site sous double couverture FM + APSAD.",
+    "reference": "FMDS 2-81 §2.3.1 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-3-002",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.3.5",
+    "theme": "FM ITM — Système découvert hors service",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 2-81 §2.3.5, dans quels cas un système de protection incendie est-il considéré « hors service » et requiert l'activation du Red Tag Permit System ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Composants inopérants",
+      "Mauvaise performance du système (ex : pression insuffisante)",
+      "Mauvaise condition physique (corrosion sévère, dommage mécanique)",
+      "Découverte lors d'une ITM d'un défaut bloquant",
+      "Test de waterflow alarm réalisé pendant les heures de production"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "§2.3.5 FMDS 2-81 : un système est considéré hors service en cas (1) de composants inopérants, (2) de mauvaise performance, (3) de mauvaise condition physique. Découverte via ITM = activation Red Tag. Le test waterflow planifié ne rend pas le système « hors service » au sens §2.3.5 — c'est un cas distinct (§2.3.3) où l'on conseille de tester hors heures de production pour limiter les perturbations. Voir aussi FMDS 10-7 pour les exemples.",
+    "reference": "FMDS 2-81 §2.3.5 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-4-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.4.2.1",
+    "theme": "FM ITM — Vannes de contrôle (visuel hebdo)",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 2-81 Table 2.4.2.1, à quelle fréquence faut-il INSPECTER VISUELLEMENT les vannes de contrôle d'un système de protection incendie automatique (full-open, sécurisées, accessibles) ?",
+    "propositions": [
+      "Mensuellement (similaire au check pompe diesel)",
+      "Hebdomadairement",
+      "Trimestriellement (aligné NFPA 25 §13.3.2.1)",
+      "Annuellement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Table 2.4.2.1 FMDS 2-81 : inspection visuelle hebdomadaire des vannes de contrôle pour vérifier position ouverte/sécurisée/accessible. Annexe C montre que NFPA 25 recommande trimestriel (13.3.2.1.2) — FM est plus exigeant. Différence à connaître en intervention internationale : sur site FM, fréquence hebdo ; sur site NFPA, trimestriel. Sur site R1 (France), c'est l'exploitant qui remplit S1A Postes hebdomadaire — convergence avec FM côté périodicité.",
+    "reference": "FMDS 2-81 Table 2.4.2.1 + Annexe C (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-4-002",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.4.2.1",
+    "theme": "FM ITM — Test physique full-open des vannes",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "FMDS 2-81 Table 2.4.2.1 : à quelle fréquence faut-il tester PHYSIQUEMENT la position pleine ouverture des vannes PIV (post-indicating valves), NRS et IBV non-FM Approved ?",
+    "propositions": [
+      "Hebdomadairement, en même temps que l'inspection visuelle",
+      "Mensuellement",
+      "Semestriellement",
+      "Annuellement (au moment du full-travel exercise)"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Table 2.4.2.1 §2 FMDS 2-81 : test physique mensuel de la position full-open pour PIV, WPIV, IBV non-FM Approved, NRS, CB/RW, butterfly non-indicating. À distinguer du full-travel exercise annuel (§4, qui mesure le nombre de tours pour fermer/rouvrir) et de l'inspection visuelle hebdomadaire (§1). NFPA 25 demande annuel pour ce test physique → FM est plus exigeant. Une vanne partiellement fermée est une cause fréquente de défaut hydraulique en intervention.",
+    "reference": "FMDS 2-81 Table 2.4.2.1 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-5-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.5.1.1",
+    "theme": "FM ITM — Main drain test annuel",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 2-81 Table 2.5.1.1, à quelle fréquence faut-il réaliser un main-drain flow test pour évaluer les obstructions significatives en amont de chaque colonne sprinkler ?",
+    "propositions": [
+      "Trimestriellement (en même temps que le test waterflow alarm)",
+      "Semestriellement (S1B équivalent)",
+      "Annuellement",
+      "Tous les 5 ans, lors de l'investigation obstructions"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Table 2.5.1.1 §4 FMDS 2-81 : main-drain test annuel pour évaluer les obstructions en amont de chaque colonne riser. Idéalement après l'exercice annuel des vannes de contrôle. Si plusieurs risers sont manifoldés sur un lead-in commun, un seul main-drain test suffit. Convergence avec NFPA 25 §13.2.2 (annuel aussi). Sur R1 française : pas exactement équivalent — on contrôle via débit/pression au point F (R1 1994+) lors du Q1 semestriel.",
+    "reference": "FMDS 2-81 Table 2.5.1.1 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-5-002",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.5.1.1",
+    "theme": "FM ITM — Test alarme waterflow (60 sec)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "FMDS 2-81 Table 2.5.1.1 §2 : lors du test trimestriel d'une alarme waterflow par circulation d'eau à travers la connexion d'essai, dans quel délai maximum l'alarme doit-elle être reçue selon DS 2-0 ?",
+    "propositions": [
+      "30 secondes",
+      "60 secondes",
+      "90 secondes (aligné NFPA 25)",
+      "120 secondes"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Table 2.5.1.1 §2 FMDS 2-81 : la réception de l'alarme doit prendre moins de 60 secondes selon DS 2-0. Test trimestriel par circulation d'eau via test connection — vérifier (1) activation locale (cloche, sirène, stroboscope), (2) enregistrement sur panneau d'alarme central ou station de monitoring, (3) écoulement de la connexion d'essai vers l'extérieur. Bypass valve admissible pour économiser l'eau. Pour systèmes antifreeze : annuel et non trimestriel.",
+    "reference": "FMDS 2-81 Table 2.5.1.1 §2 + DS 2-0 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-5-003",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.5.2.1",
+    "theme": "FM ITM — Wet system obstruction 5 ans",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 2-81 Table 2.5.2.1, à quelle fréquence faut-il INVESTIGUER un système wet sprinkler alimenté par une source d'eau ouverte (open water supply) pour les débris obstructifs ?",
+    "propositions": [
+      "Annuellement",
+      "Tous les 3 ans",
+      "Tous les 5 ans, quel que soit le matériau de tuyauterie",
+      "Uniquement quand obstructions suspectées"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Table 2.5.2.1 FMDS 2-81 : investigation obstruction tous les 5 ans pour systèmes wet alimentés par source d'eau ouverte (rivière, lac, citerne aérienne...), QUEL QUE SOIT le matériau de canalisation. Convergence avec NFPA 25 §14.3.2.1. Logique : source ouverte = MES + matières en suspension + biofilm. Cas distinct : black steel pipe en système dry/preaction → investigation à 10 ans, 20 ans puis tous les 5 ans (Table 2.5.3.3).",
+    "reference": "FMDS 2-81 Table 2.5.2.1 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-5-004",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.5.3.3",
+    "theme": "FM ITM — Dry pipe valve trip test",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 2-81 Table 2.5.3.3, à quelle fréquence faut-il réaliser un FULL-FLOW trip test sur une vanne dry-pipe (acier noir) ?",
+    "propositions": [
+      "Annuellement (même fréquence que le partial-flow trip test)",
+      "Tous les 3 ans (ou tous les 10 ans pour systèmes installés sous azote)",
+      "Tous les 5 ans (aligné NFPA 25)",
+      "Uniquement lors d'une suspicion d'anomalie"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Table 2.5.3.3 FMDS 2-81 : partial-flow trip test ANNUEL ; full-flow trip test (ou évaluation videoscope / Ultrasonic Guided Wave) tous les 3 ans, OU tous les 10 ans pour systèmes installés à l'azote (effet anti-corrosion). NFPA 25 demande 3 ans aussi pour full-flow (§13.4.5.2.2.2). À noter : ce test est plus contraignant qu'en R1 (où le test poste sous air se fait par essai à la vanne aval lors du Q1 semestriel, sans déclenchement systématique complet).",
+    "reference": "FMDS 2-81 Table 2.5.3.3 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-5-005",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.5.3.3",
+    "theme": "FM ITM — Black steel pipe obstruction (10/20/5)",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 2-81 Table 2.5.3.3, quel est le calendrier d'investigation des systèmes dry-pipe avec tuyauterie en acier noir pour obstructions (hors systèmes installés à l'azote et refrigerated area) ?",
+    "propositions": [
+      "Tous les 5 ans dès la mise en service",
+      "À 10 ans, puis à 20 ans, puis tous les 5 ans ensuite",
+      "Annuellement à partir de la 10e année",
+      "Uniquement quand obstructions suspectées (pas de calendrier fixe)"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Table 2.5.3.3 FMDS 2-81 : tuyauterie acier noir + système dry = vulnérable à la corrosion interne (MIC, corrosion par O2 résiduel). Calendrier : 10 ans, puis 20 ans, puis tous les 5 ans. Logique : laisser le système se développer avant la 1re investigation, puis surveillance accrue après 20 ans. Systèmes installés à l'azote = ignorés du calendrier (atmosphère inerte). Cause directe d'effondrement débit/pression en sinistre et NC majeure côté FM.",
+    "reference": "FMDS 2-81 Table 2.5.3.3 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-6-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.6.1",
+    "theme": "FM ITM — Hydrants Inspection / Flow test",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "FMDS 2-81 Table 2.6.1.1 : parmi ces opérations sur les fire hydrants et standpipe systems, lesquelles sont annuelles ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Inspect, test, and exercise control valves",
+      "Inspect and flow test fire hydrants",
+      "Inspect, exercise and flow test monitors and nozzles",
+      "Vérification hose houses, hose stations, monitors portables/fixes pour disponibilité et dommages",
+      "Inspection mensuelle des hydrants pour accessibilité, fuites, dommages"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "Table 2.6.1.1 FMDS 2-81 : ANNUEL → control valves (§1), flow test hydrants (§4), exercise/flow test monitors et nozzles. MENSUEL → check hydrants pour accessibilité/fuites/dommages (§2). TRIMESTRIEL → hose houses + hose stations + monitors portables/fixes (§3). À retenir pour rapport audit terrain : 4 fréquences distinctes par catégorie d'équipement. NFPA 25 §7.2.2.7 demande semi-annuel/annuel pour monitors → FM aligne sur annuel.",
+    "reference": "FMDS 2-81 Table 2.6.1.1 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-9-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.9.1.1",
+    "theme": "FM ITM — Test pompe diesel hebdo vs électrique mensuel",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 2-81 Table 2.9.1.1, à quelle fréquence faut-il démarrer en mode automatique (pressure drop ou waterflow alarm) une pompe d'incendie pour churn test ?",
+    "propositions": [
+      "Hebdomadairement pour pompes diesel ET électriques",
+      "Hebdomadairement pour pompes diesel — mensuellement pour pompes électriques",
+      "Mensuellement pour pompes diesel — hebdomadairement pour pompes électriques",
+      "Mensuellement pour les deux types"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Table 2.9.1.1 §2 FMDS 2-81 : pompe DIESEL = hebdo (§2.9.3), pompe ÉLECTRIQUE = mensuel (§2.9.2). À ne pas confondre : NFPA 25 demande HEBDO pour les DEUX (§8.3.1.1 + §8.3.1.2) → FM est PLUS clément sur l'électrique. Sur R1 française : essai hebdo pompe principale (S1A Sources). Convergence FM/R1 pour le diesel — divergence pour l'électrique. Pas d'isolation pendant churn test (vanne aval NON fermée).",
+    "reference": "FMDS 2-81 Table 2.9.1.1 §2 + Annexe C (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-9-002",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.9.3.1.2",
+    "theme": "FM ITM — Durée churn test pompe diesel (30 min)",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 2-81 §2.9.3.1.2 + §3.1.11.4, quelle est la durée minimale recommandée pour un churn test sur pompe diesel, et pourquoi ?",
+    "propositions": [
+      "10 minutes — durée suffisante pour confirmer le démarrage et la pression",
+      "30 minutes — durée nécessaire pour atteindre la température normale d'opération et éviter le wet-stacking (accumulation de fuel non brûlé)",
+      "60 minutes — durée alignée NFPA 25 §8.3.1.1",
+      "Aucune durée minimale n'est imposée"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.9.3.1.2.A + §3.1.11.4 FMDS 2-81 : churn test diesel = minimum 30 minutes. Raison technique : (1) atteindre la température d'opération normale, (2) éviter le WET-STACKING — fuel non brûlé qui s'accumule dans le moteur et l'échappement, source de dommages. (3) Chasser l'humidité du carter d'huile. Pour pompe électrique : pas de durée minimale aussi stricte (pas de wet-stacking possible). À comparer R1 §12.9 qui impose aussi un essai régulier mais sans la mention wet-stacking.",
+    "reference": "FMDS 2-81 §2.9.3.1.2 + §3.1.11.4 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-9-003",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.9.3.1.3",
+    "theme": "FM ITM — Cuve gazole pompe diesel (3/4 / 8h)",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous vérifiez une pompe diesel d'incendie sur site FM. Après le churn test, quel niveau minimum FMDS 2-81 §2.9.3.1.3.C exige-t-il dans la cuve gazole ?",
+    "propositions": [
+      "Au moins 50 %",
+      "Au moins 2/3 (66 %)",
+      "Au moins 3/4 (75 %), ou capacité de fournir 8 heures de runtime à 100 % de charge moteur",
+      "100 % en permanence"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§2.9.3.1.3.C FMDS 2-81 : « Verify the diesel tank is at least 3/4 full or capable of providing 8 hours of runtime at 100% rated engine load. » Logique : assurer une autonomie suffisante en cas de sinistre majeur. À comparer R1 2025 §12.9 qui exige du gazole avec autonomie minimum (cf. règle R1 80-90 %). FM utilise une double condition : 75 % OU 8 h calculées. Vérifier que la jauge n'est pas figée — une cuve qui ne descend jamais est suspecte (jauge bloquée).",
+    "reference": "FMDS 2-81 §2.9.3.1.3.C (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-9-004",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.9.4",
+    "theme": "FM ITM — Inspection salle pompes",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "FMDS 2-81 §2.9.4.1 : parmi ces points, lesquels font partie de l'inspection HEBDOMADAIRE de la salle des pompes d'incendie ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Contrôleur de pompe en mode automatique, sans alarme trouble",
+      "Température de la salle maintenue au-dessus de 40°F (4°C)",
+      "Drains de sol dégagés, louvres de ventilation libres",
+      "Cabinets électriques fermés et sécurisés, toutes vannes verrouillées en position pleine ouverture",
+      "Test annuel de performance avec courbe débit/pression complète"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "§2.9.4.1 FMDS 2-81 (inspection hebdomadaire salle pompes, Table 2.9.1.1 §3) : check contrôleur en auto, T°C > 4°C, drains/louvres libres, cabinets fermés, vannes verrouillées open, tuyauterie sans fuite, verrouillage cuve diesel. Le test annuel performance (item E) est une opération SÉPARÉE, annuelle (§2.9.5). Point sensible terrain : T° salle pompes < 4°C → risque de gel circuit refroidissement diesel + figeage gazole hiver, NC majeure.",
+    "reference": "FMDS 2-81 §2.9.4.1 + Table 2.9.1.1 §3 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-281-2019-2-12-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2026",
+    "chapitre": "2.12.2.1",
+    "theme": "FM ITM — Freeze-up prevention (T° système valve)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 2-81 §2.5.3.3 + Table 2.12.2.1, à quelle valeur minimum la température dans les enclosures des system valves (dry-pipe, preaction, deluge) doit-elle être maintenue ?",
+    "propositions": [
+      "32°F (0°C) — minimum absolu pour éviter le gel de l'eau",
+      "40°F (4°C)",
+      "50°F (10°C)",
+      "60°F (15°C) — aligné R1 sur local technique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Table 2.5.3.3 + §2.12 FMDS 2-81 : T° minimum 40°F (4°C) dans les enclosures de system valves dry/preaction/deluge ET dans la salle des pompes (§2.9.4.1.B). Vérification hebdomadaire en saison de chauffage. Au-dessous : risque de gel circuit (priming water, pilot lines), figeage du gazole, défaut allumage diesel. Convergence stricte avec NFPA 25 §4.1.2.5. Sur R1 : pas de valeur explicite équivalente unique — exigence générale « température adaptée » mais sans seuil numérique.",
+    "reference": "FMDS 2-81 Table 2.5.3.3 + §2.9.4.1.B + Table 2.12.2.1 (avril 2019, rév. avril 2026)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-112-2020-2-1-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2020-rev2025",
+    "chapitre": "2.1",
+    "theme": "FM 1-12 — Classification matériaux concealed spaces",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon FMDS 1-12 §2.1, en combien de catégories les matériaux constituant les espaces concealed (vides combustibles) sont-ils divisés ?",
+    "propositions": [
+      "2 catégories : combustible et non combustible",
+      "3 catégories : Class 1, Class 2, et melt-out ceiling panels",
+      "4 catégories : Class 1, 2, 3 et 4 (aligné DS 8-1 commodity classification)",
+      "5 catégories : HC-1 à HC-5"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.1 FMDS 1-12 : trois catégories — Class 1 (typiquement pas de besoin sprinkleur), Class 2 (généralement besoin sprinkleur), melt-out ceiling panels (cas spécial, plafonds fusibles). Définitions précises en Appendix A. À ne pas confondre avec : (1) Classes 1-4 du DS 8-1 = commodity classification stockage ; (2) HC-1/2/3 du DS 3-26 = hazard categories nonstorage. Trois nomenclatures FM distinctes selon le contexte d'application.",
+    "reference": "FMDS 1-12 §2.1 + Appendix A (avril 2020, rév. avril 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-112-2020-2-2-3-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2020-rev2025",
+    "chapitre": "2.2.3.2",
+    "theme": "FM 1-12 — Firestops compartimentation max",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "FMDS 1-12 §2.2.3.2 : quel intervalle MAXIMUM est admis pour la subdivision (firestops) des compartiments combustibles selon les figures 2.2.2-1 et 2.2.2-2 ?",
+    "propositions": [
+      "500 ft² (46 m²)",
+      "1 000 ft² (93 m²)",
+      "2 000 ft² (186 m²)",
+      "4 000 ft² (370 m²)"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§2.2.3.2 FMDS 1-12 : firestops ou subdivision aux intervalles n'excédant pas 2 000 ft² (186 m²) là où recommandé par les Figures 2.2.2-1 et 2.2.2-2. Pour les murs combustibles : firestops à chaque niveau de plancher et horizontalement à intervalles max de 10 ft (3 m) (§2.2.3.3). Matériaux acceptés pour firestops : plaque de plâtre, laine minérale, fibre céramique. Objectif : empêcher la propagation latérale du feu dans les vides combustibles, défaillance majeure constatée en sinistre.",
+    "reference": "FMDS 1-12 §2.2.3.2 (avril 2020, rév. avril 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-112-2020-2-2-4-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2020-rev2025",
+    "chapitre": "2.2.4",
+    "theme": "FM 1-12 — Plafonds melt-out (fusibles)",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Vous évaluez l'installation d'un plafond fusible (melt-out ceiling) FM Approved sous une protection sprinkleur. Selon FMDS 1-12 §2.2.4, quelles exigences doivent être respectées ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Installation UNIQUEMENT dans des occupations Hazard category 1 (HC-1)",
+      "Distance maximum 5 ft (1,5 m) entre le plafond fusible et les sprinkleurs automatiques",
+      "Installation horizontale uniquement (pas en pente)",
+      "Compatible avec systèmes dry-pipe pour zones non chauffées",
+      "Pas d'isolation thermique posée au-dessus des tuiles fusibles"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "explication": "§2.2.4 FMDS 1-12 : plafonds fusibles FM Approved → (1) HC-1 uniquement, (2) max 5 ft (1,5 m) sous sprinkleurs, (3) horizontal uniquement, (4) PAS de dry-pipe (incompatibilité — le délai de fusion + délai d'arrivée d'eau cumulés rendent inopérante), (5) pas d'isolation au-dessus (même légèrement plus petite), (6) pas de peinture/coating hors spécification FM Approval, (7) pas de sprinkleurs sous le plafond seulement. Limitation principale : risque de retard cumulé de fusion qui ralentirait l'arrivée d'eau aux têtes au-dessus.",
+    "reference": "FMDS 1-12 §2.2.4 (avril 2020, rév. avril 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-112-2020-2-2-2-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2020-rev2025",
+    "chapitre": "2.2.2.1.2",
+    "theme": "FM 1-12 — Cloud ceilings (révision avril 2020)",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 1-12 §2.2.2.1.2 (révision avril 2020), comment les cloud ceilings doivent-ils être construits et traités du point de vue protection sprinkleur ?",
+    "propositions": [
+      "Construits en matériaux Class 2 admis ; aucune contrainte particulière pour le sprinkleur",
+      "Construits en matériaux non combustibles ou FM Approved Class 1, et traités comme des obstructions selon DS 2-0",
+      "Aucune exigence spécifique : les cloud ceilings sont hors scope du DS 1-12",
+      "Toujours doublés d'une protection sprinkleur dédiée au-dessus"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.2.2.1.2 FMDS 1-12 (nouveauté avril 2020) : cloud ceilings construits en matériaux non combustibles OU FM Approved Class 1, et traités comme obstructions selon DS 2-0 (Installation Guidelines for Automatic Sprinklers). Cette section a été ajoutée à la révision avril 2020 (« A. Added recommendations for cloud ceilings »). Un cloud ceiling = plafond suspendu non continu (panneaux flottants). L'enjeu : assurer que les sprinkleurs au-dessus restent efficaces sur la surface couverte par le cloud.",
+    "reference": "FMDS 1-12 §2.2.2.1.2 + Appendix B (révision avril 2020, rév. avril 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-112-2020-2-2-8-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2020-rev2025",
+    "chapitre": "2.2.8",
+    "theme": "FM 1-12 — Murs creux extérieurs (cavity walls)",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "FMDS 1-12 §2.2.8 : quelles options sont admises pour la construction de murs creux extérieurs (exterior cavity walls) ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Systèmes de murs creux FM Approved",
+      "Matériaux de construction non combustibles",
+      "Matériaux conformes au standard FM Approvals 4880 Class 1",
+      "Isolation en polystyrène expansé (EPS) sans contraintes",
+      "Tout matériau combustible si protégé par sprinkleur"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§2.2.8 FMDS 1-12 : trois options autorisées — (A) systèmes FM Approved, (B) matériaux non combustibles, (C) matériaux conformes au standard FM Approvals 4880 Class 1. L'EPS (figure 3.3-1) a échoué les tests de feu en mur creux (combustion jusqu'à la fin de l'array de test, fumée noire), donc NON admis sans contrainte. Le verre expansé (EG, figure 3.3-2) a réussi. Risque connu : hot work à proximité de l'isolation combustible en mur creux = source majeure de sinistre lors de constructions/rénovations.",
+    "reference": "FMDS 1-12 §2.2.8 + Figures 3.3-1/3.3-2 (avril 2020, rév. avril 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-2-2-1-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "2.2.1.2",
+    "theme": "FM 3-7 — Séparation pump house (15 m)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous intervenez sur la conception d'une salle de pompes incendie d'un site FM. Selon FMDS 3-7 §2.2.1.2, quelle distance minimale de séparation est recommandée pour un bâtiment de pompes DÉTACHÉ ?",
+    "propositions": [
+      "5 m (16 ft) des bâtiments protégés",
+      "10 m (33 ft) des bâtiments protégés",
+      "15 m (50 ft) des bâtiments protégés, en construction non combustible",
+      "30 m (100 ft) des bâtiments protégés"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§2.2.1.2 FMDS 3-7 : pompe localisée dans un bâtiment détaché de construction non combustible, à au moins 50 ft (15 m) des bâtiments protégés. Logique : isoler la pompe des sinistres dans les bâtiments protégés. Si bâtiment détaché impossible : alternative = séparation par construction coupe-feu 2 h (réduite à 1 h si pump room ET zones adjacentes sont protégées par sprinkleur). Sur R1 (§12) : pas de distance équivalente — exigence générale d'isolement par paroi REI120.",
+    "reference": "FMDS 3-7 §2.2.1.2 (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-2-2-1-002",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "2.2.1.6",
+    "theme": "FM 3-7 — T° minimum salle pompes",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "FMDS 3-7 §2.2.1.6 : à quelle température minimale la salle des pompes (pump room ou pump house) doit-elle être maintenue ?",
+    "propositions": [
+      "Pas d'exigence chiffrée si la salle est chauffée",
+      "Au-dessus de 40°F (5°C)",
+      "Au-dessus de 50°F (10°C)",
+      "Au-dessus de 60°F (15°C)"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.2.1.6 FMDS 3-7 : température salle pompes maintenue au-dessus de 40°F (5°C). Convergent avec §2.4.21.3 (cuves diesel) et §2.9.4.1.B FMDS 2-81 (4°C en ITM). Au-dessous : risque de figeage gazole, gel circuit refroidissement, batteries dégradées. NC majeure terrain. Vérification opérationnelle : prendre la T° à proximité du contrôleur ET de la cuve gazole — pas une seule T° de salle.",
+    "reference": "FMDS 3-7 §2.2.1.6 (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-2-2-1-003",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "2.2.1.5",
+    "theme": "FM 3-7 — Sprinkleurs sur pompes diesel",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous concevez une installation de pompe diesel d'incendie sur site FM. Selon FMDS 3-7 §2.2.1.5, faut-il prévoir une protection sprinkleur au-dessus de la pompe elle-même ?",
+    "propositions": [
+      "Non — la pompe assure sa propre protection en cas d'incendie",
+      "Oui — prévoir des sprinkleurs automatiques au-dessus des pompes à moteur (engine-driven)",
+      "Uniquement pour les pompes électriques (risque arc électrique)",
+      "Optionnel, selon analyse de risque du site"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.2.1.5 FMDS 3-7 : « Provide automatic sprinklers over engine-driven pumps. » Logique : un moteur diesel = source de chaleur + carburant + huile = potentiel incendie INTERNE au local pompes. La pompe doit pouvoir continuer à fonctionner pour combattre un sinistre extérieur, donc on protège la pompe elle-même contre un feu local. Spécificité diesel — sur électrique, le risque incendie interne est moindre.",
+    "reference": "FMDS 3-7 §2.2.1.5 (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-2-3-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "3.1.3",
+    "theme": "FM 3-7 — Aspiration : 10 diamètres en amont",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "FMDS 3-7 §3.1.3 : quelle distance minimale est recommandée entre la bride d'aspiration de la pompe et tout composant créant un écoulement turbulent (coude, vanne, té...) en AMONT ?",
+    "propositions": [
+      "3 diamètres de tuyau",
+      "5 diamètres de tuyau",
+      "10 diamètres de tuyau",
+      "20 diamètres de tuyau"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§3.1.3 FMDS 3-7 : « The distance of 10 pipe diameters is a general guideline that has been used by the water control industry. » Logique : un écoulement turbulent à l'aspiration → cavitation, vibrations, dégradation de la courbe pompe. Critère général — vérifier toujours que les critères de débit/pression d'acceptation sont satisfaits. Sur R1 §12 : pas de valeur explicite « 10 diamètres » mais exigence de tranquillisation de l'écoulement.",
+    "reference": "FMDS 3-7 §3.1.3 (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-2-3-4-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "2.3.4.2",
+    "theme": "FM 3-7 — Soupape de décharge / Pression composants (175 psi)",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 3-7 §2.3.4.2, à partir de quelle valeur de pression cumulée (churn pump + aspiration statique max) une SOUPAPE DE DÉCHARGE principale (main relief valve) devient-elle obligatoire ?",
+    "propositions": [
+      "100 psi (6,9 bar)",
+      "Quand la pression dépasse la valeur nominale des composants du système, généralement 175 psi (12 bar)",
+      "Toujours obligatoire, quelle que soit la pression",
+      "Jamais nécessaire si la pompe est conforme FM Approved"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.3.4.2 FMDS 3-7 : soupape de décharge requise si pression nette de churn + pression statique max d'aspiration > pression nominale des composants du système, GÉNÉRALEMENT 175 psi (12 bar). Logique : protéger les composants contre les surpressions anormales. La soupape est un dispositif de sécurité — elle ne doit s'ouvrir QUE en condition de surpression anormale (pas en routine). Bonnes pratiques de conception : éviter le besoin de relief valve via dimensionnement correct (§3.1.10).",
+    "reference": "FMDS 3-7 §2.3.4.2 + §3.1.10 (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-2-4-21-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "2.4.21.6",
+    "theme": "FM 3-7 — Cuve gazole : 8 h + 5% expansion + 5% sump",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 3-7 §2.4.21.6, comment dimensionner la cuve gazole d'une pompe diesel d'incendie ?",
+    "propositions": [
+      "Capacité minimum 8 heures de fonctionnement moteur",
+      "Capacité minimum 8 heures de fonctionnement moteur + 5 % de volume pour expansion + 5 % de volume pour sump (rétention non utilisable)",
+      "Capacité minimum 4 heures, sans réserve d'expansion",
+      "Aucune exigence quantitative, à la libre appréciation du fabricant"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.4.21.6 FMDS 3-7 : cuve dimensionnée pour 8 h MINIMUM de runtime moteur + 5 % volume pour expansion (dilatation thermique gazole) + 5 % volume pour sump (zone basse non aspirable par la canne, pour piéger l'eau et les sédiments). Cuve réservée EXCLUSIVEMENT à la pompe diesel — pas de partage avec autre usage. À comparer FMDS 2-81 §2.9.3.1.3.C qui demande de vérifier 3/4 plein OU 8h capacité après chaque churn test.",
+    "reference": "FMDS 3-7 §2.4.21.6 (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-2-4-21-002",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "2.4.21.4",
+    "theme": "FM 3-7 — Cuvette de rétention gazole indoor",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "FMDS 3-7 §2.4.21.4 : quelle exigence dimensionnelle s'applique à la cuvette de rétention (spill containment curbing) autour d'une cuve gazole intérieure ?",
+    "propositions": [
+      "Capacité de rétention = 50 % du volume de la cuve",
+      "Capacité de rétention = 110 % du volume de la cuve (équivalent réglementation ICPE FR)",
+      "Capacité = volume total de la cuve + 2 in (5 cm) de revanche (freeboard)",
+      "Pas d'exigence dimensionnelle, juste une cuvette obligatoire"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§2.4.21.4 FMDS 3-7 : « Design the curbing around the fuel tank to contain the entire contents of the tank plus 2 in. (5 cm) freeboard. » Volume total cuve + freeboard 5 cm. Logique différente de la réglementation FR ICPE (qui est typiquement 100 % ou 110 % selon configuration). À retenir en intervention internationale : FM = 100 % + freeboard 5 cm, pas un pourcentage. Cuve double paroi acier OU vault béton (§2.4.21.1). Pas de niveau visuel en verre ou plastique (§2.4.21.5).",
+    "reference": "FMDS 3-7 §2.4.21.4 (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-2-4-22-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "2.4.22.1",
+    "theme": "FM 3-7 — Ventilation diesel T° max (49°C)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "FMDS 3-7 §2.4.22.1.A : quelle est la température MAXIMALE admissible mesurée à l'entrée du filtre à air de combustion d'un moteur diesel d'incendie ?",
+    "propositions": [
+      "100°F (38°C)",
+      "120°F (49°C)",
+      "140°F (60°C)",
+      "Pas de température max imposée"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.4.22.1.A FMDS 3-7 : T° MAX dans toutes conditions = 120°F (49°C) à l'entrée du filtre à air de combustion. Logique : air trop chaud → densité réduite → moins d'O2 par cycle → puissance dégradée + risque de surchauffe moteur. La ventilation doit aussi assurer (B) l'air de combustion, (C) l'évacuation des vapeurs dangereuses, (D) les renouvellements d'air pour moteurs à radiateur. En intervention, vérifier que les louvres de ventilation sont libres (§2.9.4.1.D FMDS 2-81).",
+    "reference": "FMDS 3-7 §2.4.22.1 (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-3-1-9-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "3.1.9",
+    "theme": "FM 3-7 — Performance pompe 150 %",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "FMDS 3-7 §3.1.9 + Annexe C : sur quels points de débit faut-il tester une pompe d'incendie pour développer sa courbe de performance ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Churn (0 % du débit nominal)",
+      "100 % du débit nominal",
+      "150 % du débit nominal",
+      "Points intermédiaires (50 %, 75 %, 125 %)",
+      "200 % du débit nominal"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explication": "Annexe C FMDS 3-7 : tester la pompe sur sa GAMME ENTIÈRE de débit (0 à 150 % du débit nominal). Points clés : churn (0 %), 100 % (débit nominal), 150 %. Au moins DEUX points intermédiaires (50 %, 75 %, 125 %) pour développer la courbe. Pas de test à 200 % (la pompe n'est pas conçue pour). Critère d'acceptation : à 150 % du débit nominal, la pompe doit fournir au moins 65 % de la pression nominale. À churn : typiquement ≤ 140 % de la pression nominale (mais beaucoup de pompes ne l'atteignent pas).",
+    "reference": "FMDS 3-7 §3.1.9 + Annexe C (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-3-1-13-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "3.1.13.2",
+    "theme": "FM 3-7 — Alimentation électrique pompe : pas de protection surintensité dédiée",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 3-7 §3.1.13.2, faut-il prévoir une protection surintensité (overcurrent) dédiée sur l'alimentation d'une pompe d'incendie électrique ?",
+    "propositions": [
+      "Oui — disjoncteur magnéto-thermique dimensionné aux ampères nominaux du moteur",
+      "Non — une protection surintensité séparée n'est PAS requise sur le feeder, car un court-circuit est peu probable sur une installation correcte et l'omission élimine une source possible de défaut interrompant l'alimentation pompe",
+      "Oui — protection différentielle 30 mA obligatoire",
+      "Oui — fusibles avec courbe gG dimensionnés à 1,5 × In moteur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§3.1.13.2 FMDS 3-7 : « Separate overcurrent protection is not required for the fire pump feeder. » Raisonnement : (1) court-circuit peu probable sur un feeder correctement installé, (2) omission = élimination d'une source potentielle de défaut interrompant la pompe. En cas de court-circuit, les protections en amont (réseau) coupent. Logique INVERSE de la sécurité classique des installations électriques (où on protège chaque départ). Surprenant côté électricien généraliste — convergence avec NFPA 70 (NEC) art. 695 sur fire pumps.",
+    "reference": "FMDS 3-7 §3.1.13.2 (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-326-2019-2-2-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2025",
+    "chapitre": "2.2.2",
+    "theme": "FM 3-26 — Hazard categories (HC-1/2/3)",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon FMDS 3-26 §2.2.2, en combien de catégories de risque (Hazard Categories) sont classées les occupations nonstorage ?",
+    "propositions": [
+      "2 catégories : Light Hazard / Ordinary Hazard",
+      "3 catégories : HC-1, HC-2, HC-3 — niveau de risque croissant",
+      "4 catégories : HC-1 à HC-4",
+      "5 catégories : équivalent LH/OH1-4 R1"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.2.2 FMDS 3-26 : 3 catégories HC-1, HC-2, HC-3, représentant un niveau de risque incendie croissant. HC-4 a été SUPPRIMÉ en révision janvier 2011 (« vague occupancy description not fitting any comparable manufacturing sites »). À comparer R1 française : LH, OH1, OH2, OH3, OH4, HHP1-4, HHS1-4 (12+ classes). Le FM est donc beaucoup plus condensé. Cross-référentiel : un site R1 LH ≈ HC-1 FM ; OH3-4 ≈ HC-2 ; HHP1-4 → HC-3 (selon contenu). Voir Appendix C pour exemples.",
+    "reference": "FMDS 3-26 §2.2.2 + Appendix B (avril 2019, rév. avril 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-326-2019-2-3-1-10-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2025",
+    "chapitre": "2.3.1.10",
+    "theme": "FM 3-26 — Densité HC-1 plafond 9 m wet",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 3-26 Table 2.3.1.10, quelle est la densité de design sprinkleur pour une occupation HC-1, hauteur de plafond max 30 ft (9 m), système wet ?",
+    "propositions": [
+      "0,1 gpm/ft² sur 1 500 ft² (4 mm/min sur 140 m²)",
+      "0,2 gpm/ft² sur 2 500 ft² (8 mm/min sur 230 m²)",
+      "0,3 gpm/ft² sur 2 500 ft² (12 mm/min sur 230 m²)",
+      "5 mm/min sur 84 m² (équivalent LH R1)"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Table 2.3.1.10 FMDS 3-26 : HC-1 / plafond ≤ 9 m / wet : 0,1 gpm/ft² sur 1 500 ft² (4 mm/min sur 140 m²). Pour comparer R1 (T6.1) : LH = 2,25 mm/min × 84 m². Donc FM HC-1 est plus exigeant en densité (4 vs 2,25 mm/min) mais sur surface plus grande (140 vs 84 m²). HC-2 wet (= OH approx) : 8 mm/min × 230 m². HC-3 wet : 12 mm/min × 230 m². Pression mini sprinkleur le plus défavorable : 7 psi (0,5 bar) — convergence avec R1 §13.2.",
+    "reference": "FMDS 3-26 Table 2.3.1.10 + §2.3.1.11 (avril 2019, rév. avril 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-326-2019-2-3-1-12-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2025",
+    "chapitre": "2.3.1.12",
+    "theme": "FM 3-26 — Hose stream allowance HC",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "FMDS 3-26 §2.3.1.12 : quelle est l'allocation de débit hose stream à prévoir EN PLUS du débit sprinkleur pour les occupations HC-3 ?",
+    "propositions": [
+      "250 gpm (950 L/min), identique HC-1 et HC-2",
+      "500 gpm (1 900 L/min)",
+      "750 gpm (2 800 L/min)",
+      "Aucune allocation hose stream : sprinkleurs uniquement"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.3.1.12 FMDS 3-26 : hose stream allowance = 250 gpm (950 L/min) pour HC-1 et HC-2, 500 gpm (1 900 L/min) pour HC-3. Cette allocation s'ajoute au débit sprinkleur dans le calcul de la source d'eau. Durée min source d'eau = 60 min pour toutes catégories (§2.3.1.13). Distinction nette avec R1 (§7.8.2 PI 60-180 m³/h forfait selon classe) et avec EN 12845 (qui distingue inside hose vs yard hydrant).",
+    "reference": "FMDS 3-26 §2.3.1.12 + §2.3.1.13 (avril 2019, rév. avril 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-326-2019-2-3-2-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2025",
+    "chapitre": "2.3.2.1",
+    "theme": "FM 3-26 — Incidental storage (200 ft² / 64 ft²)",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "FMDS 3-26 §2.3.2 : quelles limites définissent le stockage « incidental » (occasionnel, traité comme nonstorage) ? (plusieurs bonnes réponses)",
+    "propositions": [
+      "Classe 1-3 (non plastique) : hauteur max 10 ft (3 m), surface max 200 ft² (20 m²)",
+      "Plastiques en HC-2/HC-3 : hauteur max 6 ft (1,8 m), surface max 64 ft² (6 m², ≈ 4 palettes)",
+      "Tout stockage > ces limites doit être protégé selon DS 8-9 (storage of Class 1-4 and plastics)",
+      "Aucune limite : le stockage incidental est défini par l'exploitant",
+      "Limite unique de 500 ft² quelle que soit la classe"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "§2.3.2.1-2.3.2.2 FMDS 3-26 : INCIDENTAL = (1) Class 1-3 max 10 ft × 200 ft² (3 m × 20 m²) ; (2) plastiques en HC-2/HC-3 max 6 ft × 64 ft² (1,8 m × 6 m²) — environ 4 palettes. Au-delà = renvoi vers DS 8-9 pour protection storage dédiée. Logique : tolérer un stockage marginal sans changer la stratégie sprinkleur, mais imposer la protection storage dès que le seuil est franchi. À comparer R1 §5 : pas d'équivalent direct ; les classes HHP/HHS sont liées à la nature du stockage, pas à une surface seuil.",
+    "reference": "FMDS 3-26 §2.3.2.1 + §2.3.2.2 (avril 2019, rév. avril 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-326-2019-app-c-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2019-rev2025",
+    "chapitre": "Appendix C / Table C-1",
+    "theme": "FM 3-26 — Classification parking (HC-3 depuis 2021)",
+    "difficulte": 5,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous classez un parking couvert sur un site FM. Selon FMDS 3-26 (révision janvier 2021), à quelle Hazard Category appartient un parking ou car park ?",
+    "propositions": [
+      "HC-1 — usage public, peu de matières combustibles fixes",
+      "HC-2 — classification historique stable",
+      "HC-3 — révision janvier 2021 (auparavant HC-2)",
+      "Hors scope DS 3-26 : voir DS 5-32 Data Centers"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "Appendix B FMDS 3-26 / révision janvier 2021 : « Revised the hazard category for parking garage and car parks to HC-3 from HC-2. » Raison : retours d'expérience de sinistres parkings (véhicules électriques, plastiques accrus dans la construction des véhicules récents, embrasement rapide). Charge calorifique élevée + risque de propagation rapide → HC-3 désormais. Évolution majeure pour intervention sur sites assurés FM : un parking en révision (constat 2018) sera peut-être à requalifier en cas de modif. Cross R1 : R1 2025 distingue les véhicules électriques avec règles spécifiques.",
+    "reference": "FMDS 3-26 Appendix C + Appendix B janvier 2021 (avril 2019, rév. avril 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-81-2014-2-1-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2014-rev2025",
+    "chapitre": "2.1",
+    "theme": "FM 8-1 — Hiérarchie 8 classes commodities",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon FMDS 8-1 §2.1, dans quel ordre les commodities standards FM sont-elles rangées, du risque le PLUS FAIBLE au PLUS ÉLEVÉ ?",
+    "propositions": [
+      "Class 1 → Class 2 → Class 3 → Class 4",
+      "Noncombustible → Class 1 → Class 2 → Class 3 → Class 4/CUP → CEP → UUP → UEP",
+      "UEP → UUP → CEP → CUP/Class 4 → Class 3 → Class 2 → Class 1 → Noncombustible",
+      "Class 1 → Class 2 → CUP → CEP → UUP → UEP"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.1 FMDS 8-1 : 8 niveaux du moins au plus dangereux — Noncombustible → Class 1 → Class 2 → Class 3 → Class 4/CUP (Cartoned Unexpanded Plastic) → CEP (Cartoned Expanded Plastic) → UUP (Uncartoned Unexpanded Plastic) → UEP (Uncartoned Expanded Plastic). À retenir : Class 4 = CUP (Class 4 et CUP sont équivalents). Le « uncartoned » est PIRE que le « cartoned » — le carton ralentit la prise en feu. L'« expanded » (mousse, polystyrène expansé) est PIRE que l'« unexpanded » (rigide).",
+    "reference": "FMDS 8-1 §2.1 + Table 3.1.3 (avril 2014, rév. octobre 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-81-2014-2-2-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2014-rev2025",
+    "chapitre": "2.2.4.1",
+    "theme": "FM 8-1 — Class 3 : 5% plastique seuil",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous classifiez un commodity comme Class 3 selon FMDS 8-1 §2.2.4. Quel est le seuil de plastique (unexpanded, expanded, ou combinaison) admis dans la composition ?",
+    "propositions": [
+      "Pas de seuil — Class 3 admet n'importe quel pourcentage de plastique",
+      "Jusqu'à 2 % en poids ou volume",
+      "Jusqu'à 5 % en poids ou volume (au-delà, classer en Class 4/CUP ou supérieur)",
+      "Jusqu'à 25 % en volume seulement"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§2.2.4.1.B FMDS 8-1 : Class 3 = (A) cellulosiques (bois, papier, textiles naturels) sur palettes bois/FM Approved ; (B) Classes 1, 2 ou 3 contenant ≤ 5 % de plastique (unexpanded, expanded, ou combinaison) par poids OU volume. Au-delà de 5 % : (1) si total UP > 5 % → Class 4/UP ; (2) si EP entre 5-40 % volume → UP ; (3) si EP > 40 % → EP. Seuil 5 % critique pour la classification — vérifier avec balance OU mesure de volume. Sur palette plastique non FM Approved : monter d'un cran (§2.2.9.2).",
+    "reference": "FMDS 8-1 §2.2.4.1 + §2.2.5 + §2.2.6 (avril 2014, rév. octobre 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-81-2014-2-2-9-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2014-rev2025",
+    "chapitre": "2.2.9.2",
+    "theme": "FM 8-1 — Palette plastique non FM Approved",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous vérifiez un stockage Class 2 sur palettes plastique non FM Approved (unexpanded). Selon FMDS 8-1 §2.2.9.2, quelle classification finale doit s'appliquer ?",
+    "propositions": [
+      "Reste en Class 2 — la palette n'affecte pas la classification",
+      "Monte en Class 3 (un cran)",
+      "Monte directement en CUP/Class 4 (deux crans)",
+      "Reclassement libre selon analyse"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.2.9.2 FMDS 8-1 : palette plastique unexpanded NON FM Approved → classification du commodity remontée d'UN niveau. Class 1 → Class 2, Class 2 → Class 3, Class 3 → CUP/Class 4. Logique : la palette plastique ajoute du combustible et fond/coule en feu, aggravant la propagation. Sur palette FM Approved : pas d'augmentation (§2.2.9.1). Sur palette bois ou FM Approved : pas d'augmentation. Conséquence dimensionnement protection : design sprinkleur DS 8-9 doit utiliser la classification AGGRAVÉE, pas la classification matière brute.",
+    "reference": "FMDS 8-1 §2.2.9.1 + §2.2.9.2 (avril 2014, rév. octobre 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-81-2014-2-2-8-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2014-rev2025",
+    "chapitre": "2.2.8.4",
+    "theme": "FM 8-1 — Caisse bois 5 côtés fermée (Class 3)",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Selon FMDS 8-1 §2.2.8.4, comment classifier un commodity 100 % plastique stocké dans une caisse bois pleine à 5 côtés (top fermé) ≥ 0,25 in (6,3 mm) d'épaisseur ?",
+    "propositions": [
+      "Reste en UUP (matière plastique brute)",
+      "Class 3 — la caisse bois 5 côtés réduit le danger (exception : batteries li-ion qui restent en UUP)",
+      "Class 1 — la caisse bois complète protège totalement",
+      "Class 2 — réduction d'un seul cran"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§2.2.8.4 FMDS 8-1 : caisse bois pleine 5 côtés, fermée par le haut, épaisseur ≥ 0,25 in (6,3 mm) → traitement en Class 3 même si contenu plastique. EXCEPTION : batteries lithium-ion → restent UUP même en caisse bois (énergie stockée + emballement thermique non maîtrisable par confinement). Cas pratique : un onduleur démonté avec batterie Li-ion en caisse bois 5 côtés reste UUP (et non Class 3) → protection sprinkleur DS 8-9 niveau plus élevé.",
+    "reference": "FMDS 8-1 §2.2.8.4 (avril 2014, rév. octobre 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "fmds-37-2012-cross-001",
+    "type": "SPK",
+    "referentiel": "FMDS",
+    "edition": "2012-rev2021",
+    "chapitre": "Cross FM vs R1",
+    "theme": "Cross-référentiel — Biodiesel interdit FM",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous vérifiez une pompe diesel d'incendie sur site FM. L'exploitant a fait remplir la cuve avec du biodiesel B30 (30 % biocarburant). Selon FMDS 3-7 §2.4.21.14, le résultat est-il conforme ?",
+    "propositions": [
+      "Conforme — le biodiesel est admis comme alternative écologique",
+      "Conforme uniquement si B30 (taux ≤ 30 %)",
+      "Non conforme — FMDS 3-7 §2.4.21.14 interdit explicitement les biodiesels en raison de problèmes de stabilité lors de stockage prolongé",
+      "Conforme uniquement si point d'écoulement vérifié ≤ -1°C"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§2.4.21.14 FMDS 3-7 : « Do not use biodiesel fuels due to fuel stability problems when stored for long periods of time. » Logique : une pompe d'incendie peut ne servir qu'une fois en plusieurs années. Le biodiesel s'oxyde, se polymerise, attaque les joints, encrasse les injecteurs → indisponibilité au moment du sinistre. Seul le gazole de type et grade spécifiés par le constructeur moteur est admis. Point d'écoulement (pour points) et point de trouble (cloud) ≤ 30°F (-1°C). À comparer R1 §12.9 : pas de mention biodiesel explicite mais exigence implicite de gazole conforme spec constructeur. Sur site FR avec obligation EN 590 B7 max → OK ; avec biodiesel volontaire → NC FM.",
+    "reference": "FMDS 3-7 §2.4.21.14 (avril 2012, rév. octobre 2021)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-3-3-2-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "3.3.2",
+    "theme": "NFPA 22 — Types de réservoir (définitions)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon NFPA 22 §3.3.2.3, comment se définit un « Gravity Tank » ?",
+    "propositions": [
+      "Un réservoir qui utilise l'élévation (hauteur statique) comme source de pression",
+      "Un réservoir qui utilise de l'air comprimé pour expulser son contenu",
+      "Un réservoir d'aspiration fournissant l'eau à une pompe avec un minimum de pression de charge",
+      "Un réservoir contenant une membrane flexible séparant l'eau et l'air"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "§3.3.2.3 : un Gravity Tank est défini comme « a storage tank that uses elevation (head) as a source of pressure » — équivalent du château d'eau qui alimente le réseau par gravité. À distinguer des autres types : §3.3.2.4 Pressure Tank (air sous pression), §3.3.2.5 Suction Tank (réservoir d'aspiration), §3.3.2.1 Bladder Tank (membrane flexible), §3.3.2.2 Break Tank (capacité < demande, alimente une pompe).",
+    "reference": "NFPA 22 §3.3.2 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-3-3-2-002",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "3.3.2.2",
+    "theme": "NFPA 22 — Break Tank (capacité < demande)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Qu'est-ce qu'un « Break Tank » au sens de NFPA 22 §3.3.2.2 ?",
+    "propositions": [
+      "Un réservoir de secours utilisé en cas de défaillance du réservoir principal",
+      "Un réservoir d'isolement entre deux réseaux pour rupture hydraulique",
+      "Un réservoir alimentant une pompe incendie dont la capacité est INFÉRIEURE à la demande de protection (débit × durée)",
+      "Un réservoir tampon entre la source publique et la pompe pour compenser les pertes de charge"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§3.3.2.2 : « A tank providing suction to a fire pump whose capacity is less than the fire protection demand (flow rate times flow duration). » La logique : le break tank est complété en continu par la source publique pendant le sinistre. Il ne suffit pas à lui seul mais sa combinaison avec l'arrivée d'eau publique satisfait la demande totale. §14.5 fixe les règles de dimensionnement et refill. Aucun équivalent direct en R1 française — la R1 §8 raisonne en source A (≥ 30 min autonomes) + source B (≥ 60-90 min).",
+    "reference": "NFPA 22 §3.3.2.2 et §14.5 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-cross-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "3.3.2 + R1 8",
+    "theme": "Cross NFPA 22 / R1 — Logique des types de tank vs sources A/B",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous intervenez sur un site international équipé d'un Pressure Tank au sens NFPA 22 §3.3.2.4. Le client demande la correspondance avec la logique R1 française. Quelle est la lecture la PLUS correcte ?",
+    "propositions": [
+      "NFPA 22 classe selon le TYPE PHYSIQUE du réservoir (gravity/pressure/suction/bladder/break) alors que R1 classe selon la QUALITÉ d'alimentation (source A vs source B) — un même Pressure Tank peut être source A en R1 §8.5 (LH, ≥ 15 m³) ou simple complément",
+      "Pressure Tank NFPA = source A en R1 systématiquement, peu importe la classe LH/OH/HHP/HHS",
+      "Pressure Tank NFPA = source B en R1 systématiquement (logique de secours par air comprimé)",
+      "Il n'y a pas de correspondance possible, les deux référentiels sont étanches"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Distinction conceptuelle essentielle pour un vérificateur intervenant à l'international : NFPA 22 §3.3.2 classe les réservoirs par TYPE PHYSIQUE (gravity, pressure, suction, bladder, break), R1 §8 les classe par QUALITÉ FONCTIONNELLE D'ALIMENTATION (source A = autonome 30 min pour les sprinkleurs les plus défavorisés ; source B = volume + débit selon classe LH/OH/HHP/HHS). Un Pressure Tank NFPA peut très bien constituer une source A R1 §8.5 (réservoir sous pression ≥ 15 m³ en LH) ou un complément. Les deux logiques sont compatibles mais ne se superposent pas mécaniquement.",
+    "reference": "NFPA 22 §3.3.2 / R1 §8.5, §8.6.1, §8.7.1 (édition 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-4-1-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "4.1.1",
+    "theme": "NFPA 22 — Dimensionnement (capacité × élévation)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon NFPA 22 §4.1.1, quel principe gouverne le dimensionnement de la taille et de l'élévation d'un réservoir d'incendie ?",
+    "propositions": [
+      "Un volume forfaitaire de 100 m³ minimum quelle que soit la classe de risque",
+      "Le débit incendie requis (« required fire flow ») et la durée pour le ou les systèmes de protection raccordés, ainsi que les pressions nécessaires",
+      "Le volume du bâtiment protégé divisé par un coefficient k = 50",
+      "La capacité de la pompe principale multipliée par 60 minutes"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§4.1.1 : « The size and elevation of tanks shall be determined by the required fire flow and duration for the attached fire protection system(s) and the pressures required. » Logique différente de R1 §8 : NFPA 22 dimensionne le réservoir à partir du SYSTÈME RACCORDÉ (sprinkler, hydrants, water mist…) avec son débit et sa durée d'application. R1 §8.5/8.6.1/8.7.1 fixe directement les caractéristiques de la source A par classe (30 min, débit selon LH/OH/HH). Les deux convergent au final mais le point d'entrée du calcul diffère.",
+    "reference": "NFPA 22 §4.1.1 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-4-9-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "4.9",
+    "theme": "NFPA 22 — Protection foudre (renvoi NFPA 780)",
+    "difficulte": 2,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon NFPA 22 §4.9, quelle est l'exigence pour la protection contre la foudre d'un réservoir d'incendie ?",
+    "propositions": [
+      "Pas d'exigence spécifique, c'est à l'AHJ d'apprécier au cas par cas",
+      "Mise à la terre simple avec une prise de terre dédiée < 10 Ω",
+      "Installation d'une protection conforme à NFPA 780 (Standard for the Installation of Lightning Protection Systems)",
+      "Installation d'un parafoudre IEC 62305-3 sur l'arrivée électrique"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§4.9 : « To prevent lightning damage to tanks, protection shall be installed in accordance with NFPA 780. » Exigence simple mais explicite. Distinction notable avec R1 française : la R1 2025 ne contient PAS d'exigence dédiée de protection foudre pour la source d'eau. Sur les sites internationaux assurés NFPA, cette exigence doit être vérifiée à la mise en service et lors des modifications. Pour la France, c'est l'arrêté ICPE foudre du 04/10/2010 + NF EN 62305 qui s'appliquent selon le classement ICPE du site.",
+    "reference": "NFPA 22 §4.9 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-4-15-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "4.15",
+    "theme": "NFPA 22 — Évent de toiture (dimensionnement)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors de la vérification d'un réservoir métallique sous NFPA 22, vous mesurez l'évent (roof vent) au-dessus du niveau d'eau max. Selon §4.15.2, quelle est la section minimale exigée ?",
+    "propositions": [
+      "Une section au moins égale à la pleine section de la canalisation de remplissage",
+      "Une section au moins égale à la moitié de la section de la canalisation de refoulement (discharge) OU de remplissage (fill), au choix du concepteur",
+      "Une section au moins égale à la moitié de la section de la PLUS GRANDE des deux entre la canalisation de refoulement et la canalisation de remplissage",
+      "DN 100 forfaitaire selon Table 4.15.2"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§4.15.2 : « A vent pipe shall have a cross-sectional area equal to a minimum of one-half the area of the discharge pipe(s) or fill pipe, whichever is the larger. » Détail technique précis : c'est BIEN la moitié de la section de la PLUS GRANDE des deux (et non pas au choix). Le vent doit aussi être équipé d'un grillage anti-volatile mailles 9,5 mm (3/8 in) §4.15.3, et l'overflow N'EST PAS compté dans la section d'évent §4.15.7. Sur le terrain : visualiser le réservoir, vérifier qu'évent ≠ trop-plein.",
+    "reference": "NFPA 22 §4.15.2 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-4-15-002",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "4.15.7",
+    "theme": "NFPA 22 — Overflow ≠ vent",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur un réservoir vérifié sous NFPA 22, vous constatez qu'un seul piquage en partie haute fait office à la fois de trop-plein (overflow) et d'évent (vent). Selon §4.15.7, le résultat est-il conforme ?",
+    "propositions": [
+      "Conforme si la section est ≥ DN 150 (capacité combinée)",
+      "Conforme sous réserve d'un piège anti-volatile dimensionné",
+      "Non conforme — §4.15.7 dispose que « The overflow pipe shall not be included as vent area. » Évent et trop-plein sont deux fonctions distinctes",
+      "Conforme : l'overflow assure la ventilation par son ouverture permanente"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§4.15.7 est très clair : « The overflow pipe shall not be included as vent area. » Le trop-plein évacue l'eau excédentaire en cas de remplissage trop fort ; l'évent compense les variations de pression atmosphérique lors du remplissage/vidange. Deux fonctions distinctes, deux piquages distincts. Erreur fréquente sur sites anciens où économie de piquages avait été faite. Constat à formaliser en NC en intervention FM/NFPA.",
+    "reference": "NFPA 22 §4.15.7 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-7-2-10-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "7.2.10.1",
+    "theme": "NFPA 22 — Pressure Tank : compresseur d'air",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon NFPA 22 §7.2.10.1, quelle est la capacité minimale du compresseur d'air d'un Pressure Tank de 7500 gal (28,39 m³) ou moins ?",
+    "propositions": [
+      "16 ft³/min (0,45 m³/min) d'air libre",
+      "20 ft³/min (0,57 m³/min) d'air libre",
+      "10 ft³/min (0,28 m³/min) d'air libre",
+      "30 ft³/min (0,85 m³/min) d'air libre"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "§7.2.10.1 : compresseur ≥ 16 ft³/min (0,45 m³/min) pour les Pressure Tanks ≤ 7500 gal (28,39 m³), et ≥ 20 ft³/min (0,57 m³/min) pour les capacités supérieures. À ne pas confondre. Le compresseur doit être implanté dans le local du réservoir §7.2.10.2 (sauf dérogation AHJ). En R1 française, le réservoir sous pression est mentionné §8.5 (LH ≥ 15 m³) et §8.6.1 (OH ≥ 23 m³), mais les exigences précises du compresseur ne sont pas chiffrées avec ce niveau de détail dans la R1 2025 (renvoi aux normes produit).",
+    "reference": "NFPA 22 §7.2.10.1 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-7-2-9-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "7.2.9.1",
+    "theme": "NFPA 22 — Pressure Tank : durée de remplissage",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon NFPA 22 §7.2.9.1, en combien de temps maximum le système de remplissage d'un Pressure Tank doit-il restaurer le niveau d'eau requis avec la pression d'air nécessaire ?",
+    "propositions": [
+      "2 heures",
+      "4 heures",
+      "8 heures",
+      "24 heures"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§7.2.9.1 : « The filling supply or pump shall be reliable and shall be capable of replenishing the water that is required to be maintained in the tank with the required air pressure restored in not more than 4 hours. » Valeur à connaître pour vérifier le bon dimensionnement du circuit de remplissage. Une soupape de décharge est aussi exigée à la pompe §7.2.9.2 (renvoi §7.2.7). À comparer avec le break tank §14.5 : refill capable de maintenir la demande du système incendie pendant la durée de protection requise.",
+    "reference": "NFPA 22 §7.2.9.1 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-7-1-8-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "7.1.8.3.2",
+    "theme": "NFPA 22 — Pressure Tank : marquage 2/3 capacity line",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors de la vérification d'un Pressure Tank sous NFPA 22, vous cherchez le marquage « 2/3 capacity line ». Selon §7.1.8.3.2, où ce marquage doit-il figurer et que signifie-t-il ?",
+    "propositions": [
+      "Sur la plaque constructeur uniquement, repère théorique de remplissage 2/3 eau / 1/3 air",
+      "Gravé sur la plaque du réservoir, en relief ou estampé, placé derrière le gauge glass de sorte que la flèche indique le niveau d'eau quand le réservoir est rempli aux 2/3",
+      "Peint en rouge sur la coque extérieure à 2/3 de la hauteur",
+      "Indiqué par un capteur électronique de niveau"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§7.1.8.3.2 : la plate du réservoir doit porter le marquage « 2/3 capacity line » en relief ou estampé, derrière le gauge glass (regard de niveau), positionné de sorte que la flèche indique le niveau d'eau quand le réservoir est plein aux 2/3. Pour les réservoirs horizontaux : la ligne 2/3 est à 109/100 du diamètre au-dessus du fond (formule §7.1.8.3.2). Logique : un Pressure Tank typique fonctionne 2/3 eau + 1/3 air comprimé. Vérification visuelle terrain : le marquage doit être présent et lisible.",
+    "reference": "NFPA 22 §7.1.8.3.2 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-7-1-9-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "7.1.9.5",
+    "theme": "NFPA 22 — T° local Pressure Tank vs T° eau (cross R1)",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Un site international combinant Pressure Tank sous NFPA 22 et installation sprinkleur sous R1. Quelle est la lecture CORRECTE des exigences de température ?",
+    "propositions": [
+      "NFPA 22 §7.1.9.5 exige T° du tank room ≥ 40°F (4,4°C), et §16.1.2 exige T° de l'eau elle-même maintenue ≥ 42°F (5,6°C). R1 §9.2 demande T° de l'eau ≥ 4°C. Trois exigences distinctes à vérifier",
+      "NFPA 22 et R1 demandent toutes deux 4°C strictement pour la même donnée",
+      "Seule la température de l'eau compte, celle du local n'est pas un critère",
+      "NFPA 22 et R1 imposent 5,6°C pour l'eau, la T° du local est libre"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "Trois exigences distinctes à ne pas confondre : (1) NFPA 22 §7.1.9.5 — local du Pressure Tank chauffé ≥ 40°F (4,4°C) ; (2) NFPA 22 §16.1.2 — eau la plus froide du tank ou tank riser maintenue ≥ 42°F (5,6°C) lors des conditions météo les plus froides + §16.1.2.2 alarme T° basse à 40°F (4,4°C) ; (3) R1 2025 §9.2 — T° de l'eau ≥ 4°C dans le réservoir et la canalisation d'aspiration. Distinction fine : NFPA = consigne de maintien explicite avec alarme ; R1 = seuil minimum. Sur un site double-couvert, retenir la valeur LA PLUS CONTRAIGNANTE (5,6°C NFPA).",
+    "reference": "NFPA 22 §7.1.9.5, §16.1.2, §16.1.2.2 / R1 §9.2 (édition 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-14-2-13-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "14.2.13",
+    "theme": "NFPA 22 — Anti-vortex plate (dimensions chiffrées)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous vérifiez l'anti-vortex plate d'un Suction Tank sous NFPA 22 §14.2.13. Quelles sont les exigences DIMENSIONNELLES précises ?",
+    "propositions": [
+      "Plaque ronde de diamètre = diamètre du conduit de sortie, espacement libre ≥ 100 mm",
+      "Plaque horizontale en acier d'au moins DEUX FOIS le diamètre de la sortie sur un coude long radius, montée à la moitié du diamètre du conduit au-dessus du fond, distance minimale du fond = 6 in (152 mm)",
+      "Plaque carrée 300×300 mm placée perpendiculairement à l'axe de sortie",
+      "Dimensions à libre appréciation du constructeur, validation AHJ"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§14.2.13.2 : « horizontal steel plate that is at least twice the diameter of the outlet on a long radius elbow fitting, mounted at the outlet a distance above the bottom of the tank equal to one-half the diameter of the discharge pipe. » §14.2.13.3 : distance minimale au-dessus du fond = 6 in (152 mm). Donc trois exigences cumulatives : (1) diam. plaque ≥ 2× diam. sortie, (2) sur coude long radius, (3) hauteur fond = max(½ diam. discharge, 6 in/152 mm). Distinction R1 : la R1 française mentionne le dispositif anti-vortex (ou anti-tourbillon) mais renvoie aux normes produit sans chiffrer ces dimensions précises, ce qui rend la lecture NFPA plus contraignante côté terrain.",
+    "reference": "NFPA 22 §14.2.13 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-14-2-12-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "14.2.12.6",
+    "theme": "NFPA 22 — Vanne OS&Y sur suction tank fire pump",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vérification d'un Suction Tank utilisé comme source d'une pompe incendie sous NFPA 22. Sur la canalisation de refoulement, quelle exigence s'impose à la vanne de contrôle (controlling valve) selon §14.2.12.6 ?",
+    "propositions": [
+      "Vanne papillon listée 1/4 de tour avec indicateur de position",
+      "Vanne à boisseau sphérique avec verrou ouvert",
+      "Vanne de type OS&Y (Outside Screw & Yoke) listée — tige sortante visible à l'extérieur",
+      "Vanne murale listée avec voyant lumineux"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§14.2.12.6 : « Where a tank is used as a suction source for a fire pump, the listed indicating control valve shall be of the outside screw and yoke (OS&Y) type. » Logique : la tige filetée sortante permet une vérification VISUELLE INSTANTANÉE de la position ouverte (tige longue dehors) / fermée (tige rentrée). Critère majeur de sécurité sur l'aspiration d'une pompe incendie. À distinguer de §14.2.12.1 (vanne « indicating » exigée sur discharge pipe en général, mais sans imposer OS&Y). Point de vigilance Q1 sur site mixte : vérifier la nature exacte de la vanne aspiration pompe.",
+    "reference": "NFPA 22 §14.2.12.6 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-14-5-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "14.5",
+    "theme": "NFPA 22 — Break tank : refill mechanism (cross R1)",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Lors de l'audit d'un Break Tank de 50 m³ alimentant une pompe incendie qui exige 100 m³ × 90 min (demande totale 150 m³), comment interpréter la conformité au sens NFPA 22 §14.5 ?",
+    "propositions": [
+      "Non conforme dans tous les cas : la capacité du break tank doit être ≥ à la demande totale du système",
+      "Conforme uniquement si la source publique d'appoint peut maintenir le complément requis (refill mechanism) pendant la durée totale d'utilisation — c'est précisément le principe du break tank §3.3.2.2",
+      "Conforme uniquement si la pompe est de type vertical turbine",
+      "À évaluer par l'AHJ sans critère technique chiffré"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§3.3.2.2 + §14.5 : le break tank a précisément pour vocation d'être de capacité INFÉRIEURE à la demande totale, parce qu'il est complété en continu par la source d'appoint pendant le sinistre. Le refill mechanism §14.5.2 doit donc être capable de fournir le débit complémentaire requis pour atteindre la durée d'application totale. Logique étrangère à R1 française : R1 §8 raisonne en source A (autosuffisante 30 min) + source B (volume couvrant la durée totale), sans cette logique de tank + refill continu intégrée à la définition.",
+    "reference": "NFPA 22 §3.3.2.2 + §14.5 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-14-2-11-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "14.2.11",
+    "theme": "NFPA 22 — Check valve : implantation",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur un réservoir d'incendie installé sur tour indépendante (independent tower), où doit être implanté le clapet anti-retour (check valve) de la discharge pipe selon NFPA 22 §14.2.11 ?",
+    "propositions": [
+      "Sur la canalisation horizontale aérienne entre la tour et le bâtiment",
+      "Au-dessus de la dalle haute du bâtiment alimenté",
+      "Horizontalement, dans une fosse (pit) sous le réservoir",
+      "À l'aspiration de la pompe relais"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§14.2.11.1 : « A listed check valve shall be placed horizontally in the discharge pipe and shall be located in a pit under the tank where the tank is located on an independent tower. » Position horizontale ET dans une fosse sous le réservoir. Variantes : §14.2.11.2 (tank au-dessus d'un bâtiment) → check valve dans une fosse, de préférence extérieure ; §14.2.11.3 (pas de place) → rez-de-chaussée ou sous-sol, protégée. §14.2.11.4 : pour les Suction Tanks où la discharge n'est pas utilisée comme fill, check valve non requis.",
+    "reference": "NFPA 22 §14.2.11 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-14-6-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "14.6",
+    "theme": "NFPA 22 — Overflow (trop-plein)",
+    "difficulte": 3,
+    "multi": true,
+    "mode_audit": false,
+    "enonce": "À propos du trop-plein (overflow) d'un réservoir d'incendie sous NFPA 22 §14.6, quelles propositions sont CORRECTES ? Plusieurs bonnes réponses possibles.",
+    "propositions": [
+      "L'overflow et le vent peuvent être combinés sur un même piquage",
+      "L'overflow ne peut pas être inclus dans la section d'évent (vent area)",
+      "L'overflow doit avoir une dimension minimale fixée par §14.6.1",
+      "Le tuyau d'overflow doit être protégé contre l'entrée d'animaux"
+    ],
+    "bonnes_reponses": [
+      1,
+      2
+    ],
+    "explication": "Bonnes réponses : (B) §4.15.7 — « The overflow pipe shall not be included as vent area. » ; (C) §14.6.1 — la taille de l'overflow est fixée par §14.6.1 (Size). Mauvaises : (A) faux, §4.15.7 interdit la combinaison ; (D) §14.6 ne traite pas explicitement de protection animale (c'est §4.15 pour le vent qui exige le grillage). Logique : sur le terrain, ces deux fonctions (overflow et vent) doivent être visuellement distinctes — c'est un point de contrôle visuel rapide en intervention.",
+    "reference": "NFPA 22 §14.6 + §4.15.7 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-16-1-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "16.1.2",
+    "theme": "NFPA 22 — Chauffage de l'eau (cross R1 §9.2)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Un même réservoir d'incendie en France est soumis simultanément à NFPA 22 (client international) et R1 2025 (assurance APSAD). À quelle température minimale l'eau du réservoir doit-elle être maintenue pour respecter SIMULTANÉMENT les deux référentiels ?",
+    "propositions": [
+      "4°C — c'est l'exigence R1, qui prime sur le territoire français",
+      "5,6°C (42°F) — c'est l'exigence NFPA 22 §16.1.2, plus contraignante que R1 §9.2 (≥ 4°C)",
+      "7°C — pour assurer une marge de sécurité",
+      "0°C tant que l'eau reste liquide"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "Comparaison à connaître pour intervention internationale : NFPA 22 §16.1.2 — « the heating system shall be of such capacity that the temperature of the coldest water in the tank or tank riser, or both, is maintained at or above 42°F (5,6°C) during the coldest weather. » R1 2025 §9.2 — T° eau ≥ 4°C. En cas de double exigence (assurance APSAD + assureur FM/NFPA), retenir la valeur la PLUS CONTRAIGNANTE = 5,6°C. La R1 prime en France sur le plan réglementaire APSAD, mais NFPA s'impose contractuellement à l'assuré international. NFPA 22 §16.1.2.2 ajoute une alarme T° basse à 40°F (4,4°C) — non exigée explicitement en R1.",
+    "reference": "NFPA 22 §16.1.2 / R1 §9.2 (édition 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-16-1-002",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "16.1.2.2",
+    "theme": "NFPA 22 — Alarme T° basse vs consigne de maintien",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Sur un site sous NFPA 22, le client confond la consigne de chauffage et la consigne d'alarme. Quelle est la lecture EXACTE des §16.1.2 et §16.1.2.2 ?",
+    "propositions": [
+      "Les deux valeurs sont identiques : 4,4°C (40°F)",
+      "Consigne de maintien §16.1.2 = 42°F (5,6°C) ; alarme T° basse §16.1.2.2 = 40°F (4,4°C). 1,2°C d'écart de marge",
+      "Consigne de maintien = 40°F ; alarme = 42°F",
+      "L'alarme est facultative, seule la consigne de maintien est obligatoire"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§16.1.2 : maintien à ≥ 42°F (5,6°C) en conditions météo les plus froides. §16.1.2.2 : « A low water temperature alarm, set at 40°F (4.4°C), shall be provided. » Distinction logique : la consigne est le point de fonctionnement normal, l'alarme se déclenche AVANT le gel pour alerter d'une dérive (1,2°C de marge). L'alarme est OBLIGATOIRE (« shall »), pas facultative. A.16.1.2.2 recommande la connexion à un système de supervision local ou télésurveillance. En vérification terrain : tester le déclenchement par simulation de capteur (descente artificielle de consigne).",
+    "reference": "NFPA 22 §16.1.2 + §16.1.2.2 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-16-3-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "16.3.11",
+    "theme": "NFPA 22 — Chauffage solaire admis avec backup",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon NFPA 22 §16.3.11, le chauffage solaire d'un réservoir d'incendie est-il autorisé ?",
+    "propositions": [
+      "Interdit — seuls les systèmes vapeur, gravitaire ou électrique sont admis",
+      "Autorisé sans condition particulière",
+      "Autorisé pour réduire la consommation d'autres énergies, mais un système de chauffage de secours (backup) conforme au reste du chapitre 16 est obligatoire",
+      "Autorisé uniquement dans les régions où la T° moyenne du jour le plus froid > 5°F (−15°C)"
+    ],
+    "bonnes_reponses": [
+      2
+    ],
+    "explication": "§16.3.11.1 : « Tanks shall be permitted to be equipped with solar heating to reduce the consumption of other forms of heating energy. » §16.3.11.2 : « A solar-heated tank shall have a backup heating system, as described in this chapter. » Le solaire est admis MAIS jamais seul — toujours un backup conventionnel (vapeur, immersion électrique, gravitaire circulation, etc.) selon Tables 16.2.1 a/b/c en fonction de la zone de T° la plus froide. Approche pragmatique : économie d'énergie ET fiabilité totale. À l'inverse, la R1 2025 ne traite pas explicitement le chauffage solaire.",
+    "reference": "NFPA 22 §16.3.11 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-16-4-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "16.4",
+    "theme": "NFPA 22 — Isolation thermique du réservoir",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Selon NFPA 22 §16.4, quelles règles s'appliquent à l'isolation thermique du réservoir d'incendie ?",
+    "propositions": [
+      "L'isolation est obligatoire dès que la T° moyenne du jour le plus froid est < 5°F (−15°C)",
+      "L'isolation est PERMISE par l'AHJ pour économie d'énergie ; les matériaux doivent être listés, installés avec protection feu/exposition/corrosion/intempéries ; calculs selon ASHRAE Handbook ; T° de calcul de l'eau moyenne 55°F (12,8°C)",
+      "L'isolation est interdite car elle masque les défauts de corrosion",
+      "L'isolation est libre, aucune règle ne s'applique"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§16.4.1 : isolation permise par AHJ pour économie d'énergie. §16.4.2 : matériaux listés + protection feu/exposition/corrosion/intempéries. §16.4.3 : calcul selon ASHRAE Handbook — Fundamentals. §16.4.4 : T° hivernale ext. selon §16.1.2.1 (jour le plus froid moyen). §16.4.5 : calcul de perte de chaleur basé sur T° moyenne de l'eau = 55°F (12,8°C). Approche bien plus structurée que R1 française sur ce sujet — la R1 ne donne pas de méthode de calcul d'isolation thermique. Sur un site sous NFPA, vérifier que la documentation d'isolation existe (calcul ASHRAE, matériaux listés).",
+    "reference": "NFPA 22 §16.4 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-17-5-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "17.5.1.1",
+    "theme": "NFPA 22 — Test hydrostatique Pressure Tank",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Quelle est la pression hydrostatique de test minimale pour un Pressure Tank selon NFPA 22 §17.5.1.1 ?",
+    "propositions": [
+      "10 bar (150 psi)",
+      "16 bar (232 psi)",
+      "12 bar (175 psi)",
+      "1,5 × pression de service nominale"
+    ],
+    "bonnes_reponses": [
+      0
+    ],
+    "explication": "§17.5.1.1 : « The hydrostatic test pressure shall be a minimum of 150 lb/in.² (10.3 bar). » Test ASME Boiler and Pressure Vessel Code (Section construction des appareils sous pression non chauffés), à effectuer avant peinture. À ne pas confondre avec §17.5.2 — test complémentaire à pression de service avec valves fermées, perte ≤ ½ psi (0,03 bar) en 24 h, réservoir aux 2/3 capacité. Deux tests distincts complémentaires. R1 française : essai d'étanchéité prévu pour les sources mais sans valeur chiffrée 150 psi équivalente — renvoi au code des appareils sous pression français (DESP / arrêté ESP).",
+    "reference": "NFPA 22 §17.5.1.1 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-17-5-002",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "17.5.2",
+    "theme": "NFPA 22 — Test étanchéité Pressure Tank 24h",
+    "difficulte": 4,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous réceptionnez un Pressure Tank et vous menez le test d'étanchéité complémentaire NFPA 22 §17.5.2. Quels sont les paramètres exacts du test ?",
+    "propositions": [
+      "Tank rempli à 100 % de capacité, pression service, perte ≤ 1 psi en 12 h",
+      "Tank rempli aux 2/3 de capacité, pression de service normale, toutes vannes fermées, perte ≤ 1/2 psi (0,03 bar) en 24 heures",
+      "Tank rempli aux 3/4 de capacité, pression service, perte ≤ 2 psi en 48 h",
+      "Tank rempli à 50 % de capacité, pression atmosphérique, observation visuelle 6 h"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§17.5.2 : « In addition to the ASME tests, each pressure tank shall be filled to two-thirds of its capacity and tested at the normal working pressure with all valves closed and shall not lose more than 1/2 psi (0,03 bar) pressure in 24 hours. » Test très exigeant (1/2 psi = 34 mbar, sur 24 h, c'est un seuil de détection de fuite très bas). Ce test est complémentaire au test ASME §17.5.1 (hydro 150 psi). Sur le terrain : noter la pression initiale, refermer les vannes, attendre 24 h sans aucune intervention, relire. Si perte > 0,03 bar → recherche fuite obligatoire.",
+    "reference": "NFPA 22 §17.5.2 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-17-7-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "17.7",
+    "theme": "NFPA 22 — Test étanchéité Concrete Tank",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": false,
+    "enonce": "Comment se déroule le test d'étanchéité d'un réservoir en béton (Concrete Tank) selon NFPA 22 §17.7 ?",
+    "propositions": [
+      "Remplissage maximum + maintien 4 h + observation visuelle",
+      "Remplissage maximum + maintien 24 h pour stabilisation + mesure de la baisse de niveau sur les 72 h suivantes, en déduisant l'évaporation",
+      "Remplissage + maintien 48 h continue avec mesure constante",
+      "Test de poussée hydrostatique avec capteur de pression côté extérieur"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§17.7.2 — Préparation : tank rempli au niveau max, attente ≥ 24 h pour stabilisation (absorption initiale du béton). §17.7.3 — Mesure : baisse de niveau mesurée sur les 72 h suivantes, évaporation mesurée ou calculée et déduite. §17.7.4 — exigence stricte : « no measurable leakage » après mise en service. Méthode adaptée au béton qui absorbe naturellement de l'eau dans les premières heures. À comparer : Wood Tank §17.8.1 — test 48 h ; Fiberglass Tank §17.9 — test 2 h après backfill ; Pressure Tank §17.5 — ASME + 24 h ½ psi.",
+    "reference": "NFPA 22 §17.7 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-18-1-001",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "18.1",
+    "theme": "NFPA 22 — ITM renvoyée à NFPA 25 (cross R1 §3.5)",
+    "difficulte": 3,
+    "multi": false,
+    "mode_audit": true,
+    "enonce": "Vous cherchez dans NFPA 22 (2023) les périodicités d'inspection, test et maintenance (ITM) du réservoir. Que dit §18.1 ?",
+    "propositions": [
+      "Chapitre 18 contient un Tableau 18.1 listant toutes les périodicités hebdomadaires/mensuelles/annuelles",
+      "Les ITM doivent être effectuées périodiquement « in accordance with NFPA 25 » — NFPA 22 ne contient PAS les fréquences ITM, elles sont dans le standard ITM séparé NFPA 25",
+      "Les ITM sont à la discrétion de l'AHJ, aucun standard de référence",
+      "Renvoi à FMDS 2-81 pour les sites assurés FM Global"
+    ],
+    "bonnes_reponses": [
+      1
+    ],
+    "explication": "§18.1 : « Tanks shall be periodically inspected, tested, and maintained in accordance with NFPA 25. » Architecture US : NFPA 22 = standard de CONCEPTION/CONSTRUCTION ; NFPA 25 = standard d'ITM pour TOUS les water-based fire protection systems (sprinklers, pompes, hydrants, tanks, foam, water mist…). Architecture française très différente : la R1 contient À LA FOIS la conception et la vérification semestrielle Q1 (§3.5) au sein du même document. Sur un site international, ne pas chercher les fréquences dans NFPA 22 — aller dans NFPA 25.",
+    "reference": "NFPA 22 §18.1 (édition 2023)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
+  },
+  {
+    "id": "nfpa22-2023-cross-002",
+    "type": "SPK",
+    "referentiel": "NFPA 22",
+    "edition": "2023",
+    "chapitre": "synthèse cross-référentiel",
+    "theme": "Cross NFPA 22 / R1 — Synthèse stratégie de dimensionnement",
+    "difficulte": 4,
+    "multi": true,
+    "mode_audit": true,
+    "enonce": "Un audit international compare la stratégie de dimensionnement des sources d'eau entre NFPA 22 et R1. Quelles affirmations sont CORRECTES ? Plusieurs bonnes réponses possibles.",
+    "propositions": [
+      "NFPA 22 dimensionne la capacité par « required fire flow × duration » du système attaché (§4.1.1), R1 fixe directement les caractéristiques par classe LH/OH/HHP/HHS au §8",
+      "Les deux référentiels imposent une autonomie minimale de 30 min pour la source autonome (Source A R1 §8.5/8.6.1/8.7.1) — NFPA 22 ne fixe pas cette valeur, elle dépend du système attaché",
+      "NFPA 22 §18.1 renvoie l'ITM à NFPA 25, R1 §3.5 intègre la vérification Q1 directement dans le référentiel",
+      "NFPA 22 et R1 demandent toutes deux 5,6°C minimum pour l'eau du réservoir"
+    ],
+    "bonnes_reponses": [
+      0,
+      1,
+      2
+    ],
+    "explication": "(A) ✅ §4.1.1 NFPA 22 vs §8 R1 — logique de calcul différente, convergence finale possible mais point d'entrée distinct. (B) ✅ R1 fixe explicitement 30 min pour la source A (LH/OH/HH) ; NFPA 22 laisse la durée dépendre du système incendie. (C) ✅ architecture documentaire différente : code ITM séparé (NFPA 25) vs intégration dans la règle (R1). (D) ❌ R1 §9.2 = 4°C, NFPA 22 §16.1.2 = 5,6°C — les deux valeurs SONT différentes. En audit cross-référentiel sur site français double-assuré : retenir la valeur la plus contraignante (5,6°C NFPA).",
+    "reference": "NFPA 22 §4.1.1, §16.1.2, §18.1 / R1 §3.5, §8, §9.2 (édition 2025)",
+    "generated_at": "2026-05-24",
+    "skill_version": "v7"
   }
 ]
