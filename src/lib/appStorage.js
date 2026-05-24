@@ -9,12 +9,14 @@ const NS_BADGES = "quizr1.v1.unlockedBadges";
 // Defaults INTERVENTION — repris depuis lib/picker.js (dupliqués ici pour éviter
 // un cycle d'import lors du premier mount avant chargement du picker)
 const DEFAULT_INTERVENTION_RATIOS = {
-  r1_2025:    0.40,
-  r1_old:     0.20,
-  en12845:    0.15,
+  r1_2025:    0.35,
+  r1_old:     0.18,
+  en12845:    0.12,
   r5:         0.08,
   nf_s62_201: 0.07,
-  nf_s62_200: 0.05,
+  nf_s62_200: 0.06,
+  fmds:       0.05,
+  nfpa22:     0.04,
   cross:      0.05,
 };
 const DEFAULT_EDITIONS_R1 = ["2025", "2020", "2014", "2008", "2002", "1994"];
