@@ -16,7 +16,8 @@
 // ---------------------------------------------------------------------------
 
 // === BUCKETS — clés stables utilisées partout (UI, prefs, picker) ==========
-export const BUCKETS = ["r1_2025", "r1_old", "r5", "nf_s62_201", "en12845", "nf_s62_200", "cross"];
+// Ordre d'affichage = ordre du tableau (sprinkleur d'abord, RIA, PI/BI, Cross)
+export const BUCKETS = ["r1_2025", "r1_old", "en12845", "r5", "nf_s62_201", "nf_s62_200", "cross"];
 
 export const BUCKET_LABELS = {
   r1_2025:    "R1 · 2025",
@@ -31,9 +32,9 @@ export const BUCKET_LABELS = {
 export const DEFAULT_INTERVENTION_RATIOS = {
   r1_2025:    0.40,
   r1_old:     0.20,
-  r5:         0.10,
-  nf_s62_201: 0.10,
-  en12845:    0.10,
+  en12845:    0.15,
+  r5:         0.08,
+  nf_s62_201: 0.07,
   nf_s62_200: 0.05,
   cross:      0.05,
 };
