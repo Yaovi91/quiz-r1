@@ -14,7 +14,10 @@ import {
   loadAppState, saveAppState,
   loadUnlockedBadges, saveUnlockedBadges,
   FIRST_RUN_DEFAULTS,
+  DEFAULT_INTERVENTION_RATIOS, DEFAULT_EDITIONS_R1,
 } from './lib/appStorage.js';
+// Lot INTER — picker multi-référentiels (LIBRE + INTERVENTION)
+import { pickQuestion as pickFromCatalogV2 } from './lib/picker.js';
 
 /* =========================================================================
    R1 QUIZZ — Flow Home → Question → Level-up
@@ -105,8 +108,8 @@ const GLOBAL_CSS = `
     min-height: 100vh;
     position: relative;
     z-index: 2;
-    /* Lot 3b.2 fix — respecter la status bar iPhone */
-    padding: calc(env(safe-area-inset-top, 0) + 16px) 16px 120px;
+    /* Lot INTER — renforce le dégagement sous status bar / Dynamic Island */
+    padding: calc(env(safe-area-inset-top, 0) + 24px) 16px 120px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -4003,6 +4006,16 @@ export default function App() {
   // ---- Settings ----
   const [settingsOpen, setSettingsOpen] = useState(false);
 
+  // ---- Lot INTER — mode de jeu + ratios + éditions R1 ----
+  // quizMode = "libre" (R1 2025 strict) | "intervention" (multi-référentiels pondérés)
+  const [quizMode, setQuizMode] = useState(() => initFrom('quizMode', 'libre'));
+  const [interventionRatios, setInterventionRatios] = useState(() =>
+    initFrom('interventionRatios', DEFAULT_INTERVENTION_RATIOS)
+  );
+  const [interventionEditionsR1, setInterventionEditionsR1] = useState(() =>
+    initFrom('interventionEditionsR1', DEFAULT_EDITIONS_R1)
+  );
+
   // ---- Lot 3b : persistance localStorage ----
   // À chaque changement d'un état persistant, on sauvegarde.
   // Le debounce naturel de React (batch) suffit, pas besoin de timer.
@@ -4017,8 +4030,10 @@ export default function App() {
       xp, xpToday, level, streak, bestCombo,
       totalQ, correctQ, rate, freezes, x3Remaining,
       quests: serializedQuests,
+      // Lot INTER
+      quizMode, interventionRatios, interventionEditionsR1,
     });
-  }, [xp, xpToday, level, streak, bestCombo, totalQ, correctQ, rate, freezes, x3Remaining, quests]);
+  }, [xp, xpToday, level, streak, bestCombo, totalQ, correctQ, rate, freezes, x3Remaining, quests, quizMode, interventionRatios, interventionEditionsR1]);
 
   // À chaque changement des badges, on sauvegarde le Set des ids débloqués.
   useEffect(() => {
@@ -4041,7 +4056,15 @@ export default function App() {
     setForceGolden(false);
     // Tire dans le vrai catalogue si chargé, sinon fallback sur le mini pool
     if (catalog && catalog.length > 0) {
-      const q = pickFromCatalog(catalog, { audit: false, multi: false, exclude: currentQ, r1Strict: true });
+      // Lot INTER — le picker honore le mode actif (libre / intervention)
+      const q = pickFromCatalogV2(catalog, {
+        mode: quizMode,
+        audit: false,
+        multi: false,
+        exclude: currentQ,
+        ratios: interventionRatios,
+        editionsR1: interventionEditionsR1,
+      });
       if (q) setCurrentQ(q);
     } else {
       setCurrentQ(prev => pickQuestion(prev));
@@ -4354,8 +4377,14 @@ export default function App() {
             bonneReponse: Array.isArray(q.bonnes_reponses) ? q.bonnes_reponses[0] : q.bonneReponse,
           }));
           setCatalog(normalized);
-          // Première question depuis le vrai catalogue
-          const q = pickFromCatalog(normalized, { audit: false, multi: false, r1Strict: true });
+          // Première question depuis le vrai catalogue — Lot INTER : respecte le mode actif
+          const q = pickFromCatalogV2(normalized, {
+            mode: quizMode,
+            audit: false,
+            multi: false,
+            ratios: interventionRatios,
+            editionsR1: interventionEditionsR1,
+          });
           if (q) setCurrentQ(q);
         }
       })
@@ -4602,10 +4631,17 @@ export default function App() {
           </button>
         </div>
 
-        {/* Settings sheet (Lot 1) */}
+        {/* Settings sheet (Lot 1 + Lot INTER) */}
         <SettingsSheet
           open={settingsOpen}
           onClose={() => setSettingsOpen(false)}
+          quizMode={quizMode}
+          interventionRatios={interventionRatios}
+          interventionEditionsR1={interventionEditionsR1}
+          catalog={catalog}
+          onModeChange={setQuizMode}
+          onRatiosChange={setInterventionRatios}
+          onEditionsR1Change={setInterventionEditionsR1}
         />
       </div>
     </>
