@@ -3930,7 +3930,7 @@ export default function App() {
     const defaults = [
       { id: 1, text: '10 questions aujourd\'hui', current: 0, target: 10, xp: 50, Icon: Target, done: false },
       { id: 2, text: '5 bonnes d\'affilée', current: 0, target: 5, xp: 50, Icon: TrendingUp, done: false },
-      { id: 3, text: '1 intervention aujourd\'hui', current: 0, target: 1, xp: 50, Icon: Crosshair, done: false, locked: true, lockedReason: 'Mode Intervention bientôt disponible' },
+      { id: 3, text: '1 intervention aujourd\'hui', current: 0, target: 1, xp: 50, Icon: Crosshair, done: false },
     ];
     // Si persisté, on fusionne les champs `current` et `done` sur les defaults (le reste reste fixe)
     if (Array.isArray(persisted)) {
@@ -4197,10 +4197,10 @@ export default function App() {
       return next.length > HISTORY_MAX ? next.slice(next.length - HISTORY_MAX) : next;
     });
 
-    // Lot 3b.1.1 — incrémentation des quêtes du jour
-    // Q1 : "10 questions aujourd'hui" → +1 à chaque réponse (juste ou fausse)
-    // Q2 : "5 bonnes d'affilée" → suit le comboStreak (jusqu'à target)
-    // Q3 : "1 intervention" → verrouillée, on ne touche pas
+    // Lot 3b.1.1 + Lot INTER — incrémentation des quêtes du jour
+    // Q1 : "10 questions aujourd'hui"     → +1 à chaque réponse (juste ou fausse)
+    // Q2 : "5 bonnes d'affilée"            → suit le comboStreak (jusqu'à target)
+    // Q3 : "1 intervention aujourd'hui"    → +1 si on joue en mode INTERVENTION
     setQuests(prev => prev.map(q => {
       if (q.locked || q.done) return q;
       let newCurrent = q.current;
@@ -4210,6 +4210,11 @@ export default function App() {
         // Combo qui vient d'être calculé : si correct, comboStreak+1, sinon 0
         const newCombo = correct ? comboStreak + 1 : 0;
         newCurrent = Math.min(q.target, newCombo);
+      } else if (q.id === 3) {
+        // Lot INTER — incrémente quand on est en mode INTERVENTION
+        if (quizMode === 'intervention') {
+          newCurrent = Math.min(q.target, q.current + 1);
+        }
       }
       const justDone = !q.done && newCurrent >= q.target;
       if (justDone) {
