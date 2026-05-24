@@ -11,9 +11,9 @@ const NS_BADGES = "quizr1.v1.unlockedBadges";
 const DEFAULT_INTERVENTION_RATIOS = {
   r1_2025:    0.40,
   r1_old:     0.20,
-  r5:         0.10,
-  nf_s62_201: 0.10,
-  en12845:    0.10,
+  en12845:    0.15,
+  r5:         0.08,
+  nf_s62_201: 0.07,
   nf_s62_200: 0.05,
   cross:      0.05,
 };
@@ -79,9 +79,44 @@ export function loadAppState() {
 /**
  * Sauvegarde l'état persistant.
  * Reçoit l'état complet à persister.
+ *
+ * Garde-fou anti-écrasement : si l'existant a déjà une vraie progression
+ * (xp > 0, totalQ > 0, ou level > 1) et qu'on s'apprête à écrire un state
+ * "tout à zéro" (typique d'une race condition au premier mount après
+ * un reload du service worker), on refuse l'écriture pour ne pas effacer
+ * la progression de l'utilisateur.
+ *
+ * Le reset volontaire passe par resetAppState() qui supprime la clé entière,
+ * donc ce garde-fou ne gêne pas le reset utilisateur.
  */
 export function saveAppState(state) {
   try {
+    // Garde-fou : vérifier si l'existant a une progression > 0
+    const raw = localStorage.getItem(NS);
+    if (raw) {
+      try {
+        const existing = JSON.parse(raw);
+        const hasExistingProgression =
+          (existing.xp || 0) > 0 ||
+          (existing.totalQ || 0) > 0 ||
+          (existing.level || 1) > 1;
+        const writingEmpty =
+          (state.xp || 0) === 0 &&
+          (state.totalQ || 0) === 0 &&
+          (state.level || 1) === 1;
+        if (hasExistingProgression && writingEmpty) {
+          console.warn(
+            "[appStorage] save refusé : écrasement détecté " +
+            `(existant : xp=${existing.xp}, totalQ=${existing.totalQ}, level=${existing.level} — ` +
+            "à écrire : tout à zéro). Pour reset volontaire, utilise les boutons de réglages."
+          );
+          return false;
+        }
+      } catch {
+        // Parse failed → on continue normalement (rien à protéger)
+      }
+    }
+
     // On ne persiste que les clés "principales" pour éviter de stocker des
     // ref de fonctions ou des states éphémères (animations, etc.)
     const persisted = {};
