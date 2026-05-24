@@ -1,50 +1,292 @@
-// Algorithme de tirage de la prochaine question.
-// v3 — support multi-référentiels (R1, EN12845, …) avec ratios pondérés.
-import { isDue } from "./srs.js";
-import { todayKey } from "./storage.js";
+// src/lib/picker.js
+// Tirage de question — Quizz R1 v4
+// ---------------------------------------------------------------------------
+// Deux modes pédagogiques :
+//   LIBRE         → R1 édition 2025 strict (cible : Q1, vérif sprinkleur)
+//   INTERVENTION  → multi-référentiels pondérés (R1 toutes éditions + R5 RIA
+//                   + NF S62-201 + EN 12845 + NF S62-200 + cross R1↔EN 12845)
+//
+// Curseurs INTERVENTION (somme normalisée à 1) :
+//   r1_2025, r1_old, r5, nf_s62_201, en12845, nf_s62_200
+//   (les questions cross héritent du bucket "Cross" partagé entre r1_2025 et en12845)
+//
+// Détection cross : une question dont l'`id` commence par "cross-" est
+// pédagogiquement INTERVENTION même si son champ `referentiel` vaut "R1"
+// ou "EN12845" — on la route en INTER, jamais en LIBRE.
+// ---------------------------------------------------------------------------
 
-// === RATIOS PAR RÉFÉRENTIEL ===
-// Modifiable ici en attendant une UI de réglages.
-// Les valeurs sont normalisées automatiquement (somme = 1).
-const DEFAULT_RATIOS = {
-  R1: 0.80,
-  EN12845: 0.20,
-  // Plus tard : R5: 0.x, EN13565-2: 0.x, …
+// === BUCKETS — clés stables utilisées partout (UI, prefs, picker) ==========
+export const BUCKETS = ["r1_2025", "r1_old", "r5", "nf_s62_201", "en12845", "nf_s62_200", "cross"];
+
+export const BUCKET_LABELS = {
+  r1_2025:    "R1 · 2025",
+  r1_old:     "R1 · anciennes éditions",
+  r5:         "R5 · RIA",
+  nf_s62_201: "NF S 62-201 · RIA",
+  en12845:    "EN 12845 · sprinkleur EU",
+  nf_s62_200: "NF S 62-200 · PI / BI",
+  cross:      "Cross R1 ↔ EN 12845",
 };
 
-// Mémoire de session : IDs des dernières questions tirées.
-let recentIds = [];
+export const DEFAULT_INTERVENTION_RATIOS = {
+  r1_2025:    0.40,
+  r1_old:     0.20,
+  r5:         0.10,
+  nf_s62_201: 0.10,
+  en12845:    0.10,
+  nf_s62_200: 0.05,
+  cross:      0.05,
+};
 
-// Filtre niveau : très permissif au début (variété), strict ensuite.
-function passesLevelFilter(q, level, answered) {
-  if ((answered || 0) < 30) return q.difficulte <= 4;
-  if (q.difficulte > level + 1) return false;
-  return true;
+export const DEFAULT_EDITIONS_R1 = ["2025", "2020", "2014", "2008", "2002", "1994"];
+
+export const R1_OLD_EDITIONS = ["2020", "2014", "2008", "2002", "1994", "1990", "1979", "1974", "1967", "1957", "1898"];
+
+// === Helpers ===============================================================
+const isCrossQ = (q) => typeof q.id === "string" && q.id.startsWith("cross-");
+
+function bucketOf(q) {
+  // Une question cross est toujours dans "cross", indépendamment de son referentiel
+  if (isCrossQ(q)) return "cross";
+  const ref = q.referentiel || "R1";
+  const ed = String(q.edition || "");
+  if (ref === "R1") return ed === "2025" ? "r1_2025" : "r1_old";
+  if (ref === "R5") return "r5";
+  if (ref === "NF S62-201" || ref === "NF S 62-201") return "nf_s62_201";
+  if (ref === "EN12845" || ref === "NF EN 12845") return "en12845";
+  if (ref === "NF S62-200" || ref === "NF S 62-200") return "nf_s62_200";
+  if (ref === "Cross R1 + EN 12845") return "cross";
+  if (ref === "NF S 61-213/CN") return "nf_s62_200"; // famille PI
+  return "r1_old"; // fallback prudent
 }
 
-function multiAllowed(level, rand, answered) {
-  if ((answered || 0) < 30) return rand() < 0.3;
-  if (level <= 2) return false;
-  const target = level === 3 ? 0.10 : level === 4 ? 0.30 : 0.50;
-  return rand() < target;
+// === LIBRE ==================================================================
+/**
+ * Mode LIBRE — comportement original : R1 édition 2025 strict.
+ * Pas de question cross, pas d'anciennes éditions, pas d'autres référentiels.
+ */
+function pickLibre(catalog, { audit, multi, exclude }) {
+  let pool = catalog.filter(q =>
+    !isCrossQ(q) &&
+    (q.referentiel === "R1" || !q.referentiel) &&
+    String(q.edition) === "2025" &&
+    q.multi === multi
+  );
+  if (audit === true) pool = pool.filter(q => q.mode_audit === true);
+  else if (audit === false) pool = pool.filter(q => q.mode_audit === false);
+  return pickRandom(pool, exclude);
 }
 
-function rateChapter(byChapter, ch) {
-  const c = byChapter[ch];
-  if (!c || c.seen === 0) return 0.5;
-  return c.correct / c.seen;
-}
+// === INTERVENTION ==========================================================
+/**
+ * Mode INTERVENTION — tirage pondéré multi-référentiels.
+ *
+ * Étape 1 — tirer un bucket selon les ratios.
+ * Étape 2 — filtrer les questions de ce bucket avec audit/multi + éditions R1.
+ * Étape 3 — fallback gracieux si bucket vide après filtrage (renormalisation).
+ */
+function pickIntervention(catalog, { audit, multi, exclude, ratios, editionsR1 }) {
+  // 1. Indexer le catalogue par bucket avec les filtres audit/multi/éditions appliqués
+  const byBucket = {};
+  for (const b of BUCKETS) byBucket[b] = [];
 
-function weakestChapter(byChapter) {
-  let worst = null;
-  let worstRate = 1.1;
-  for (const [ch, c] of Object.entries(byChapter || {})) {
-    if (c.seen >= 5) {
-      const r = c.correct / c.seen;
-      if (r < worstRate) { worstRate = r; worst = ch; }
+  for (const q of catalog) {
+    if (q.multi !== multi) continue;
+    if (audit === true && !q.mode_audit) continue;
+    if (audit === false && q.mode_audit) continue;
+
+    const b = bucketOf(q);
+
+    // Filtrer les éditions R1 anciennes selon les cases activées
+    if (b === "r1_old") {
+      const ed = String(q.edition || "");
+      if (!editionsR1.includes(ed)) continue;
+    }
+
+    byBucket[b].push(q);
+  }
+
+  // 2. Renormaliser les ratios sur les buckets non vides + ratio > 0
+  const active = {};
+  let total = 0;
+  for (const b of BUCKETS) {
+    const r = ratios[b] || 0;
+    if (r > 0 && byBucket[b].length > 0) {
+      active[b] = r;
+      total += r;
     }
   }
-  return worst;
+  if (total === 0) {
+    // Tous les buckets actifs sont vides → fallback : on relâche, on prend ce qu'on a
+    const all = Object.values(byBucket).flat();
+    return pickRandom(all, exclude);
+  }
+
+  // 3. Tirage pondéré du bucket
+  let r = Math.random() * total;
+  let chosen = null;
+  for (const [b, w] of Object.entries(active)) {
+    r -= w;
+    if (r <= 0) { chosen = b; break; }
+  }
+  if (!chosen) chosen = Object.keys(active).pop();
+
+  return pickRandom(byBucket[chosen], exclude);
+}
+
+// === AUDIT / REVISION (modes transverses) ==================================
+/**
+ * Mode AUDIT — uniquement les questions terrain (mode_audit === true).
+ * Respecte le mode parent (libre/intervention) pour le scope.
+ */
+function pickAudit(catalog, opts) {
+  return pickQuestion(catalog, { ...opts, audit: true });
+}
+
+/**
+ * Mode REVISION — chapitre ciblé. Ignore le mode parent.
+ */
+function pickRevision(catalog, { chapter, exclude }) {
+  if (!chapter) return null;
+  const pool = catalog.filter(q => String(q.chapitre || "").startsWith(chapter));
+  return pickRandom(pool, exclude);
+}
+
+// === API publique ==========================================================
+/**
+ * pickQuestion(catalog, opts) — tirage unifié.
+ *
+ * Options :
+ *   mode         : "libre" | "intervention"  (default "libre")
+ *   audit        : true | false | null       (default false ; null = mix)
+ *   multi        : boolean                   (default false)
+ *   exclude      : question object           (anti-doublon immédiat)
+ *   ratios       : objet par bucket          (utilisé en INTERVENTION)
+ *   editionsR1   : array de string           (éditions R1 activées en INTER)
+ *   chapter      : string                    (mode revision)
+ *   submode      : "audit" | "revision" | null (override le filtrage)
+ */
+export function pickQuestion(catalog, opts = {}) {
+  if (!Array.isArray(catalog) || catalog.length === 0) return null;
+
+  const {
+    mode = "libre",
+    audit = false,
+    multi = false,
+    exclude = null,
+    ratios = DEFAULT_INTERVENTION_RATIOS,
+    editionsR1 = DEFAULT_EDITIONS_R1,
+    chapter = null,
+    submode = null,
+  } = opts;
+
+  // Submodes prioritaires
+  if (submode === "revision") return pickRevision(catalog, { chapter, exclude });
+  if (submode === "audit") {
+    if (mode === "intervention") {
+      return pickIntervention(catalog, { audit: true, multi, exclude, ratios, editionsR1 });
+    }
+    return pickLibre(catalog, { audit: true, multi, exclude });
+  }
+
+  // Modes principaux
+  if (mode === "intervention") {
+    return pickIntervention(catalog, { audit, multi, exclude, ratios, editionsR1 });
+  }
+  return pickLibre(catalog, { audit, multi, exclude });
+}
+
+// === Rétrocompat avec l'ancien API App.jsx ================================
+/**
+ * pickFromCatalog(catalog, options) — wrapper rétrocompatible.
+ *
+ * L'ancienne API utilisait :
+ *   { audit, multi, exclude, ratio, r1Strict }
+ *
+ * Mapping :
+ *   r1Strict: true   → mode: "libre"   (R1 2025 strict, comportement inchangé)
+ *   r1Strict: false  → mode: "libre"   (sans cross — par sécurité, anciennes
+ *                                       valeurs r1Strict=false étaient utilisées
+ *                                       avec le picker legacy non multi-référentiels)
+ *
+ * Pour activer INTERVENTION, App.jsx doit appeler pickQuestion() directement
+ * avec mode: "intervention".
+ */
+export function pickFromCatalog(catalog, options = {}) {
+  const { audit = false, multi = false, exclude = null, r1Strict = false, mode, ratios, editionsR1 } = options;
+
+  // Si mode explicite passé (nouveau code) : on l'utilise
+  if (mode === "intervention") {
+    return pickQuestion(catalog, { mode, audit, multi, exclude, ratios, editionsR1 });
+  }
+
+  // Sinon : comportement legacy = LIBRE strict
+  return pickQuestion(catalog, { mode: "libre", audit, multi, exclude });
+}
+
+// === Daily Challenge =======================================================
+/**
+ * Tirage seedé de 10 questions pour le Daily Challenge.
+ * En mode INTERVENTION, le seed inclut le hash des ratios pour rester stable
+ * tant que les curseurs ne bougent pas.
+ */
+export function pickDailyTen(catalog, dateKey, { mode = "libre", ratios, editionsR1 } = {}) {
+  const seedStr = `daily-${dateKey}-${mode}`;
+  const rand = seedRand(seedStr);
+
+  // Pool : selon le mode, mais on retire audit + multi pour le daily
+  let pool;
+  if (mode === "intervention") {
+    pool = catalog.filter(q => !q.multi && !q.mode_audit);
+    // Filtrer par buckets actifs (ratio > 0) + éditions R1
+    const activeBuckets = new Set(
+      BUCKETS.filter(b => (ratios?.[b] || 0) > 0)
+    );
+    pool = pool.filter(q => {
+      const b = bucketOf(q);
+      if (!activeBuckets.has(b)) return false;
+      if (b === "r1_old") {
+        return (editionsR1 || DEFAULT_EDITIONS_R1).includes(String(q.edition));
+      }
+      return true;
+    });
+  } else {
+    pool = catalog.filter(q =>
+      !isCrossQ(q) &&
+      (q.referentiel === "R1" || !q.referentiel) &&
+      String(q.edition) === "2025" &&
+      !q.multi &&
+      !q.mode_audit
+    );
+  }
+
+  // Tirage 10 sans remise, seedé
+  const picked = [];
+  const used = new Set();
+  let safety = 0;
+  while (picked.length < 10 && safety < 400 && pool.length > 0) {
+    const idx = Math.floor(rand() * pool.length);
+    const q = pool[idx];
+    if (q && !used.has(q.id)) {
+      used.add(q.id);
+      picked.push(q);
+    }
+    safety++;
+  }
+  return picked;
+}
+
+// === Internals =============================================================
+function pickRandom(pool, exclude) {
+  if (!pool || pool.length === 0) return null;
+  if (pool.length === 1) return pool[0];
+  let q;
+  let safety = 0;
+  do {
+    q = pool[Math.floor(Math.random() * pool.length)];
+    safety++;
+  } while (exclude && q && exclude.id && q.id === exclude.id && safety < 12);
+  return q;
 }
 
 function seedRand(seedStr) {
@@ -59,153 +301,31 @@ function seedRand(seedStr) {
   };
 }
 
-function seenToday(card) {
-  if (!card || !card.lastSeen) return false;
-  return card.lastSeen === todayKey();
+// === Stats utilitaires (pour StatsScreen) ==================================
+/**
+ * Calcule le breakdown d'un catalogue par bucket — utile pour l'UI Settings
+ * (affichage "X questions disponibles dans ce bucket").
+ */
+export function bucketCounts(catalog, editionsR1 = DEFAULT_EDITIONS_R1) {
+  const counts = {};
+  for (const b of BUCKETS) counts[b] = 0;
+  if (!Array.isArray(catalog)) return counts;
+  for (const q of catalog) {
+    const b = bucketOf(q);
+    if (b === "r1_old" && !editionsR1.includes(String(q.edition))) continue;
+    counts[b]++;
+  }
+  return counts;
 }
 
 /**
- * Renvoie le référentiel d'une question (default R1 si absent).
+ * Normalise un objet de ratios pour que la somme = 1.
+ * Si tout est à 0 → renvoie le default.
  */
-function getRef(q) {
-  return q.referentiel || "R1";
+export function normalizeRatios(ratios) {
+  const sum = Object.values(ratios).reduce((a, b) => a + (b || 0), 0);
+  if (sum <= 0) return { ...DEFAULT_INTERVENTION_RATIOS };
+  const out = {};
+  for (const k of Object.keys(ratios)) out[k] = (ratios[k] || 0) / sum;
+  return out;
 }
-
-/**
- * Tire un référentiel selon les ratios.
- * Si certains référentiels ne sont pas représentés dans le pool, on les ignore et on renormalise.
- */
-function pickReferentiel(pool, rand, ratios) {
-  // Référentiels effectivement présents dans le pool
-  const present = new Set(pool.map(getRef));
-  const filtered = {};
-  let total = 0;
-  for (const [ref, r] of Object.entries(ratios)) {
-    if (present.has(ref) && r > 0) {
-      filtered[ref] = r;
-      total += r;
-    }
-  }
-  if (total === 0) {
-    // fallback : on prend le premier référentiel présent
-    return [...present][0] || "R1";
-  }
-  // Tirage pondéré
-  let r = rand() * total;
-  for (const [ref, w] of Object.entries(filtered)) {
-    r -= w;
-    if (r <= 0) return ref;
-  }
-  return Object.keys(filtered).pop();
-}
-
-/**
- * Pick une question dans le pool selon les règles.
- */
-export function pickQuestion(pool, state, opts = {}) {
-  const { mode = "libre", chapter = null, seed = null, excludeIds = [] } = opts;
-  const level = state.level || 1;
-  const answered = state.answered || 0;
-  const rand = seed ? seedRand(seed) : Math.random;
-
-  // Référentiels demandés (depuis state.ratios si défini, sinon defaults)
-  const ratios = (state.ratios && Object.keys(state.ratios).length > 0)
-    ? state.ratios
-    : DEFAULT_RATIOS;
-
-  // 1. Filtrage par mode (audit / révision ciblée)
-  let candidates = pool.filter(q => !excludeIds.includes(q.id));
-
-  if (mode === "audit") {
-    candidates = candidates.filter(q => q.mode_audit === true);
-  } else if (mode === "revision" && chapter) {
-    candidates = candidates.filter(q => q.chapitre.startsWith(chapter));
-  } else {
-    // mode libre / daily : sélection par référentiel selon les ratios
-    const pickedRef = pickReferentiel(candidates, rand, ratios);
-    const byRef = candidates.filter(q => getRef(q) === pickedRef);
-    if (byRef.length > 0) candidates = byRef;
-
-    // Filtres niveau et multi-réponses
-    candidates = candidates.filter(q => passesLevelFilter(q, level, answered));
-    const allowMulti = multiAllowed(level, rand, answered);
-    if (!allowMulti) candidates = candidates.filter(q => !q.multi);
-  }
-
-  if (candidates.length === 0) {
-    // Fallback : si le filtrage donne vide, on relâche (sans referentiel ni niveau)
-    candidates = pool.filter(q => !excludeIds.includes(q.id));
-    if (mode === "audit") candidates = candidates.filter(q => q.mode_audit === true);
-    if (mode === "revision" && chapter) candidates = candidates.filter(q => q.chapitre.startsWith(chapter));
-    if (candidates.length === 0) return null;
-  }
-
-  // 2. Pondération édition (80% 2025/2026 / 20% antérieures) — sauf modes ciblés
-  if (mode === "libre" || mode === "daily") {
-    const wantOld = rand() < 0.2;
-    const isRecent = (q) => q.edition === "2025" || q.edition === "2026";
-    const filtered = candidates.filter(q => wantOld ? !isRecent(q) : isRecent(q));
-    if (filtered.length > 0) candidates = filtered;
-  }
-
-  // 3. Anti-boucle : éviter les 5 dernières questions si possible
-  const recentSet = new Set(recentIds.slice(-5));
-  const filteredRecent = candidates.filter(q => !recentSet.has(q.id));
-  if (filteredRecent.length >= 2) candidates = filteredRecent;
-
-  // 4. Spaced repetition : préférer les non-dues si on en a au moins 3
-  const due = candidates.filter(q => isDue(state.cards[q.id]));
-  if (due.length >= 3) candidates = due;
-
-  // 5. Pondération chapitre faible + déprio forte des vues aujourd'hui
-  const weights = candidates.map(q => {
-    const card = state.cards[q.id];
-    if (seenToday(card)) return 0.1;
-    const rate = rateChapter(state.byChapter || {}, q.chapitre);
-    let w = 1 + (1 - rate);
-    return Math.max(0.5, Math.min(2, w));
-  });
-
-  // 6. Tirage pondéré
-  const total = weights.reduce((a, b) => a + b, 0);
-  let picked;
-  if (total <= 0) {
-    picked = candidates[Math.floor(rand() * candidates.length)];
-  } else {
-    let r = rand() * total;
-    picked = candidates[candidates.length - 1];
-    for (let i = 0; i < candidates.length; i++) {
-      r -= weights[i];
-      if (r <= 0) { picked = candidates[i]; break; }
-    }
-  }
-
-  // 7. Mémoriser pour les prochains tirages
-  if (picked) {
-    recentIds.push(picked.id);
-    if (recentIds.length > 10) recentIds = recentIds.slice(-10);
-  }
-  return picked;
-}
-
-/** Pour le mode Daily Challenge : 10 questions seedées sur la date. */
-export function pickDailyTen(pool, state, dateKey) {
-  const seed = "daily-" + dateKey;
-  const rand = seedRand(seed);
-  let pickable = pool.filter(q => passesLevelFilter(q, state.level || 1, state.answered || 0));
-  const picked = [];
-  const used = new Set();
-  let safety = 0;
-  while (picked.length < 10 && safety < 200) {
-    const idx = Math.floor(rand() * pickable.length);
-    const q = pickable[idx];
-    if (q && !used.has(q.id)) {
-      used.add(q.id);
-      picked.push(q);
-    }
-    safety++;
-  }
-  return picked;
-}
-
-export { weakestChapter, DEFAULT_RATIOS };
