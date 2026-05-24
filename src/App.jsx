@@ -10,6 +10,7 @@ import {
 import SettingsSheet from './components/settings/SettingsSheet.jsx';
 import GuestMode from './components/guest/GuestMode.jsx';
 import SprintScreen from './components/sprint/SprintScreen.jsx';
+import ReferentielPicker from './components/quiz/ReferentielPicker.jsx';
 import {
   loadAppState, saveAppState,
   loadUnlockedBadges, saveUnlockedBadges,
@@ -3111,10 +3112,11 @@ function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, o
   const progress = ((xp - xpPrevLevel) / (xpNextLevel - xpPrevLevel)) * 100;
 
   const modes = [
-    { key: 'libre', title: 'Quizz libre', sub: 'adaptatif · ∞', Icon: InfinityIcon, primary: true },
-    { key: 'sprint', title: 'Sprint', sub: '3 · 5 · 7 min · chrono', Icon: Clock },
-    { key: 'survie', title: 'Survie', sub: 'jusqu\'à la 1ʳᵉ faute', Icon: Heart },
-    { key: 'revision', title: 'Révision ciblée', sub: 'choisis un chapitre · sans XP', Icon: BookOpen, full: true },
+    { key: 'libre',        title: 'Quizz libre',     sub: 'R1 2025 · adaptatif · ∞', Icon: InfinityIcon, primary: true },
+    { key: 'intervention', title: 'Intervention',    sub: 'multi-référentiels',      Icon: Sliders,      primary: true },
+    { key: 'survie',       title: 'Survie',          sub: 'jusqu\'à la 1ʳᵉ faute',   Icon: Heart },
+    { key: 'sprint',       title: 'Sprint',          sub: '3 · 5 · 7 min · chrono',  Icon: Clock },
+    { key: 'revision',     title: 'Révision ciblée', sub: 'choisis un référentiel · sans XP', Icon: BookOpen, full: true },
   ];
 
   return (
@@ -4015,6 +4017,9 @@ export default function App() {
   const [interventionEditionsR1, setInterventionEditionsR1] = useState(() =>
     initFrom('interventionEditionsR1', DEFAULT_EDITIONS_R1)
   );
+  // Révision ciblée : sheet de sélection + bucket actif (session-only, pas persisté)
+  const [revisionPickerOpen, setRevisionPickerOpen] = useState(false);
+  const [revisionBucket, setRevisionBucket] = useState(null);
 
   // ---- Lot 3b : persistance localStorage ----
   // À chaque changement d'un état persistant, on sauvegarde.
@@ -4041,7 +4046,7 @@ export default function App() {
     saveUnlockedBadges(unlockedIds);
   }, [badges]);
 
-  const resetQuestion = () => {
+  const resetQuestion = (overrides = {}) => {
     setSelected(null);
     setValidated(false);
     setIsCorrect(false);
@@ -4054,11 +4059,19 @@ export default function App() {
     setIsGolden(forceGolden || Math.random() < 0.05); // ~5% golden
     setForceBonus(false);
     setForceGolden(false);
+    // Override possible du mode (pour bascule libre↔intervention via boutons home)
+    // ou du bucket (pour révision ciblée par référentiel).
+    // Si revisionBucket est actif (mode révision en cours), on continue à tirer
+    // de ce bucket à chaque "next" — sauf si l'appelant fournit un override explicite.
+    const effectiveMode = overrides.mode || quizMode;
+    const submode = overrides.submode || (revisionBucket ? 'revision' : null);
+    const bucket = overrides.bucket || revisionBucket || null;
     // Tire dans le vrai catalogue si chargé, sinon fallback sur le mini pool
     if (catalog && catalog.length > 0) {
-      // Lot INTER — le picker honore le mode actif (libre / intervention)
       const q = pickFromCatalogV2(catalog, {
-        mode: quizMode,
+        mode: effectiveMode,
+        submode,
+        bucket,
         audit: false,
         multi: false,
         exclude: currentQ,
@@ -4073,17 +4086,32 @@ export default function App() {
 
   const handleStartQuestion = (mode = 'libre') => {
     if (mode === 'libre') {
-      resetQuestion();
+      // Lance Quizz libre — basculer quizMode sur "libre" si nécessaire
+      if (quizMode !== 'libre') setQuizMode('libre');
+      resetQuestion({ mode: 'libre' });
+      setScreen('question');
+    } else if (mode === 'intervention') {
+      // Lance Quizz en mode INTERVENTION — bascule quizMode + tire
+      if (quizMode !== 'intervention') setQuizMode('intervention');
+      resetQuestion({ mode: 'intervention' });
       setScreen('question');
     } else if (mode === 'survie') {
       setScreen('survival');
     } else if (mode === 'sprint') {
       setScreen('sprint');
     } else if (mode === 'revision') {
-      // À implémenter — pour l'instant fallback libre
-      resetQuestion();
-      setScreen('question');
+      // Ouvre le sheet de sélection de référentiel
+      setRevisionPickerOpen(true);
     }
+  };
+
+  // Lot INTER — Révision ciblée par référentiel
+  // Le ReferentielPicker renvoie un bucket ; on lance le mode revision avec ce filtre.
+  const handleRevisionStart = (bucket) => {
+    setRevisionPickerOpen(false);
+    setRevisionBucket(bucket);
+    resetQuestion({ submode: 'revision', bucket });
+    setScreen('question');
   };
 
   const handleModeXpGain = (amount) => {
@@ -4110,6 +4138,8 @@ export default function App() {
   const handleBack = () => {
     setScreen('home');
     setComboStreak(0);
+    // Sortir du mode révision ciblée si on était dedans
+    if (revisionBucket !== null) setRevisionBucket(null);
   };
 
   const handleAnswer = (idx) => {
@@ -4647,6 +4677,14 @@ export default function App() {
           onModeChange={setQuizMode}
           onRatiosChange={setInterventionRatios}
           onEditionsR1Change={setInterventionEditionsR1}
+        />
+
+        {/* Lot INTER — Révision ciblée : sheet de sélection référentiel */}
+        <ReferentielPicker
+          open={revisionPickerOpen}
+          catalog={catalog}
+          onClose={() => setRevisionPickerOpen(false)}
+          onPick={handleRevisionStart}
         />
       </div>
     </>
