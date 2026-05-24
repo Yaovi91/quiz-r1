@@ -254,6 +254,21 @@ export default function InterventionControls({
     [catalog, editionsR1]
   );
 
+  // Ordre d'affichage : tri par count décroissant si catalog fourni, sinon ordre canonique.
+  // À count égal : R1 d'abord (r1_2025, r1_old), puis ordre alphabétique du label.
+  const orderedBuckets = useMemo(() => {
+    if (!counts) return [...BUCKETS];
+    const priority = (b) => (b === "r1_2025" ? 2 : b === "r1_old" ? 1 : 0);
+    return [...BUCKETS].sort((a, b) => {
+      const ca = counts[a] || 0;
+      const cb = counts[b] || 0;
+      if (cb !== ca) return cb - ca;
+      const pa = priority(a), pb = priority(b);
+      if (pb !== pa) return pb - pa;
+      return BUCKET_LABELS[a].localeCompare(BUCKET_LABELS[b]);
+    });
+  }, [counts]);
+
   // Normalisation pour afficher les % réels (somme = 100%)
   const normalized = useMemo(() => normalizeRatios(safeRatios), [safeRatios]);
   const rawSum = useMemo(
@@ -335,7 +350,7 @@ export default function InterventionControls({
             </div>
 
             <div className="ratio-block">
-              {BUCKETS.map(b => {
+              {orderedBuckets.map(b => {
                 const value = safeRatios[b] || 0;
                 const pctNormalized = rawSum > 0 ? normalized[b] : 0;
                 const c = counts ? counts[b] : null;
