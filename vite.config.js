@@ -31,7 +31,14 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,json}'],
+        // Lot INTER — on retire 'json' du précache (limite Workbox 2 MiB, et
+        // notre questions.json fait 2,8 MB). Le catalogue est servi via le
+        // runtimeCaching ci-dessous (StaleWhileRevalidate), pas via le précache.
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        globIgnores: ['**/questions.json', '**/questions.example.json'],
+        // Garde-fou : si un autre asset volumineux apparaît un jour, on
+        // accepte jusqu'à 5 MiB en précache au lieu de planter le build.
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         // Cache runtime pour le catalogue de questions
         runtimeCaching: [
           {
