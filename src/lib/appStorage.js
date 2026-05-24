@@ -1,10 +1,23 @@
 // src/lib/appStorage.js
 // Persistance localStorage de l'état principal de l'app.
 // Lot 3b — branche les compteurs XP, niveau, streak, badges, etc. sur localStorage
-// pour que l'utilisateur retrouve sa progression à chaque ouverture.
+// Lot INTER — ajoute la persistance du mode (libre/intervention) + curseurs ratios + éditions R1.
 
 const NS = "quizr1.v1.appState";
 const NS_BADGES = "quizr1.v1.unlockedBadges";
+
+// Defaults INTERVENTION — repris depuis lib/picker.js (dupliqués ici pour éviter
+// un cycle d'import lors du premier mount avant chargement du picker)
+const DEFAULT_INTERVENTION_RATIOS = {
+  r1_2025:    0.40,
+  r1_old:     0.20,
+  r5:         0.10,
+  nf_s62_201: 0.10,
+  en12845:    0.10,
+  nf_s62_200: 0.05,
+  cross:      0.05,
+};
+const DEFAULT_EDITIONS_R1 = ["2025", "2020", "2014", "2008", "2002", "1994"];
 
 // Valeurs par défaut au premier lancement (premier utilisateur)
 const FIRST_RUN_DEFAULTS = {
@@ -22,6 +35,11 @@ const FIRST_RUN_DEFAULTS = {
   xpTodayResetDate: null,  // pour reset xpToday à minuit
   questsResetDate: null,   // pour reset quotidien des quêtes
   quests: null,            // array sérialisé des quêtes (current/done par id)
+
+  // === Mode de jeu (Lot INTER) =============================================
+  quizMode: "libre",                      // "libre" | "intervention"
+  interventionRatios: { ...DEFAULT_INTERVENTION_RATIOS },
+  interventionEditionsR1: [...DEFAULT_EDITIONS_R1],
 };
 
 /**
@@ -39,6 +57,18 @@ export function loadAppState() {
     const clean = {};
     for (const k of known) {
       if (k in parsed) clean[k] = parsed[k];
+    }
+    // Migration douce : si un utilisateur avait un state pré-INTER,
+    // on remplit les nouveaux champs avec les defaults
+    if (!("quizMode" in clean)) clean.quizMode = FIRST_RUN_DEFAULTS.quizMode;
+    if (!("interventionRatios" in clean) || typeof clean.interventionRatios !== "object") {
+      clean.interventionRatios = { ...DEFAULT_INTERVENTION_RATIOS };
+    } else {
+      // Compléter les buckets manquants si on a ajouté de nouveaux référentiels
+      clean.interventionRatios = { ...DEFAULT_INTERVENTION_RATIOS, ...clean.interventionRatios };
+    }
+    if (!Array.isArray(clean.interventionEditionsR1)) {
+      clean.interventionEditionsR1 = [...DEFAULT_EDITIONS_R1];
     }
     return clean;
   } catch {
@@ -80,9 +110,6 @@ export function resetAppState() {
 
 // ---------- BADGES ----------
 
-/**
- * Charge le Set des ids de badges déjà débloqués.
- */
 export function loadUnlockedBadges() {
   try {
     const raw = localStorage.getItem(NS_BADGES);
@@ -95,9 +122,6 @@ export function loadUnlockedBadges() {
   }
 }
 
-/**
- * Sauvegarde le Set des ids de badges débloqués.
- */
 export function saveUnlockedBadges(set) {
   try {
     localStorage.setItem(NS_BADGES, JSON.stringify(Array.from(set)));
@@ -107,13 +131,10 @@ export function saveUnlockedBadges(set) {
   }
 }
 
-export { FIRST_RUN_DEFAULTS, NS, NS_BADGES };
+export { FIRST_RUN_DEFAULTS, NS, NS_BADGES, DEFAULT_INTERVENTION_RATIOS, DEFAULT_EDITIONS_R1 };
 
 // ---------- HELPERS DATE ----------
 
-/**
- * Renvoie YYYY-MM-DD pour aujourd'hui en heure locale.
- */
 export function todayStr() {
   const d = new Date();
   const y = d.getFullYear();
@@ -122,9 +143,6 @@ export function todayStr() {
   return `${y}-${m}-${day}`;
 }
 
-/**
- * Renvoie true si la date stockée correspond à hier (en heure locale).
- */
 export function isYesterday(dateStr) {
   if (!dateStr) return false;
   const yesterday = new Date();
