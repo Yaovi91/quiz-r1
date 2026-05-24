@@ -16,8 +16,9 @@
 // ---------------------------------------------------------------------------
 
 // === BUCKETS — clés stables utilisées partout (UI, prefs, picker) ==========
-// Ordre d'affichage = ordre du tableau (sprinkleur d'abord, RIA, PI/BI, Cross)
-export const BUCKETS = ["r1_2025", "r1_old", "en12845", "r5", "nf_s62_201", "nf_s62_200", "cross"];
+// L'ordre du tableau ne fixe PAS l'ordre d'affichage : InterventionControls
+// trie les sliders dynamiquement par count décroissant.
+export const BUCKETS = ["r1_2025", "r1_old", "en12845", "r5", "nf_s62_201", "nf_s62_200", "fmds", "nfpa22", "cross"];
 
 export const BUCKET_LABELS = {
   r1_2025:    "R1 · 2025",
@@ -26,16 +27,20 @@ export const BUCKET_LABELS = {
   nf_s62_201: "NF S 62-201 · RIA",
   en12845:    "EN 12845 · sprinkleur EU",
   nf_s62_200: "NF S 62-200 · PI / BI",
+  fmds:       "FMDS · FM Global",
+  nfpa22:     "NFPA 22 · réservoirs (US)",
   cross:      "Cross R1 ↔ EN 12845",
 };
 
 export const DEFAULT_INTERVENTION_RATIOS = {
-  r1_2025:    0.40,
-  r1_old:     0.20,
-  en12845:    0.15,
+  r1_2025:    0.35,
+  r1_old:     0.18,
+  en12845:    0.12,
   r5:         0.08,
   nf_s62_201: 0.07,
-  nf_s62_200: 0.05,
+  nf_s62_200: 0.06,
+  fmds:       0.05,
+  nfpa22:     0.04,
   cross:      0.05,
 };
 
@@ -56,6 +61,8 @@ function bucketOf(q) {
   if (ref === "NF S62-201" || ref === "NF S 62-201") return "nf_s62_201";
   if (ref === "EN12845" || ref === "NF EN 12845") return "en12845";
   if (ref === "NF S62-200" || ref === "NF S 62-200") return "nf_s62_200";
+  if (ref === "FMDS" || ref === "FM Global") return "fmds";
+  if (ref === "NFPA 22" || ref === "NFPA22") return "nfpa22";
   if (ref === "Cross R1 + EN 12845") return "cross";
   if (ref === "NF S 61-213/CN") return "nf_s62_200"; // famille PI
   return "r1_old"; // fallback prudent
@@ -145,11 +152,20 @@ function pickAudit(catalog, opts) {
 }
 
 /**
- * Mode REVISION — chapitre ciblé. Ignore le mode parent.
+ * Mode REVISION — chapitre OU bucket (référentiel) ciblé. Ignore le mode parent.
+ * - bucket  : "r1_2025" | "r1_old" | "en12845" | "r5" | ... | "cross"
+ * - chapter : string (préfixe de chapitre, ex. "15.2")
+ * Si les deux sont fournis, bucket prime puis chapter filtre dans le bucket.
  */
-function pickRevision(catalog, { chapter, exclude }) {
-  if (!chapter) return null;
-  const pool = catalog.filter(q => String(q.chapitre || "").startsWith(chapter));
+function pickRevision(catalog, { bucket, chapter, exclude }) {
+  let pool = catalog;
+  if (bucket) {
+    pool = pool.filter(q => bucketOf(q) === bucket);
+  }
+  if (chapter) {
+    pool = pool.filter(q => String(q.chapitre || "").startsWith(chapter));
+  }
+  if (!bucket && !chapter) return null;
   return pickRandom(pool, exclude);
 }
 
@@ -178,11 +194,12 @@ export function pickQuestion(catalog, opts = {}) {
     ratios = DEFAULT_INTERVENTION_RATIOS,
     editionsR1 = DEFAULT_EDITIONS_R1,
     chapter = null,
+    bucket = null,
     submode = null,
   } = opts;
 
   // Submodes prioritaires
-  if (submode === "revision") return pickRevision(catalog, { chapter, exclude });
+  if (submode === "revision") return pickRevision(catalog, { bucket, chapter, exclude });
   if (submode === "audit") {
     if (mode === "intervention") {
       return pickIntervention(catalog, { audit: true, multi, exclude, ratios, editionsR1 });
