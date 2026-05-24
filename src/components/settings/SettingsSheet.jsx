@@ -14,6 +14,7 @@ import {
   resetTodaySession, resetStatsAndProgression, resetFactory,
   exportAllData, importAllData,
 } from '../../lib/userPrefs.js';
+import InterventionControls from './InterventionControls.jsx';
 
 // ============================================================================
 // STYLES — bloc CSS local pour ne pas polluer le global
@@ -411,7 +412,19 @@ const SHEET_CSS = `
 // ============================================================================
 // MAIN COMPONENT
 // ============================================================================
-export default function SettingsSheet({ open, onClose, onPrefsChange }) {
+export default function SettingsSheet({
+  open,
+  onClose,
+  onPrefsChange,
+  // Lot INTER — mode de jeu (props optionnelles : si absentes, la section ne s'affiche pas)
+  quizMode,
+  interventionRatios,
+  interventionEditionsR1,
+  catalog,
+  onModeChange,
+  onRatiosChange,
+  onEditionsR1Change,
+}) {
   const [prefs, setPrefs] = useState(() => loadPrefs());
   const [confirm, setConfirm] = useState(null); // { type, title, body, dangerText, onConfirm }
   const [toast, setToast] = useState(null); // { kind, text }
@@ -555,6 +568,19 @@ export default function SettingsSheet({ open, onClose, onPrefsChange }) {
                 </div>
 
                 <div className="settings-body">
+
+                  {/* ====== MODE DE JEU (Lot INTER) ====== */}
+                  {typeof quizMode !== 'undefined' && (
+                    <InterventionControls
+                      mode={quizMode}
+                      ratios={interventionRatios}
+                      editionsR1={interventionEditionsR1}
+                      catalog={catalog}
+                      onModeChange={onModeChange}
+                      onRatiosChange={onRatiosChange}
+                      onEditionsR1Change={onEditionsR1Change}
+                    />
+                  )}
 
                   {/* ====== CHRONO DAILY ====== */}
                   <div className="settings-section">
