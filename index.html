@@ -3,18 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+
+    <!-- PWA / Safari iOS ------------------------------------------------- -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Quizz R1" />
+    <meta name="apple-mobile-web-app-title" content="Fire Quizz" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#0A0B0F" />
     <meta name="color-scheme" content="dark" />
 
+    <!-- Description / SEO / partage -------------------------------------- -->
+    <meta name="description" content="Révision R1 sprinkler · adaptatif · sessions courtes" />
+    <meta property="og:title" content="Fire Quizz" />
+    <meta property="og:description" content="Révision R1 sprinkler · adaptatif · sessions courtes" />
+    <meta property="og:type" content="website" />
+
+    <!-- Manifest PWA ----------------------------------------------------- -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Apple touch icons ------------------------------------------------ -->
     <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png" />
     <link rel="apple-touch-icon" sizes="120x120" href="icons/icon-120.png" />
 
+    <!-- Splash iPhone ---------------------------------------------------- -->
     <link rel="apple-touch-startup-image" href="splash/splash-iphone.png" />
 
+    <!-- Favicon ---------------------------------------------------------- -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png" />
+
+    <!-- Fonts ------------------------------------------------------------ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +45,7 @@
       rel="stylesheet"
     />
 
-    <title>Quizz R1</title>
+    <title>Fire Quizz</title>
   </head>
   <body>
     <div id="root"></div>
