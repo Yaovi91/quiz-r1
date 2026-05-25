@@ -21,7 +21,7 @@ import {
 import { pickQuestion as pickFromCatalogV2 } from './lib/picker.js';
 
 /* =========================================================================
-   R1 QUIZZ — Flow Home → Question → Level-up
+   FIRE QUIZZ — Flow Home → Question → Level-up
    Design: technical-refined dark, accent ambre, game-feel maximal
    ========================================================================= */
 
@@ -134,6 +134,32 @@ const GLOBAL_CSS = `
     align-items: center;
     padding: 6px 4px 2px;
   }
+
+  /* ============ BRAND BAR (mini-lockup Fire Quizz) ============ */
+  .brand-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 4px 0 12px;
+    margin: 0 0 12px;
+    border-bottom: 1px solid var(--border);
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .brand-bar-word {
+    font-family: var(--font-sans, 'Geist'), -apple-system, sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #FCD34D 0%, #F59E0B 50%, #E63946 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+  }
+
   .pill-icon {
     display: inline-flex;
     align-items: center;
@@ -3127,6 +3153,12 @@ function HomeScreen({ state, onStartQuestion, onFlameDown, onFlameUp, onXpTap, o
       exit={{ opacity: 0, y: -8 }}
       transition={{ duration: 0.35, ease: [0.2, 0.7, 0.3, 1] }}
     >
+      {/* Brand bar — mini-lockup Fire Quizz */}
+      <div className="brand-bar" aria-label="Fire Quizz">
+        <BreathingFlame size={14} />
+        <span className="brand-bar-word">Fire Quizz</span>
+      </div>
+
       {/* Top bar */}
       <div className="topbar">
         <div
