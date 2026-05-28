@@ -69971,5 +69971,709 @@
   "reference": "NF S 62-200 Annexes A et B (édition août 2009)",
   "generated_at": "2026-05-24",
   "skill_version": "v10-audit-phase2"
+ },
+ {
+  "id": "j5f5-2019-0-1-001",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "0.1",
+  "theme": "Distinction J5 / F5",
+  "difficulte": 1,
+  "multi": false,
+  "mode_audit": false,
+  "enonce": "Quelle est la différence entre les certifications APSAD J5 et F5 ?",
+  "propositions": [
+   "J5 et F5 désignent une seule et même certification sous deux appellations",
+   "J5 = validation ; F5 = maintenance d'installations RIA/PIA",
+   "J5 vise les sprinkleurs et F5 vise les RIA",
+   "J5 concerne les petites entreprises, F5 les grandes structures certifiées"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Le référentiel sépare deux certifications de service : J5 pour la validation d'installations RIA/PIA, F5 pour leur maintenance. Une entreprise peut détenir l'une, l'autre ou les deux.\n→ Cross R5 : la technique RIA/PIA elle-même (conception, vérifs, maintenance) est définie par le R5 ; J5/F5 certifie l'entreprise qui applique le R5.",
+  "reference": "J5/F5 §0.1 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-0-1-002",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "0.1",
+  "theme": "Déclaration N5 — qui l'établit",
+  "difficulte": 2,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Une entreprise souhaite établir des déclarations de conformité N5 sur des installations RIA/PIA. Quelle certification doit-elle détenir ?",
+  "propositions": [
+   "F5 (maintenance)",
+   "La certification A5",
+   "J5 (validation)",
+   "Aucune, c'est libre"
+  ],
+  "bonnes_reponses": [
+   2
+  ],
+  "explication": "C'est la certification J5 (validation) qui autorise une entreprise à délivrer des déclarations de conformité N5 ou des déclarations d'installation, y compris sur des installations existantes dont l'installateur d'origine est inconnu.\n→ Cross R5 : la déclaration N5 atteste la conformité au référentiel technique R5.",
+  "reference": "J5/F5 §0.1 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-0-1-003",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "0.1",
+  "theme": "Compte rendu Q5 — qui l'établit",
+  "difficulte": 2,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Quelle certification permet à une entreprise de délivrer des comptes rendus de vérification périodique Q5 ?",
+  "propositions": [
+   "J5 (validation)",
+   "F5 (maintenance)",
+   "Le certificat B0 général",
+   "Toute entreprise du bâtiment"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "La certification F5 (maintenance) habilite l'entreprise à établir les comptes rendus de vérification périodique Q5, sur des installations ayant fait l'objet d'une déclaration N5 ou d'installation.\n→ Cross R5 : le Q5 correspond au compte rendu de vérification périodique défini en R5 §4.2.4.",
+  "reference": "J5/F5 §0.1 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-0-1-004",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "0.1",
+  "theme": "Prérequis au Q5",
+  "difficulte": 3,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Un compte rendu Q5 peut-il être délivré sur n'importe quelle installation RIA ?",
+  "propositions": [
+   "Oui, sur toute installation existante équipée de RIA opérationnels",
+   "Non : il faut une N5 ou une déclaration d'installation préalable",
+   "Oui, dès qu'un contrat de maintenance existe",
+   "Non, seulement sur les installations de moins de 5 ans"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Le Q5 ne s'applique qu'aux installations déjà couvertes par une N5 ou une déclaration d'installation. Sans ce socle, la vérification périodique ne peut produire de Q5.\n→ Cross R5 : sans N5, il faut d'abord une validation J5 pour bâtir le dossier de référence.",
+  "reference": "J5/F5 §0.1 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-0-1-005",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "0.1",
+  "theme": "RIA et PIA — champ",
+  "difficulte": 1,
+  "multi": false,
+  "mode_audit": false,
+  "enonce": "Le référentiel J5/F5 couvre les installations de :",
+  "propositions": [
+   "Des sprinkleurs automatiques sous eau exclusivement",
+   "Les RIA et les PIA (postes d'incendie additivés)",
+   "Colonnes sèches",
+   "Détection incendie"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Le champ d'application vise les Robinets d'Incendie Armés (RIA) et les Postes d'Incendie Additivés (PIA).\n→ Cross R5 : ce périmètre RIA/PIA est exactement celui du référentiel technique R5.",
+  "reference": "J5/F5 §0.1 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-0-1-006",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "0.1",
+  "theme": "J5/F5 n'est pas une certif d'installation",
+  "difficulte": 2,
+  "multi": false,
+  "mode_audit": false,
+  "enonce": "Une entreprise certifiée J5/F5 est-elle de ce fait certifiée pour installer des RIA/PIA ?",
+  "propositions": [
+   "Oui, la certification couvre également la pose et l'installation neuve",
+   "Non : J5/F5 valident et maintiennent, elles n'installent pas",
+   "Oui, mais seulement pour les RIA",
+   "Cela dépend de l'effectif de l'entreprise concernée"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Une note explicite du référentiel précise que ces certifications ne sont pas des certifications de service d'installation. J5 valide, F5 maintient — poser l'installation relève d'une autre activité.\n→ Cross R5 : J5 permet justement de valider a posteriori des installations même quand l'installateur d'origine a disparu.",
+  "reference": "J5/F5 §0.1 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-6-1J-007",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "6.1J",
+  "theme": "Validation conception — qui valide",
+  "difficulte": 2,
+  "multi": false,
+  "mode_audit": false,
+  "enonce": "Dans le cadre J5, la vérification de la conception d'une installation doit être validée par :",
+  "propositions": [
+   "N'importe quel technicien disponible au sein de l'équipe projet",
+   "Le client commanditaire",
+   "Le responsable technique de l'entreprise",
+   "Un auditeur externe mandaté directement par le CNPP"
+  ],
+  "bonnes_reponses": [
+   2
+  ],
+  "explication": "La validation de la conception relève du responsable technique de l'entreprise ; cette validation est enregistrée et conservée.\n→ Cross R5 : les calculs de conception eux-mêmes suivent le R5 §3.2.",
+  "reference": "J5/F5 §6.1J (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-7-1J-008",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "7.1J",
+  "theme": "Validation réalisation — objet",
+  "difficulte": 3,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Les prestations de validation de la réalisation (J5) consistent à vérifier sur site que l'installation est conforme :",
+  "propositions": [
+   "Au seul cahier des charges commercial signé avec le client final",
+   "Aux documents, au référentiel de l'offre et aux règles de l'art",
+   "Uniquement aux souhaits verbaux de l'exploitant",
+   "À la norme électrique en vigueur seulement"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "La validation de la réalisation contrôle, sur le terrain, la cohérence entre l'installation, les documents fournis par l'installateur, le référentiel retenu dans l'offre et les règles de l'art. Le responsable technique valide.\n→ Cross R5 : ce contrôle s'appuie sur le R5 §3.3.1.",
+  "reference": "J5/F5 §7.1J (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-8-1J-009",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "8.1J",
+  "theme": "Vérif conformité initiale — but",
+  "difficulte": 2,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "La vérification de conformité initiale (8J) a pour but de s'assurer que l'installation :",
+  "propositions": [
+   "Qu'elle est esthétiquement bien intégrée dans son environnement bâti",
+   "Qu'elle est opérationnelle (vérification fonctionnelle)",
+   "Coûte moins cher que prévu",
+   "Est assurée auprès d'un assureur agréé"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "La vérification fonctionnelle vise à confirmer que l'installation est opérationnelle. Elle suit la procédure formalisée de l'entreprise et est enregistrée.\n→ Cross R5 : les vérifications fonctionnelles renvoient au R5 §3.3.2.",
+  "reference": "J5/F5 §8.1J (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-8-1J-010",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "8.1J",
+  "theme": "Installation existante date inconnue",
+  "difficulte": 4,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "En J5, sur une installation existante dont la date de conception est inconnue, que faut-il faire en plus des vérifications habituelles ?",
+  "propositions": [
+   "Aucune opération particulière n'est requise dans ce cas de figure",
+   "Réaliser les opérations décennales en complément des vérifs",
+   "Refuser la prestation",
+   "Attendre 10 ans avant toute déclaration"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Quand la date de conception n'est pas connue, il faut ajouter les opérations décennales aux vérifications, afin de qualifier réellement l'état de l'installation avant toute déclaration.\n→ Cross R5 : les opérations décennales sont décrites au R5 (maintenance §4.2).",
+  "reference": "J5/F5 §8.1J (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-8-2J-011",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "8.2J",
+  "theme": "Dossier technique — remise",
+  "difficulte": 2,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "À l'issue de la vérification initiale (J5), le dossier technique produit est :",
+  "propositions": [
+   "Conservé uniquement par l'entreprise",
+   "Validé par le responsable technique puis remis à l'exploitant",
+   "Transmis directement et exclusivement au service départemental d'incendie",
+   "Détruit après 1 an"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Le dossier technique, validé par le responsable technique, revient à l'exploitant. Il s'accompagne d'une N5 ou d'une déclaration d'installation.\n→ Cross R5 : le contenu du dossier suit le R5 §3.2.",
+  "reference": "J5/F5 §8.2J (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-8-2J-012",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "8.2J",
+  "theme": "Écarts constatés",
+  "difficulte": 3,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Lors de la vérification initiale, des exigences ne sont pas satisfaites. Comment cela est-il traité ?",
+  "propositions": [
+   "On délivre quand même une N5 sans réserve",
+   "Synthèse des écarts établie, détail formalisé au dossier technique",
+   "On annule purement et simplement la totalité de la prestation engagée",
+   "On informe seulement oralement le client"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "En cas d'exigences non satisfaites, une synthèse des écarts est précisée et le détail formalisé dans le dossier technique de l'installation.\n→ Cross R5 : le formalisme des écarts renvoie à l'ANNEXE 2 du R5.",
+  "reference": "J5/F5 §8.2J (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-9-1F-013",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "9.1F",
+  "theme": "Vérif périodique — finalité",
+  "difficulte": 2,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "La vérification périodique (F5) sert à s'assurer :",
+  "propositions": [
+   "Du seul aspect visuel et de la propreté apparente des RIA installés",
+   "Du maintien de la conformité au risque et de l'aptitude à fonctionner",
+   "De la rentabilité du contrat de maintenance",
+   "Que le client a payé ses factures"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "La vérification périodique confirme que l'installation reste conforme au risque à protéger et garde son aptitude à fonctionner intégralement. Elle inclut une revue de l'évolution du risque initial.\n→ Cross R5 : les opérations périodiques suivent le R5 §4.2.1 à 4.2.3.",
+  "reference": "J5/F5 §9.1F (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-9-1F-014",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "9.1F",
+  "theme": "Évolution du risque",
+  "difficulte": 3,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Si, lors d'une vérification périodique, l'entreprise constate une évolution du risque par rapport à l'identification initiale, elle doit :",
+  "propositions": [
+   "Ignorer ce point, considéré comme hors de son périmètre d'intervention",
+   "Exercer son devoir de conseil professionnel auprès du client",
+   "Arrêter immédiatement l'installation",
+   "Refacturer le double"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Face à une évolution du risque, l'entreprise doit exercer son devoir de conseil professionnel envers le client. La vérification périodique comprend justement cette revue de l'évolution du risque.\n→ Cross R5 : l'adéquation installation/risque est un principe du R5.",
+  "reference": "J5/F5 §9.1F (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-9-2F-015",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "9.2F",
+  "theme": "Q5 — opérations couvertes",
+  "difficulte": 3,
+  "multi": true,
+  "mode_audit": true,
+  "enonce": "Le compte rendu de vérification périodique Q5 peut couvrir quelles opérations de maintenance ? (plusieurs bonnes réponses)",
+  "propositions": [
+   "La maintenance annuelle",
+   "La maintenance quinquennale",
+   "La maintenance décennale",
+   "L'installation initiale du réseau"
+  ],
+  "bonnes_reponses": [
+   0,
+   1,
+   2
+  ],
+  "explication": "La vérification périodique aboutissant au Q5 peut englober les maintenances annuelle, quinquennale et décennale des matériels constitutifs. L'installation initiale n'en fait pas partie (c'est du ressort J5).\n→ Cross R5 : ces périodicités de maintenance sont fixées par le R5 §4.2.",
+  "reference": "J5/F5 §9.2F (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-10-1F-016",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "10.1F",
+  "theme": "Maintenance corrective — définition",
+  "difficulte": 2,
+  "multi": false,
+  "mode_audit": false,
+  "enonce": "La maintenance corrective (10F) désigne :",
+  "propositions": [
+   "L'entretien préventif planifié longtemps à l'avance dans le contrat",
+   "Rétablir le fonctionnement après apparition d'un dysfonctionnement",
+   "Le remplacement systématique tous les 10 ans",
+   "La simple visite commerciale annuelle"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "La maintenance corrective regroupe les opérations qui rétablissent le fonctionnement de l'installation après l'apparition d'un dysfonctionnement. Elle se distingue de la maintenance périodique (préventive).\n→ Cross R5 : ces opérations suivent le R5 §4.3.",
+  "reference": "J5/F5 §10.1F (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-10-1F-017",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "10.1F",
+  "theme": "Délai prise en compte réparation",
+  "difficulte": 4,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "En F5, une demande de travaux de réparation doit être prise en compte par l'entreprise titulaire dans un délai de :",
+  "propositions": [
+   "24 heures",
+   "48 heures",
+   "72 heures",
+   "une semaine"
+  ],
+  "bonnes_reponses": [
+   2
+  ],
+  "explication": "Le titulaire de la certification F5 doit prendre en compte une demande de travaux de réparation sous 72 heures à compter de sa réception.\n→ Cross R5 : à ne pas confondre avec le préavis CNPP de 72 h du N100 en R1 sprinkleur (interruption >12 h) — même durée, contexte différent.",
+  "reference": "J5/F5 §10.1F (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-5-2-018",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "5.2",
+  "theme": "Sous-traitance J5",
+  "difficulte": 4,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Une entreprise certifiée J5 peut sous-traiter une activité relevant de la certification J5 :",
+  "propositions": [
+   "À n'importe quelle entreprise du secteur du bâtiment, sans condition",
+   "Uniquement à une autre entreprise elle-même certifiée J5",
+   "À une entreprise certifiée F5",
+   "Jamais, la sous-traitance est interdite"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Une entreprise certifiée J5 ne peut sous-traiter une activité couverte par J5 qu'à une autre entreprise certifiée J5. Seule exception : la réalisation des dessins, qui peut être confiée à une entreprise non certifiée.\n→ Cross R5 : la chaîne de responsabilité garantit l'application du R5 par un acteur qualifié.",
+  "reference": "J5/F5 §5.2 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-5-2-019",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "5.2",
+  "theme": "Sous-traitance — exception dessins",
+  "difficulte": 3,
+  "multi": false,
+  "mode_audit": false,
+  "enonce": "Quelle activité J5 peut être confiée à une entreprise NON certifiée ?",
+  "propositions": [
+   "Les calculs hydrauliques",
+   "La réalisation des dessins",
+   "La déclaration N5",
+   "La vérification fonctionnelle"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "La seule exception à la règle « sous-traitance J5 → J5 uniquement » concerne la réalisation des dessins, qui peut être faite par une entreprise non certifiée.\n→ Cross R5 : les actes engageant la conformité R5 (calculs, déclarations) restent réservés aux certifiés.",
+  "reference": "J5/F5 §5.2 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-5-2-020",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "5.2",
+  "theme": "Sous-traitance F5",
+  "difficulte": 3,
+  "multi": false,
+  "mode_audit": false,
+  "enonce": "Une entreprise certifiée F5 peut sous-traiter une activité F5 :",
+  "propositions": [
+   "À une entreprise certifiée J5 ou à un installateur classique",
+   "Uniquement à une autre entreprise elle-même certifiée F5",
+   "À toute entreprise de maintenance",
+   "À une entreprise étrangère sans condition"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "La sous-traitance d'une activité relevant de F5 n'est possible qu'auprès d'une autre entreprise certifiée F5.\n→ Cross R5 : cette exigence préserve la qualité de maintenance attendue par le R5.",
+  "reference": "J5/F5 §5.2 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-5-2-021",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "5.2",
+  "theme": "Mentions minimales du devis",
+  "difficulte": 3,
+  "multi": true,
+  "mode_audit": false,
+  "enonce": "Selon §5.2, un devis J5/F5 doit préciser au minimum : (plusieurs bonnes réponses)",
+  "propositions": [
+   "Le référentiel technique utilisé (ex : APSAD R5)",
+   "Les prestations couvertes et leurs limites",
+   "Les prestations optionnelles",
+   "Le salaire des techniciens intervenants"
+  ],
+  "bonnes_reponses": [
+   0,
+   1,
+   2
+  ],
+  "explication": "Le devis indique au minimum le référentiel utilisé (ex : R5), les prestations couvertes et leurs limites, et les prestations optionnelles. La rémunération du personnel n'a pas à y figurer.\n→ Cross R5 : nommer le référentiel R5 dans le devis fixe le niveau d'exigence technique attendu.",
+  "reference": "J5/F5 §5.2 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-3-1-022",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "3.1",
+  "theme": "Responsable technique — expérience",
+  "difficulte": 3,
+  "multi": false,
+  "mode_audit": false,
+  "enonce": "Le responsable technique employé en permanence doit justifier d'une expérience minimale de :",
+  "propositions": [
+   "6 mois",
+   "Une expérience d'un an minimum dans le domaine RIA/PIA concerné",
+   "2 ans d'expérience (ou culture technique équivalente)",
+   "5 ans"
+  ],
+  "bonnes_reponses": [
+   2
+  ],
+  "explication": "L'entreprise doit employer en permanence au moins un responsable technique disposant d'au moins 2 années d'expérience dans le domaine concerné, ou d'une culture technique équivalente.\n→ Cross R5 : ce responsable garantit la bonne application des exigences techniques du R5.",
+  "reference": "J5/F5 §3.1 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-4-1-023",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "4.1",
+  "theme": "Équipements de mesure",
+  "difficulte": 3,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Les équipements servant à mesurer la pression et le débit lors des prestations doivent être :",
+  "propositions": [
+   "Achetés neufs systématiquement avant chaque nouvelle intervention",
+   "Étalonnés ou vérifiés périodiquement selon leur usage",
+   "De marque imposée par le CNPP",
+   "Remplacés tous les ans"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Les équipements de mesure (pression, débit) doivent être étalonnés ou vérifiés périodiquement selon leur usage ; un équipement non conforme impose des dispositions correctives, avec enregistrements conservés.\n→ Cross R5 : la fiabilité des mesures conditionne la validité des vérifs débit/pression du R5.",
+  "reference": "J5/F5 §4.1 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-3-4-024",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "3.4",
+  "theme": "Habilitation du personnel",
+  "difficulte": 2,
+  "multi": false,
+  "mode_audit": false,
+  "enonce": "En F5, tout technicien qui intervient sur le périmètre certifié doit faire l'objet :",
+  "propositions": [
+   "D'une simple mention figurant dans son contrat de travail individuel",
+   "D'une habilitation formelle et enregistrée du responsable d'établissement",
+   "D'un agrément préfectoral",
+   "D'aucune formalité particulière"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Chaque intervenant reçoit une habilitation écrite, enregistrée, signée par le responsable de son établissement de rattachement.\n→ Cross R5 : seul un personnel habilité garantit des vérifications R5 fiables.",
+  "reference": "J5/F5 §3.4 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-1-4-025",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "1.4",
+  "theme": "Registre des réclamations",
+  "difficulte": 2,
+  "multi": false,
+  "mode_audit": false,
+  "enonce": "Concernant les réclamations clients, l'entreprise certifiée doit :",
+  "propositions": [
+   "Les traiter uniquement à l'oral, sans formalisme particulier requis",
+   "Tenir un registre des réclamations, examinable en audit",
+   "Les transmettre au CNPP sous 24 h",
+   "Les ignorer si non écrites"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "L'entreprise tient à jour un registre des réclamations relatives aux prestations certifiées ; ce registre peut être examiné lors des audits de certification.\n→ Cross R5 : la traçabilité organisationnelle complète la traçabilité technique exigée côté R5.",
+  "reference": "J5/F5 §1.4 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-5-1-026",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "5.1",
+  "theme": "Identification des besoins",
+  "difficulte": 3,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Avant signature du contrat, l'entreprise recherche les difficultés d'exécution par :",
+  "propositions": [
+   "Une simple estimation téléphonique",
+   "Visite préalable sur site, ou analyse du dossier technique",
+   "La consultation préalable systématique de l'assureur du bâtiment concerné",
+   "Un sondage auprès des occupants"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "L'évaluation préalable se fait par une visite sur site ou par l'analyse du dossier et des documents techniques. En l'absence de documents, l'entreprise propose une reconstitution.\n→ Cross R5 : cette phase prépare l'application correcte du R5 sur l'installation réelle.",
+  "reference": "J5/F5 §5.1 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-0-1-027",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "0.1",
+  "theme": "Scénario — installateur disparu",
+  "difficulte": 4,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Un exploitant possède une vieille installation RIA dont l'installateur a disparu, sans aucune déclaration de conformité. Quelle prestation lui permet d'obtenir un dossier de référence ?",
+  "propositions": [
+   "Une simple maintenance F5 réalisée par une entreprise certifiée",
+   "Une validation J5, établissant une N5 ou déclaration d'installation",
+   "Un contrôle de l'assureur",
+   "Rien n'est possible sans l'installateur d'origine"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "La validation J5 est précisément conçue pour ce cas : établir une déclaration N5 ou d'installation sur des installations existantes, y compris quand l'installateur d'origine est inconnu ou a disparu. C'est le préalable à un suivi Q5 ultérieur.\n→ Cross R5 : la validation s'appuie sur les exigences techniques du R5 pour qualifier l'existant.",
+  "reference": "J5/F5 §0.1 (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
+ },
+ {
+  "id": "j5f5-2019-9-2F-028",
+  "type": "RIA",
+  "edition": "2019",
+  "referentiel": "J5/F5",
+  "chapitre": "9.2F",
+  "theme": "Cohérence N5 → Q5",
+  "difficulte": 4,
+  "multi": false,
+  "mode_audit": true,
+  "enonce": "Sur le terrain, vous arrivez pour une vérification périodique F5. L'exploitant ne dispose d'aucune déclaration N5 ni d'installation. Que pouvez-vous délivrer ?",
+  "propositions": [
+   "Un Q5 normal, comme sur toute installation déjà suivie en maintenance",
+   "Pas de Q5 valable sans socle N5 : une validation J5 préalable s'impose",
+   "Un certificat B0",
+   "Un Q5 provisoire de 6 mois"
+  ],
+  "bonnes_reponses": [
+   1
+  ],
+  "explication": "Sans déclaration N5 ou d'installation préexistante, aucun Q5 ne peut être valablement délivré : le compte rendu périodique suppose ce socle. Il faut d'abord une validation J5 pour constituer le dossier de référence.\n→ Cross R5 : la chaîne N5 (validation) → Q5 (périodique) reflète la logique conformité initiale puis vérifications périodiques du R5 §3 et §4.",
+  "reference": "J5/F5 §9.2F (édition Octobre 2019)",
+  "generated_at": "2026-05-28",
+  "skill_version": "v10"
  }
 ]
